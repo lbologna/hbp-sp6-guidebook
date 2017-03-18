@@ -1,0 +1,14 @@
+.bsp-container-left {
+    text-align: center;
+    float: left;
+    margin-left: 5px;
+    margin-right: 25px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.bsp-container-center{
+    border-width: 0px ;
+    text-align: center;
+}
