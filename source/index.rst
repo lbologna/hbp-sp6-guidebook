@@ -10,10 +10,10 @@ The Brain Simulation Platform is part of the Human Brain Project (HBP) platform 
 As a result, the unique functionality of the Platform allows novel questions to be addressed, which could previously not be researched.
 
 .. toctree::
-   :maxdepth: 3 
+   :maxdepth: 6 
 
-   getting_started
-   online_usecases
+   getting_started/getting_started
+   online_usecases/online_usecases
 
 .. Indices and tables
 .. ==================
