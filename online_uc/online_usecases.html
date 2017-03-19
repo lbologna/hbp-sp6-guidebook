@@ -1,0 +1,140 @@
+
+
+
+<!DOCTYPE html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Online Use Cases &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body role="document">
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Online Use Cases</a><ul>
+<li><a class="reference internal" href="#trace-analysis">Trace Analysis</a><ul>
+<li><a class="reference internal" href="#feature-extraction-graphical-user-interface">Feature extraction Graphical User Interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/online_uc/online_usecases.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    
+                </aside>
+
+                <div class="section" id="online-use-cases">
+<span id="online-usecases"></span><h1>Online Use Cases<a class="headerlink" href="#online-use-cases" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="trace-analysis">
+<span id="id1"></span><h2>Trace Analysis<a class="headerlink" href="#trace-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="feature-extraction-graphical-user-interface">
+<h3>Feature extraction Graphical User Interface<a class="headerlink" href="#feature-extraction-graphical-user-interface" title="Permalink to this headline">¶</a></h3>
+<p>The feature extraction GUI allows users to select data from an HBP dataset and/or upload their own, and extract electrophysiological features of interest.
+The application leverages the Python Electrophys Feature Extract Library (eFEL) and provides a friendly interface to select both individual voltage traces (based on the stimulus current applied) and features to be extracted.</p>
+<p>Step 1 of 4
+Select the data from a dataset, based on cell properties to be chosen from the filter dropdown menus. Additionally and/or alternatively upload your own data for processing (see Fig. 1).</p>
+<p>The only file extension allowed at present is .abf (axon binary file) and the uploaded files must contain both the voltage and the stimulus signals. This is a mandatory condition for several features to be computed and for the feature extraction process to be completed successfully.
+The analog voltage and stimulus signals are extracted through the neo python library, designed for representing different formats of intracellular and extracellular electrophysiological data (see neo for a complete reference).</p>
+<p>Step 2 of 4
+Once the filtering/upload done, individual traces are plotted and can be checked for selection. Traces represent the voltage membrane responses of the selected cell to the stimulus displayed in the legend. Highlight individual traces by hovering on the corresponding stimulus and select them by clicking on the same legend or through the selection buttons (see Fig. 2). When all the traces of interest have been selected, go the next page for feature selection.</p>
+<p>Step 3 of 4
+The feature selection page allows you to select the features to extract from the electrophysiological chosen signals. Features are grouped by type: 1) Spike event features - 2) Spike shape features and 3) Voltage features, and are selected by clicking on the corresponding box. When hovering on feature names a brief description is provided (see Fig. 3). Once the selection is completed, click on the Next button to launch the extraction process.</p>
+<p>Step 4 of 4
+The feature extraction process computes the means and standard deviations of the selected features for individual cells and for individual stimuli. Once a stimulus is chosen for a single file, it will be taken into account for all the selected files corresponding to the same cell. Finally, a grand mean is computed among different cells. A feature.json and protocol.json files are generated for both individual cells and the entire ensemble. A preview is provided on the last page for the .json files corresponding to the grand means and a link to .zip file containing the entire set of results is provided (see Fig. 4).</p>
+</div>
+</div>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Luca L. Bologna, Carmen A. Lupascu, R. Migliore, M. Migliore.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>
