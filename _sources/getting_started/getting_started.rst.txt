@@ -100,6 +100,10 @@ Use case maturity
 
     A service of this maturity level is under heavy development and recommended only for specialists’ use or use for co-design partners.
 
+**********
+HPC access
+**********
+
 .. container:: bsp-container-left
 
     .. image:: images/hpc_tag.png
@@ -107,7 +111,7 @@ Use case maturity
 
 .. container:: bsp-inline-text 
 
-    Use cases with this icon require a small to medium amount of high-performance computing resources. They can be either public, such as those available through the NSG, or provided by the user through a personal grant, such as a PRACE award.
+    Use cases with this icon require a small to medium amount of High-Performance Computing (HPC) resources. They can be either public, such as those available through the NSG, or provided by the user through a personal grant, such as a PRACE award.
 
 .. container:: bsp-container-left
 
