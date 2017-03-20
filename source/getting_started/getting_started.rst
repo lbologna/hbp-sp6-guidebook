@@ -100,6 +100,10 @@ Use case maturity
 
     A service of this maturity level is under heavy development and recommended only for specialists’ use or use for co-design partners.
 
+**********
+HPC access
+**********
+
 .. container:: bsp-container-left
 
     .. image:: images/hpc_tag.png
@@ -107,7 +111,7 @@ Use case maturity
 
 .. container:: bsp-inline-text 
 
-    Use cases with this icon require a small to medium amount of high-performance computing resources. They can be either public, such as those available through the NSG, or provided by the user through a personal grant, such as a PRACE award.
+    Use cases with this icon require a small to medium amount of High-Performance Computing (HPC) resources. They can be either public, such as those available through the NSG, or provided by the user through a personal grant, such as a PRACE award.
 
 .. container:: bsp-container-left
 
@@ -118,3 +122,11 @@ Use case maturity
     
     This type of use cases need large HPC resources, which must be provided by the user. Typically, use cases showing this icon involve complex simulations of large scale cellular level model of brain areas/regions, that are deployed on one of the supercomputer centers supporting HBP activities (JSC and CINECA). Subjected to technical compatibility and license agreement, this type of simulations can be delegated to be executed outside the BSP.
 
+
+*********************
+Service Accessibility
+*********************
+
+As with most scientific instruments, access to advanced functionality may be subject to certain conditions. This is due to the early state of the Platform and to the fact that it relies on limited resources, such as supercomputers.
+
+Please see the below table for the services the Brain Simulation Platform (BSP) provides to different user classes at this point in time:
