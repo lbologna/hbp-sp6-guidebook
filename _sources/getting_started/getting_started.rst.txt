@@ -100,6 +100,8 @@ Use case maturity
 
     A service of this maturity level is under heavy development and recommended only for specialists’ use or use for co-design partners.
 
+|
+
 **********
 HPC access
 **********
@@ -121,4 +123,70 @@ HPC access
 .. container:: bsp-inline-text 
     
     This type of use cases need large HPC resources, which must be provided by the user. Typically, use cases showing this icon involve complex simulations of large scale cellular level model of brain areas/regions, that are deployed on one of the supercomputer centers supporting HBP activities (JSC and CINECA). Subjected to technical compatibility and license agreement, this type of simulations can be delegated to be executed outside the BSP.
+
+|
+
+*********************
+Service Accessibility
+*********************
+
+As with most scientific instruments, access to advanced functionality may be subject to certain conditions. This is due to the early state of the Platform and to the fact that it relies on limited resources, such as supercomputers.
+
+Please see the below table for the services the Brain Simulation Platform (BSP) provides to different user classes at this point in time:
+
+
+
+
+.. list-table::  
+    :header-rows: 1
+
+    * - Class 
+      - Who?
+      - What?
+      - Terms
+      - Support
+    * - ANONYMOUS
+      - anyone
+      - * Download open source software from github accounts of SP6 partners
+      - * license terms of respective software
+      - * support through channels indicated with the respective software
+        * community support through HBP Forum
+    * - HBP IDENTITY
+      - anyone with an HBP Identity Account
+      - * Browse BSP use case Collabs
+        * Browse BSP model Collabs
+        * Can be added to private Collabs by Collab owners 
+        * Restricted access to apps: limited functionality or limited access
+      - * license terms of respective software
+        * HBP Collaboratory or Platform Terms of Service for accessible services
+      - * Best effort support
+        * send inquiries to bsp-support@humanbrainproject.eu
+    * - PROJECT ACCESS
+      - anyone who belongs to an HBP Partnering Project (or similar agreement)
+      - * All rights of HBP Identity class
+        * Access to the online functionality of the Brain Simulation Platform if requested in the Partnering Project agreement
+        * Access to HBP models in the Brain Simulation Platform if requested in the Partnering Project agreement
+        * HPC resources (*)
+      - * license terms of respective software
+        * HBP Collaboratory or Platform Terms of Service for accessible services
+        * Terms of the Partnering Project agreement (or similar agreement)
+      - * Full support according to terms of Partnering Project agreement
+        * send inquiries and support requests to bsp-support@humanbrainproject.eu
+    * - HBP MEMBERS
+      - Anyone who belongs to an HBP partner institution and is granted accreditation to a particular HBP Subproject 
+      - * All rights of HBP Identity class
+        * Access to the online functionality of the Brain Simulation Platform
+        * Access to HBP models in the Brain Simulation Platform
+        * HPC resources (*) 
+      - * HBP Consortium Agreement
+      - * Full support
+        * send inquiries and support requests to bsp-support@humanbrainproject.eu
+
+|
+
+
+(*) Note that access to HPC resources are subject to independent peer review by the HPC platform. During the partnering project accession process, application to required resources will be coordinated. More information on HPC accounts and allocations can be found on the HPC Platform. For an overview of accessibility of services from other platforms, please look here. 
+
+
+
 
