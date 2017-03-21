@@ -9,7 +9,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Trace Analysis &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <title>Feature extraction Graphical User Interface &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
     
     <link rel="stylesheet" href="../../_static/hbpdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -33,6 +33,7 @@
     <script type="text/javascript" src="../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Overview" href="../overview/overview.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
@@ -55,12 +56,25 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Trace Analysis</a><ul>
-<li><a class="reference internal" href="#feature-extraction-graphical-user-interface">Feature extraction Graphical User Interface</a></li>
+<li><a class="reference internal" href="#">Feature extraction Graphical User Interface</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#electrophysiological-data">Electrophysiological data</a></li>
+<li><a class="reference internal" href="#features-description">Features description</a><ul>
+<li><a class="reference internal" href="#graphical-user-interface">Graphical User Interface</a><ul>
+<li><a class="reference internal" href="#trace-selection">Trace selection</a></li>
+<li><a class="reference internal" href="#feature-selection">Feature selection</a></li>
+<li><a class="reference internal" href="#results">Results</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../overview/overview.html"
+                        title="previous chapter">Overview</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -86,34 +100,56 @@
 
             <div class="content">
                 
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../online_usecases.html">Online Use Cases</a>
+                    
+                </div>
+                
 
                 <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../overview/overview.html">Overview</a>
+                    </span>
                     
                     
                 </aside>
 
-                <div class="section" id="trace-analysis">
-<span id="id1"></span><h1>Trace Analysis<a class="headerlink" href="#trace-analysis" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="feature-extraction-graphical-user-interface">
-<h2>Feature extraction Graphical User Interface<a class="headerlink" href="#feature-extraction-graphical-user-interface" title="Permalink to this headline">¶</a></h2>
-<p>The feature extraction GUI allows users to select data from an HBP dataset and/or upload their own, and extract electrophysiological features of interest.
-The application leverages the Python Electrophys Feature Extract Library (eFEL) and provides a friendly interface to select both individual voltage traces (based on the stimulus current applied) and features to be extracted.</p>
-<p>Step 1 of 4
-Select the data from a dataset, based on cell properties to be chosen from the filter dropdown menus. Additionally and/or alternatively upload your own data for processing (see Fig. 1).</p>
-<p>The only file extension allowed at present is .abf (axon binary file) and the uploaded files must contain both the voltage and the stimulus signals. This is a mandatory condition for several features to be computed and for the feature extraction process to be completed successfully.
-The analog voltage and stimulus signals are extracted through the neo python library, designed for representing different formats of intracellular and extracellular electrophysiological data (see neo for a complete reference).</p>
-<p>Step 2 of 4
-Once the filtering/upload done, individual traces are plotted and can be checked for selection. Traces represent the voltage membrane responses of the selected cell to the stimulus displayed in the legend. Highlight individual traces by hovering on the corresponding stimulus and select them by clicking on the same legend or through the selection buttons (see Fig. 2). When all the traces of interest have been selected, go the next page for feature selection.</p>
-<p>Step 3 of 4
-The feature selection page allows you to select the features to extract from the electrophysiological chosen signals. Features are grouped by type: 1) Spike event features - 2) Spike shape features and 3) Voltage features, and are selected by clicking on the corresponding box. When hovering on feature names a brief description is provided (see Fig. 3). Once the selection is completed, click on the Next button to launch the extraction process.</p>
-<p>Step 4 of 4
-The feature extraction process computes the means and standard deviations of the selected features for individual cells and for individual stimuli. Once a stimulus is chosen for a single file, it will be taken into account for all the selected files corresponding to the same cell. Finally, a grand mean is computed among different cells. A feature.json and protocol.json files are generated for both individual cells and the entire ensemble. A preview is provided on the last page for the .json files corresponding to the grand means and a link to .zip file containing the entire set of results is provided (see Fig. 4).</p>
+                <div class="section" id="feature-extraction-graphical-user-interface">
+<span id="efel-gui"></span><h1>Feature extraction Graphical User Interface<a class="headerlink" href="#feature-extraction-graphical-user-interface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The Feature extraction Graphical User Interface (GUI) is a web application that allows users to extract an ensemble of electrophysiological properties from voltage traces recorded upon electrical stimulation of neuronal cells. With respect to the data selection from which to extract the features, three scenarios are possible: 1) Based on her/his data permissions (see <a class="reference internal" href="#electrophys-data-label"><span class="std std-ref">Electrophysiological data</span></a>), the user select individual traces, classified by stimulation amplitude, from the HBP database. 2) The user select the voltage traces from the data files she/he uploaded through the &#8220;Upload&#8221; utility of the GUI. 3) The user select traces from both the HBP database and her/his own uploaded file(s).</p>
+<p>The application leverages the Python Electrophys Feature Extract Library (eFEL) and provides a friendly interface to select both individual voltage traces (based on the stimulus current applied) and features to be extracted.</p>
+</div>
+</div>
+<div class="section" id="electrophysiological-data">
+<span id="electrophys-data-label"></span><h1>Electrophysiological data<a class="headerlink" href="#electrophysiological-data" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="features-description">
+<h1>Features description<a class="headerlink" href="#features-description" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="graphical-user-interface">
+<h2>Graphical User Interface<a class="headerlink" href="#graphical-user-interface" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="trace-selection">
+<span id="trace-selection-label"></span><h3>Trace selection<a class="headerlink" href="#trace-selection" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="feature-selection">
+<h3>Feature selection<a class="headerlink" href="#feature-selection" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="results">
+<h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 </div>
 
             </div>
 
             <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../overview/overview.html">Overview</a>
+                </span>
                 
                 
             </aside>

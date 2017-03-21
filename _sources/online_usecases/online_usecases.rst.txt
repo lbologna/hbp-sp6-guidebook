@@ -1,11 +1,12 @@
 .. _online_usecases:
 
-================
+################
 Online Use Cases
-================
+################
 
+.. toctree::
+    :maxdepth: 4
 
-Trace Analysis
-==============
+    overview/overview
+    trace_analysis/efel_gui
 
-.. include:: trace_analysis/efel_gui.rst
