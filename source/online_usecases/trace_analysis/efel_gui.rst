@@ -1,10 +1,13 @@
 .. _efel_gui:
 
+###########################################
 Feature extraction Graphical User Interface
--------------------------------------------
+###########################################
 
+********
 Overview
 ********
+
 
 The Feature extraction Graphical User Interface (GUI) is a web application that allows users to extract an ensemble of electrophysiological properties from voltage traces recorded upon electrical stimulation of neuronal cells. With respect to the data selection from which to extract the features, three scenarios are possible: 1) Based on her/his data permissions (see :ref:`electrophys_data_label`), the user select individual traces, classified by stimulation amplitude, from the HBP database. 2) The user select the voltage traces from the data files she/he uploaded through the "Upload" utility of the GUI. 3) The user select traces from both the HBP database and her/his own uploaded file(s).
 
@@ -14,12 +17,15 @@ The application leverages the Python Electrophys Feature Extract Library (eFEL) 
 
 .. _electrophys_data_label:
 
+
 Electrophysiological data
-#########################
+=========================
+
 
 Features description
-####################
+====================
 
+************************
 Graphical User Interface
 ************************
 
@@ -27,10 +33,10 @@ Graphical User Interface
 .. _trace-selection-label:
 
 Trace selection
-###############
+===============
 
 Feature selection
-#################
+=================
 
 Results
-#######
+=======

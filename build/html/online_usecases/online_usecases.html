@@ -33,6 +33,7 @@
     <script type="text/javascript" src="../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Overview" href="overview/overview.html" />
     <link rel="prev" title="Getting started" href="../getting_started/getting_started.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -54,33 +55,12 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Online Use Cases</a><ul>
-<li><a class="reference internal" href="#trace-analysis">Trace Analysis</a><ul>
-<li><a class="reference internal" href="#feature-extraction-graphical-user-interface">Feature extraction Graphical User Interface</a><ul>
-<li><a class="reference internal" href="#overview">Overview</a><ul>
-<li><a class="reference internal" href="#electrophysiological-data">Electrophysiological data</a></li>
-<li><a class="reference internal" href="#features-description">Features description</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#graphical-user-interface">Graphical User Interface</a><ul>
-<li><a class="reference internal" href="#trace-selection">Trace selection</a></li>
-<li><a class="reference internal" href="#feature-selection">Feature selection</a></li>
-<li><a class="reference internal" href="#results">Results</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
   <h4>Previous topic</h4>
   <p class="topless"><a href="../getting_started/getting_started.html"
                         title="previous chapter">Getting started</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="overview/overview.html"
+                        title="next chapter">Overview</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -114,38 +94,37 @@
                     </span>
                     
                     
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="overview/overview.html">Overview</a>
+                    </span>
+                    
                 </aside>
 
                 <div class="section" id="online-use-cases">
 <span id="online-usecases"></span><h1>Online Use Cases<a class="headerlink" href="#online-use-cases" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="trace-analysis">
-<h2>Trace Analysis<a class="headerlink" href="#trace-analysis" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="feature-extraction-graphical-user-interface">
-<span id="efel-gui"></span><h3>Feature extraction Graphical User Interface<a class="headerlink" href="#feature-extraction-graphical-user-interface" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="overview">
-<h4>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h4>
-<p>The Feature extraction Graphical User Interface (GUI) is a web application that allows users to extract an ensemble of electrophysiological properties from voltage traces recorded upon electrical stimulation of neuronal cells. With respect to the data selection from which to extract the features, three scenarios are possible: 1) Based on her/his data permissions (see <a class="reference internal" href="trace_analysis/efel_gui.html#electrophys-data-label"><span class="std std-ref">Electrophysiological data</span></a>), the user select individual traces, classified by stimulation amplitude, from the HBP database. 2) The user select the voltage traces from the data files she/he uploaded through the &#8220;Upload&#8221; utility of the GUI. 3) The user select traces from both the HBP database and her/his own uploaded file(s).</p>
-<p>The application leverages the Python Electrophys Feature Extract Library (eFEL) and provides a friendly interface to select both individual voltage traces (based on the stimulus current applied) and features to be extracted.</p>
-<div class="section" id="electrophysiological-data">
-<span id="electrophys-data-label"></span><h5>Electrophysiological data<a class="headerlink" href="#electrophysiological-data" title="Permalink to this headline">¶</a></h5>
-</div>
-<div class="section" id="features-description">
-<h5>Features description<a class="headerlink" href="#features-description" title="Permalink to this headline">¶</a></h5>
-</div>
-</div>
-<div class="section" id="graphical-user-interface">
-<h4>Graphical User Interface<a class="headerlink" href="#graphical-user-interface" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="trace-selection">
-<span id="trace-selection-label"></span><h5>Trace selection<a class="headerlink" href="#trace-selection" title="Permalink to this headline">¶</a></h5>
-</div>
-<div class="section" id="feature-selection">
-<h5>Feature selection<a class="headerlink" href="#feature-selection" title="Permalink to this headline">¶</a></h5>
-</div>
-<div class="section" id="results">
-<h5>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h5>
-</div>
-</div>
-</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview/overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview/overview.html#user-experience">User experience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview/overview.html#use-case-maturity">Use case maturity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview/overview.html#hpc-access">HPC access</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="trace_analysis/efel_gui.html">Feature extraction Graphical User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="trace_analysis/efel_gui.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="trace_analysis/efel_gui.html#electrophysiological-data">Electrophysiological data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trace_analysis/efel_gui.html#features-description">Features description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="trace_analysis/efel_gui.html#graphical-user-interface">Graphical User Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="trace_analysis/efel_gui.html#trace-selection">Trace selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trace_analysis/efel_gui.html#feature-selection">Feature selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trace_analysis/efel_gui.html#results">Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
@@ -157,6 +136,10 @@
                     previous: <a class="hbpdoc-hnav-link" href="../getting_started/getting_started.html">Getting started</a>
                 </span>
                 
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="overview/overview.html">Overview</a>
+                </span>
                 
             </aside>
         </article>
