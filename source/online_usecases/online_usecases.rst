@@ -8,5 +8,5 @@ Online Use Cases
     :maxdepth: 4
 
     overview/overview
-    trace_analysis/efel_gui
+    trace_analysis/trace_analysis
 
