@@ -18,7 +18,7 @@ A schematic organization of the use cases workflow is shown in the figure on the
 So, here are a few simple typical steps you can follow to start your project:
 
 1. Navigate the use cases list to decide/find the one most appropriate to what you would like to do; the system will show you in some detail what is already available, based on your account accreditation;
-2. Once you choose the use case, the platform will guide you to create a new collab (or join an existing one); all code and HBP-generated experimental data and models needed to execute the use case will be copied there; in several cases you can also upload and work with your own data;
+2. Once you choose the use case, the platform will guide you to create a new collab (or to add the use case to one of your existing collabs); all code and HBP-generated experimental data and models needed to execute the use case will be copied there; in several cases you can also upload and work with your own data;
 3. Use your own imagination and collaborate with your team to pursue your scientific work, by using the tools already available or create new ones;
 4. Once you are satisfied with the results, you can download them and/or make your work available to other users by releasing it into the HBP database; our support team can eventually also help you in creating a new use case.
 
@@ -107,7 +107,7 @@ HPC access
 
 .. container:: bsp-inline-text 
 
-    Use cases with this icon require a small to medium amount of High-Performance Computing (HPC) resources. They can be either public, such as those available through the NSG, or provided by the user through a personal grant, such as a PRACE award.
+    Use cases with this icon require a small to medium amount of High-Performance Computing resources. They can be either public, such as those available through the NSG, or provided by the user through a personal grant, such as a PRACE award, on one of the supercomputer centers supporting HBP activities (JSC and CINECA).
 
 .. container:: bsp-container-left
 
@@ -116,5 +116,5 @@ HPC access
 
 .. container:: bsp-inline-text 
     
-    This type of use cases need large HPC resources, which must be provided by the user. Typically, use cases showing this icon involve complex simulations of large scale cellular level model of brain areas/regions, that are deployed on one of the supercomputer centers supporting HBP activities (JSC and CINECA). Subjected to technical compatibility and license agreement, this type of simulations can be delegated to be executed outside the BSP.
+    This type of use cases needs large HPC resources. Typically, use cases showing this icon involve complex simulations of large scale cellular level model of brain areas/regions, that are deployed on JSC and CINECA systems. Subjected to technical compatibility and license agreement, this type of simulations can be delegated to be executed on other HPC systems, outside the BSP.
 
