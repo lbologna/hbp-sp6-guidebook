@@ -4,7 +4,7 @@
 Overview
 ########
 
-The Single Cell Building use cases show practical examples of how to obtain a single cell model of morphologically and biophysically detailed neurons exploiting the Blue Brain Python Optimization Library (BluePyOpt, Van Geit W et al., 2016, Front. Neuroinform. 10:17. doi: 10.3389/fninf.2016.00017).
+The Single Cell Building use cases show practical examples of how to obtain a single cell model of morphologically and biophysically detailed neurons exploiting the Blue Brain Python Optimization Library (BluePyOpt, Van Geit W et al., 2016, `Front. Neuroinform <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4896051/#>`_. 10:17. doi: `10.3389/fninf.2016.00017 <http://journal.frontiersin.org/article/10.3389/fninf.2016.00017/full>`_).
 The different use cases will guide you through the most appropriate workflow, depending on what you would like to do. In general, they are organized around three different possibilities, of increasing complexity:
 1) Rebuild an existing single cell model2) Build your own cell model using HBP data3) Build your own cell model using HBP and/or your own data
 and an independent tool to
