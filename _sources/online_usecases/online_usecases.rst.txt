@@ -9,4 +9,5 @@ Online Use Cases
 
     overview/overview
     trace_analysis/trace_analysis
+    single_cell_building/single_cell_building
 
