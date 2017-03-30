@@ -16,7 +16,7 @@ Overview
 
 
 
-The Feature Extraction Graphical User Interface (GUI) is a web application that allows users to extract an ensemble of electrophysiological properties from voltage traces recorded upon electrical stimulation of neuronal cells. The application main outcome is the generation of two files - *features.json* and *protocol.json* - that the user will be able to use for later model parameter optimizations.
+The Feature Extraction Graphical User Interface (GUI) is a web application that allows users to extract an ensemble of electrophysiological properties from voltage traces recorded upon electrical stimulation of neuronal cells (see figure on the left). The application main outcome is the generation of two files - *features.json* and *protocol.json* - that the user will be able to use for later model parameter optimizations.
 
 With respect to the data selection, three scenarios are possible: 1) Based on her/his data permissions (see :ref:`electrophys-data-label`), the user select voltage traces from the Human Brain Project (HBP) database; 2) The user selects the voltage traces from the data files she/he uploaded through the "Upload" utility of the GUI; 3) The user select traces from both the HBP database and her/his own uploaded file(s).
 
