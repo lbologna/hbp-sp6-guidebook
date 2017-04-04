@@ -102,7 +102,7 @@ The features the user can select for extraction are described at this `link <htt
 
 They are computed for every trace, collected by cell and successively averaged by stimulus amplitude. The computed values are averaged a second time among cells. This will generate two result files (i.e. *features.json* and  *protocol.json*) per cell plus two supplementary files with the global averages. If the standard deviation of some feature is zero, the computed values (i.e. mean and standard deviation) are not reported.
 
-.. While the `eFEL <http://bluebrain.github.io/eFEL/index.html>`_ extracts the features of interest from single traces (individually selected or grouped) it does not take into account any information on the cell properties, such as the *cell_id* needed to group the results for the generation of the above mentioned *features.json* and *protocol.json*. To perform this wrapping we used a custom python code (please contact `christian.rossert AT epfl.ch` for further informations).
+While the `eFEL <http://bluebrain.github.io/eFEL/index.html>`_ extracts the features of interest from single traces (individually selected or grouped) it does not take into account any information on the cell properties, such as the *cell_id* needed to group the results for the generation of the above mentioned *features.json* and *protocol.json*. To perform this wrapping we used a custom python code (please contact `christian.rossert AT epfl.ch` for further information).
 
 
 ************************
