@@ -4,13 +4,13 @@
 Build your own single cell model using HBP data 
 ###############################################
 
-This use case allows a user to configure the `BluePyOpt <http://bluepyopt.readthedocs.io/en/latest/>`_ to run an optimization choosing from HBP data for morphology, channel kinetics, features, and parameters. The current version, allows to select among self-consistent configuration files from previous optimizations.
+This use case allows a user to configure the `BluePyOpt <http://bluepyopt.readthedocs.io/en/latest/>`_ to run an optimization choosing from HBP data for morphology, channel kinetics, features, and parameters. The current version allows to select among self-consistent configuration files from previous optimizations.
 
 |
 
 Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/new collab.  The cloned Notebooks are:
 
-1. “BluePyOpt Browse All” – it allows users to:
+1 “BluePyOpt Browse All” – it allows users to:
 
   1.1 choose and visualize an existing morphology from HBP data (name and type of morphology are listed)
 
@@ -27,7 +27,7 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
 .. container:: bsp-container-center
 
     .. image:: images/byohd_chose.png
-        :width: 600px
+        :width: 500px
         :align: right
 
 |
@@ -53,16 +53,15 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
 
 |
 
-  1.5 configure the BluePyOpt optimization algorithm, by defining the offspring size and the max number of generations, that are set by default to 10 and 2 respectively
+  1.5 configure the BluePyOpt optimization algorithm, by defining the offspring size and the max number of generations; they are set by default to 10 and 2 respectively
 
 |
 
   1.6 "Create zip file" will generate the zip file needed to run the new optimization
 
-
 |
 
-  1.7 Login to NSG (Neuroscience Gateway) by inserting username and password and clicking on the "Login NSG" button
+  1.7 Login to NSG (Neuroscience Gateway) by inserting your username and password and clicking on the "Login NSG" button
 
 .. container:: bsp-container-center
 
@@ -80,11 +79,63 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
 
 |
 
+  1.10 the job has been submitted when you see:
 
-  1.10 If interested in looking the code click on “Click here to toggle on/off the raw code” button
+.. container:: bsp-container-center
 
+    .. image:: images/byohd_submitted.png
+        :width: 300px
+        :align: right
+
+|
+
+You may check the job status by clicking on the “Check NSG simulation”. The status may be: QUEUE, COMMANDRENDERING, INPUTSTAGING, SUBMITTED, LOAD_RESULTS or COMPLETED;
+Once the job is COMPLETED, results are saved in the collab storage, under the BluePyOptAll/resultsNSG/username/datetime folder
+
+|
+
+  1.11 If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
+ 
 .. container:: bsp-container-center
 
     .. image:: images/byohd_toggle.png
         :width: 250px
         :align: right
+
+|
+
+2 “NSG Job Manager” – a Jupyter Notebook that allows users to:
+   
+   2.1 login to Neuroscience Gateway (NSG) and load the Job Manager by clicking on “Job manager”
+   
+.. container:: bsp-container-center
+
+    .. image:: images/byohd_loginNSG.png
+        :width: 250px
+        :align: right
+
+|
+
+   2.2 copy completed jobs from NSG to the collab storage by clicking on → 
+
+|
+
+   2.3 refresh jobs on NSG by clicking on 
+
+.. container:: bsp-container-center
+
+    .. image:: images/byohd_refresh.png
+        :width: 450px
+        :align: right
+
+|
+
+
+a job can be stored only if completed
+
+.. container:: bsp-container-center
+
+    .. image:: images/byohd_completed.png
+        :width: 450px
+        :align: right
+

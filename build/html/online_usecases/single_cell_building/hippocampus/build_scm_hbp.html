@@ -112,14 +112,12 @@
 
                 <div class="section" id="build-your-own-single-cell-model-using-hbp-data">
 <span id="build-scm-hbp"></span><h1>Build your own single cell model using HBP data<a class="headerlink" href="#build-your-own-single-cell-model-using-hbp-data" title="Permalink to this headline">¶</a></h1>
-<p>This use case allows a user to configure the <a class="reference external" href="http://bluepyopt.readthedocs.io/en/latest/">BluePyOpt</a> to run an optimization choosing from HBP data for morphology, channel kinetics, features, and parameters. The current version, allows to select among self-consistent configuration files from previous optimizations.</p>
+<p>This use case allows a user to configure the <a class="reference external" href="http://bluepyopt.readthedocs.io/en/latest/">BluePyOpt</a> to run an optimization choosing from HBP data for morphology, channel kinetics, features, and parameters. The current version allows to select among self-consistent configuration files from previous optimizations.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/new collab.  The cloned Notebooks are:</p>
-<ol class="arabic simple">
-<li>“BluePyOpt Browse All” – it allows users to:</li>
-</ol>
+<p>1 “BluePyOpt Browse All” – it allows users to:</p>
 <blockquote>
 <div>1.1 choose and visualize an existing morphology from HBP data (name and type of morphology are listed)</div></blockquote>
 <div class="bsp-container-center docutils container">
@@ -131,7 +129,7 @@
 <blockquote>
 <div>1.2 choose a self-consistent set of configuration files (the four JSON files) for the chosen morphology; the list includes those available for the selected morphology</div></blockquote>
 <div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/byohd_chose.png"><img alt="../../../_images/byohd_chose.png" class="align-right" src="../../../_images/byohd_chose.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/byohd_chose.png"><img alt="../../../_images/byohd_chose.png" class="align-right" src="../../../_images/byohd_chose.png" style="width: 500px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -153,7 +151,7 @@
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div>1.5 configure the BluePyOpt optimization algorithm, by defining the offspring size and the max number of generations, that are set by default to 10 and 2 respectively</div></blockquote>
+<div>1.5 configure the BluePyOpt optimization algorithm, by defining the offspring size and the max number of generations; they are set by default to 10 and 2 respectively</div></blockquote>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -163,7 +161,7 @@
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div>1.7 Login to NSG (Neuroscience Gateway) by inserting username and password and clicking on the &#8220;Login NSG&#8221; button</div></blockquote>
+<div>1.7 Login to NSG (Neuroscience Gateway) by inserting your username and password and clicking on the &#8220;Login NSG&#8221; button</div></blockquote>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/byohd_login.png"><img alt="../../../_images/byohd_login.png" class="align-right" src="../../../_images/byohd_login.png" style="width: 300px;" /></a>
 </div>
@@ -181,9 +179,51 @@
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div>1.10 If interested in looking the code click on “Click here to toggle on/off the raw code” button</div></blockquote>
+<div>1.10 the job has been submitted when you see:</div></blockquote>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/byohd_submitted.png"><img alt="../../../_images/byohd_submitted.png" class="align-right" src="../../../_images/byohd_submitted.png" style="width: 300px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>You may check the job status by clicking on the “Check NSG simulation”. The status may be: QUEUE, COMMANDRENDERING, INPUTSTAGING, SUBMITTED, LOAD_RESULTS or COMPLETED;
+Once the job is COMPLETED, results are saved in the collab storage, under the BluePyOptAll/resultsNSG/username/datetime folder</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div>1.11 If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</div></blockquote>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/byohd_toggle.png"><img alt="../../../_images/byohd_toggle.png" class="align-right" src="../../../_images/byohd_toggle.png" style="width: 250px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>2 “NSG Job Manager” – a Jupyter Notebook that allows users to:</p>
+<blockquote>
+<div>2.1 login to Neuroscience Gateway (NSG) and load the Job Manager by clicking on “Job manager”</div></blockquote>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/byohd_loginNSG.png"><img alt="../../../_images/byohd_loginNSG.png" class="align-right" src="../../../_images/byohd_loginNSG.png" style="width: 250px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div>2.2 copy completed jobs from NSG to the collab storage by clicking on →</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div>2.3 refresh jobs on NSG by clicking on</div></blockquote>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/byohd_refresh.png"><img alt="../../../_images/byohd_refresh.png" class="align-right" src="../../../_images/byohd_refresh.png" style="width: 450px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>a job can be stored only if completed</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/byohd_completed.png"><img alt="../../../_images/byohd_completed.png" class="align-right" src="../../../_images/byohd_completed.png" style="width: 450px;" /></a>
 </div>
 </div>
 
