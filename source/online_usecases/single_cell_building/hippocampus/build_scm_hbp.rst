@@ -156,7 +156,7 @@ a job can be stored only if completed
 
 
 |
-
+|
 
 .. container:: bsp-container-center
 
