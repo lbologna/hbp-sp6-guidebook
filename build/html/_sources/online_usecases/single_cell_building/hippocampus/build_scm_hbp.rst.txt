@@ -90,7 +90,7 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
 |
 
 You may check the job status by clicking on the “Check NSG simulation”. The status may be: QUEUE, COMMANDRENDERING, INPUTSTAGING, SUBMITTED, LOAD_RESULTS or COMPLETED;
-Once the job is COMPLETED, results are saved in the collab storage, under the BluePyOptAll/resultsNSG/username/datetime folder
+Once the job is COMPLETED, results are saved in the collab storage, under the BluePyOptAll/resultsNSG/username/foldername (foldername is the name of the configuration set, where date and time are changed with the current date and time)
 
 |
 
@@ -120,7 +120,9 @@ Once the job is COMPLETED, results are saved in the collab storage, under the Bl
 
 |
 
-   2.3 refresh jobs on NSG by clicking on 
+   2.3 refresh jobs on NSG by clicking on |wait_symbol|
+
+.. |wait_symbol| image:: images/wait.png
 
 .. container:: bsp-container-center
 
@@ -139,3 +141,29 @@ a job can be stored only if completed
         :width: 450px
         :align: right
 
+|
+
+3 “BluePyOpt Analysis” – a Jupyter Notebook that allows users to:
+
+    3.1 Choose a previous optimization, from the HBP GitHub repository or from the collab storage, and run an analysis by clicking on “View analysis”
+
+
+.. container:: bsp-container-center
+
+    .. image:: images/byohd_saveAnalysis.png
+        :width: 500px
+        :align: right
+
+
+|
+
+
+.. container:: bsp-container-center
+
+    .. image:: images/byohd_viewAnalysis.png
+        :width: 500px
+        :align: right
+
+|
+
+    3.2 Save the analysis in the storage by clicking on “Save analysis”. The analysis are saved under the BluePyOptAnalysis/username/foldername (foldername is the name of the optimization)
