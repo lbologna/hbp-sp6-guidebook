@@ -147,15 +147,15 @@ a job can be stored only if completed
 
     3.1 Choose a previous optimization, from the HBP GitHub repository or from the collab storage, and run an analysis by clicking on “View analysis”
 
+    3.2 Save the analysis in the storage by clicking on “Save analysis”. The analysis are saved under the BluePyOptAnalysis/username/foldername (foldername is the name of the optimization)
 
 .. container:: bsp-container-center
 
     .. image:: images/byohd_saveAnalysis.png
         :width: 500px
         :align: right
+    
 
-
-|
 |
 
 .. container:: bsp-container-center
@@ -166,4 +166,3 @@ a job can be stored only if completed
 
 |
 
-    3.2 Save the analysis in the storage by clicking on “Save analysis”. The analysis are saved under the BluePyOptAnalysis/username/foldername (foldername is the name of the optimization)
