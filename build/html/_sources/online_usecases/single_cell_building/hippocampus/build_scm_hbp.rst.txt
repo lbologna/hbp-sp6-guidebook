@@ -160,7 +160,7 @@ a job can be stored only if completed
 
 .. container:: bsp-container-center
 
-    .. image:: images/byohd_viewAnalysis.png
+    .. image:: images/byohd_viewTraces.png
         :width: 500px
         :align: right
 
