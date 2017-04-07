@@ -51,6 +51,8 @@ Before diving into the steps, one necessary condition is to install the HVF plat
 Choosing and loading a model from the HVF Model Catalog
 ********************************************************
 
+|
+
 **Purpose**
 
 In the HVF, user checks out the model catalog containing the list of currently available models for validations. The user then picks a model (see video below). 
