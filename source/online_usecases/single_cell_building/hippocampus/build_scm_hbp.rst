@@ -99,7 +99,7 @@ Once the job is COMPLETED, results are saved in the collab storage, under the Bl
 .. container:: bsp-container-center
 
     .. image:: images/byohd_toggle.png
-        :width: 250px
+        :width: 300px
         :align: right
 
 |
@@ -111,7 +111,7 @@ Once the job is COMPLETED, results are saved in the collab storage, under the Bl
 .. container:: bsp-container-center
 
     .. image:: images/byohd_loginNSG.png
-        :width: 250px
+        :width: 300px
         :align: right
 
 |
@@ -127,7 +127,7 @@ Once the job is COMPLETED, results are saved in the collab storage, under the Bl
 .. container:: bsp-container-center
 
     .. image:: images/byohd_refresh.png
-        :width: 450px
+        :width: 600px
         :align: right
 
 |
@@ -138,7 +138,7 @@ a job can be stored only if completed
 .. container:: bsp-container-center
 
     .. image:: images/byohd_completed.png
-        :width: 450px
+        :width: 600px
         :align: right
 
 |
@@ -152,7 +152,7 @@ a job can be stored only if completed
 .. container:: bsp-container-center
 
     .. image:: images/byohd_saveAnalysis.png
-        :width: 500px
+        :width: 600px
         :align: right
     
 
@@ -161,7 +161,7 @@ a job can be stored only if completed
 .. container:: bsp-container-center
 
     .. image:: images/byohd_viewTraces.png
-        :width: 500px
+        :width: 600px
         :align: right
 
 |
