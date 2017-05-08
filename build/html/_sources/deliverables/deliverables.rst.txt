@@ -38,6 +38,8 @@ Deliverables
 
 `Public release documentation <https://collab.humanbrainproject.eu/#/collab/1655/nav/15208?state=uuid%3D248fd3c4-b76f-4448-aba8-c8627b344ec1>`_
 
+Collaboratory
+`Collaboratory Home`_
 
 .. _`Updated data specification (Dec 2016)`: https://collab.humanbrainproject.eu/#/collab/1655/nav/15208
 .. _`Collaboratory Home`: https://collab.humanbrainproject.eu/#/collab/19/nav/175
