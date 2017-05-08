@@ -40,4 +40,6 @@ Deliverables
 
 
 .. _`Updated data specification (Dec 2016)`: https://collab.humanbrainproject.eu/#/collab/1655/nav/15208
+.. _`Collaboratory Home`: https://collab.humanbrainproject.eu/#/collab/19/nav/175
+
 .. .. _`Updated data specification (Dec 2016)`: https://collab.humanbrainproject.eu/#/collab/1655/nav/15208?state=uuid%3Dbf34e292-a4c8-4330-be68-8c7af922c1e0
