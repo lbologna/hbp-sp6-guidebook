@@ -1,0 +1,293 @@
+
+
+
+<!DOCTYPE html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Synaptic events fitting (user’s data) &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Single Cell Building" href="../../single_cell_building/single_cell_building.html" />
+    <link rel="prev" title="Synaptic events fitting (user’s model)" href="../syn_events_fituser_mod/syn_events_fituser_mod.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body role="document">
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../syn_events_fituser_mod/syn_events_fituser_mod.html"
+                        title="previous chapter">Synaptic events fitting (user’s model)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../single_cell_building/single_cell_building.html"
+                        title="next chapter">Single Cell Building</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/online_usecases/trace_analysis/syn_events_fit_user_data/syn_events_fit_user_data.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../trace_analysis.html">Trace Analysis</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../syn_events_fituser_mod/syn_events_fituser_mod.html">Synaptic events fitting (user’s model)</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../../single_cell_building/single_cell_building.html">Single Cell Building</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="synaptic-events-fitting-users-data">
+<span id="syn-events-fit-user-data"></span><h1>Synaptic events fitting (user’s data)<a class="headerlink" href="#synaptic-events-fitting-users-data" title="Permalink to this headline">¶</a></h1>
+<p>This use case allows a user to fit synaptic events data with model from NeuroInformatics Platform.</p>
+<p>Selecting this use case, one Jupyter Notebook is cloned in a private existing/new collab.</p>
+<p>By launching the notebook (Run All from the “Cell” menu), a simple graphical interface will guide the user to:</p>
+<ol class="arabic">
+<li><p class="first">Select a local experimental file</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/select_exp1.png"><img alt="../../../_images/select_exp1.png" class="align-center" src="../../../_images/select_exp1.png" style="width: 400px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>At this time, the only accepted format for the experimental file is a text file with time in the first column and individual traces in successive columns. All columns must be of the same length.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</li>
+<li><p class="first">Fill the form with the values needed to write a configuration file: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse). The name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters are by default those corresponding to the model from NeuroInformatics Platform</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/fill_form1.png"><img alt="../../../_images/fill_form1.png" class="align-center" src="../../../_images/fill_form1.png" style="width: 400px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/fitting_params.png"><img alt="../../../_images/fitting_params.png" class="align-center" src="../../../_images/fitting_params.png" style="width: 600px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/dependencies1.png"><img alt="../../../_images/dependencies1.png" class="align-center" src="../../../_images/dependencies1.png" style="width: 500px;" /></a>
+</div>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="3">
+<li><p class="first">Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure on JURECA or on MARCONI using UNICORE authentication, or on the NSG and check the status of the job</p>
+<p>On JURECA the number of nodes, number of CPUs per node and runtime are set by default to 2, 24 and 10m respectively</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>On MARCONI the number of nodes, number of CPUs per node and runtime are set by default to 2, 36 and 10m respectively</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The user needs to be aware of the limitations imposed by each HPC system on resources</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>On the NSG the number of nodes, number of cores and runtime are set by default to 2, 24 and 0.5 respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact <a class="reference external" href="mailto:nsghelp&#37;&#52;&#48;sdsc&#46;edu">nsghelp<span>&#64;</span>sdsc<span>&#46;</span>edu</a>. The maximum number of cores required per node is 24.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/select_hpc1.png"><img alt="../../../_images/select_hpc1.png" class="align-center" src="../../../_images/select_hpc1.png" style="width: 400px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/set_cores_nodes1.png"><img alt="../../../_images/set_cores_nodes1.png" class="align-center" src="../../../_images/set_cores_nodes1.png" style="width: 400px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/login2.png"><img alt="../../../_images/login2.png" class="align-center" src="../../../_images/login2.png" style="width: 400px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/job_submitted2.png"><img alt="../../../_images/job_submitted2.png" class="align-center" src="../../../_images/job_submitted2.png" style="width: 400px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Once the job is completed, the output files will be in the collab storage under different directories, according to the system used.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>JURECA: results are saved under the results/output_submissionTime folder;</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>MARCONI: results are saved under the resultsMarconi/output_submissionTime folder;</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>NSG results are saved under the resultsNSG/output_submissionTime folder.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</li>
+<li><p class="first">Analyse the optimized parameters. The user may visualize:</p>
+<p>4.1. The results table (sorted in ascending order by the fitting error).</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/results_table1.png"><img alt="../../../_images/results_table1.png" class="align-center" src="../../../_images/results_table1.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>4.2. The boxplot of the normalized results.</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/results_box1.png"><img alt="../../../_images/results_box1.png" class="align-center" src="../../../_images/results_box1.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>4.3. The best fit.</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/results_fit1.png"><img alt="../../../_images/results_fit1.png" class="align-center" src="../../../_images/results_fit1.png" style="width: 700px;" /></a>
+</div>
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic" start="5">
+<li><p class="first">If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/toggle_button2.png"><img alt="../../../_images/toggle_button2.png" class="align-center" src="../../../_images/toggle_button2.png" style="width: 300px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</li>
+</ol>
+<dl class="docutils">
+<dt>Warnings</dt>
+<dd><ul class="first last simple">
+<li>Each notebook cell has two square bracket on the left.<ol class="arabic">
+<li>When are empty, it means that the code was never run before</li>
+<li>When there is an asterisk [*], it means that the code is running</li>
+<li>When there is a number, it means that the code was run. A progressive numbering scheme define the order in which the cells were run</li>
+</ol>
+</li>
+<li>Each time a notebook is executed, a kernel status symbol is displayed in the top right corner of the notebook<ol class="arabic">
+<li>When there is a circle bullet •, it means that the kernel is running and the user have to be sure to not interfere with the code execution</li>
+<li>When there is an empty circle bullet ○, it means that the kernel is idle and the user can interfere with the notebook</li>
+</ol>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../syn_events_fituser_mod/syn_events_fituser_mod.html">Synaptic events fitting (user’s model)</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../../single_cell_building/single_cell_building.html">Single Cell Building</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Luca L. Bologna, Carmen A. Lupascu, R. Migliore, M. Migliore.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>
