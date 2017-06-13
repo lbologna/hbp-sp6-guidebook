@@ -1,6 +1,6 @@
 # hbp-sp6-guidebook
 
-### Building HTTP documentation
+### Building HTML documentation
 
 ```bash
 virtualenv venv \
