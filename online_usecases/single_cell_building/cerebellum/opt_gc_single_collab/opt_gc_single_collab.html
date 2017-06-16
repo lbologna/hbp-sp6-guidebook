@@ -1,0 +1,325 @@
+
+
+
+<!DOCTYPE html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mono compartmental Cerebellar Granule cell running on the collab &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Multi compartmental Cerebellar Granule cell running on collab" href="../opt_gc_multi_collab/opt_gc_multi_collab.html" />
+    <link rel="prev" title="Cerebellum" href="../cerebellum.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body role="document">
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../cerebellum.html"
+                        title="previous chapter">Cerebellum</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../opt_gc_multi_collab/opt_gc_multi_collab.html"
+                        title="next chapter">Multi compartmental Cerebellar Granule cell running on collab</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/online_usecases/single_cell_building/cerebellum/opt_gc_single_collab/opt_gc_single_collab.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../../single_cell_building.html">Single Cell Building</a>
+                    
+                    <a href="../cerebellum.html">Cerebellum</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../cerebellum.html">Cerebellum</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../opt_gc_multi_collab/opt_gc_multi_collab.html">Multi compartmental Cerebellar Granule cell running on collab</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="mono-compartmental-cerebellar-granule-cell-running-on-the-collab">
+<h1>Mono compartmental Cerebellar Granule cell running on the collab<a class="headerlink" href="#mono-compartmental-cerebellar-granule-cell-running-on-the-collab" title="Permalink to this headline">¶</a></h1>
+<p>The model is an adaptation of a mono compartmental granule cell NEURON model (D&#8217;Angelo et al., 2001)</p>
+<p><a class="reference external" href="https://senselab.med.yale.edu/modeldb/showModel.cshtml?model=116835">https://senselab.med.yale.edu/modeldb/showModel.cshtml?model=116835</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>INFO</p>
+<p>Since the intensive computational power required to run all the simulations, this optimization can be run on the collab with a max of 4 individuals for only 4 generations.</p>
+<p>The results can go from not acceptable models to good results, depending on the optimization.</p>
+<p>Each notebook cell has two square brackets on the left. When there is a number it means that the cell can be started. When, instead, an asterisk [*] is present it means that the code in that cell is running.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/opt_run_param.png"><img alt="../../../../_images/opt_run_param.png" class="align-left" src="../../../../_images/opt_run_param.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 1 – This optimization can be run on the collab but, given the intensive computational power required to run all the simulations, it is better not to use more than 4 individuals and 4 generations. Because of this limitation, each run can generate a single model with a different degree of quality.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/custom1.png"><img alt="../../../../_images/custom1.png" class="align-left" src="../../../../_images/custom1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 2 - This custom class defines the parameters and section to create to build an axon composed by specific sections. It is used to define the temperature, Vinit and the tables used in the MOD files too.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/files1.png"><img alt="../../../../_images/files1.png" class="align-left" src="../../../../_images/files1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 3 – To run the optimization, it is necessary to download some files from the collab storage to the place where the python notebook will run.
+The file downloaded are the neuron morphology and the ionic channels.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/morph1.png"><img alt="../../../../_images/morph1.png" class="align-left" src="../../../../_images/morph1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 4 – This part of the code defines which morphology to load, if the axon has to be replaced by the previous Class and the locations, where we will insert the channels. The basic sectionlists are somatic, axonal, apical and basal.  It is possible to define custom sections and sectionslists.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/info_passive1.png"><img alt="../../../../_images/info_passive1.png" class="align-left" src="../../../../_images/info_passive1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 5 – This cell contains all the information to place the passive properties, with specific parameters, on the morphological locations defined before. For example: the membrane capacitance on all sections, will have a name cm_all, a param name taken from the mod file, the value, the location and the fact that is not a range (frozen = True)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/ionic_mec1.png"><img alt="../../../../_images/ionic_mec1.png" class="align-left" src="../../../../_images/ionic_mec1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 6 - The ionic mechanisms are loaded and inserted in the respective sections, defining which is each channel suffix, based on the information taken from the MOD files.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/channel_conduct1.png"><img alt="../../../../_images/channel_conduct1.png" class="align-left" src="../../../../_images/channel_conduct1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 7 – Each channel is provided with a conductance range, location and name</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/cell_all1.png"><img alt="../../../../_images/cell_all1.png" class="align-left" src="../../../../_images/cell_all1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 8 – This is the cell in which we put together the morphology, the passive and active properties to generate the cell template.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/el_location1.png"><img alt="../../../../_images/el_location1.png" class="align-left" src="../../../../_images/el_location1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 9 – Electrode location, used both to deliver the current and to record the voltage.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/stimuli1.png"><img alt="../../../../_images/stimuli1.png" class="align-left" src="../../../../_images/stimuli1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 10 - Stimuli, recordings location and protocols. For each protocol can be defined a recording location and a stimulus, in this case, both are in the soma.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The default parameter are the conductances which were known to produce a working model. Here are present to compare the results of the optimization with a reference.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/features1.png"><img alt="../../../../_images/features1.png" class="align-left" src="../../../../_images/features1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 11 – Features name and their parameter. They were obtained, with efel, from traces recorded, in vitro, from mice (Masoli et al., 2017).</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/cell_eval1.png"><img alt="../../../../_images/cell_eval1.png" class="align-left" src="../../../../_images/cell_eval1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 12 – The cell evaluator is in charge of putting together the model template and the parameter we want to search in the optimization.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/opt_gen1.png"><img alt="../../../../_images/opt_gen1.png" class="align-left" src="../../../../_images/opt_gen1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 13 – The optimization requires and certain number of individual and generation. More individual, more combination will be tested.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/eval_best1.png"><img alt="../../../../_images/eval_best1.png" class="align-left" src="../../../../_images/eval_best1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 14 – Evaluation of the best individual based on each simulation.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/plot_best1.png"><img alt="../../../../_images/plot_best1.png" class="align-left" src="../../../../_images/plot_best1.png" style="width: 1000px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Fig. 15 - Plot of the best individual and the min fitness obtained during the optimization</p>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../cerebellum.html">Cerebellum</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../opt_gc_multi_collab/opt_gc_multi_collab.html">Multi compartmental Cerebellar Granule cell running on collab</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Luca L. Bologna, Carmen A. Lupascu, R. Migliore, M. Migliore.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>
