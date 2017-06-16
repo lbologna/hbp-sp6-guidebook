@@ -8,4 +8,5 @@ Single Cell Building
     :maxdepth: 4
 
     overview/overview
-    hippocampus/hippocampus  
+    hippocampus/hippocampus  
+    cerebellum/cerebellum  
