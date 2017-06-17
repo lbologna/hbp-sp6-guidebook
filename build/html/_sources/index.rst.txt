@@ -16,7 +16,7 @@ As a result, the unique functionality of the Platform allows novel questions to 
 
    getting_started/getting_started
    online_usecases/online_usecases
-   deliverables/deliverables
+   official_documents/official_documents
 
 .. Indices and tables
 .. ==================
