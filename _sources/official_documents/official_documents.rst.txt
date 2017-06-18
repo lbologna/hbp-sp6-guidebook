@@ -1,7 +1,7 @@
 .. _official_documents:
 
 ##################
-Official documents
+Official Documents
 ##################
 
 .. toctree::
