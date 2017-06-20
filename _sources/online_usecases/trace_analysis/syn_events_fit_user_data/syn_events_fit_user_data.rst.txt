@@ -71,10 +71,19 @@ By launching the notebook (Run All from the “Cell” menu), a simple graphical
    .. container:: bsp-container-center
 
        .. image:: images/select_hpc.png
-           :width: 400px
+           :width: 300px
            :align: center
         
    |
+
+   .. container:: bsp-container-center
+
+       .. image:: images/run_all_traces.png
+           :width: 150px
+           :align: center
+        
+   |
+ 
  
    .. container:: bsp-container-center
 
@@ -97,7 +106,11 @@ By launching the notebook (Run All from the “Cell” menu), a simple graphical
     .. image:: images/job_submitted.png
      :width: 400px
      :align: center
-        
+   
+   |
+
+   The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.
+
    |
 
    Once the job is completed, the output files will be in the collab storage under different directories, according to the system used.
@@ -147,7 +160,19 @@ By launching the notebook (Run All from the “Cell” menu), a simple graphical
     .. image:: images/results_fit.png
         :width: 700px
         :align: center
-        
+   
+    |
+
+    The user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage and visualize the table data, the box plot and the best fit. Once a collab storage folder is chosen, the user must select a corresponding experimental file (txt file), configuration file (txt file) and a result file (csv file).    
+
+   .. container:: bsp-container-center
+
+    .. image:: images/results_fit.png
+        :width: 700px
+        :align: center
+   
+    |
+
 |
 
 
@@ -178,4 +203,15 @@ Warnings
         2. When there is an empty circle bullet ○, it means that the kernel is idle and the user can interfere with the notebook
         
         
+    •   After sending a job to the HPC systems: 
+        
+        1. The collab page MUST NOT be closed. 
+
+        2. The web page MUST NOT be closed. 
+
+        3. The browser MUST NOT be closed. 
+
+        4. If the connection is interrupted, the user cannot recover the results. 
+
+        5. The page MUST remain always active to retrieve the results.   
     
