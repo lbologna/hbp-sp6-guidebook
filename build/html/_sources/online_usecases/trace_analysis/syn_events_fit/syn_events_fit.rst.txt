@@ -88,7 +88,7 @@ Selecting this use case, one Jupyter Notebook is cloned in a private existing/ne
    .. container:: bsp-container-center
 
        .. image:: images/hpc_selection.png
-           :width: 400px
+           :width: 300px
            :align: center
         
    |
@@ -96,7 +96,7 @@ Selecting this use case, one Jupyter Notebook is cloned in a private existing/ne
    .. container:: bsp-container-center
 
        .. image:: images/run_all_traces.png
-           :width: 300px
+           :width: 150px
            :align: center
         
    |
