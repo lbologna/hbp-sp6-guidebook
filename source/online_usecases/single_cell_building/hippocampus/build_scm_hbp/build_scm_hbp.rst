@@ -159,7 +159,39 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
 
    .. container:: bsp-container-center
 
-     .. image:: images/byohd_viewTraces.png
-        :width: 600px
+     .. image:: images/byohd_morphology.png
+        :width: 500px
+        :align: right
+
+   |
+
+   .. container:: bsp-container-center
+
+     .. image:: images/byohd_view_save.png
+        :width: 250px
+        :align: right
+
+   |
+
+   .. container:: bsp-container-center
+
+     .. image:: images/byohd_peaks.png
+        :width: 500px
+        :align: right
+
+   |
+
+   .. container:: bsp-container-center
+
+     .. image:: images/byohd_bars.png
+        :width: 500px
+        :align: right
+
+   |
+
+   .. container:: bsp-container-center
+
+     .. image:: images/byohd_traces.png
+        :width: 500px
         :align: right
 
