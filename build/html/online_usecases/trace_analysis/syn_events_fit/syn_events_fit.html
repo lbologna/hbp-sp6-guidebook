@@ -113,6 +113,9 @@
 <span id="syn-events-fit"></span><h1>Synaptic events fitting<a class="headerlink" href="#synaptic-events-fitting" title="Permalink to this headline">¶</a></h1>
 <p>This use case allows a user to fit synaptic events using data and model from the Neuroinformatics Platform (NIP).</p>
 <p>Selecting this use case, one Jupyter Notebook is cloned in a private existing/new collab.  By launching the notebook (Run All from the “Cell” menu), a simple graphical interface will guide the user to:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <ol class="arabic">
 <li><p class="first">Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to fit</p>
 <div class="bsp-container-center docutils container">
@@ -122,10 +125,12 @@
 <div class="line"><br /></div>
 </div>
 <p>A configuration file corresponding to the experimental file chosen is downloaded from the collab storage. The file includes: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse), the name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters</p>
+</li>
+</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</li>
+<ol class="arabic" start="2">
 <li><p class="first">Select a default or a local mod file</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/mod_selection.png"><img alt="../../../_images/mod_selection.png" class="align-center" src="../../../_images/mod_selection.png" style="width: 300px;" /></a>
@@ -134,6 +139,29 @@
 <div class="line"><br /></div>
 </div>
 <p>Of course, we assume that the user knows what we are talking about here, and that the uploaded mod file has been already tested by the user in preliminary simulations. The program does not make any check, from this point of view. An invalid file will result in errors at NEURON compilation time</p>
+<p>When a local mod file is chosen, a form with the values needed to write a corresponding configuration file is opened. The number of traces in the experimental file and the protocol (voltage clamp amplitude and reversal potential of the synapse) are by default filled with the values corresponding to the chosen experimental file. The name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters must be filled by the user. Typical values are shown in the figures below:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/local_mod.png"><img alt="../../../_images/local_mod.png" class="align-center" src="../../../_images/local_mod.png" style="width: 300px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/local_mod_values.png"><img alt="../../../_images/local_mod_values.png" class="align-center" src="../../../_images/local_mod_values.png" style="width: 300px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/local_mod_values_params.png"><img alt="../../../_images/local_mod_values_params.png" class="align-center" src="../../../_images/local_mod_values_params.png" style="width: 500px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>All the other parameters that are not fitted have their default value as defined in the mod file.</p>
 </li>
 </ol>
 <div class="line-block">
@@ -155,7 +183,13 @@
 </div>
 <p>On the NSG the number of nodes, number of cores and runtime are set by default to 2, 24 and 0.5 (hours) respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact <a class="reference external" href="mailto:nsghelp&#37;&#52;&#48;sdsc&#46;edu">nsghelp<span>&#64;</span>sdsc<span>&#46;</span>edu</a>. The maximum number of cores required per node is 24</p>
 <div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/hpc_selection.png"><img alt="../../../_images/hpc_selection.png" class="align-center" src="../../../_images/hpc_selection.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/hpc_selection.png"><img alt="../../../_images/hpc_selection.png" class="align-center" src="../../../_images/hpc_selection.png" style="width: 400px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/run_all_traces.png"><img alt="../../../_images/run_all_traces.png" class="align-center" src="../../../_images/run_all_traces.png" style="width: 300px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -175,6 +209,10 @@
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/job_submitted1.png"><img alt="../../../_images/job_submitted1.png" class="align-center" src="../../../_images/job_submitted1.png" style="width: 300px;" /></a>
 </div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -206,6 +244,13 @@
 <p>4.3. The best fit</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/results_plot.png"><img alt="../../../_images/results_plot.png" class="align-center" src="../../../_images/results_plot.png" style="width: 700px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage and visualize the table data, the box plot and the best fit. Once a collab storage folder is chosen, the user must select a corresponding experimental file (txt file), configuration file (txt file) and a result file (csv file).</p>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/choose_files.png"><img alt="../../../_images/choose_files.png" class="align-center" src="../../../_images/choose_files.png" style="width: 600px;" /></a>
 </div>
 </li>
 </ol>
@@ -234,6 +279,14 @@
 <li>Each time a notebook is executed, a kernel status symbol is displayed in the top right corner of the notebook<ol class="arabic">
 <li>When there is a circle bullet •, it means that the kernel is running and the user have to be sure to not interfere with the code execution</li>
 <li>When there is an empty circle bullet ○, it means that the kernel is idle and the user can interfere with the notebook</li>
+</ol>
+</li>
+<li>After sending a job to the HPC systems:<ol class="arabic">
+<li>The collab page MUST NOT be closed.</li>
+<li>The web page MUST NOT be closed.</li>
+<li>The browser MUST NOT be closed.</li>
+<li>If the connection is interrupted, the user cannot recover the results.</li>
+<li>The page MUST remain always active to retrieve the results.</li>
 </ol>
 </li>
 </ul>
