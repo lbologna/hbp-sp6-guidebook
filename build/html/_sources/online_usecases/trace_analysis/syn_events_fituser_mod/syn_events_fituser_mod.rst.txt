@@ -1,8 +1,8 @@
 .. _syn_events_fit_user_mod:
 
-#################################################
+######################################
 Synaptic events fitting (user’s model)
-#################################################
+######################################
 
 This use case allows a user to fit synaptic events using user’s data and model.
 
@@ -35,6 +35,8 @@ Selecting this use case, one Jupyter Notebook is cloned in a private existing/ne
    |
  
    Of course, we assume that the user knows what we are talking about here, and that the uploaded mod file has been already tested by the user in preliminary simulations. The program does not make any check, from this point of view. An invalid file will result in errors at NEURON compilation time
+
+   All the other parameters that are not fitted have their default value as defined in the mod file.
 
 |
 
@@ -86,10 +88,19 @@ Selecting this use case, one Jupyter Notebook is cloned in a private existing/ne
    .. container:: bsp-container-center
 
     .. image:: images/select_hpc.png
-     :width: 400px
+     :width: 300px
      :align: center
         
    |
+
+   .. container:: bsp-container-center
+
+    .. image:: images/run_all_traces.png
+     :width: 200px
+     :align: center
+        
+   |
+   
    
    .. container:: bsp-container-center
 
@@ -114,6 +125,8 @@ Selecting this use case, one Jupyter Notebook is cloned in a private existing/ne
      :align: center
         
    |
+
+   The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.
 
    Once the job is completed, the output files will be in the collab storage under different directories, according to the system used.
    
@@ -159,6 +172,18 @@ Selecting this use case, one Jupyter Notebook is cloned in a private existing/ne
            :width: 700px
            :align: center
         
+   |
+
+   The user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage and visualize the table data, the box plot and the best fit. Once a collab storage folder is chosen, the user must select a corresponding experimental file (txt file), configuration file (txt file) and a result file (csv file).
+
+   .. container:: bsp-container-center
+
+       .. image:: images/choose_files.png
+           :width: 600px
+           :align: center
+        
+   |
+
 |
 
 6. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
@@ -187,5 +212,15 @@ Warnings
         
         2. When there is an empty circle bullet ○, it means that the kernel is idle and the user can interfere with the notebook
         
+    •   After sending a job to the HPC systems: 
         
+        1. The collab page MUST NOT be closed. 
+
+        2. The web page MUST NOT be closed. 
+
+        3. The browser MUST NOT be closed. 
+
+        4. If the connection is interrupted, the user cannot recover the results. 
+
+        5. The page MUST remain always active to retrieve the results.   
     
