@@ -171,3 +171,11 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
         :width: 500px
         :align: right
 
+   3.3 If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
+ 
+   .. container:: bsp-container-center
+
+     .. image:: images/toggle.png
+        :width: 300px
+        :align: right
+
