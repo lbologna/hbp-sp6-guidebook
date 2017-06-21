@@ -132,6 +132,9 @@ red text to guide you through the interface:</p>
 <div><a class="reference internal image-reference" href="../../../_images/neuron_as_a_service_ui.png"><img alt="../../../_images/neuron_as_a_service_ui.png" src="../../../_images/neuron_as_a_service_ui.png" style="width: 700px;" /></a>
 </div></blockquote>
 </li>
+<li><p class="first">Cell morphology can be visualized either in 3D view or 2D Dendrogram view. It is possible to
+zoom/rotate/pan using your mouse/scroll wheel/trackpad.</p>
+</li>
 <li><p class="first">Current clamp can be attached to any section by clicking the segment in the cell 3D/2D Dendrogram
 view and then pressing the <em>Place current injection</em> button. Or by selecting the section in the
 tree view on the right and pressing the same button.</p>
@@ -141,6 +144,21 @@ and select the segments to record the voltage from. They are added to the corres
 10 segments can be recorded from.</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../_images/neuron_as_a_service_ui_sim.png"><img alt="../../../_images/neuron_as_a_service_ui_sim.png" src="../../../_images/neuron_as_a_service_ui_sim.png" style="width: 700px;" /></a>
+</div></blockquote>
+</li>
+<li><p class="first">The graph showing the traces recorded from the cell segments can be zoomed in by clicking and dragging
+in order to select the area to zoom in. Double click on the graph will restore the original zoom level.</p>
+</li>
+<li><p class="first">The recorded traces can be downloaded as csv file. The download link should become available at the
+bottom right corner of the graph after the simulation has finished.</p>
+<p>The following jupyter notebook code shows how it can be loaded with pandas for the further analysis:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sim_CA1_int_bAC_011023HP2_20170510120324_2017-06-21_14-36-10_amp-soma_0-0.7nA.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;soma[0]_0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div></blockquote>
 </li>
 </ol>
