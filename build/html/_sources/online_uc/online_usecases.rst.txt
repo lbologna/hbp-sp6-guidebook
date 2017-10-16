@@ -1,7 +1,0 @@
-.. _online_usecases:
-
-================
-Online Use Cases
-================
-
-.. include:: trace_analysis/trace_analysis.rst
