@@ -5,8 +5,7 @@ Documentation
 Configure and Launch Simulations
 ================================
 
-This use case allows a user to configure and launch a simulation in
-Jülich infrestructure using `Unicore API <https://www.unicore.eu/>`__.
+This use case allows a user to configure and launch a simulation on HBP HPAC infrastructure using `Unicore API <https://www.unicore.eu/>`__.
 
 1) Run Simulations
 ~~~~~~~~~~~~~~~~~~
@@ -54,7 +53,7 @@ From the **middle** you can configure:
          milliseconds(ms)
       -  *Duration*: Time length of stimulus duration, given in
          milliseconds(ms)
-      -  *Weight*: The strength of the created synapseS
+      -  *Weight*: The strength of the created synapses
       -  *Number of synapses*: The number of synapses to create
    
    |edit_stimulus|
@@ -84,7 +83,7 @@ From the **middle** you can configure:
 
 From the **bottom** you can ``launch`` the simulation
 
-- This will open a form to configure the parameters before executing the jobs in Jülich
+- This will open a form to configure the parameters before executing the jobs on the supercomputer
 
  - *Title*: The title of the job
  - *Computer*: Which supercomputer will run the simulation.
@@ -126,7 +125,7 @@ From the **middle** you are able to:
    analysis step
 
    -  This will open a form to configure the parameters before executing
-      the analysis in Jülich system
+      the analysis on the supercomputer
 
       -  *Title*: Title of the job
       -  *Origin*: Supercomputer where the simulation output are located
