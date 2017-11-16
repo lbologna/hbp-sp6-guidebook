@@ -194,6 +194,7 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
      .. image:: images/byohd_traces.png
         :width: 500px
         :align: right
+
    |
    
    3.3 If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
