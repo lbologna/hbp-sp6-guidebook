@@ -9,16 +9,16 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Single Cell In Silico Experiments &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <title>Basal Ganglia &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
     
-    <link rel="stylesheet" href="../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
+        URL_ROOT:    '../../../',
         VERSION:     '0.1.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -26,23 +26,23 @@
         SOURCELINK_SUFFIX: '.txt'
       };
     </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../_static/hbpdoc.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Single cell in silico experiments under current/voltage clamp" href="single_cell_clamp/single_cell_clamp.html" />
-    <link rel="prev" title="Optimise a striatial fast spiking interneuron" href="../single_cell_building/basal_ganglia/opt_fs_int/opt_fs_int.html" />
+    <script type="text/javascript" src="../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Optimise a striatial fast spiking interneuron" href="opt_fs_int/opt_fs_int.html" />
+    <link rel="prev" title="Multi compartmental Cerebellar Granule cell running on NSG" href="../cerebellum/opt_gc_multi_nsg/opt_gc_multi_nsg.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
   <body role="document">
 <div class="hbpdoc-page">
     <section class="hbpdoc-title page-header">
-        <a class="project-title" href="../../index.html">HBP Brain Simulation Platform Guidebook</a>
+        <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
 
         <a class="hbpdoc-toc-toggle pull-right" href>
             <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
@@ -57,21 +57,21 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../single_cell_building/basal_ganglia/opt_fs_int/opt_fs_int.html"
-                        title="previous chapter">Optimise a striatial fast spiking interneuron</a></p>
+  <p class="topless"><a href="../cerebellum/opt_gc_multi_nsg/opt_gc_multi_nsg.html"
+                        title="previous chapter">Multi compartmental Cerebellar Granule cell running on NSG</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="single_cell_clamp/single_cell_clamp.html"
-                        title="next chapter">Single cell in silico experiments under current/voltage clamp</a></p>
+  <p class="topless"><a href="opt_fs_int/opt_fs_int.html"
+                        title="next chapter">Optimise a striatial fast spiking interneuron</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../_sources/online_usecases/single_cell_in_silico/single_cell_in_silico.rst.txt"
+      <li><a href="../../../_sources/online_usecases/single_cell_building/basal_ganglia/basal_ganglia.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
-    <form class="search" action="../../search.html" method="get">
+    <form class="search" action="../../../search.html" method="get">
       <div><input type="text" name="q" /></div>
       <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
@@ -89,7 +89,9 @@
                 
                 <div class="breadcrumb breadcrumb-meta expand">
                     
-                    <a href="../online_usecases.html">Online Use Cases</a>
+                    <a href="../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../single_cell_building.html">Single Cell Building</a>
                     
                 </div>
                 
@@ -97,21 +99,21 @@
                 <aside class="hbpdoc-hnav hbpdoc-hnav-top">
                     
                     <span class="hbpdoc-hnav-previous">
-                        previous: <a class="hbpdoc-hnav-link" href="../single_cell_building/basal_ganglia/opt_fs_int/opt_fs_int.html">Optimise a striatial fast spiking interneuron</a>
+                        previous: <a class="hbpdoc-hnav-link" href="../cerebellum/opt_gc_multi_nsg/opt_gc_multi_nsg.html">Multi compartmental Cerebellar Granule cell running on NSG</a>
                     </span>
                     
                     
                     <span class="hbpdoc-hnav-next">
-                        next: <a class="hbpdoc-hnav-link" href="single_cell_clamp/single_cell_clamp.html">Single cell in silico experiments under current/voltage clamp</a>
+                        next: <a class="hbpdoc-hnav-link" href="opt_fs_int/opt_fs_int.html">Optimise a striatial fast spiking interneuron</a>
                     </span>
                     
                 </aside>
 
-                <div class="section" id="single-cell-in-silico-experiments">
-<span id="single-cell-in-silico"></span><h1>Single Cell In Silico Experiments<a class="headerlink" href="#single-cell-in-silico-experiments" title="Permalink to this headline">¶</a></h1>
+                <div class="section" id="basal-ganglia">
+<span id="id1"></span><h1>Basal Ganglia<a class="headerlink" href="#basal-ganglia" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="single_cell_clamp/single_cell_clamp.html">Single cell in silico experiments under current/voltage clamp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opt_fs_int/opt_fs_int.html">Optimise a striatial fast spiking interneuron</a></li>
 </ul>
 </div>
 </div>
@@ -121,12 +123,12 @@
             <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
                 
                 <span class="hbpdoc-hnav-previous">
-                    previous: <a class="hbpdoc-hnav-link" href="../single_cell_building/basal_ganglia/opt_fs_int/opt_fs_int.html">Optimise a striatial fast spiking interneuron</a>
+                    previous: <a class="hbpdoc-hnav-link" href="../cerebellum/opt_gc_multi_nsg/opt_gc_multi_nsg.html">Multi compartmental Cerebellar Granule cell running on NSG</a>
                 </span>
                 
                 
                 <span class="hbpdoc-hnav-next">
-                    next: <a class="hbpdoc-hnav-link" href="single_cell_clamp/single_cell_clamp.html">Single cell in silico experiments under current/voltage clamp</a>
+                    next: <a class="hbpdoc-hnav-link" href="opt_fs_int/opt_fs_int.html">Optimise a striatial fast spiking interneuron</a>
                 </span>
                 
             </aside>

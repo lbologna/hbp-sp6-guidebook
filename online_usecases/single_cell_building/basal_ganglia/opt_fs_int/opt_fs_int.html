@@ -1,0 +1,167 @@
+
+
+
+<!DOCTYPE html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Optimise a striatial fast spiking interneuron &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../../',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Single Cell In Silico Experiments" href="../../../single_cell_in_silico/single_cell_in_silico.html" />
+    <link rel="prev" title="Basal Ganglia" href="../basal_ganglia.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body role="document">
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../basal_ganglia.html"
+                        title="previous chapter">Basal Ganglia</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../../single_cell_in_silico/single_cell_in_silico.html"
+                        title="next chapter">Single Cell In Silico Experiments</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/online_usecases/single_cell_building/basal_ganglia/opt_fs_int/opt_fs_int.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../../single_cell_building.html">Single Cell Building</a>
+                    
+                    <a href="../basal_ganglia.html">Basal Ganglia</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../basal_ganglia.html">Basal Ganglia</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../../../single_cell_in_silico/single_cell_in_silico.html">Single Cell In Silico Experiments</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="optimise-a-striatial-fast-spiking-interneuron">
+<span id="fs-single-cell-opt-guidebook"></span><h1>Optimise a striatial fast spiking interneuron<a class="headerlink" href="#optimise-a-striatial-fast-spiking-interneuron" title="Permalink to this headline">¶</a></h1>
+<p>This use case demonstrates how BluePyOpt can be used to optimised a striatal fast spiking interneuron. The notebook is self contained and runs the first steps of the genetic optimisation. For a production run, the population size as well as the number of iterations needs to be increased.</p>
+<p>The notebook starts by downloading the relevant code from the collab storage. This step only needs to be done once. Since we are using neuron we also need to compile the channel mod files. If this step is skipped neuron will complain that the mechanism naf is not found.</p>
+<p>The information about the optimisation to be run is stored in config/FS-info.json which refers to additional json files:</p>
+<ul class="simple">
+<li>FS-protocols.json</li>
+<li>FS-features-generated.json</li>
+<li>FS-mechanisms.json</li>
+<li>FS-parameters.json</li>
+</ul>
+<p>For each set of parameters to be tested a neuron model is instantiated by the Neuron_evaluator. A series of current injections are sent to the neuron while the somatic voltage is recorded. From this voltage trace a number of features are extracted, and compared to the same features extracted from the corresponding experimental data.</p>
+<p><strong>FS-protocols.json</strong> lists the protocols and the stimuli that is associated with it. Each protocol also specifies a holding current. The delay, amplitude, duration and total duration is specified for each current injection.</p>
+<p><strong>FS-features-generated.json</strong> lists the features. Each protocol has their own set of features associated with it. For each feature the mean value and standard deviation (SD) is specified. The SD is used when weighting the feature scores together to get the final score for the model. Each feature also has a set of parameters which modifies it.</p>
+<p><strong>FS-mechanisms.json</strong> lists the mechanisms. Each ion channel has a corresponding mod file which is compiled by nrnivmodl.</p>
+<p><strong>FS-parameters.json</strong> lists all the parameters for the model. These can either be specified as a value, or as a range by giving the upper and lower bounds.</p>
+<p>The main json file also points to the morphology of the neuron:</p>
+<ul class="simple">
+<li>morphology/FSi-E.CNG.swc.</li>
+</ul>
+<p>To increase the population size and the number of generations for the genetic algorithm edit the following. Please note that this might increase runtime considerably. For production runs a super computer cluster is recommended.</p>
+<p>opt.run(max_ngen=10,offspring_size=10,continue_cp=False,cp_filename=&#8217;save/FS-notebook-run.pickle&#8217;)</p>
+<p>The post optimisation analysis is done by Neuron_analysis. It displays the top ten individuals that had the best scores and lists their parameters. It also displays the simulated protocols (blue) overlaid on the experimental data (red). The best candidate is displayed in dark blue, the others in light blue. The script also plots how the scores change with successive iterations of the genetic algorithm.</p>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../basal_ganglia.html">Basal Ganglia</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../../../single_cell_in_silico/single_cell_in_silico.html">Single Cell In Silico Experiments</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Luca L. Bologna, Carmen A. Lupascu, R. Migliore, M. Migliore.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>
