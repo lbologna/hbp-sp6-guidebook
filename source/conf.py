@@ -54,8 +54,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'HBP Brain Simulation Platform Guidebook'
-copyright = u'2017, Luca L. Bologna, Carmen A. Lupascu, R. Migliore, M. Migliore'
-author = u'Luca L. Bologna, Carmen A. Lupascu, R. Migliore, M. Migliore'
+copyright = u'2017, Brain Simulation Platform members'
+author = u'Brain Simulation Platform members'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
