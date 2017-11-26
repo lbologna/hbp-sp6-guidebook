@@ -1,8 +1,8 @@
 .. _hh_neuron_builder:
 
-############################# 
-Hodgkin Huxley Neuron Builder
-#############################
+#######################################
+Hodgkin Huxley Neuron Builder (CDP2-P1)
+#######################################
 
 ******** 
 Overview 
@@ -24,7 +24,6 @@ resources or uploading his own files.
 The web-application homepage (see figure below) allow the user to initiate a new
 workflow or select a workflow previously saved in the current collab storage.
 
-
 |
 
 .. container:: bsp-container-center
@@ -37,8 +36,7 @@ workflow or select a workflow previously saved in the current collab storage.
 
 After initiating a new workflow, the user is provided with two panels allowing
 to go through the processes of "Cell Optimization" and "Single Cell Simulation"
-respectively. A third panel, the "Optimization settings", is provided for the
-insertion of the optimization parameters (see figure below).
+respectively (see figure below).
 
 |
 
@@ -77,7 +75,7 @@ optimization parameters (see figure below).
   HBP or from data upload by the user himself. For a detailed explanation of the
   Feature Extraction GUI, please refer to the dedicated page of this guidebook
   (:ref:`efel_gui`). Alternatively, the user can upload his own
-  **features.json** and **protocols.json** files through the "Upload files"
+  *features.json* and *protocols.json* files through the "Upload files"
   button.
 
 |
@@ -92,14 +90,14 @@ optimization parameters (see figure below).
 
 * The model to be optimized is chosen among a dataset displayed to the user
   after clicking the "Choose from database" button. The dataset is made up of
-  `NEURON <https://www.neuron.yale.edu/>`_ based models previously optimized via
-  a different set of electrophysiological features. When choosing the model, the
-  user is provided with two images representing the reconstructed morphology of
-  the neuron and an example of the simulated activity of the model (see figure
+  `NEURON <https://www.neuron.yale.edu/>`_ based models.
+  When choosing the model, the user is provided with two images representing the reconstructed morphology of
+  the neuron and an example of the simulated activity of the model, after it has
+  been optimized via a different set of electrophysiological features (see figure
   below). Based on the neuron/activity properties the user chooses a model which will be
   optimized by using the features extracted/uploaded in the previous step. The
   model parameters will be optimized via the `BluePyOpt
-  <https://github.com/BlueBrain/BluePyOpt>`_ tool via an optimization procedure
+  <https://github.com/BlueBrain/BluePyOpt>`_ tool through an optimization procedure
   based on genetic algorithm. For a complete reference to the BluePyOpt, please
   refer to the original article at this `link. <https://www.frontiersin.org/articles/10.3389/fninf.2016.00017/full>`_
 
@@ -116,10 +114,10 @@ optimization parameters (see figure below).
 * Before launching the optimization, the user must set the optimization
   parameters by clicking the "Set parameters/Choose HPC" button of the
   "Optimization settings" panel. A form is presented to the user (see image
-  below), to be filled with: i) parameters concerning the genetic algorithm
-  namely the maximum number of generation the user want
-  to adopt as well as the number of offspring to be considered; ii) system
-  parameters for the optimization run, namely the number of node and cores to be
+  below), to be filled with: i) parameters concerning the genetic algorithm,
+  namely the maximum number of generation the user wants
+  to adopt as well as the number of offsprings to be considered; ii) system
+  parameters for the optimization run, namely the number of nodes and cores to be
   reserved on the hpc system and the maximum time the process is allowed to be
   running for; iii) the hpc system to be used.
 
@@ -161,7 +159,7 @@ submission with the same workflow id (see figure below).
 |
 
 Both the feature and the optimization files can be removed from the pipeline
-and/or downloaded by the user on the local machine through the "Delete" and "Download"
+and/or downloaded by the user on his local machine through the "Delete" and "Download"
 buttons respectively.
 
 
@@ -211,14 +209,25 @@ figures below).
 
 
 
-Alternatively, the user can upload a **.zip** package containing the files needed for the
-simulation, through the upload button.
+Alternatively, the user can upload a *.zip* package containing the files needed for the
+simulation, through the upload button. For an example of how the *.zip* file
+content must be structured, please refer to the following `link <https://github.com/lbologna/bsp_data_repository/raw/master/optimizations/CA1_int_bAC_011017HP2_20170510120000/CA1_int_bAC_011017HP2_20170510120000.zip>`_.
 
 Once the model files are integrated into the pipeline, the simulation can be run
 by clicking the "Run Simulation" button. The model is fed to the "Neuron As A Service"
 web-application, integrated into the neuron builder (see figure below), which
-allow the user to set visualize the morphology of the chosen model (both in 3D
+allow the user to visualize the morphology of the chosen model (both in 3D
 and as a dendogram) and set the simulation run parameters.
+
+|
+
+.. container:: bsp-container-center
+
+    .. image:: images/hhnb_naas_sim.png 
+        :scale: 30% 
+        :align: right
+
+|
 
 For further details on the "Neuron As A Service" application, please refer to
 the dedicated page of this guidebook (:ref:`single_cell_clamp`).
