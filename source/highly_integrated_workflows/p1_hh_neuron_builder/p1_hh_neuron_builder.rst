@@ -145,7 +145,7 @@ optimization can be launched (see figure below).
 
 |
 
-Upon successfull submission, the flag icon is changed and the submission button disactivated so as to forbid a second
+Upon successful submission, the flag icon is changed and the submission button deactivated so as to forbid a second
 submission with the same workflow id (see figure below).
 
 |
