@@ -16,12 +16,12 @@ The *Morphology Analysis* use case provides capability to analyse a neuronal mor
      .. image:: images/select_single_cell_model.png
         :width: 700px
 
-3. Next, you should define a collab in which you want to perform analysis on the morphology of the chosen single-cell model. You may choose to add the morphology analysis to an existing collab, or create a new collab:
+3. Next, you should define a Collab in which you want to perform analysis on the morphology of the chosen single-cell model. You may choose to add the morphology analysis to an existing Collab, or create a new Collab:
 
      .. image:: images/create_collab.png
         :width: 700px
 
-4. Once you have selected or created a collab that you plan to work in, a Jupyter notebook will open. This notebook contains all functionality you need to download the morphology you previously selected and perform analysis. We encourage you to read the documentation that precedes every notebook cell.
+4. Once you have selected or created a Collab that you plan to work in, a Jupyter notebook will open. This notebook contains all functionality you need to download the morphology you previously selected and perform analysis. We encourage you to read the documentation that precedes every notebook cell.
 
      .. image:: images/morphology_analysis_notebook.png
         :width: 700px
