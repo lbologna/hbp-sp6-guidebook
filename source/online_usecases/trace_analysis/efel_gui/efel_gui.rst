@@ -60,7 +60,7 @@ contributors are displayed to the user after data selection, see
 "authorized collab" is a collab whose team members have read access to the data.
 Regardless of the collab from which they are executing the Feature Extraction
 web app, users who are members of, at least, one collab authorized for a set of
-data, have read access to those data. Data for which the user have no
+data, have read access to those data. Data for which the users have no
 authorization will not be displayed.
 
 
