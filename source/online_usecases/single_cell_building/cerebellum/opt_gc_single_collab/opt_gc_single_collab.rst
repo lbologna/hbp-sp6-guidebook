@@ -1,4 +1,14 @@
-Mono compartmental Cerebellar Granule cell running on the collab.
-Mono compartmental Cerebellar Granule cell optimization performed with BluePyOpt (Martina Rizza). The same data was used with the Optimizer Framework (Masoli et al., 2017)
-The model is an adaptation of a mono compartmental granule cell NEURON model (D'Angelo' et al., 2001)
-https://senselab.med.yale.edu/modeldb/showModel.cshtml?model=116835
+Mono compartmental cerebellar granule cell optimized with BluePyOpt..
+
+The granule cells are the most abundant type of neuron in the cerebellum and, togheter with the Golgi cells, form the granule cell layers. 
+During the last two decades many granule cell models were built to explore their physiological properties. 
+
+The Python notebook contains the code to optimize, with BluePyOpt, a single compartmental cerebellar granule cell using the computational resources provided on the collab.
+The notebook contains a step by step description of each notebook cell starting with the morphology, to the definition of custom section lists for the axon, the voltage dependent ionic channels and the optimization parameters. 
+
+The ionic channels mechanisms, passive properties, morphology were taken and adapted from a previous published granule cell model (D'Angelo et al., 2001) (https://senselab.med.yale.edu/modeldb/showModel.cshtml?model=116835) and used in the automatic reconstruction and its validation. 
+The models were originally obtained using the BBP Optimizer Framework (Masoli et al., 2017) but it later adapted to BluePyOpt with identical results. 
+
+Information about how to convert a morphology type, for example neuron to SWC or neurolucida, to be used in the optimization procedure, can be found in the previosly mentioned paper.
+
+(Code and testing - Martina Rizza PhD)
