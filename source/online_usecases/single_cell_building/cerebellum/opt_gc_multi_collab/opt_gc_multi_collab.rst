@@ -3,7 +3,6 @@
 #################################################################
 Multi compartmental Cerebellar Granule cell running on the collab
 #################################################################
-=======
 
 Multi compartmental cerebellar granule cell optimized with BluePyOpt.
 
