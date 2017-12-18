@@ -1,3 +1,5 @@
+.. _model-catalog-app:
+
 #################
 Model Catalog app
 #################
