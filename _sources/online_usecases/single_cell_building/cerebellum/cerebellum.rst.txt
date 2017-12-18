@@ -9,5 +9,3 @@ Cerebellum
 
     opt_gc_single_collab/opt_gc_single_collab
     opt_gc_multi_collab/opt_gc_multi_collab
-    opt_gc_multi_nsg/opt_gc_multi_nsg
-  
