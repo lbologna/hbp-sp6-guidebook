@@ -9,7 +9,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Analyze an optimization run &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <title>Neuroscience Gateway (NGS) Job Manager &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
     
     <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
@@ -34,8 +34,8 @@
     <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Neuroscience Gateway (NGS) Job Manager" href="../nsg_job_manager/nsg_job_manager.html" />
-    <link rel="prev" title="Build your own single cell model using HBP data" href="../build_scm_hbp/build_scm_hbp.html" />
+    <link rel="next" title="Cerebellum" href="../../cerebellum/cerebellum.html" />
+    <link rel="prev" title="Analyze an optimization run" href="../analyze_run/analyze_run.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
@@ -57,15 +57,15 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../build_scm_hbp/build_scm_hbp.html"
-                        title="previous chapter">Build your own single cell model using HBP data</a></p>
+  <p class="topless"><a href="../analyze_run/analyze_run.html"
+                        title="previous chapter">Analyze an optimization run</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../nsg_job_manager/nsg_job_manager.html"
-                        title="next chapter">Neuroscience Gateway (NGS) Job Manager</a></p>
+  <p class="topless"><a href="../../cerebellum/cerebellum.html"
+                        title="next chapter">Cerebellum</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../../../_sources/online_usecases/single_cell_building/hippocampus/analyze_run/analyze_run.rst.txt"
+      <li><a href="../../../../_sources/online_usecases/single_cell_building/hippocampus/nsg_job_manager/nsg_job_manager.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -101,61 +101,46 @@
                 <aside class="hbpdoc-hnav hbpdoc-hnav-top">
                     
                     <span class="hbpdoc-hnav-previous">
-                        previous: <a class="hbpdoc-hnav-link" href="../build_scm_hbp/build_scm_hbp.html">Build your own single cell model using HBP data</a>
+                        previous: <a class="hbpdoc-hnav-link" href="../analyze_run/analyze_run.html">Analyze an optimization run</a>
                     </span>
                     
                     
                     <span class="hbpdoc-hnav-next">
-                        next: <a class="hbpdoc-hnav-link" href="../nsg_job_manager/nsg_job_manager.html">Neuroscience Gateway (NGS) Job Manager</a>
+                        next: <a class="hbpdoc-hnav-link" href="../../cerebellum/cerebellum.html">Cerebellum</a>
                     </span>
                     
                 </aside>
 
-                <div class="section" id="analyze-an-optimization-run">
-<span id="analyze-run"></span><h1>Analyze an optimization run<a class="headerlink" href="#analyze-an-optimization-run" title="Permalink to this headline">¶</a></h1>
-<p>“BluePyOpt Analysis” – a Jupyter Notebook that allows users to:</p>
+                <div class="section" id="neuroscience-gateway-ngs-job-manager">
+<span id="nsg-job-manager"></span><h1>Neuroscience Gateway (NGS) Job Manager<a class="headerlink" href="#neuroscience-gateway-ngs-job-manager" title="Permalink to this headline">¶</a></h1>
+<p>“NSG Job Manager” – a Jupyter Notebook that allows users to:</p>
 <ol class="arabic simple">
-<li>Choose a previous optimization, from the HBP GitHub repository or from the collab storage, and run an analysis by clicking on “View analysis”</li>
-<li>Save the analysis in the storage by clicking on “Save analysis”. The analysis are saved under the BluePyOptAnalysis/username/foldername (foldername is the name of the optimization)</li>
+<li>login to Neuroscience Gateway (NSG) and load the Job Manager by clicking on “Job manager”</li>
 </ol>
 <div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../../_images/saveAnalysis.png"><img alt="../../../../_images/saveAnalysis.png" class="align-right" src="../../../../_images/saveAnalysis.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/loginNSG.png"><img alt="../../../../_images/loginNSG.png" class="align-right" src="../../../../_images/loginNSG.png" style="width: 300px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../../_images/morphology.png"><img alt="../../../../_images/morphology.png" class="align-right" src="../../../../_images/morphology.png" style="width: 500px;" /></a>
-</div>
+<ol class="arabic simple" start="2">
+<li>copy completed jobs from NSG to the collab storage by clicking on →</li>
+</ol>
 <div class="line-block">
 <div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../../_images/view_save.png"><img alt="../../../../_images/view_save.png" class="align-right" src="../../../../_images/view_save.png" style="width: 250px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../../_images/peaks.png"><img alt="../../../../_images/peaks.png" class="align-right" src="../../../../_images/peaks.png" style="width: 500px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../../_images/bars.png"><img alt="../../../../_images/bars.png" class="align-right" src="../../../../_images/bars.png" style="width: 500px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../../_images/traces.png"><img alt="../../../../_images/traces.png" class="align-right" src="../../../../_images/traces.png" style="width: 500px;" /></a>
 </div>
 <ol class="arabic simple" start="3">
-<li>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</li>
+<li>refresh jobs on NSG by clicking on <img alt="wait_symbol" src="../../../../_images/wait1.png" /></li>
 </ol>
 <div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../../_images/toggle.png"><img alt="../../../../_images/toggle.png" class="align-right" src="../../../../_images/toggle.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/refresh.png"><img alt="../../../../_images/refresh.png" class="align-right" src="../../../../_images/refresh.png" style="width: 600px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>a job can be stored only if completed</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/completed.png"><img alt="../../../../_images/completed.png" class="align-right" src="../../../../_images/completed.png" style="width: 600px;" /></a>
 </div>
 </div>
 
@@ -164,12 +149,12 @@
             <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
                 
                 <span class="hbpdoc-hnav-previous">
-                    previous: <a class="hbpdoc-hnav-link" href="../build_scm_hbp/build_scm_hbp.html">Build your own single cell model using HBP data</a>
+                    previous: <a class="hbpdoc-hnav-link" href="../analyze_run/analyze_run.html">Analyze an optimization run</a>
                 </span>
                 
                 
                 <span class="hbpdoc-hnav-next">
-                    next: <a class="hbpdoc-hnav-link" href="../nsg_job_manager/nsg_job_manager.html">Neuroscience Gateway (NGS) Job Manager</a>
+                    next: <a class="hbpdoc-hnav-link" href="../../cerebellum/cerebellum.html">Cerebellum</a>
                 </span>
                 
             </aside>

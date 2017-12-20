@@ -78,104 +78,11 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
         .. image:: images/toggle_button.png
             :width: 300px
             :align: right
-   
-
-
-2. “NSG Job Manager” – a Jupyter Notebook that allows users to:
-   
-   2.1 login to Neuroscience Gateway (NSG) and load the Job Manager by clicking on “Job manager”
-   
-   .. container:: bsp-container-center
-
-     .. image:: images/loginNSG.png
-        :width: 300px
-        :align: right
 
    |
 
-   2.2 copy completed jobs from NSG to the collab storage by clicking on → 
+2. :ref:`"NSG Job Manager" <nsg_job_manager>`
 
    |
 
-   2.3 refresh jobs on NSG by clicking on |wait_symbol|
-
-   .. |wait_symbol| image:: images/wait.png
-
-   .. container:: bsp-container-center
-
-     .. image:: images/refresh.png
-        :width: 600px
-        :align: right
-
-   |
-
-   a job can be stored only if completed
-
-   .. container:: bsp-container-center
-
-     .. image:: images/completed.png
-        :width: 600px
-        :align: right
-
-   |
-
-3. “BluePyOpt Analysis” – a Jupyter Notebook that allows users to:
-
-   3.1 Choose a previous optimization, from the HBP GitHub repository or from the collab storage, and run an analysis by clicking on “View analysis”
-
-   3.2 Save the analysis in the storage by clicking on “Save analysis”. The analysis are saved under the BluePyOptAnalysis/username/foldername (foldername is the name of the optimization)
-
-   .. container:: bsp-container-center
-
-     .. image:: images/saveAnalysis.png
-        :width: 600px
-        :align: right
-
-   |
-
-   .. container:: bsp-container-center
-
-     .. image:: images/morphology.png
-        :width: 500px
-        :align: right
-
-   |
-
-   .. container:: bsp-container-center
-
-     .. image:: images/view_save.png
-        :width: 250px
-        :align: right
-
-   |
-
-   .. container:: bsp-container-center
-
-     .. image:: images/peaks.png
-        :width: 500px
-        :align: right
-
-   |
-
-   .. container:: bsp-container-center
-
-     .. image:: images/bars.png
-        :width: 500px
-        :align: right
-
-   |
-
-   .. container:: bsp-container-center
-
-     .. image:: images/traces.png
-        :width: 500px
-        :align: right
-
-   3.3 If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
- 
-   .. container:: bsp-container-center
-
-     .. image:: images/toggle.png
-        :width: 300px
-        :align: right
-
+3. :ref:`"BluePyOpt Analysis" <analyze_run>`
