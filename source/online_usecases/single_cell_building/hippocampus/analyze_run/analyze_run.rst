@@ -5,7 +5,7 @@ Analyze an optimization run
 ###########################
 
 
-“BluePyOpt Analysis” – a Jupyter Notebook that allows users to:
+This Jupyter Notebook allows users to:
 
 1. Choose a previous optimization, from the HBP GitHub repository or from the collab storage, and run an analysis by clicking on “View analysis”
 

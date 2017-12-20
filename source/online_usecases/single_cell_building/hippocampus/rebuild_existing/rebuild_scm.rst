@@ -8,7 +8,7 @@ This use case allows a user to configure the BluePyOpt to re-run an optimization
 
 Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/new collab.  The cloned Notebooks are:
 
-1. “BluePyOpt One” – it allows users to:
+1. “Rebuild Single HippoCell - Config” – it allows users to:
 
    1.1.	Visualize the electrophysiological features, for the chosen model, that will be used as a reference by the optimization process (“Features” tab); they cannot be changed
 
@@ -81,8 +81,9 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
 
    |
 
-2. :ref:`"NSG Job Manager" <nsg_job_manager>`
+2. :ref:`"Rebuild Single HippoCell - NSG Job Manager" <nsg_job_manager>`
 
    |
 
-3. :ref:`"BluePyOpt Analysis" <analyze_run>`
+3. :ref:`"Rebuild Single HippoCell - Analysis" <analyze_run>`
+

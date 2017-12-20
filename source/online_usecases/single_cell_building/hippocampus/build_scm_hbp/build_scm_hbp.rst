@@ -10,7 +10,7 @@ This use case allows a user to configure the `BluePyOpt <http://bluepyopt.readth
 
 Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/new collab.  The cloned Notebooks are:
 
-1. “BluePyOpt Browse All” – it allows users to:
+1. “BuildOwn Single HippoCell - Config” – it allows users to:
 
    1.1 choose and visualize an existing morphology from HBP data (name and type of morphology are listed)
 
@@ -105,8 +105,8 @@ Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/ne
 
    |
 
-2. :ref:`"NSG Job Manager" <nsg_job_manager>`
+2. :ref:`"BuildOwn Single HippoCell - NSG Job Manager" <nsg_job_manager>`
 
    |
 
-3. :ref:`"BluePyOpt Analysis" <analyze_run>`
+3. :ref:`"BuildOwn Single HippoCell - Analysis" <analyze_run>`
