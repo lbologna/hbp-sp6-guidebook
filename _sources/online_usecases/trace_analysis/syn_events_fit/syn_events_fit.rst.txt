@@ -6,25 +6,26 @@ Synaptic events fitting
 
 This use case allows a user to fit synaptic events using data and model from the Neuroinformatics Platform (NIP).
 
-Selecting this use case, one Jupyter Notebook is cloned in a private existing/new collab.  By launching the notebook (Run All from the “Cell” menu), a simple graphical interface will guide the user to:
+Selecting this use case, 2 Jupyter Notebooks are cloned in a private existing/new collab.
+The cloned Notebooks are:
 
-|
+1. "Synaptic events fitting" - it allows users to:
 
-1. Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to fit
+   1.1. Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to fit
 
    .. container:: bsp-container-center
     
-       .. image:: images/data_selection.png
-           :width: 700px
-           :align: center
+        .. image:: images/data_selection.png
+            :width: 700px
+            :align: center
         
    |
 
    A configuration file corresponding to the experimental file chosen is downloaded from the collab storage. The file includes: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse), the name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters
 
-|
+   |
 
-2. Select a default or a local mod file
+   1.2. Select a default or a local mod file
 
    .. container:: bsp-container-center
 
@@ -67,9 +68,9 @@ Selecting this use case, one Jupyter Notebook is cloned in a private existing/ne
    
    All the other parameters that are not fitted have their default value as defined in the mod file.
 
-|
+   |
 
-3. Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the status of the job
+   1.3. Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the status of the job
 
    On JURECA the number of nodes, number of CPUs per node and runtime are set by default to 2, 24 and 10m respectively
    
@@ -139,51 +140,8 @@ Selecting this use case, one Jupyter Notebook is cloned in a private existing/ne
 
    |
 
-4. Analyse the optimized parameters. The user may visualize:
 
-   4.1. The results table (sorted in ascending order by the fitting error)
-                        
-   .. container:: bsp-container-center
-
-    .. image:: images/results_table.png
-     :width: 700px
-     :align: center
-              
-   |
-   |
- 
-   4.2.	The boxplot of the normalized results
-   
-   .. container:: bsp-container-center
-
-    .. image:: images/results_box.png
-     :width: 700px
-     :align: center
-              
-   |
-   |
- 
-   4.3.	The best fit
- 
-   .. container:: bsp-container-center
-
-    .. image:: images/results_plot.png
-        :width: 700px
-        :align: center
-        
-    |
-
-    The user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage and visualize the table data, the box plot and the best fit. Once a collab storage folder is chosen, the user must select a corresponding experimental file (txt file), configuration file (txt file) and a result file (csv file).
-
-   .. container:: bsp-container-center
-
-    .. image:: images/choose_files.png
-        :width: 600px
-        :align: center
-
-|
-
-5. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
+   1.4. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
 
    .. container:: bsp-container-center
 
@@ -193,6 +151,7 @@ Selecting this use case, one Jupyter Notebook is cloned in a private existing/ne
         
    |
 
+2. :ref:`Synaptic events fitting with user data analysis <syn_events_fit_analysis>`
 
 Warnings
     •	Each notebook cell has two square bracket on the left. 

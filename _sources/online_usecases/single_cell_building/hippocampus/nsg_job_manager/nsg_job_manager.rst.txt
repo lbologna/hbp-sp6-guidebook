@@ -1,10 +1,10 @@
 .. _nsg_job_manager:
 
 ######################################
-Neuroscience Gateway (NGS) Job Manager
+Neuroscience Gateway (NSG) Job Manager
 ######################################
 
-“NSG Job Manager” – a Jupyter Notebook that allows users to:
+This Jupyter Notebook allows users to:
    
 1. login to Neuroscience Gateway (NSG) and load the Job Manager by clicking on “Job manager”
    

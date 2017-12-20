@@ -6,17 +6,18 @@ Synaptic events fitting (user’s data)
 
 This use case allows a user to fit synaptic events data with model from NeuroInformatics Platform.
 
-Selecting this use case, one Jupyter Notebook is cloned in a private existing/new collab.  
+Selecting this use case, 2 Jupyter Notebooks are cloned in a private existing/new collab.
+The cloned Notebooks are:
 
-By launching the notebook (Run All from the “Cell” menu), a simple graphical interface will guide the user to:
+1. "Synaptic events fitting with user data" - it allows users to:
 
-1. Select a local experimental file
+   1.1. Select a local experimental file
 
    .. container:: bsp-container-center
 
-       .. image:: images/select_exp.png
-           :width: 400px
-           :align: center
+        .. image:: images/select_exp.png
+            :width: 400px
+            :align: center
         
    |
  
@@ -24,7 +25,8 @@ By launching the notebook (Run All from the “Cell” menu), a simple graphical
 
    |
 
-2. Fill the form with the values needed to write a configuration file: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse). The name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters are by default those corresponding to the model from NeuroInformatics Platform
+
+   1.2. Fill the form with the values needed to write a configuration file: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse). The name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters are by default those corresponding to the model from NeuroInformatics Platform
 
    .. container:: bsp-container-center
 
@@ -48,9 +50,9 @@ By launching the notebook (Run All from the “Cell” menu), a simple graphical
            :width: 500px
            :align: center
         
-|
+   |
 
-3. Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure on JURECA or on MARCONI using UNICORE authentication, or on the NSG and check the status of the job
+   1.3. Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure on JURECA or on MARCONI using UNICORE authentication, or on the NSG and check the status of the job
 
    On JURECA the number of nodes, number of CPUs per node and runtime are set by default to 2, 24 and 10m respectively
    
@@ -129,54 +131,8 @@ By launching the notebook (Run All from the “Cell” menu), a simple graphical
 
    |
 
-4. Analyse the optimized parameters. The user may visualize:
 
-   4.1. The results table (sorted in ascending order by the fitting error).
-                        
-   .. container:: bsp-container-center
-
-    .. image:: images/results_table.png
-     :width: 700px
-     :align: center
-              
-   |
-   |
- 
-   4.2.	The boxplot of the normalized results.
-   
-   .. container:: bsp-container-center
-
-    .. image:: images/results_box.png
-     :width: 700px
-     :align: center
-              
-   |
-   |
- 
-   4.3.	The best fit.
- 
-   .. container:: bsp-container-center
-
-    .. image:: images/results_fit.png
-        :width: 700px
-        :align: center
-   
-   |
-
-   The user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage and visualize the table data, the box plot and the best fit. Once a collab storage folder is chosen, the user must select a corresponding experimental file (txt file), configuration file (txt file) and a result file (csv file).    
-
-   .. container:: bsp-container-center
-
-    .. image:: images/choose_files.png
-        :width: 700px
-        :align: center
-   
-    |
-
-|
-
-
-5. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
+   1.4. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
 
    .. container:: bsp-container-center
 
@@ -186,6 +142,7 @@ By launching the notebook (Run All from the “Cell” menu), a simple graphical
         
    |
 
+2. :ref:`Synaptic events fitting with user data analysis <syn_events_fit_analysis>`
 
 Warnings
     •	Each notebook cell has two square bracket on the left. 

@@ -34,7 +34,7 @@
     <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Morphology Analysis" href="../../morphology_analysis/morphology_analysis.html" />
+    <link rel="next" title="Synaptic events fitting analysis" href="../syn_events_fit_analysis/syn_events_fit_analysis.html" />
     <link rel="prev" title="Synaptic events fitting (user’s model)" href="../syn_events_fituser_mod/syn_events_fituser_mod.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -60,8 +60,8 @@
   <p class="topless"><a href="../syn_events_fituser_mod/syn_events_fituser_mod.html"
                         title="previous chapter">Synaptic events fitting (user’s model)</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../../morphology_analysis/morphology_analysis.html"
-                        title="next chapter">Morphology Analysis</a></p>
+  <p class="topless"><a href="../syn_events_fit_analysis/syn_events_fit_analysis.html"
+                        title="next chapter">Synaptic events fitting analysis</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -104,7 +104,7 @@
                     
                     
                     <span class="hbpdoc-hnav-next">
-                        next: <a class="hbpdoc-hnav-link" href="../../morphology_analysis/morphology_analysis.html">Morphology Analysis</a>
+                        next: <a class="hbpdoc-hnav-link" href="../syn_events_fit_analysis/syn_events_fit_analysis.html">Synaptic events fitting analysis</a>
                     </span>
                     
                 </aside>
@@ -112,10 +112,11 @@
                 <div class="section" id="synaptic-events-fitting-users-data">
 <span id="syn-events-fit-user-data"></span><h1>Synaptic events fitting (user’s data)<a class="headerlink" href="#synaptic-events-fitting-users-data" title="Permalink to this headline">¶</a></h1>
 <p>This use case allows a user to fit synaptic events data with model from NeuroInformatics Platform.</p>
-<p>Selecting this use case, one Jupyter Notebook is cloned in a private existing/new collab.</p>
-<p>By launching the notebook (Run All from the “Cell” menu), a simple graphical interface will guide the user to:</p>
+<p>Selecting this use case, 2 Jupyter Notebooks are cloned in a private existing/new collab.
+The cloned Notebooks are:</p>
 <ol class="arabic">
-<li><p class="first">Select a local experimental file</p>
+<li><p class="first">&#8220;Synaptic events fitting with user data&#8221; - it allows users to:</p>
+<p>1.1. Select a local experimental file</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/select_exp.png"><img alt="../../../_images/select_exp.png" class="align-center" src="../../../_images/select_exp.png" style="width: 400px;" /></a>
 </div>
@@ -126,8 +127,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</li>
-<li><p class="first">Fill the form with the values needed to write a configuration file: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse). The name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters are by default those corresponding to the model from NeuroInformatics Platform</p>
+<p>1.2. Fill the form with the values needed to write a configuration file: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse). The name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters are by default those corresponding to the model from NeuroInformatics Platform</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/fill_form.png"><img alt="../../../_images/fill_form.png" class="align-center" src="../../../_images/fill_form.png" style="width: 400px;" /></a>
 </div>
@@ -143,13 +143,10 @@
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/dependencies.png"><img alt="../../../_images/dependencies.png" class="align-center" src="../../../_images/dependencies.png" style="width: 500px;" /></a>
 </div>
-</li>
-</ol>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic" start="3">
-<li><p class="first">Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure on JURECA or on MARCONI using UNICORE authentication, or on the NSG and check the status of the job</p>
+<p>1.3. Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure on JURECA or on MARCONI using UNICORE authentication, or on the NSG and check the status of the job</p>
 <p>On JURECA the number of nodes, number of CPUs per node and runtime are set by default to 2, 24 and 10m respectively</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -185,7 +182,7 @@
 <div class="line"><br /></div>
 </div>
 <div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/login3.png"><img alt="../../../_images/login3.png" class="align-center" src="../../../_images/login3.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/login1.png"><img alt="../../../_images/login1.png" class="align-center" src="../../../_images/login1.png" style="width: 400px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -216,51 +213,15 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</li>
-<li><p class="first">Analyse the optimized parameters. The user may visualize:</p>
-<p>4.1. The results table (sorted in ascending order by the fitting error).</p>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/results_table1.png"><img alt="../../../_images/results_table1.png" class="align-center" src="../../../_images/results_table1.png" style="width: 700px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
-<p>4.2. The boxplot of the normalized results.</p>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/results_box1.png"><img alt="../../../_images/results_box1.png" class="align-center" src="../../../_images/results_box1.png" style="width: 700px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-<div class="line"><br /></div>
-</div>
-<p>4.3. The best fit.</p>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/results_fit.png"><img alt="../../../_images/results_fit.png" class="align-center" src="../../../_images/results_fit.png" style="width: 700px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>The user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage and visualize the table data, the box plot and the best fit. Once a collab storage folder is chosen, the user must select a corresponding experimental file (txt file), configuration file (txt file) and a result file (csv file).</p>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/choose_files1.png"><img alt="../../../_images/choose_files1.png" class="align-center" src="../../../_images/choose_files1.png" style="width: 700px;" /></a>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</div>
-</li>
-</ol>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<ol class="arabic" start="5">
-<li><p class="first">If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
+<p>1.4. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/toggle_button2.png"><img alt="../../../_images/toggle_button2.png" class="align-center" src="../../../_images/toggle_button2.png" style="width: 300px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+</li>
+<li><p class="first"><a class="reference internal" href="../syn_events_fit_analysis/syn_events_fit_analysis.html#syn-events-fit-analysis"><span class="std std-ref">Synaptic events fitting with user data analysis</span></a></p>
 </li>
 </ol>
 <dl class="docutils">
@@ -300,7 +261,7 @@
                 
                 
                 <span class="hbpdoc-hnav-next">
-                    next: <a class="hbpdoc-hnav-link" href="../../morphology_analysis/morphology_analysis.html">Morphology Analysis</a>
+                    next: <a class="hbpdoc-hnav-link" href="../syn_events_fit_analysis/syn_events_fit_analysis.html">Synaptic events fitting analysis</a>
                 </span>
                 
             </aside>
