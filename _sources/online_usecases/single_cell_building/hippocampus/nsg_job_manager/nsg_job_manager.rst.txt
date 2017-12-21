@@ -1,16 +1,10 @@
-.. _nsg_job_manager:
-
-######################################
-Neuroscience Gateway (NSG) Job Manager
-######################################
-
-This Jupyter Notebook allows users to:
+This Jupyter Notebook allows the user to:
    
 1. login to Neuroscience Gateway (NSG) and load the Job Manager by clicking on “Job manager”
    
 .. container:: bsp-container-center
 
-  .. image:: images/loginNSG.png
+  .. image:: ../nsg_job_manager/images/loginNSG.png
      :width: 300px
      :align: right
 
@@ -22,11 +16,11 @@ This Jupyter Notebook allows users to:
 
 3. refresh jobs on NSG by clicking on |wait_symbol|
 
-.. |wait_symbol| image:: images/wait.png
+.. |wait_symbol| image:: ../nsg_job_manager/images/wait.png
 
 .. container:: bsp-container-center
 
-  .. image:: images/refresh.png
+  .. image:: ../nsg_job_manager/images/refresh.png
      :width: 600px
      :align: right
 
@@ -36,6 +30,6 @@ a job can be stored only if completed
 
 .. container:: bsp-container-center
 
-  .. image:: images/completed.png
+  .. image:: ../nsg_job_manager/images/completed.png
      :width: 600px
      :align: right

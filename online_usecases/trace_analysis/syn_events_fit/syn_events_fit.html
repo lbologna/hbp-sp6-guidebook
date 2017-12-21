@@ -56,6 +56,15 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Synaptic events fitting</a><ul>
+<li><a class="reference internal" href="#synaptic-events-fitting-config">Synaptic events fitting - Config</a></li>
+<li><a class="reference internal" href="#synaptic-events-fitting-analysis">Synaptic events fitting - Analysis</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="../efel_gui/efel_gui.html"
                         title="previous chapter">Feature Extraction Graphical User Interface</a></p>
@@ -112,11 +121,14 @@
                 <div class="section" id="synaptic-events-fitting">
 <span id="syn-events-fit"></span><h1>Synaptic events fitting<a class="headerlink" href="#synaptic-events-fitting" title="Permalink to this headline">¶</a></h1>
 <p>This use case allows a user to fit synaptic events using data and model from the Neuroinformatics Platform (NIP).</p>
-<p>Selecting this use case, 2 Jupyter Notebooks are cloned in a private existing/new collab.
+<p>Selecting this use case, two Jupyter Notebooks are cloned in a private existing/new collab.
 The cloned Notebooks are:</p>
-<ol class="arabic">
-<li><p class="first">&#8220;Synaptic events fitting&#8221; - it allows users to:</p>
-<p>1.1. Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to fit</p>
+<div class="section" id="synaptic-events-fitting-config">
+<h2>Synaptic events fitting - Config<a class="headerlink" href="#synaptic-events-fitting-config" title="Permalink to this headline">¶</a></h2>
+<p>It allows the user to:</p>
+<ol class="arabic simple">
+<li>Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to fit</li>
+</ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/data_selection.png"><img alt="../../../_images/data_selection.png" class="align-center" src="../../../_images/data_selection.png" style="width: 700px;" /></a>
 </div>
@@ -127,7 +139,9 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.2. Select a default or a local mod file</p>
+<ol class="arabic simple" start="2">
+<li>Select a default or a local mod file</li>
+</ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/mod_selection.png"><img alt="../../../_images/mod_selection.png" class="align-center" src="../../../_images/mod_selection.png" style="width: 300px;" /></a>
 </div>
@@ -161,7 +175,9 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.3. Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the status of the job</p>
+<ol class="arabic simple" start="3">
+<li>Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the status of the job</li>
+</ol>
 <p>On JURECA the number of nodes, number of CPUs per node and runtime are set by default to 2, 24 and 10m respectively</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -216,42 +232,64 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.4. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
+<ol class="arabic simple" start="4">
+<li>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</li>
+</ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/toggle_button1.png"><img alt="../../../_images/toggle_button1.png" class="align-center" src="../../../_images/toggle_button1.png" style="width: 300px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</li>
-<li><p class="first"><a class="reference internal" href="../syn_events_fit_analysis/syn_events_fit_analysis.html#syn-events-fit-analysis"><span class="std std-ref">Synaptic events fitting with user data analysis</span></a></p>
-</li>
+</div>
+<div class="section" id="synaptic-events-fitting-analysis">
+<h2>Synaptic events fitting - Analysis<a class="headerlink" href="#synaptic-events-fitting-analysis" title="Permalink to this headline">¶</a></h2>
+<p>This Jupyter Notebook allows the user to analyse the optimized parameters.
+The user may visualize:</p>
+<ol class="arabic simple">
+<li>The results table (sorted in ascending order by the fitting error).</li>
 </ol>
-<dl class="docutils">
-<dt>Warnings</dt>
-<dd><ul class="first last simple">
-<li>Each notebook cell has two square bracket on the left.<ol class="arabic">
-<li>When are empty, it means that the code was never run before</li>
-<li>When there is an asterisk [*], it means that the code is running</li>
-<li>When there is a number, it means that the code was run. A progressive numbering scheme define the order in which the cells were run</li>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/results_table1.png"><img alt="../../../_images/results_table1.png" class="align-center" src="../../../_images/results_table1.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>The boxplot of the normalized results.</li>
 </ol>
-</li>
-<li>Each time a notebook is executed, a kernel status symbol is displayed in the top right corner of the notebook<ol class="arabic">
-<li>When there is a circle bullet •, it means that the kernel is running and the user have to be sure to not interfere with the code execution</li>
-<li>When there is an empty circle bullet ○, it means that the kernel is idle and the user can interfere with the notebook</li>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/results_box1.png"><img alt="../../../_images/results_box1.png" class="align-center" src="../../../_images/results_box1.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>The best fit.</li>
 </ol>
-</li>
-<li>After sending a job to the HPC systems:<ol class="arabic">
-<li>The collab page MUST NOT be closed.</li>
-<li>The web page MUST NOT be closed.</li>
-<li>The browser MUST NOT be closed.</li>
-<li>If the connection is interrupted, the user cannot recover the results.</li>
-<li>The page MUST remain always active to retrieve the results.</li>
-</ol>
-</li>
-</ul>
-</dd>
-</dl>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/results_fit1.png"><img alt="../../../_images/results_fit1.png" class="align-center" src="../../../_images/results_fit1.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage and visualize the table data, the box plot and the best fit. Once a collab storage folder is chosen, the user must select a corresponding experimental file (txt file), configuration file (txt file) and a result file (csv file).</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/choose_files1.png"><img alt="../../../_images/choose_files1.png" class="align-center" src="../../../_images/choose_files1.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/toggle_button5.png"><img alt="../../../_images/toggle_button5.png" class="align-center" src="../../../_images/toggle_button5.png" style="width: 300px;" /></a>
+</div>
+</div>
 </div>
 
             </div>

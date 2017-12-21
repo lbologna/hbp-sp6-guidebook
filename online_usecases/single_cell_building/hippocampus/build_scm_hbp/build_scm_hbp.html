@@ -34,7 +34,7 @@
     <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Analyze an optimization run" href="../analyze_run/analyze_run.html" />
+    <link rel="next" title="Cerebellum" href="../../cerebellum/cerebellum.html" />
     <link rel="prev" title="Rebuild an existing single hippocampal cell model" href="../rebuild_existing/rebuild_scm.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -56,12 +56,22 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Build your own single cell model using HBP data</a><ul>
+<li><a class="reference internal" href="#buildown-single-hippocell-config">BuildOwn Single HippoCell - Config</a></li>
+<li><a class="reference internal" href="#buildown-single-hippocell-nsg-job-manager">BuildOwn Single HippoCell - NSG Job Manager</a></li>
+<li><a class="reference internal" href="#buildown-single-hippocell-analysis">BuildOwn Single HippoCell - Analysis</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="../rebuild_existing/rebuild_scm.html"
                         title="previous chapter">Rebuild an existing single hippocampal cell model</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../analyze_run/analyze_run.html"
-                        title="next chapter">Analyze an optimization run</a></p>
+  <p class="topless"><a href="../../cerebellum/cerebellum.html"
+                        title="next chapter">Cerebellum</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -106,7 +116,7 @@
                     
                     
                     <span class="hbpdoc-hnav-next">
-                        next: <a class="hbpdoc-hnav-link" href="../analyze_run/analyze_run.html">Analyze an optimization run</a>
+                        next: <a class="hbpdoc-hnav-link" href="../../cerebellum/cerebellum.html">Cerebellum</a>
                     </span>
                     
                 </aside>
@@ -117,61 +127,62 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Selecting this use case, 3 Jupyter Notebooks are cloned in a private existing/new collab.  The cloned Notebooks are:</p>
-<ol class="arabic">
-<li><p class="first">“BuildOwn Single HippoCell - Config” – it allows users to:</p>
-<p>1.1 choose and visualize an existing morphology from HBP data (name and type of morphology are listed)</p>
+<p>Selecting this use case, three Jupyter Notebooks are cloned in a private existing/new collab.  The cloned Notebooks are:</p>
+<div class="section" id="buildown-single-hippocell-config">
+<h2>BuildOwn Single HippoCell - Config<a class="headerlink" href="#buildown-single-hippocell-config" title="Permalink to this headline">¶</a></h2>
+<p>It allows the user to:</p>
+<p>1 choose and visualize an existing morphology from HBP data (name and type of morphology are listed)</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../../_images/byohd_browseall.png"><img alt="../../../../_images/byohd_browseall.png" class="align-right" src="../../../../_images/byohd_browseall.png" style="width: 600px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.2 choose a self-consistent set of configuration files (the four JSON files) for the chosen morphology; the list includes those available for the selected morphology</p>
+<p>2 choose a self-consistent set of configuration files (the four JSON files) for the chosen morphology; the list includes those available for the selected morphology</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../../_images/byohd_chose.png"><img alt="../../../../_images/byohd_chose.png" class="align-right" src="../../../../_images/byohd_chose.png" style="width: 500px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.3 visualize the electrophysiological features that will be used as a reference by the optimization process (“Features” tab); they cannot be changed</p>
+<p>3 visualize the electrophysiological features that will be used as a reference by the optimization process (“Features” tab); they cannot be changed</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../../_images/byohd_visualize.png"><img alt="../../../../_images/byohd_visualize.png" class="align-right" src="../../../../_images/byohd_visualize.png" style="width: 600px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.4 visualize and change parameters of an existing optimization (&#8220;Parameters&#8221; tab). The user can change the values and &#8220;Save new parameters&#8221;</p>
+<p>4 visualize and change parameters of an existing optimization (&#8220;Parameters&#8221; tab). The user can change the values and &#8220;Save new parameters&#8221;</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../../_images/byohd_change.png"><img alt="../../../../_images/byohd_change.png" class="align-right" src="../../../../_images/byohd_change.png" style="width: 600px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.5 configure the BluePyOpt optimization algorithm, by defining the offspring size and the max number of generations; they are set by default to 10 and 2 respectively</p>
+<p>5 configure the BluePyOpt optimization algorithm, by defining the offspring size and the max number of generations; they are set by default to 10 and 2 respectively</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.6 &#8220;Create zip file&#8221; will generate the zip file needed to run the new optimization</p>
+<p>6 &#8220;Create zip file&#8221; will generate the zip file needed to run the new optimization</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.7 Login to NSG (Neuroscience Gateway) by inserting your username and password and clicking on the &#8220;Login NSG&#8221; button</p>
+<p>7 Login to NSG (Neuroscience Gateway) by inserting your username and password and clicking on the &#8220;Login NSG&#8221; button</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../../_images/byohd_login.png"><img alt="../../../../_images/byohd_login.png" class="align-right" src="../../../../_images/byohd_login.png" style="width: 300px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.8 configure the parameters of the optimization job: number of nodes, number of cores and runtime. They are set by default to 2, 10 and 0.5 respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact us at <a class="reference external" href="mailto:nsghelp&#37;&#52;&#48;sdsc&#46;edu">nsghelp<span>&#64;</span>sdsc<span>&#46;</span>edu</a>. The maximum number of cores required per node is 24.</p>
+<p>8 configure the parameters of the optimization job: number of nodes, number of cores and runtime. They are set by default to 2, 10 and 0.5 respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact us at <a class="reference external" href="mailto:nsghelp&#37;&#52;&#48;sdsc&#46;edu">nsghelp<span>&#64;</span>sdsc<span>&#46;</span>edu</a>. The maximum number of cores required per node is 24.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.9 run the optimization by clicking on the “Run NSG simulation”</p>
+<p>9 run the optimization by clicking on the “Run NSG simulation”</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.10 the job has been submitted when you see:</p>
+<p>10 the job has been submitted when you see:</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../../_images/byohd_submitted.png"><img alt="../../../../_images/byohd_submitted.png" class="align-right" src="../../../../_images/byohd_submitted.png" style="width: 300px;" /></a>
 </div>
@@ -183,22 +194,93 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>1.11 If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
+<p>11 If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../../_images/byohd_toggle.png"><img alt="../../../../_images/byohd_toggle.png" class="align-right" src="../../../../_images/byohd_toggle.png" style="width: 300px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</li>
-<li><p class="first"><a class="reference internal" href="../nsg_job_manager/nsg_job_manager.html#nsg-job-manager"><span class="std std-ref">&#8220;BuildOwn Single HippoCell - NSG Job Manager&#8221;</span></a></p>
+</div>
+<div class="section" id="buildown-single-hippocell-nsg-job-manager">
+<h2>BuildOwn Single HippoCell - NSG Job Manager<a class="headerlink" href="#buildown-single-hippocell-nsg-job-manager" title="Permalink to this headline">¶</a></h2>
+<p>This Jupyter Notebook allows the user to:</p>
+<ol class="arabic simple">
+<li>login to Neuroscience Gateway (NSG) and load the Job Manager by clicking on “Job manager”</li>
+</ol>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/loginNSG1.png"><img alt="../../../../_images/loginNSG1.png" class="align-right" src="../../../../_images/loginNSG1.png" style="width: 300px;" /></a>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</li>
-<li><p class="first"><a class="reference internal" href="../analyze_run/analyze_run.html#analyze-run"><span class="std std-ref">&#8220;BuildOwn Single HippoCell - Analysis&#8221;</span></a></p>
-</li>
+<ol class="arabic simple" start="2">
+<li>copy completed jobs from NSG to the collab storage by clicking on →</li>
 </ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li>refresh jobs on NSG by clicking on <img alt="wait_symbol" src="../../../../_images/wait1.png" /></li>
+</ol>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/refresh1.png"><img alt="../../../../_images/refresh1.png" class="align-right" src="../../../../_images/refresh1.png" style="width: 600px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>a job can be stored only if completed</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/completed1.png"><img alt="../../../../_images/completed1.png" class="align-right" src="../../../../_images/completed1.png" style="width: 600px;" /></a>
+</div>
+</div>
+<div class="section" id="buildown-single-hippocell-analysis">
+<h2>BuildOwn Single HippoCell - Analysis<a class="headerlink" href="#buildown-single-hippocell-analysis" title="Permalink to this headline">¶</a></h2>
+<p>This Jupyter Notebook allows the user to:</p>
+<ol class="arabic simple">
+<li>Choose a previous optimization, from the HBP GitHub repository or from the collab storage, and run an analysis by clicking on “View analysis”</li>
+<li>Save the analysis in the storage by clicking on “Save analysis”. The analysis are saved under the BluePyOptAnalysis/username/foldername (foldername is the name of the optimization)</li>
+</ol>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/saveAnalysis1.png"><img alt="../../../../_images/saveAnalysis1.png" class="align-right" src="../../../../_images/saveAnalysis1.png" style="width: 600px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/morphology1.png"><img alt="../../../../_images/morphology1.png" class="align-right" src="../../../../_images/morphology1.png" style="width: 500px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/view_save1.png"><img alt="../../../../_images/view_save1.png" class="align-right" src="../../../../_images/view_save1.png" style="width: 250px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/peaks1.png"><img alt="../../../../_images/peaks1.png" class="align-right" src="../../../../_images/peaks1.png" style="width: 500px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/bars1.png"><img alt="../../../../_images/bars1.png" class="align-right" src="../../../../_images/bars1.png" style="width: 500px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/traces1.png"><img alt="../../../../_images/traces1.png" class="align-right" src="../../../../_images/traces1.png" style="width: 500px;" /></a>
+</div>
+<ol class="arabic simple" start="3">
+<li>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</li>
+</ol>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../../_images/toggle1.png"><img alt="../../../../_images/toggle1.png" class="align-right" src="../../../../_images/toggle1.png" style="width: 300px;" /></a>
+</div>
+</div>
 </div>
 
             </div>
@@ -211,7 +293,7 @@
                 
                 
                 <span class="hbpdoc-hnav-next">
-                    next: <a class="hbpdoc-hnav-link" href="../analyze_run/analyze_run.html">Analyze an optimization run</a>
+                    next: <a class="hbpdoc-hnav-link" href="../../cerebellum/cerebellum.html">Cerebellum</a>
                 </span>
                 
             </aside>
