@@ -1,9 +1,3 @@
-.. _syn_events_fit_analysis:
-
-################################
-Synaptic events fitting analysis
-################################
-
 This Jupyter Notebook allows the user to analyse the optimized parameters.
 The user may visualize:
 
@@ -11,7 +5,7 @@ The user may visualize:
                         
 .. container:: bsp-container-center
 
-     .. image:: images/results_table.png
+     .. image:: ../syn_events_fit_analysis/images/results_table.png
          :width: 700px
          :align: center
               
@@ -22,7 +16,7 @@ The user may visualize:
    
 .. container:: bsp-container-center
 
-     .. image:: images/results_box.png
+     .. image:: ../syn_events_fit_analysis/images/results_box.png
          :width: 700px
          :align: center
               
@@ -33,7 +27,7 @@ The user may visualize:
  
 .. container:: bsp-container-center
 
-     .. image:: images/results_fit.png
+     .. image:: ../syn_events_fit_analysis/images/results_fit.png
          :width: 700px
          :align: center
    
@@ -43,7 +37,7 @@ The user may analyse the optimized parameters for a default data and mod file co
 
 .. container:: bsp-container-center
 
-     .. image:: images/choose_files.png
+     .. image:: ../syn_events_fit_analysis/images/choose_files.png
          :width: 700px
          :align: center
    
@@ -56,24 +50,6 @@ If you are interested in looking at the code, click on “Click here to toggle o
 
 .. container:: bsp-container-center
 
-     .. image:: images/toggle_button.png
+     .. image:: ../syn_events_fit_analysis/images/toggle_button.png
          :width: 300px
          :align: center
-      
-|
-
-
-Warnings
-    •	Each notebook cell has two square bracket on the left. 
-    
-        1.	When are empty, it means that the code was never run before
-
-        2.	When there is an asterisk [*], it means that the code is running
-        
-        3.	When there is a number, it means that the code was run. A progressive numbering scheme define the order in which the cells were run
-        
-    •	Each time a notebook is executed, a kernel status symbol is displayed in the top right corner of the notebook
-    
-        1.	When there is a circle bullet •, it means that the kernel is running and the user have to be sure to not interfere with the code execution
-        
-        2. When there is an empty circle bullet ○, it means that the kernel is idle and the user can interfere with the notebook

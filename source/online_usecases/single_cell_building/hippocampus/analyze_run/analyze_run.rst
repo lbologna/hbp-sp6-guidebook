@@ -1,11 +1,5 @@
-.. _analyze_run:
 
-###########################
-Analyze an optimization run 
-###########################
-
-
-This Jupyter Notebook allows users to:
+This Jupyter Notebook allows the user to:
 
 1. Choose a previous optimization, from the HBP GitHub repository or from the collab storage, and run an analysis by clicking on “View analysis”
 
@@ -13,7 +7,7 @@ This Jupyter Notebook allows users to:
 
 .. container:: bsp-container-center
 
-  .. image:: images/saveAnalysis.png
+  .. image:: ../analyze_run/images/saveAnalysis.png
      :width: 600px
      :align: right
 
@@ -21,7 +15,7 @@ This Jupyter Notebook allows users to:
 
 .. container:: bsp-container-center
 
-  .. image:: images/morphology.png
+  .. image:: ../analyze_run/images/morphology.png
      :width: 500px
      :align: right
 
@@ -29,7 +23,7 @@ This Jupyter Notebook allows users to:
 
 .. container:: bsp-container-center
 
-  .. image:: images/view_save.png
+  .. image:: ../analyze_run/images/view_save.png
      :width: 250px
      :align: right
 
@@ -37,7 +31,7 @@ This Jupyter Notebook allows users to:
 
 .. container:: bsp-container-center
 
-  .. image:: images/peaks.png
+  .. image:: ../analyze_run/images/peaks.png
      :width: 500px
      :align: right
 
@@ -45,7 +39,7 @@ This Jupyter Notebook allows users to:
 
 .. container:: bsp-container-center
 
-  .. image:: images/bars.png
+  .. image:: ../analyze_run/images/bars.png
      :width: 500px
      :align: right
 
@@ -53,7 +47,7 @@ This Jupyter Notebook allows users to:
 
 .. container:: bsp-container-center
 
-  .. image:: images/traces.png
+  .. image:: ../analyze_run/images/traces.png
      :width: 500px
      :align: right
 
@@ -61,6 +55,6 @@ This Jupyter Notebook allows users to:
  
 .. container:: bsp-container-center
 
-  .. image:: images/toggle.png
+  .. image:: ../analyze_run/images/toggle.png
      :width: 300px
      :align: right
