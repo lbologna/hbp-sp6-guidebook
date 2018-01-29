@@ -162,6 +162,10 @@ Both the feature and the optimization files can be removed from the pipeline
 and/or downloaded by the user on his local machine through the "Delete" and "Download"
 buttons respectively.
 
+|
+
+The status of the submitted jobs can be monitored via the "Single Cell
+Simulation Run" panel (see next paragraph), through the "Fetch results" button.
 
 **************************
 Single Cell Simulation Run 
