@@ -147,7 +147,7 @@ From the **top** you are able to see:
 
 |simulation_details_top|
 
-- ``Simulation`` and ``Analysis`` with the following information
+- ``Simulation`` with the following information
 
    - *Name*
    - *ID*
@@ -164,6 +164,11 @@ From the **middle** you are able to see:
    - *Unicore Logs*
    - *Stderr*: Logs of the simulation
    - *Stdout*: Output information of the simulation
+
+In ``Analysis`` section shows the different analysis the user has run
+
+   |simulation_details_analysis|
+
 
 .. |run_simulation| image:: images/run_simulation.png
 .. |run_simulation_top| image:: images/run_simulation_top.png
@@ -183,6 +188,7 @@ From the **middle** you are able to see:
 .. |run_analysis_form| image:: images/run_analysis_form.png
 .. |simulation_details| image:: images/simulation_details.png
 .. |simulation_details_middle| image:: images/simulation_details_middle.png
+.. |simulation_details_analysis| image:: images/simulation_details_analysis.png
 .. |simulation_details_top| image:: images/simulation_details_top.png
 
 
