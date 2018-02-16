@@ -22,7 +22,6 @@ An user is able to create a new Collab, use an existing one, add use cases to th
 
 Usually, when an user chooses an use case to work on, the following screen is presented to let the user select an existing Collab or to create a new Collab:
 
-.. class:: with-border
 .. image:: images/collab_select.png
     :scale: 90%
     :align: right
