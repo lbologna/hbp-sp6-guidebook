@@ -112,6 +112,14 @@
                 <div class="section" id="morphology-analysis">
 <span id="id1"></span><h1>Morphology Analysis<a class="headerlink" href="#morphology-analysis" title="Permalink to this headline">¶</a></h1>
 <p>The <em>Morphology Analysis</em> use case provides capability to analyse a neuronal morphology with <a class="reference external" href="https://github.com/BlueBrain/NeuroM">NeuroM</a>.</p>
+<p><a class="reference external" href="https://github.com/BlueBrain/NeuroM">NeuroM</a> is a Python toolkit for the analysis and processing of neuron morphologies. It can be used to:</p>
+<ul class="simple">
+<li>quickly extract various morphometrics for one or a population of neurons. Example of such metrics are the neurite length, number of bifurcation per neurite or the number of segments. The list of all features can be found in the NeuroM documentation (<a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.fst.get.html">here</a> and <a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.get.html">there</a>).</li>
+<li><a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.check.html">check</a> the validity of morphology files (examples: no missing parent points, no excessively small neurite radii, no missing soma).</li>
+<li>visualize neuron morphologies with the module: <a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.viewer.html">neuron.view</a>.</li>
+<li>iterate through morphology parts of a neuron object for more advanced use cases. One can iterate on neurites, sections (neurite chunk between two successive branching points) or segments (the most fundamental sub-unit of a morphology).</li>
+</ul>
+<p>Here are the steps to open this use case:</p>
 <ol class="arabic">
 <li><p class="first">The use case can be found under <em>Online Use Cases/Morphology Analysis</em>:</p>
 <blockquote>

@@ -59,6 +59,13 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Getting started</a><ul>
+<li><a class="reference internal" href="#working-with-collabs">Working with Collabs</a></li>
+<li><a class="reference internal" href="#use-case-organization">Use case Organization</a><ul>
+<li><a class="reference internal" href="#user-experience">User experience</a></li>
+<li><a class="reference internal" href="#use-case-maturity">Use case maturity</a></li>
+<li><a class="reference internal" href="#hpc-access">HPC access</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#service-accessibility">Service Accessibility</a></li>
 </ul>
 </li>
@@ -112,10 +119,119 @@
                 <div class="section" id="getting-started">
 <span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <p>The Brain Simulation Platform (BSP) is organized around several “Online Use Cases” and “Model Collabs”. From there, in a few clicks you will be guided to specific practical ways to use the BSP in such a way to be almost immediately productive.</p>
+<p>As with most scientific instruments, access to advanced functionality may be subject to certain conditions. This is due to the early state of the Platform and to the fact that it relies on limited resources, such as supercomputers.
+Please see the table at the end of this section regarding the services the Brain Simulation Platform (BSP) provides to different user classes at this point in time.</p>
+<p>But first a quick overview is given on how to work with &#8220;Collabs&#8221; and how the use cases are organized:</p>
+<div class="section" id="working-with-collabs">
+<h2>Working with Collabs<a class="headerlink" href="#working-with-collabs" title="Permalink to this headline">¶</a></h2>
+<p>The central scientific working place in the Brain Simulation Platform are the &#8216;Collabs&#8217; (from &#8216;Collaboration&#8217;).  A Collab is an area in which one or more scientists can work on different/multiple tasks.
+An user is able to create a new Collab, use an existing one, add use cases to this Collab, and to invite colleagues from the scientific community to collaborate.</p>
+<p>Usually, when an user chooses an use case to work on, the following screen is presented to let the user select an existing Collab or to create a new Collab:</p>
+<a class="reference internal image-reference" href="../_images/collab_select.png"><img alt="../_images/collab_select.png" class="align-right" src="../_images/collab_select.png" style="width: 954.0px; height: 292.5px;" /></a>
+<p>Here you can enter the name of an existing Collab; any matching Collab will be listed and you can click it. Or you can select &#8216;Create new Collab&#8217; which will lead to the following screen:</p>
+<a class="reference internal image-reference" href="../_images/collab_new.png"><img alt="../_images/collab_new.png" class="align-right" src="../_images/collab_new.png" style="width: 957.6px; height: 293.4px;" /></a>
+<p>When you create a new Collab, the steps are easy:</p>
+<ol class="arabic simple">
+<li>You select an meaningful name for the Collab (example: &#8220;Henry CA1 Connectome&#8221;).</li>
+<li>You click on &#8220;Create&#8221; (You can choose of the Collab can be seen by anyone, or if its Private. You can change this later anytime).</li>
+<li>Then the actual notebook or GUI of the use case you initially selected should open up.</li>
+</ol>
+<p>A new Collab will open with your use case(s) and several options:</p>
+<a class="reference internal image-reference" href="../_images/collab_options.png"><img alt="../_images/collab_options.png" class="align-right" src="../_images/collab_options.png" style="width: 222.3px; height: 218.7px;" /></a>
+<p>Here you have different possibilities to configure the Collab or to see some statistics:</p>
+<dl class="docutils">
+<dt><strong>Overview</strong></dt>
+<dd>Will display recent activities in the Collab.</dd>
+<dt><strong>Team</strong></dt>
+<dd>Here you can invite a colleague to collaborate</dd>
+<dt><strong>Storage</strong></dt>
+<dd>Here you can see what data and files are in the Collab-storage. You can upload and download files to/from that storage space.</dd>
+<dt><strong>Settings</strong></dt>
+<dd>Here you can change the privacy of the Collab and rename it, if required.</dd>
+</dl>
+</div>
+<div class="section" id="use-case-organization">
+<h2>Use case Organization<a class="headerlink" href="#use-case-organization" title="Permalink to this headline">¶</a></h2>
+<div class="bsp-container-left docutils container">
+<a class="reference internal image-reference" href="../_images/bsp_scheme.png"><img alt="../_images/bsp_scheme.png" class="align-right" src="../_images/bsp_scheme.png" style="width: 381.6px; height: 294.6px;" /></a>
+</div>
+<p>A schematic organization of the use cases workflow is shown in the figure on the left. An important aspect of the workflow is that it is open to the entire neuroscience community. This means that no matter if you belong to an HBP partner Institution, an external Laboratory/Company, or you are just a curious student, you can be invited to have a HBP account and will have access to the use cases. The only restriction will be on the type of data you will able to work with, and the resources that you can use.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>So, here are a few simple typical steps you can follow to start your project:</p>
+<ol class="arabic simple">
+<li>Navigate the use cases list to decide/find the one most appropriate to what you would like to do; the system will show you in some detail what is already available, based on your account accreditation;</li>
+<li>Once you choose the use case, the platform will guide you to create a new collab (or to add the use case to one of your existing collabs); all code and HBP-generated experimental data and models needed to execute the use case will be copied there; in several cases you can also upload and work with your own data;</li>
+<li>Use your own imagination and collaborate with your team to pursue your scientific work, by using the tools already available or create new ones;</li>
+<li>Once you are satisfied with the results, you can download them and/or make your work available to other users by releasing it into the HBP database; our support team can eventually also help you in creating a new use case.</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>This is the theory, but in practice what you can do with a use case will of course depend on your background and expertize. The BSP follows a user centric development, to enable users with different backgrounds and skill level to exploit the Platform’s capabilities to pursue scientific goals.
+Also, keep in mind that use cases are constantly updated, to improve their functionalities and usability, and may require different types of resources. To help you in deciding if a specific use case is appropriate for your expertise, each one is marked with intuitive icons, indicating the expected user experience, the use case maturity, and the type of resources required. You will see these icons on the rightmost part of the use case buttons, as in the figure below:</p>
+<div class="bsp-container-center docutils container">
+<a class="bsp-center reference internal image-reference" href="../_images/usecase_button.png"><img alt="../_images/usecase_button.png" class="bsp-center align-right" src="../_images/usecase_button.png" style="width: 619.5px; height: 244.3px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Here is what they mean:</p>
+<div class="section" id="user-experience">
+<h3>User experience<a class="headerlink" href="#user-experience" title="Permalink to this headline">¶</a></h3>
+<div class="bsp-container-left docutils container">
+<a class="reference internal image-reference" href="../_images/everybody_tag.png"><img alt="../_images/everybody_tag.png" src="../_images/everybody_tag.png" style="width: 84.0px; height: 30.1px;" /></a>
+</div>
+<p><strong>End users:</strong> interested in using the BSP infrastructure and facilities in the most user-friendly way, for relatively simple collaborative scientific projects using GUIs and public HPC resources, such as a Cloud Computing or the Neuroscience Gateway (NSG); they know the electrophysiological mechanisms underlying a neuron’s behavior (ion channels, synaptic and firing properties, etc) and understand how to run a simple simulation, but they have no background experience on programming languages such as python and/or the NEURON simulation environment.</p>
+<div class="bsp-container-left docutils container">
+<a class="reference internal image-reference" href="../_images/poweruser_tag.png"><img alt="../_images/poweruser_tag.png" src="../_images/poweruser_tag.png" style="width: 84.0px; height: 30.1px;" /></a>
+</div>
+<p><strong>Power user:</strong> interested in using the BSP infrastructure and facilities for collaborative projects using public resources (such as the NSG), or their own HPC grants on one of the supercomputer centers supporting HBP activities (JSC and CINECA). These users are able to design, implement, run, and analyze models and simulations using the NEURON simulation environment; they understand the information needed to implement and run a simulation of morphologically and biophysically accurate neurons, and they have a working knowledge of python.</p>
+<div class="bsp-container-left docutils container">
+<a class="reference internal image-reference" href="../_images/experts_tag.png"><img alt="../_images/experts_tag.png" src="../_images/experts_tag.png" style="width: 84.0px; height: 30.1px;" /></a>
+</div>
+<p><strong>Experts and co-design partners:</strong> users with a good knowledge of the inner working of collabs/apps/webservices and/or a substantial expertize in implementing simulations of morphologically and biophysically accurate neurons and networks to model brain functions; they contribute to the development of new use cases/models.</p>
+<div class="bsp-container-left docutils container">
+<a class="reference internal image-reference" href="../_images/developer_tag.png"><img alt="../_images/developer_tag.png" src="../_images/developer_tag.png" style="width: 84.0px; height: 30.1px;" /></a>
+</div>
+<p><strong>Code developers:</strong> designers and early adopters of initial versions of collabs/apps/webservices/models; they are top experts in their respective ICT and/or neuroscience field. Use cases showing this icon are usually restricted to collabs with a team composed of mostly HBP partners for developing/testing advanced topics.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="use-case-maturity">
+<h3>Use case maturity<a class="headerlink" href="#use-case-maturity" title="Permalink to this headline">¶</a></h3>
+<div class="bsp-container-left docutils container">
+<a class="reference internal image-reference" href="../_images/beta_tag.png"><img alt="../_images/beta_tag.png" src="../_images/beta_tag.png" style="width: 50.0px; height: 52.5px;" /></a>
+</div>
+<div class="bsp-inline-text docutils container">
+A service of this maturity level has reached a certain robustness and may be used by early adopters.</div>
+<div class="bsp-container-left docutils container">
+<a class="reference internal image-reference" href="../_images/experimental_tag.png"><img alt="../_images/experimental_tag.png" src="../_images/experimental_tag.png" style="width: 50.0px; height: 52.5px;" /></a>
+</div>
+<div class="bsp-inline-text docutils container">
+A service of this maturity level is under heavy development and recommended only for specialists’ use or use for co-design partners.</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="hpc-access">
+<h3>HPC access<a class="headerlink" href="#hpc-access" title="Permalink to this headline">¶</a></h3>
+<div class="bsp-container-left docutils container">
+<a class="reference internal image-reference" href="../_images/hpc_tag.png"><img alt="../_images/hpc_tag.png" src="../_images/hpc_tag.png" style="width: 50.0px; height: 52.5px;" /></a>
+</div>
+<div class="bsp-inline-text docutils container">
+Use cases with this icon require a small to medium amount of High-Performance Computing resources. They can be either public, such as those available through the NSG, or provided by the user through a personal grant, such as a PRACE award, on one of the supercomputer centers supporting HBP activities (JSC and CINECA).</div>
+<div class="bsp-container-left docutils container">
+<a class="reference internal image-reference" href="../_images/byo_tag.png"><img alt="../_images/byo_tag.png" src="../_images/byo_tag.png" style="width: 50.0px; height: 52.5px;" /></a>
+</div>
+<div class="bsp-inline-text docutils container">
+This type of use cases needs large HPC resources. Typically, use cases showing this icon involve complex simulations of large scale cellular level model of brain areas/regions, that are deployed on JSC and CINECA systems. Subjected to technical compatibility and license agreement, this type of simulations can be delegated to be executed on other HPC systems, outside the BSP.</div>
+</div>
+</div>
 <div class="section" id="service-accessibility">
 <h2>Service Accessibility<a class="headerlink" href="#service-accessibility" title="Permalink to this headline">¶</a></h2>
-<p>As with most scientific instruments, access to advanced functionality may be subject to certain conditions. This is due to the early state of the Platform and to the fact that it relies on limited resources, such as supercomputers.</p>
-<p>Please see the below table for the services the Brain Simulation Platform (BSP) provides to different user classes at this point in time:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
