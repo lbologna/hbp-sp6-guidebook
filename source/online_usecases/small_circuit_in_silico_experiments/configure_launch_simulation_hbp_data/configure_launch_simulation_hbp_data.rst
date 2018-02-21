@@ -1,20 +1,19 @@
 
-Documentation
-~~~~~~~~~~~~~
+Configure and run a small circuit using preconfigured HBP model and data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Configure and Launch Simulations
-================================
+
 
 This use case allows a user to configure and launch a simulation on HBP HPAC infrastructure using `Unicore API <https://www.unicore.eu/>`__.
 
-1) Run Simulations
-~~~~~~~~~~~~~~~~~~
+Run Simulations
+===============
 
 |run_simulation|
 
 ----------------
 
-From the **top** you can configure: 
+From the **top** you can configure:
 
    |run_simulation_top|
 
@@ -34,12 +33,12 @@ From the **middle** you can configure:
 
 -  ``add`` new stimulus/report, ``edit`` or ``remove`` (You can also
    double-click on the timeline to add or edit)
-   
+
    |edit_buttons|
 
 -  ``Slices Selector`` allows to pick a slice of the hippocampus and it
    will add this to the *stimulus* / *report*
-   
+
    |stimulus_selector|
 
 -  ``Stimulations``
@@ -55,7 +54,7 @@ From the **middle** you can configure:
          milliseconds(ms)
       -  *Weight*: The strength of the created synapses
       -  *Number of synapses*: The number of synapses to create
-   
+
    |edit_stimulus|
 
 -  ``Reports``
@@ -76,7 +75,7 @@ From the **middle** you can configure:
       -  *Dt*: The frequency of reporting in milliseconds(ms)
       -  *Format*: Defines the report output format [Bin, ASCII, HDF5]
       -  *Number of synapses*: The number of synapses to create
-      
+
    |edit_report|
 
 --------------
@@ -88,14 +87,14 @@ From the **bottom** you can ``launch`` the simulation
  - *Title*: The title of the job
  - *Computer*: Which supercomputer will run the simulation.
  - *Project*: (optional) If you want to specify under which project the simulation should be run
- - *Nodes*: The amount of nodes that will be allocated and used for the simulation 
+ - *Nodes*: The amount of nodes that will be allocated and used for the simulation
  - *Run Time*: The maximum time before timeout (in seconds)
  - *Preview Config*: This will open a new tab with the complete configuration that is going to be sent (BlueConfig)
 
    |run_simulation_form|
 
-2) View Simulations
-~~~~~~~~~~~~~~~~~~~
+View Simulations
+================
 
 |view_simulation|
 
@@ -132,14 +131,14 @@ From the **middle** you are able to:
       -  *Destination*: Supercomputer that the output files from
          simulation will be copied to and start the analysis
       -  *Nodes*: Number of nodes dedicated for the analysis job
-         
+
          |run_analysis_form|
 
 -  ``Delete`` the simulation
 -  ``Abort`` the simulation
 
-3) Simulation Details
-~~~~~~~~~~~~~~~~~~~~~
+Simulation Details
+==================
 
 |simulation_details|
 
@@ -155,7 +154,7 @@ From the **top** you are able to see:
    - *Submission Date*
    - *Auto Sync* while the job is running reload the information
 
-From the **middle** you are able to see: 
+From the **middle** you are able to see:
 
    |simulation_details_middle|
 
@@ -190,5 +189,3 @@ In ``Analysis`` section shows the different analysis the user has run
 .. |simulation_details_middle| image:: images/simulation_details_middle.png
 .. |simulation_details_analysis| image:: images/simulation_details_analysis.png
 .. |simulation_details_top| image:: images/simulation_details_top.png
-
-
