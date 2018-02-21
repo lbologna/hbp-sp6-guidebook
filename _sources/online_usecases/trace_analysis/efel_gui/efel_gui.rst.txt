@@ -11,7 +11,7 @@ Overview
 .. container:: bsp-container-left
 
     .. image:: images/spikesEfel.png
-        :scale: 90% 
+        :scale: 90%
         :align: right
 
 
@@ -155,22 +155,23 @@ The feature extraction process is preparatory to the generation of the
 optimization performed through the `BluePyOpt
 <https://github.com/BlueBrain/BluePyOpt>`_ software tool (please refer to the
 BluePyOpt `documentation <http://bluepyopt.readthedocs.io/en/latest/>`_ for
-detailed explanations). 
+detailed explanations).
 
 The features the user can select for extraction are described at this `link
 <http://bluebrain.github.io/eFEL/index.html>`_ as well as the eFEL software
-package used to process the data.
+package used to process the data. See also :ref:`Hippocampal Neurons <hippocampal-neurons>` in this guidebook.
+
 
 Features are computed for every trace of the chosen recordings, where a trace
 correponds to a given stimulus current amplitude (indicated to the user when
-data are displayed). 
+data are displayed).
 Once the extraction finalized, the values of a feature obtained from traces
 belonging to an individual cell and corresponding to the same stimulation
 amplitude are averaged.
 The averages computed for all the cells, are averaged a second time
 by stimulus amplitude.
 This will generate two result files (i.e. *features.json* and  *protocol.json*)
-per cell plus two supplementary files with the global averages. 
+per cell plus two supplementary files with the global averages.
 
 While the `eFEL <http://bluebrain.github.io/eFEL/index.html>`_ extracts the
 features of interest from single traces (individually selected or grouped) it
@@ -212,7 +213,7 @@ Once entered in the trace selection page the user can filter the data from the
 HBP dataset, by choosing, from five dropdown menu, the properties of the cell:
 1) Species; 2) Brain structure; 3) Region; 4) Type; 5) Electrical type (`eType
 <https://bbp.epfl.ch/nmc-portal/glossary>`_). If any of the field is
-missing (e.g. the eType of the cell is not know), the "unknown" label is 
+missing (e.g. the eType of the cell is not know), the "unknown" label is
 displayed.
 
 After the data are loaded, the traces contained in each file are showed and data
@@ -257,7 +258,7 @@ extraction process takes place as described in
 .. container:: bsp-container-center
 
     .. image:: images/featureselect.png
-        :width: 500px 
+        :width: 500px
         :align: right
 
 
@@ -272,6 +273,5 @@ download.
 .. container:: bsp-container-center
 
     .. image:: images/download.png
-        :width: 500px 
+        :width: 500px
         :align: right
-

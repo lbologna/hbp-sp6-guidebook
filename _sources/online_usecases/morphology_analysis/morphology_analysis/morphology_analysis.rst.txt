@@ -25,7 +25,7 @@ Here are the steps to open this use case:
      .. image:: images/select_single_cell_model.png
         :width: 700px
 
-3. Next, you should define a Collab in which you want to perform analysis on the morphology of the chosen single-cell model. You may choose to add the morphology analysis to an existing Collab, or create a new Collab:
+3. Next, you should define a Collab in which you want to perform analysis on the morphology of the chosen single-cell model. You may choose to add the morphology analysis to an existing Collab, or create a new Collab (See also :ref:`Working with Collabs <working-with-collabs>`)
 
      .. image:: images/create_collab.png
         :width: 700px
@@ -34,4 +34,3 @@ Here are the steps to open this use case:
 
      .. image:: images/morphology_analysis_notebook.png
         :width: 700px
-
