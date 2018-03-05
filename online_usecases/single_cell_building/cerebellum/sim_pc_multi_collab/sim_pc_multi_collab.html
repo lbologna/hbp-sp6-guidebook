@@ -9,7 +9,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Multi compartmental Cerebellar Granule cell optimization &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <title>Multi compartmental mouse Purkinje cell simulation and validation &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
     
     <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
@@ -34,8 +34,8 @@
     <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Multi compartmental mouse Purkinje cell simulation and validation" href="../sim_pc_multi_collab/sim_pc_multi_collab.html" />
-    <link rel="prev" title="Mono compartmental Cerebellar Granule cell optimization" href="../opt_gc_single_collab/opt_gc_single_collab.html" />
+    <link rel="next" title="Basal Ganglia" href="../../basal_ganglia/basal_ganglia.html" />
+    <link rel="prev" title="Multi compartmental Cerebellar Granule cell optimization" href="../opt_gc_multi_collab/opt_gc_multi_collab.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
@@ -57,15 +57,15 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../opt_gc_single_collab/opt_gc_single_collab.html"
-                        title="previous chapter">Mono compartmental Cerebellar Granule cell optimization</a></p>
+  <p class="topless"><a href="../opt_gc_multi_collab/opt_gc_multi_collab.html"
+                        title="previous chapter">Multi compartmental Cerebellar Granule cell optimization</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../sim_pc_multi_collab/sim_pc_multi_collab.html"
-                        title="next chapter">Multi compartmental mouse Purkinje cell simulation and validation</a></p>
+  <p class="topless"><a href="../../basal_ganglia/basal_ganglia.html"
+                        title="next chapter">Basal Ganglia</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../../../_sources/online_usecases/single_cell_building/cerebellum/opt_gc_multi_collab/opt_gc_multi_collab.rst.txt"
+      <li><a href="../../../../_sources/online_usecases/single_cell_building/cerebellum/sim_pc_multi_collab/sim_pc_multi_collab.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -101,25 +101,33 @@
                 <aside class="hbpdoc-hnav hbpdoc-hnav-top">
                     
                     <span class="hbpdoc-hnav-previous">
-                        previous: <a class="hbpdoc-hnav-link" href="../opt_gc_single_collab/opt_gc_single_collab.html">Mono compartmental Cerebellar Granule cell optimization</a>
+                        previous: <a class="hbpdoc-hnav-link" href="../opt_gc_multi_collab/opt_gc_multi_collab.html">Multi compartmental Cerebellar Granule cell optimization</a>
                     </span>
                     
                     
                     <span class="hbpdoc-hnav-next">
-                        next: <a class="hbpdoc-hnav-link" href="../sim_pc_multi_collab/sim_pc_multi_collab.html">Multi compartmental mouse Purkinje cell simulation and validation</a>
+                        next: <a class="hbpdoc-hnav-link" href="../../basal_ganglia/basal_ganglia.html">Basal Ganglia</a>
                     </span>
                     
                 </aside>
 
-                <div class="section" id="multi-compartmental-cerebellar-granule-cell-optimization">
-<span id="multi-crb-gc-collab"></span><h1>Multi compartmental Cerebellar Granule cell optimization<a class="headerlink" href="#multi-compartmental-cerebellar-granule-cell-optimization" title="Permalink to this headline">¶</a></h1>
-<p>The granule cells are the most abundant type of neuron in the cerebellum and, togheter with the Golgi cells, form the granule cell layers.
-During the last two decades many granule cell models were built to explore their physiological properties.</p>
-<p>The Python notebook contains the code to optimize, with BluePyOpt, a multi compartmental cerebellar granule cell, using the computational resources provided on the Collab.
-The notebook contains a step by step description of each notebook cell starting with the morphology, to the definition of custom section lists for the axon, the voltage dependent ionic channels and the optimization parameters.</p>
-<p>The ionic channels mechanisms, passive properties, morphology were taken and adapted from a previous published granule cell model (Diwakar et al., 2006) (<a class="reference external" href="https://senselab.med.yale.edu/modeldb/showModel.cshtml?model=116835">https://senselab.med.yale.edu/modeldb/showModel.cshtml?model=116835</a>) and used in the automatic reconstruction and its validation.
-The models were originally obtained using the BBP Optimizer Framework (Masoli et al., 2017) but it later adapted to BluePyOpt with identical results.</p>
-<p>Information about how to convert a morphology type, for example neuron to SWC or neurolucida, to be used in the optimization procedure, can be found in the previosly mentioned paper.</p>
+                <div class="section" id="multi-compartmental-mouse-purkinje-cell-simulation-and-validation">
+<span id="sim-pc-multi-collab"></span><h1>Multi compartmental mouse Purkinje cell simulation and validation<a class="headerlink" href="#multi-compartmental-mouse-purkinje-cell-simulation-and-validation" title="Permalink to this headline">¶</a></h1>
+<p>The Purkinje cells are one of oldest and most complex neuron of the entire central nervous system.
+Their purpose is to integrate thousands of synaptic inputs coming from the cerebellar granular layer and the molecular layer interneurons.
+During the last six decades, many Purkinje cell models were built to explore their physiological properties but only in 1994 it was built the first
+multicompartmental model with HH ionic channels and 3D reconstructed morphology.
+That model was rebuilt with new passive, active and axonal properties (Masoli et al., 2015).</p>
+<p>Since the computational impact is very high, with each optimization requiring, at least, 30 hours
+to complete 256 individuals and 7 generations, it was decided to not include this step into the notebook.</p>
+<p>The notebook contains a step by step description of each cell starting from the visualization of the available results,
+to the actual analysis of the voltage/time traces and the definition of a set of parameters to validate the correct physiological results.
+The final step is to test each validated individual for the absence of the Axon Initial Segment (AIS) sodium channels.
+If a cell is still able to generate spontaneous firing, even without sodium channels then is discarded as a non physiological Purkinje cell.
+Only not spiking models, without sodium channels in the AIS, are correct.</p>
+<p>The ionic channel mechanisms, passive properties, morphology were taken
+and adapted from a previous published guinea pig Purkinje cell model (Masoli et al,. 2015; Masoli and D&#8217;Angelo, 2017)
+(<a class="reference external" href="https://senselab.med.yale.edu/modeldb/ShowModel.cshtml?model=229585">https://senselab.med.yale.edu/modeldb/ShowModel.cshtml?model=229585</a>) and used in the automatic reconstruction and its validation.</p>
 <p>(Code and testing - Stefano Masoli PhD)</p>
 </div>
 
@@ -128,12 +136,12 @@ The models were originally obtained using the BBP Optimizer Framework (Masoli et
             <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
                 
                 <span class="hbpdoc-hnav-previous">
-                    previous: <a class="hbpdoc-hnav-link" href="../opt_gc_single_collab/opt_gc_single_collab.html">Mono compartmental Cerebellar Granule cell optimization</a>
+                    previous: <a class="hbpdoc-hnav-link" href="../opt_gc_multi_collab/opt_gc_multi_collab.html">Multi compartmental Cerebellar Granule cell optimization</a>
                 </span>
                 
                 
                 <span class="hbpdoc-hnav-next">
-                    next: <a class="hbpdoc-hnav-link" href="../sim_pc_multi_collab/sim_pc_multi_collab.html">Multi compartmental mouse Purkinje cell simulation and validation</a>
+                    next: <a class="hbpdoc-hnav-link" href="../../basal_ganglia/basal_ganglia.html">Basal Ganglia</a>
                 </span>
                 
             </aside>
