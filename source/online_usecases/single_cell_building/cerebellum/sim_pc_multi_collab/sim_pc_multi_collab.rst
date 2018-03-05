@@ -1,3 +1,5 @@
+.. _sim_pc_multi_collab:
+
 #################################################################
 Multi compartmental mouse Purkinje cell simulation and validation
 #################################################################
