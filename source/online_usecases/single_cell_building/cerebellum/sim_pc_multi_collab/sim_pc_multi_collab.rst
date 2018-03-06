@@ -1,7 +1,7 @@
 .. _sim_pc_multi_collab:
 
 #################################################################
-Multi compartmental mouse Purkinje cell simulation and validation
+Simulation and validation of a mouse Purkinje cell multicompartmental model
 #################################################################
 
 The Purkinje cells are one of oldest and most complex neuron of the entire central nervous system. 
