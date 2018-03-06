@@ -1,4 +1,6 @@
+###################################
 Cerebellum microcircuit: Connectome
+###################################
 
 Expert: Stefano Casali, Elisa Marenzi, Claudia Casellato
 Target audience: (medium) Power Users 
@@ -16,12 +18,17 @@ As an example, a 3D basic visualization about the connection from Glomeruli to G
 
 Moreover, an a-posteriori analysis of the generated hdf5 file can be done by using monitoring_probConn.py (in /storage), to quantify and display probability of connection dependent on inter-soma distance between connected neurons.
 Steps:
+
 •	Running all notebook steps one at a time 
+
 •	Running each step in a sequential order
 
 Additional information:
+
 •	The whole usecase should take about 4 minutes for a volume base of 400 x 400 µm. If enabled, the computation of the metrics for each connection type adds about 15 minutes for such network size.
+
 •	No login to any other computer required
 
 Used BBP tools in notebook directly:
+
 •	None

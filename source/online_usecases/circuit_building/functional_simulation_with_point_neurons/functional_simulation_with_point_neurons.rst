@@ -1,4 +1,6 @@
+###################################
 Cerebellum microcircuit: Functional
+###################################
 
 Expert: Stefano Casali, Elisa Marenzi, Claudia Casellato
 Target audience: (medium) Power Users 
@@ -11,12 +13,17 @@ The main input are the placement and the connectome matrices converted into .dat
 The output of this usecase are .gdf files (generated for each spike detector and for each computing core), containing all the spike times of the whole built network (local path on HPC). 
 Finally, the usecase carries out a “spike analysis”, by compacting all the files into Spike Matrices (one matrix for each neuron type population; the user can select which cell type) and by quantifying and displaying frequency-related parameters (PSTH).
 Steps:
+
 •	Running all notebook steps one at a time 
+
 •	Running each step in a sequential order
 
 Additional information:
+
 •	The whole usecase should take about 4.5 hours (with 8192 cores (512 nodes) on Juqueen) for a volume base of 200 x 200 µm, excluding queue-time and excluding the a-posteriori “spike analysis”. 
+
 •	login to HPC resource by UNICORE
 
 Used BBP tools in notebook directly:
+
 •	pyNEST
