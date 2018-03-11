@@ -126,7 +126,7 @@ optimization parameters (see figure below).
 .. container:: bsp-container-center
 
     .. image:: images/hhnb_hpc_param_select.png 
-        :scale: 70% 
+        :scale: 45% 
         :align: right
 
 |
@@ -190,13 +190,20 @@ The user can fetch the results from the HPC system of choice through the "Fetch
 results" button which allows to select the HPC system the optimization
 files reside in and, successively, select the result file of interest (see
 figures below).
+At the moment, only the Neuroscience Gateway hpc system can be used for running
+the optimization scripts. A full description of the meaning of the job status
+tags can be found at this `link http://www.nsgportal.org/guide.html#UnderstandJobStatus_` .
+Please note that, while the job status can be "Completed", the outcome of the
+optimization might be empty, if, for example, the optimization parameters are
+not chose appropriately (e.g. if the "Runtime" value is set so as not to allow
+the optimization to come to an end).
 
 |
-
+ 
 .. container:: bsp-container-center
 
     .. image:: images/hhnb_fetch_param.png 
-        :scale: 80% 
+        :scale: 50% 
         :align: right
 
 |
@@ -205,8 +212,8 @@ figures below).
 
 .. container:: bsp-container-center
 
-    .. image:: images/hhnb_storage_fetch.png 
-        :scale: 80% 
+    .. image:: images/hhnb_hpc_fetch.png 
+        :scale: 55% 
         :align: right
 
 |
