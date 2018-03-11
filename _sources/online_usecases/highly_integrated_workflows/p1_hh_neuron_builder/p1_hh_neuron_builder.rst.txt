@@ -99,7 +99,7 @@ optimization parameters (see figure below).
   model parameters will be optimized via the `BluePyOpt
   <https://github.com/BlueBrain/BluePyOpt>`_ tool through an optimization procedure
   based on genetic algorithm. For a complete reference to the BluePyOpt, please
-  refer to the original article at this `link. <https://www.frontiersin.org/articles/10.3389/fninf.2016.00017/full>`_
+  refer to the original article at this `link <https://www.frontiersin.org/articles/10.3389/fninf.2016.00017/full>`_.
 
 |
 
@@ -192,7 +192,7 @@ files reside in and, successively, select the result file of interest (see
 figures below).
 At the moment, only the Neuroscience Gateway hpc system can be used for running
 the optimization scripts. A full description of the meaning of the job status
-tags can be found at this `link http://www.nsgportal.org/guide.html#UnderstandJobStatus_` .
+tags can be found at this `link <http://www.nsgportal.org/guide.html#UnderstandJobStatus>`_.
 Please note that, while the job status can be "Completed", the outcome of the
 optimization might be empty, if, for example, the optimization parameters are
 not chose appropriately (e.g. if the "Runtime" value is set so as not to allow
@@ -222,7 +222,7 @@ the optimization to come to an end).
 
 Alternatively, the user can upload a *.zip* package containing the files needed for the
 simulation, through the upload button. For an example of how the *.zip* file
-content must be structured, please refer to the following `link <https://github.com/lbologna/bsp_data_repository/raw/master/optimizations/CA1_int_bAC_011017HP2_20170510120000/CA1_int_bAC_011017HP2_20170510120000.zip>`_.
+content must be structured, please refer to the following `link <https://github.com/lbologna/bsp_data_repository/raw/master/optimizations/>`_.
 
 Once the model files are integrated into the pipeline, the simulation can be run
 by clicking the "Run Simulation" button. The model is fed to the "Neuron As A Service"
