@@ -75,25 +75,25 @@ General Info
   For more information, please visit: https://services.humanbrainproject.eu/oidc/account/request
 
 * Collabs on the HBP Collaboratory can be either public or private. Public
-  collabs can be accessed by all registered users, whereas private collabs
+  Collabs can be accessed by all registered users, whereas private Collabs
   require the user to be granted permission for access.
 
 - The *Model Catalog* and the *Validation Framework* apps can be added to any
-  collab. A collab may have multiple instances of these apps. The apps require
+  Collab. A Collab may have multiple instances of these apps. The apps require
   to be *configured* by setting the provided filters appropriately before they
   can be used. These filters restrict the type of data displayed in that particular
   instance of the app.
 
 * All tests are public, i.e. every test registered on the *Validation Framework*
-  can can be seen by all users.
+  can be seen by all users.
 
-- Models are created inside specific collab instances of the *Model Catalog* app.
+- Models are created inside specific Collab instances of the *Model Catalog* app.
   The particular app inside which a model was created is termed its *host app*.
-  Similarly, the collab containing the *host app* is termed the *host collab*.
+  Similarly, the Collab containing the *host app* is termed the *host Collab*.
 
 * Models can be set as public/private. If public, the model and its associated
   results are available to all users. If private, it can only be seen by users who
-  have access to the *host collab*.
+  have access to the *host Collab*.
 
 - No information can be deleted from the *Model Catalog* and *Validation Framework*
   apps. In future, an option to *hide* data would be implemented. This would offer
@@ -135,15 +135,15 @@ We currently have the following usecases on the Collaboratory:
 
   - **Depolarization Block Test:** *(for pyramidal cells)*
 
-    The Depolarization Block Test aims to determine whether the model enters depolarization block to prolonged, high intensity somatic current stimulus. It compares the current intensity to which the model fires the maximum number of action potentials, the current intensity before the model enters depolarization block (the two should be equal) and the equilibrium potential during depolarization block to the experimental data of Bianchi et al. 2012.
+    The Depolarization Block Test aims to determine whether the model enters depolarization block to prolonged, high intensity somatic current stimulus. It compares the current intensity to which the model fires the maximum number of action potentials, the current intensity before the model enters depolarization block (the two should be equal) and the equilibrium potential during depolarization block to the experimental data of Bianchi et al. 2012 (http://dx.doi.org/10.1007/s10827-012-0383-y).
 
   - **Back-Propagating AP Test:** *(for pyramidal cells)*
 
-    The Back-Propagating AP Test evaluates the mode and efficacy of back-propagating action potentials on the apical trunk in locations of different distances from the soma. The amplitude of the first and last AP of around 15 Hz train is compared to experimental data from Golding et al. 2001.
+    The Back-Propagating AP Test evaluates the mode and efficacy of back-propagating action potentials on the apical trunk in locations of different distances from the soma. The amplitude of the first and last AP of around 15 Hz train is compared to experimental data from Golding et al. 2001 (https://doi.org/10.1152/jn.2001.86.6.2998).
 
   - **PSP Attenuation Test:** *(for pyramidal cells)*
 
-    The PSP Attenuation Test evaluates how much the post synaptic potential (using EPSC stimulus) attenuates from the dendrite (different distances) to the soma. The soma/dendrite attenuation is compared to data from Magee & Cook 2000.
+    The PSP Attenuation Test evaluates how much the post synaptic potential (using EPSC stimulus) attenuates from the dendrite (different distances) to the soma. The soma/dendrite attenuation is compared to data from Magee & Cook 2000 (http://dx.doi.org/10.1038/78800).
 
 The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework are not found in the current Collab, then these are created. Additionally, a test report is generated and this can be viewed within the Jupyter notebook, or downloaded.
 
