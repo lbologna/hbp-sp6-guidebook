@@ -9,7 +9,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Cerebellum microcircuit: Connectome &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <title>Cerebellum &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -34,8 +34,8 @@
     <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Single Cell In Silico Experiments" href="../../single_cell_in_silico/single_cell_in_silico.html" />
-    <link rel="prev" title="Cerebellum microcircuit: Cell positioning" href="../positioning/positioning.html" />
+    <link rel="next" title="Functional Simulation with Point Neurons" href="functional_simulation_with_point_neurons/functional_simulation_with_point_neurons.html" />
+    <link rel="prev" title="Configure and run a brain region using preconfigured HBP model and data" href="../hippocampus/configure_run_brainregion_preconf_model_data/configure_run_brainregion_preconf_model_data.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head>
@@ -57,15 +57,15 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../positioning/positioning.html"
-                        title="previous chapter">Cerebellum microcircuit: Cell positioning</a></p>
+  <p class="topless"><a href="../hippocampus/configure_run_brainregion_preconf_model_data/configure_run_brainregion_preconf_model_data.html"
+                        title="previous chapter">Configure and run a brain region using preconfigured HBP model and data</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../../single_cell_in_silico/single_cell_in_silico.html"
-                        title="next chapter">Single Cell In Silico Experiments</a></p>
+  <p class="topless"><a href="functional_simulation_with_point_neurons/functional_simulation_with_point_neurons.html"
+                        title="next chapter">Functional Simulation with Point Neurons</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../../_sources/online_usecases/circuit_building/connectome/connectome.rst.txt"
+      <li><a href="../../../_sources/online_usecases/brain_area_circuit_in_silico_experiments/cerebellum/cerebellum.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -91,7 +91,7 @@
                     
                     <a href="../../online_usecases.html">Online Use Cases</a>
                     
-                    <a href="../circuit_building.html">Circuit Building</a>
+                    <a href="../brain_area_circuit_in_silico_experiments.html">Brain area circuit in silico experiments</a>
                     
                 </div>
                 
@@ -99,42 +99,23 @@
                 <aside class="hbpdoc-hnav hbpdoc-hnav-top">
                     
                     <span class="hbpdoc-hnav-previous">
-                        previous: <a class="hbpdoc-hnav-link" href="../positioning/positioning.html">Cerebellum microcircuit: Cell positioning</a>
+                        previous: <a class="hbpdoc-hnav-link" href="../hippocampus/configure_run_brainregion_preconf_model_data/configure_run_brainregion_preconf_model_data.html">Configure and run a brain region using preconfigured HBP model and data</a>
                     </span>
                     
                     
                     <span class="hbpdoc-hnav-next">
-                        next: <a class="hbpdoc-hnav-link" href="../../single_cell_in_silico/single_cell_in_silico.html">Single Cell In Silico Experiments</a>
+                        next: <a class="hbpdoc-hnav-link" href="functional_simulation_with_point_neurons/functional_simulation_with_point_neurons.html">Functional Simulation with Point Neurons</a>
                     </span>
                     
                 </aside>
 
-                <div class="section" id="cerebellum-microcircuit-connectome">
-<h1>Cerebellum microcircuit: Connectome<a class="headerlink" href="#cerebellum-microcircuit-connectome" title="Permalink to this headline">¶</a></h1>
-<p>Expert: Stefano Casali, Elisa Marenzi, Claudia Casellato
-Target audience: (medium) Power Users
-Target interface: Notebook</p>
-<p>This use case can be used to connect cerebellar neurons. The potential connections are created by imposing geometric constraints (based on the anisotropic simplified geometric features of the pre- and post-synaptic neuron types). Then, if needed, a selection (pruning) is carried out by defining convergence or/and divergence ratios and applying them by distance-dependent probability.</p>
-<p>The main input is the placement matrix (hdf5) generated into the usecase “Cell positioning”.
-By a simple GUI, the user can decide whether enabling the metrics computation Option.</p>
-<p>The output of this usecase is the updating of the associated hdf5 file generated from “positioning” (saved in /storage). Indeed a new key “/connections” is added. It contains multiple items, one for each connection (13 types). Each of them is made up of a matrix with 2 columns (PRE Neuron ID and POST Neuron ID).
-For each connection type, effective convergence and divergence ratios and pairwise distances among connected neurons are computed and printed.
-As an example, a 3D basic visualization about the connection from Glomeruli to Golgi cells is displayed. One PRE Neuron ID is selected, and all the POST neurons receiving its outward connections are plotted (Divergence). Also, one specific POST Neuron ID is selected, and all the PRE neurons sending connections to it are plotted (Convergence).</p>
-<p>Moreover, an a-posteriori analysis of the generated hdf5 file can be done by using monitoring_probConn.py (in /storage), to quantify and display probability of connection dependent on inter-soma distance between connected neurons.
-Steps:</p>
-<ul class="simple">
-<li>Running all notebook steps one at a time</li>
-<li>Running each step in a sequential order</li>
+                <div class="section" id="cerebellum">
+<span id="bac-cerebellum"></span><h1>Cerebellum<a class="headerlink" href="#cerebellum" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="functional_simulation_with_point_neurons/functional_simulation_with_point_neurons.html">Functional Simulation with Point Neurons</a></li>
 </ul>
-<p>Additional information:</p>
-<ul class="simple">
-<li>The whole usecase should take about 4 minutes for a volume base of 400 x 400 µm. If enabled, the computation of the metrics for each connection type adds about 15 minutes for such network size.</li>
-<li>No login to any other computer required</li>
-</ul>
-<p>Used BBP tools in notebook directly:</p>
-<ul class="simple">
-<li>None</li>
-</ul>
+</div>
 </div>
 
             </div>
@@ -142,12 +123,12 @@ Steps:</p>
             <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
                 
                 <span class="hbpdoc-hnav-previous">
-                    previous: <a class="hbpdoc-hnav-link" href="../positioning/positioning.html">Cerebellum microcircuit: Cell positioning</a>
+                    previous: <a class="hbpdoc-hnav-link" href="../hippocampus/configure_run_brainregion_preconf_model_data/configure_run_brainregion_preconf_model_data.html">Configure and run a brain region using preconfigured HBP model and data</a>
                 </span>
                 
                 
                 <span class="hbpdoc-hnav-next">
-                    next: <a class="hbpdoc-hnav-link" href="../../single_cell_in_silico/single_cell_in_silico.html">Single Cell In Silico Experiments</a>
+                    next: <a class="hbpdoc-hnav-link" href="functional_simulation_with_point_neurons/functional_simulation_with_point_neurons.html">Functional Simulation with Point Neurons</a>
                 </span>
                 
             </aside>
