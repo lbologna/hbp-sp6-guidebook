@@ -1,6 +1,6 @@
-#########################################
-Cerebellum microcircuit: Cell positioning
-#########################################
+################
+Cell positioning
+################
 
 
 Expert: Stefano Casali, Elisa Marenzi, Claudia Casellato

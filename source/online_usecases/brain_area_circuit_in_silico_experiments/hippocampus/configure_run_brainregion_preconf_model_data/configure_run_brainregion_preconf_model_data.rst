@@ -1,5 +1,5 @@
 
-Configure and run a small circuit using preconfigured HBP model and data
+Configure and run a brain region using preconfigured HBP model and data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

@@ -1,6 +1,6 @@
-###################################
-Cerebellum microcircuit: Functional
-###################################
+########################################
+Functional Simulation with Point Neurons
+########################################
 
 Expert: Stefano Casali, Elisa Marenzi, Claudia Casellato
 Target audience: (medium) Power Users 

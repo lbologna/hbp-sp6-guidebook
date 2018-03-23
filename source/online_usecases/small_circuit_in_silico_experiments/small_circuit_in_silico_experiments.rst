@@ -4,8 +4,9 @@
 Small Circuit In Silico Experiments
 ###################################
 
+To be defined ...
+
 .. toctree::
     :maxdepth: 4
 
-    configure_launch_simulation_hbp_data/configure_launch_simulation_hbp_data
 

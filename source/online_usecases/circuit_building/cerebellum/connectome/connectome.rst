@@ -1,6 +1,6 @@
-###################################
-Cerebellum microcircuit: Connectome
-###################################
+##########
+Connectome
+##########
 
 Expert: Stefano Casali, Elisa Marenzi, Claudia Casellato
 Target audience: (medium) Power Users 
