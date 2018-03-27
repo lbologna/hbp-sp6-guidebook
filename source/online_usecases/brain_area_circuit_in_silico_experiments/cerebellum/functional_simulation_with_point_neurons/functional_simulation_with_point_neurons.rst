@@ -55,7 +55,7 @@ o	y = 930 µm (600+150+30+150  µm), i.e. thickness DCN + GRL+ PCL + ML
 
 THUS with  24157# NUMBER of PLACED NEURONS and 634165# of  GENERATED PAIRWISE CONNECTIONS, the PSTH for GOLGI CELLS SPIKES is:
 
-     .. image:: images/outptut.tif
-        :width: 700px
+     .. image:: images/output.tif
+        :width: 1005px
 
 		

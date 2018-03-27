@@ -7,4 +7,4 @@ Circuit Building
 .. toctree::
     :maxdepth: 4
 
-	cerebellum/cerebellum
+    cerebellum/cerebellum
