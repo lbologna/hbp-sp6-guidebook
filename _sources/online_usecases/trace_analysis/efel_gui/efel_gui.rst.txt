@@ -267,7 +267,7 @@ Results
 =======
 
 Finally, a success message is displayed and results are made available to
-download.
+download. The application output consists of a **features.json** and **protocols.json** files which are generated for both individual cells and the entire ensemble. These files contain the feature value averages (computed as outlined in the above section "Feature extraction") and the protocols adopted for the experimental recordings. These files are intended to be used for the data-driven optimization step of the Hodgkin-Huxley Neuron Builder workflow, made available to the user through the Brain Simulation Platform at the `Highly Integrated Workflows <https://collab.humanbrainproject.eu/#/collab/1655/nav/66898>`_ page.
 
 
 .. container:: bsp-container-center
