@@ -7,5 +7,5 @@ Cerebellum
 .. toctree::
     :maxdepth: 4
 
-    positioning/positioning
+    cell_positioning/cell_positioning
     connectome/connectome
