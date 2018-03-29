@@ -113,9 +113,6 @@
 
                 <div class="section" id="cell-positioning">
 <h1>Cell positioning<a class="headerlink" href="#cell-positioning" title="Permalink to this headline">¶</a></h1>
-<p>Expert: Stefano Casali, Elisa Marenzi, Claudia Casellato
-Target audience: (medium) Power Users
-Target interface: Notebook</p>
 <p>This usecase places cerebellar neurons (different types: specific simplified geometric features with anisotropic properties and specific density) into a layered-volume of the cerebellum.
 The use case can be found in <em>Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume</em>.</p>
 <blockquote>
@@ -124,7 +121,7 @@ The use case can be found in <em>Online Use Cases/Circuit Building/Cells placeme
 <a class="reference internal image-reference" href="../../../../_images/placement_flow_chart.png"><img alt="../../../../_images/placement_flow_chart.png" src="../../../../_images/placement_flow_chart.png" style="width: 1829px;" /></a>
 </div></blockquote>
 <p>Approach: the desired number of cells are progressively placed following a random direction from the previous cell with a distance step guaranteeing for not volume overlapping. A “reset” starting point occurs when all the surrounding is occupied. This algorithm is computationally efficient, which is fundamental for high-density volumes, but still keeping a strong random component to achieve a realistic distribution of the pairwise inter-neuron distances. The PC Layer is almost a planar grid in-between GRL and ML, with an inter-soma distance along the x-axis constrained by the not overlapping among adjacent dendritic trees.</p>
-<p>Inputs: by a simple GUI, the basic parameters can be entered by the user</p>
+<p><strong>Inputs:</strong> by a simple GUI, the basic parameters can be entered by the user</p>
 <ul class="simple">
 <li>Base sizes (x and z) of the cerebellar volume to be built</li>
 <li>Plot option enabling</li>
@@ -136,7 +133,7 @@ The use case can be found in <em>Online Use Cases/Circuit Building/Cells placeme
 <li>Simplified geometric features for each neuron type: radius of the soma, and eventually dendritic field extensions (direction-dependent) if any constraints about not-overlapping are taken into account</li>
 <li>Density for each neuron type, and eventually ratio about density values of different types</li>
 </ul>
-<p>Output:</p>
+<p><strong>Output:</strong></p>
 <ul class="simple">
 <li>hdf5 matrix with 5 columns (saved in /storage)</li>
 <li>Neuron ID (unique)</li>
@@ -145,22 +142,14 @@ The use case can be found in <em>Online Use Cases/Circuit Building/Cells placeme
 </ul>
 <p>Monitoring: sparseness in the subvolume by computing distribution of pairwise distances (monitoring_positioning.py in /storage)</p>
 <p>Moreover, a 3D basic visualization is depicted (somas of each neuron, using a different color for each neuron type).</p>
-<p>Steps:</p>
-<ul class="simple">
-<li>Running all notebook steps one at a time</li>
-<li>Running each step in a sequential order</li>
-</ul>
-<p>Additional information:</p>
+<p><strong>Additional information:</strong></p>
 <ul class="simple">
 <li>The whole usecase should take about 10 minutes for a volume base of 400 x 400 µm.</li>
 <li>No login to any other computer required</li>
 </ul>
-<p>Used BBP tools in notebook directly:</p>
-<ul class="simple">
-<li>voxcellview</li>
-</ul>
-<p>EXAMPLE</p>
-<ul class="simple">
+<p><strong>EXAMPLE</strong></p>
+<blockquote>
+<div><ul class="simple">
 <li>x = 400 µm, z = 400 µm (→ DCN  200 x 200 µm)</li>
 <li>y = 930 µm (600+ 150+30+150  µm), i.e. thickness DCN + GRL+ PCL + ML</li>
 </ul>
@@ -207,6 +196,7 @@ The use case can be found in <em>Online Use Cases/Circuit Building/Cells placeme
 <a class="reference internal image-reference" href="../../../../_images/basket_placement.png"><img alt="../../../../_images/basket_placement.png" src="../../../../_images/basket_placement.png" style="width: 394px;" /></a>
 <a class="reference internal image-reference" href="../../../../_images/stellate_placement.png"><img alt="../../../../_images/stellate_placement.png" src="../../../../_images/stellate_placement.png" style="width: 394px;" /></a>
 <a class="reference internal image-reference" href="../../../../_images/dcn_placement.png"><img alt="../../../../_images/dcn_placement.png" src="../../../../_images/dcn_placement.png" style="width: 388px;" /></a>
+</div></blockquote>
 </div></blockquote>
 </div>
 
