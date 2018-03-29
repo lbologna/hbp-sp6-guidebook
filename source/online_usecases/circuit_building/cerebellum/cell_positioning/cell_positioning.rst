@@ -3,9 +3,6 @@ Cell positioning
 ################
 
 
-Expert: Stefano Casali, Elisa Marenzi, Claudia Casellato
-Target audience: (medium) Power Users 
-Target interface: Notebook 
 
 This usecase places cerebellar neurons (different types: specific simplified geometric features with anisotropic properties and specific density) into a layered-volume of the cerebellum.
 The use case can be found in *Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume*.
@@ -21,7 +18,7 @@ The use case can be found in *Online Use Cases/Circuit Building/Cells placement/
 
 Approach: the desired number of cells are progressively placed following a random direction from the previous cell with a distance step guaranteeing for not volume overlapping. A “reset” starting point occurs when all the surrounding is occupied. This algorithm is computationally efficient, which is fundamental for high-density volumes, but still keeping a strong random component to achieve a realistic distribution of the pairwise inter-neuron distances. The PC Layer is almost a planar grid in-between GRL and ML, with an inter-soma distance along the x-axis constrained by the not overlapping among adjacent dendritic trees.
 
-Inputs: by a simple GUI, the basic parameters can be entered by the user
+**Inputs:** by a simple GUI, the basic parameters can be entered by the user
 
 •	Base sizes (x and z) of the cerebellar volume to be built
 •	Plot option enabling
@@ -33,7 +30,7 @@ For expert users, even other parameters could be modified from scaffold_params.p
 •	Simplified geometric features for each neuron type: radius of the soma, and eventually dendritic field extensions (direction-dependent) if any constraints about not-overlapping are taken into account
 •	Density for each neuron type, and eventually ratio about density values of different types
 
-Output:
+**Output:**
 
 •	hdf5 matrix with 5 columns (saved in /storage)
 •	Neuron ID (unique)
@@ -44,63 +41,57 @@ Monitoring: sparseness in the subvolume by computing distribution of pairwise di
 
 Moreover, a 3D basic visualization is depicted (somas of each neuron, using a different color for each neuron type).
 
-Steps:
 
-•	Running all notebook steps one at a time
-•	Running each step in a sequential order
-
-Additional information:
+**Additional information:**
 
 •	The whole usecase should take about 10 minutes for a volume base of 400 x 400 µm.
 •	No login to any other computer required
 
-Used BBP tools in notebook directly:
-
-•	voxcellview
 
 
-EXAMPLE
 
-•	x = 400 µm, z = 400 µm (→ DCN  200 x 200 µm)
-•	y = 930 µm (600+ 150+30+150  µm), i.e. thickness DCN + GRL+ PCL + ML
+**EXAMPLE**
 
-TOT #NEURONS: 96.887
+ -	x = 400 µm, z = 400 µm (→ DCN  200 x 200 µm)
+ -	y = 930 µm (600+ 150+30+150  µm), i.e. thickness DCN + GRL+ PCL + ML
 
-Glomeruli (N=7073, radius =1.5 µm, in GRL excluded the upper 10 µm)
+ TOT #NEURONS: 96.887
 
--	3D dist = 206 ± 89 µm - gaussian
--	Min = 4; max =558 µm
+ Glomeruli (N=7073, radius =1.5 µm, in GRL excluded the upper 10 µm)
 
-Granule cells (N=88229, radius = 2.5 µm, in the whole GRL)
+ -	3D dist = 206 ± 89 µm - gaussian
+ -	Min = 4; max =558 µm
 
--	3D dist = 210 ± 90 µm- gaussian
--	Min =    ; max =     µm
+ Granule cells (N=88229, radius = 2.5 µm, in the whole GRL)
 
-Golgi cells (N=219, radius = 8 µm, in GRL excluded the bottom 10 µm)
+ -	3D dist = 210 ± 90 µm- gaussian
+ -	Min =    ; max =     µm
 
--	3D dist = 214 ± 91 µm – gaussian
--	Min = 26; max =504 µm
+ Golgi cells (N=219, radius = 8 µm, in GRL excluded the bottom 10 µm)
 
-Purkinje cells (N=78, radius = 7.5 µm, in PCL , planar grid)
+ -	3D dist = 214 ± 91 µm – gaussian
+ -	Min = 26; max =504 µm
 
--	3D dist = 250 ± 121 µm
--	Min = 15; max =544 µm
+ Purkinje cells (N=78, radius = 7.5 µm, in PCL , planar grid)
+
+ -	3D dist = 250 ± 121 µm
+ -	Min = 15; max =544 µm
 
 
-Basket cells (N=603, radius = 6 µm, in the ML lower half)
+ Basket cells (N=603, radius = 6 µm, in the ML lower half)
 
--	3D dist = 208 ± 96 µm - gaussian
--	Min =  13  ; max = 534    µm
+ -	3D dist = 208 ± 96 µm - gaussian
+ -	Min =  13  ; max = 534    µm
 
-Stellate cells (N=603, radius = 4 µm, in the ML upper half )
+ Stellate cells (N=603, radius = 4 µm, in the ML upper half )
 
--	3D dist = 201 ±94 µm - gaussian
--	Min = 9; max = 534 µm
+ -	3D dist = 201 ±94 µm - gaussian
+ -	Min = 9; max = 534 µm
 
-Deep Cerebellar projection Neurons (N=12, radius=10 µm, in the Deep Nucleus)
+ Deep Cerebellar projection Neurons (N=12, radius=10 µm, in the Deep Nucleus)
 
--	3D dist = 269 ± 155 µm
--	Min = 44; max = 566 µm
+ -	3D dist = 269 ± 155 µm
+ -	Min = 44; max = 566 µm
 
 
      .. image:: images/golgi_placement.png
