@@ -56,6 +56,15 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Morphology Analysis</a><ul>
+<li><a class="reference internal" href="#preview">Preview</a></li>
+<li><a class="reference internal" href="#instructions">Instructions</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="../morphology_analysis.html"
                         title="previous chapter">Morphology Analysis</a></p>
@@ -111,17 +120,46 @@
 
                 <div class="section" id="morphology-analysis">
 <span id="id1"></span><h1>Morphology Analysis<a class="headerlink" href="#morphology-analysis" title="Permalink to this headline">¶</a></h1>
-<p>The <em>Morphology Analysis</em> use case provides capability to analyse a neuronal morphology with <a class="reference external" href="https://github.com/BlueBrain/NeuroM">NeuroM</a>.</p>
+<p>The <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66851">Morphology Analysis</a> use case provides capability to analyse a neuronal morphology with <a class="reference external" href="https://github.com/BlueBrain/NeuroM">NeuroM</a>.</p>
 <p><a class="reference external" href="https://github.com/BlueBrain/NeuroM">NeuroM</a> is a Python toolkit for the analysis and processing of neuron morphologies. It can be used to:</p>
 <ul class="simple">
-<li>quickly extract various morphometrics for one or a population of neurons. Example of such metrics are the neurite length, number of bifurcation per neurite or the number of segments. The list of all features can be found in the NeuroM documentation (<a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.fst.get.html">here</a> and <a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.get.html">there</a>).</li>
+<li>quickly extract various morphometrics for one or a population of neurons. Example of such metrics are the neurite length, number of bifurcations per neurite or the number of segments. The list of all features can be found in the NeuroM documentation (<a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.fst.get.html">here</a> and <a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.get.html">there</a>).</li>
 <li><a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.check.html">check</a> the validity of morphology files (examples: no missing parent points, no excessively small neurite radii, no missing soma).</li>
 <li>visualize neuron morphologies with the module: <a class="reference external" href="http://neurom.readthedocs.io/en/stable/_neurom_build/neurom.viewer.html">neuron.view</a>.</li>
 <li>iterate through morphology parts of a neuron object for more advanced use cases. One can iterate on neurites, sections (neurite chunk between two successive branching points) or segments (the most fundamental sub-unit of a morphology).</li>
 </ul>
+<div class="section" id="preview">
+<h2>Preview<a class="headerlink" href="#preview" title="Permalink to this headline">¶</a></h2>
+<p>In this use case you will learn how to:</p>
+<ul>
+<li><p class="first">Load a neuron morphology with NeuroM</p>
+</li>
+<li><dl class="first docutils">
+<dt>Create visualization plots such as:</dt>
+<dd><a class="first last reference internal image-reference" href="../../../_images/example_neurom_draw.png"><img alt="../../../_images/example_neurom_draw.png" src="../../../_images/example_neurom_draw.png" style="width: 400px;" /></a>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Extract soma and neurite related statistics</dt>
+<dd><img alt="../../../_images/neurom_soma_statistics.png" class="first" src="../../../_images/neurom_soma_statistics.png" />
+<img alt="../../../_images/neurom_neurite_statistics.png" class="last" src="../../../_images/neurom_neurite_statistics.png" />
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Create histograms for a particular feature:</dt>
+<dd><img alt="../../../_images/neurom_feature_histogram.png" class="first last" src="../../../_images/neurom_feature_histogram.png" />
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="instructions">
+<h2>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h2>
 <p>Here are the steps to open this use case:</p>
 <ol class="arabic">
-<li><p class="first">The use case can be found under <em>Online Use Cases/Morphology Analysis</em>:</p>
+<li><p class="first">The use case can be found under <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66851">Online Use Cases/Morphology Analysis</a>:</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../_images/select_morphology_analysis.png"><img alt="../../../_images/select_morphology_analysis.png" src="../../../_images/select_morphology_analysis.png" style="width: 700px;" /></a>
 </div></blockquote>
@@ -142,6 +180,7 @@
 </div></blockquote>
 </li>
 </ol>
+</div>
 </div>
 
             </div>
