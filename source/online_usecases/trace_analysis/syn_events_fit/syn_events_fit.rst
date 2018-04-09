@@ -26,7 +26,7 @@ It allows the user to:
 |
 
 A configuration file corresponding to the experimental file chosen is downloaded from the collab storage. The file includes: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse), the name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters
-
+ 
 |
 
 2. Select a default or a local mod file
