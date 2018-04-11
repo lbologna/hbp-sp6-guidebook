@@ -66,6 +66,7 @@
 <li><a class="reference internal" href="#parameters-json">parameters.json</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#neuroscience-gateway-nsg">Neuroscience Gateway (NSG)</a></li>
 </ul>
 </li>
 </ul>
@@ -126,22 +127,17 @@
                 <div class="section" id="overview">
 <span id="scm-overview"></span><h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <p>The Single Cell Building use cases show practical examples of how to obtain a single cell model of morphologically and biophysically detailed neurons exploiting the Blue Brain Python Optimization Library (BluePyOpt, Van Geit W et al., 2016, <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4896051/#">Front. Neuroinform</a>. 10:17. doi: <a class="reference external" href="http://journal.frontiersin.org/article/10.3389/fninf.2016.00017/full">10.3389/fninf.2016.00017</a>).</p>
-<p>The different use cases will guide you through the most appropriate workflow, depending on what you would like to do. In general, they are organized around three different possibilities, of increasing complexity:</p>
-<ol class="arabic simple">
-<li>Rebuild an existing single cell model</li>
-<li>Build your own cell model using HBP data</li>
-<li>Build your own cell model using HBP and/or your own data</li>
-</ol>
-<p>and an independent tool to</p>
-<ol class="arabic simple" start="4">
-<li>Analyze an optimization run</li>
-</ol>
-<p>They differ in the amount and type of information you need to enter to configure and run an optimization. Below is a short description of all the files that are required to do an optimization run for hippocampal cells. In the simplest case, all the needed files will be automatically copied into your collab, and you just select items, push buttons, and wait to collect the results. In general, however, you may want to change something (initial parameters, channel distribution, electrophysiological features, etc). In this case you should of course know what you are doing.
-To run the optimization, it is necessary to have a morphology, a set of mod files for the ion channel or special mechanism kinetics, the stimulation protocols to be used (typically step current clamp stimuli), and the electrophysiological features you would like to use as a reference for the optimization.</p>
 <p>Although all use cases in this section use the current, public, version of the BluePyOpt, the different scientists implementing an optimization for a specific cell have used their own organization for the configuration files.</p>
 <div class="section" id="hippocampal-neurons">
 <span id="id1"></span><h2>Hippocampal neurons<a class="headerlink" href="#hippocampal-neurons" title="Permalink to this headline">¶</a></h2>
-<p>For the use cases referring to hippocampal cells, this information is contained in four self-consistent JSON files. Self-consistency is ensured by starting all json files used for a specific optimization with the same string, as shown below.</p>
+<p>For the use cases referring to hippocampal cells, the different use cases will guide you through the most appropriate workflow, depending on what you would like to do. In general, they are organized around two different possibilities, of increasing complexity:</p>
+<ol class="arabic simple">
+<li>Rebuild an existing single cell model</li>
+<li>Build your own cell model using HBP data</li>
+</ol>
+<p>They differ in the amount and type of information you need to enter to configure and run an optimization. Below is a short description of all the files that are required to do an optimization run for hippocampal cells. In the simplest case, all the needed files will be automatically copied into your collab, and you just select items, push buttons, and wait to collect the results. In general, however, you may want to change something (initial parameters, channel distribution, electrophysiological features, etc). In this case you should of course know what you are doing.</p>
+<p>To run the optimization, it is necessary to have a morphology, a set of mod files for the ion channel or special mechanism kinetics, the stimulation protocols to be used (typically step current clamp stimuli), and the electrophysiological features you would like to use as a reference for the optimization.</p>
+<p>The above information is contained in four self-consistent JSON files. Self-consistency is ensured by starting all json files used for a specific optimization with the same string, as shown below.</p>
 <div class="section" id="morph-json">
 <h3>morph.json<a class="headerlink" href="#morph-json" title="Permalink to this headline">¶</a></h3>
 <p>Defines the Neurolucida ASCII file containing the 3D reconstruction to be used for the optimization.
@@ -172,16 +168,82 @@ A typical section looks like:</p>
 </div>
 <div class="section" id="protocols-json">
 <h3>protocols.json<a class="headerlink" href="#protocols-json" title="Permalink to this headline">¶</a></h3>
-<p>Defines the stimulation protocols that should be used for the optimization. This file is also automatically created by the eFEL GUI app, and it is matched with the information contained in the <strong>features.json</strong> file.</p>
+<p>Defines the stimulation protocols that should be used for the optimization. This file is also automatically created by the eFEL GUI app, and it is matched with the information contained in the <strong>features.json</strong> file.
+A typical section looks like:</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;INT_cAC_noljp&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;step_-0.4&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;stimuli&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="mf">531.0</span><span class="p">,</span>
+                    <span class="nt">&quot;amp&quot;</span><span class="p">:</span> <span class="mf">-0.4</span><span class="p">,</span>
+                    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mf">400.0</span><span class="p">,</span>
+                    <span class="nt">&quot;totduration&quot;</span><span class="p">:</span> <span class="mf">1131.0</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+                    <span class="nt">&quot;amp&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+                    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mf">1131.0</span><span class="p">,</span>
+                    <span class="nt">&quot;totduration&quot;</span><span class="p">:</span> <span class="mf">1131.0</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="parameters-json">
 <h3>parameters.json<a class="headerlink" href="#parameters-json" title="Permalink to this headline">¶</a></h3>
 <p>This is where a user can strongly determine the quality of the optimization. In this file, active and passive properties (and their distribution) are defined.</p>
 <p>There are four self-explanatory main blocks defining: 1) the channels to be used in the different regions of a neuron (“mechanisms”), 2) their non-uniform distribution (“distributions”), 3) which parameter should be fixed (“fixed”) and 4) which parameters must be optimized (“optimized”).
-Mechanism and parameter names of course depend on the set of mod files the user choose to equip the cell with.</p>
+Mechanism and parameter names of course depend on the set of mod files the user choose to equip the cell with.
+A typical section looks like:</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;INT_cAC_noljp&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;mechanisms&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;all&quot;</span><span class="p">:</span>      <span class="p">[</span><span class="s2">&quot;pas&quot;</span><span class="p">,</span><span class="s2">&quot;kdrb&quot;</span><span class="p">,</span> <span class="s2">&quot;nax&quot;</span><span class="p">,</span> <span class="s2">&quot;kap&quot;</span><span class="p">],</span>
+            <span class="nt">&quot;somatic&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="s2">&quot;kdb&quot;</span><span class="p">,</span><span class="s2">&quot;kmb&quot;</span><span class="p">],</span>
+            <span class="nt">&quot;axonal&quot;</span><span class="p">:</span>   <span class="p">[</span><span class="s2">&quot;kmb&quot;</span><span class="p">],</span>
+            <span class="nt">&quot;allnoaxon&quot;</span><span class="p">:[</span><span class="s2">&quot;hd&quot;</span><span class="p">,</span> <span class="s2">&quot;can&quot;</span><span class="p">,</span> <span class="s2">&quot;cal&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;kca&quot;</span><span class="p">,</span> <span class="s2">&quot;cacumb&quot;</span><span class="p">,</span><span class="s2">&quot;cagk&quot;</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;distributions&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;fixed&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;global&quot;</span><span class="p">:</span>    <span class="p">[[</span><span class="s2">&quot;v_init&quot;</span><span class="p">,</span> <span class="mi">-80</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;celsius&quot;</span><span class="p">,</span> <span class="mi">34</span><span class="p">]],</span>
+            <span class="nt">&quot;all&quot;</span><span class="p">:</span>       <span class="p">[[</span><span class="s2">&quot;cm&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;secvar&quot;</span><span class="p">],[</span><span class="s2">&quot;ena&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;secvar&quot;</span><span class="p">],[</span><span class="s2">&quot;ek&quot;</span><span class="p">,</span> <span class="mi">-90</span><span class="p">,</span> <span class="s2">&quot;secvar&quot;</span><span class="p">]]</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;optimized&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;axonal&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">[</span><span class="s2">&quot;gbar_nax&quot;</span><span class="p">,</span> <span class="mf">0.025</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="s2">&quot;uniform&quot;</span> <span class="p">],</span>
+                <span class="p">[</span><span class="s2">&quot;gkdrbar_kdrb&quot;</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">,</span> <span class="s2">&quot;uniform&quot;</span> <span class="p">],</span>
+                <span class="p">[</span><span class="s2">&quot;gkabar_kap&quot;</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">,</span> <span class="s2">&quot;uniform&quot;</span> <span class="p">],</span>
+                <span class="p">[</span><span class="s2">&quot;gbar_kmb&quot;</span><span class="p">,</span> <span class="mf">0.004</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="s2">&quot;uniform&quot;</span> <span class="p">],</span>
+                <span class="p">[</span><span class="s2">&quot;Ra&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="s2">&quot;secvar&quot;</span><span class="p">],</span>
+                <span class="p">[</span><span class="s2">&quot;g_pas&quot;</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">,</span> <span class="mf">8e-5</span><span class="p">,</span> <span class="s2">&quot;uniform&quot;</span> <span class="p">],</span>
+                <span class="p">[</span><span class="s2">&quot;e_pas&quot;</span><span class="p">,</span> <span class="mi">-95</span><span class="p">,</span> <span class="mi">-75</span><span class="p">,</span> <span class="s2">&quot;uniform&quot;</span> <span class="p">]</span>
+           <span class="p">],</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p>The BluePyOpt must also be configured to set the search algorithm. This is done by defining the offspring size and the max number of generations.
 Finally, these use cases require computing resources on a HPC system. In order to carry out the optimization a user must have an account on the Neuroscience Gateway or on one of the HPC systems supporting the Brain Simulation Platform activity, such as CINECA or JSC.</p>
 </div>
+</div>
+<div class="section" id="neuroscience-gateway-nsg">
+<span id="neuroscience-gateway"></span><h2>Neuroscience Gateway (NSG)<a class="headerlink" href="#neuroscience-gateway-nsg" title="Permalink to this headline">¶</a></h2>
+<p>The Neuroscience Gateway (NSG) portal <a class="reference external" href="https://www.nsgportal.org/">https://www.nsgportal.org/</a> facilitates access and use of National Science Foundation (NSF) High Performance Computing (HPC) resources by neuroscientists. Computational modeling of cells and networks has become an essential part of neuroscience research, and investigators are using models to address problems of ever increasing complexity, e.g. large scale network models and optimization or exploration of high dimensional parameter spaces. The NSG catalyzes such research by lowering or eliminating the administrative and technical barriers that currently make it difficult for investigators to use HPC resources. It offers free computer time to neuroscientists acquired via the supercomputer time allocation process managed by the Extreme Science and Engineering Discovery Environment (XSEDE) Resource Allocation Committee (XRAC). The portal provides access to the popular computational neuroscience tools installed on various HPC resources. It also provides a community mailing list for neuroscientists to collaborate and share ideas.</p>
+<p>NSG can be accessed through a simple web portal or programmatically using RESTful services. The NSG provides an administratively and technologically streamlined environment for uploading models, specifying HPC job parameters, querying running job status, receiving job completion notices, and storing and retrieving output data. The NSG transparently distributes user&#8217;s jobs to appropriate XSEDE HPC resources.</p>
+<p>For the use cases referring to hippocampal cells, NSG will be accessed programmatically using RESTful services.</p>
+<p>Successful job submission returns a message at each major processing point, as well as when problems are encountered. Each message has a timestamp, processing stage, and textual description. A job progresses through the following stages:
+•       QUEUE - The job has been validated and placed in NSG&#8217;s queue.
+•       COMMANDRENDERING - The job has reached the head of the queue and NSG has created the command line that will be run.
+•       INPUTSTAGING - NSG has created a temporary working directory for the job on the execution host and copied the input files over.
+•       SUBMITTED - The job has been submited to the scheduler on the execution host.
+•       LOAD_RESULTS - The job has finished running on the execution host and NSG has begun to transfer the results.
+•       COMPLETED - Results successfully transferred and available.</p>
+<p>S Sivagnanam, A Majumdar, K Yoshimoto, V Astakhov, A Bandrowski, M. E. Martone, and N. T. Carnevale. Introducing the Neuroscience Gateway, IWSG, volume 993 of CEUR Workshop Proceedings, CEUR-WS.org, 2013.</p>
 </div>
 </div>
 

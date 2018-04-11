@@ -10,7 +10,7 @@ This Jupyter Notebook allows the user to:
 
 |
 
-2. copy completed jobs from NSG to the collab storage by clicking on → 
+2. copy completed jobs from NSG to the Collab storage by clicking on the arrow icon → 
 
 |
 
