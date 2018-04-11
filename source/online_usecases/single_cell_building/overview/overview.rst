@@ -6,19 +6,6 @@ Overview
 
 The Single Cell Building use cases show practical examples of how to obtain a single cell model of morphologically and biophysically detailed neurons exploiting the Blue Brain Python Optimization Library (BluePyOpt, Van Geit W et al., 2016, `Front. Neuroinform <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4896051/#>`_. 10:17. doi: `10.3389/fninf.2016.00017 <http://journal.frontiersin.org/article/10.3389/fninf.2016.00017/full>`_).
 
-The different use cases will guide you through the most appropriate workflow, depending on what you would like to do. In general, they are organized around three different possibilities, of increasing complexity:
-
-1) Rebuild an existing single cell model
-2) Build your own cell model using HBP data
-3) Build your own cell model using HBP and/or your own data
-
-and an independent tool to
-
-4) Analyze an optimization run
-
-They differ in the amount and type of information you need to enter to configure and run an optimization. Below is a short description of all the files that are required to do an optimization run for hippocampal cells. In the simplest case, all the needed files will be automatically copied into your collab, and you just select items, push buttons, and wait to collect the results. In general, however, you may want to change something (initial parameters, channel distribution, electrophysiological features, etc). In this case you should of course know what you are doing.
-To run the optimization, it is necessary to have a morphology, a set of mod files for the ion channel or special mechanism kinetics, the stimulation protocols to be used (typically step current clamp stimuli), and the electrophysiological features you would like to use as a reference for the optimization.
-
 Although all use cases in this section use the current, public, version of the BluePyOpt, the different scientists implementing an optimization for a specific cell have used their own organization for the configuration files.
 
 .. _hippocampal-neurons:
@@ -27,7 +14,16 @@ Although all use cases in this section use the current, public, version of the B
 Hippocampal neurons
 ===================
 
-For the use cases referring to hippocampal cells, this information is contained in four self-consistent JSON files. Self-consistency is ensured by starting all json files used for a specific optimization with the same string, as shown below.
+For the use cases referring to hippocampal cells, the different use cases will guide you through the most appropriate workflow, depending on what you would like to do. In general, they are organized around two different possibilities, of increasing complexity:
+
+1) Rebuild an existing single cell model
+2) Build your own cell model using HBP data
+
+They differ in the amount and type of information you need to enter to configure and run an optimization. Below is a short description of all the files that are required to do an optimization run for hippocampal cells. In the simplest case, all the needed files will be automatically copied into your collab, and you just select items, push buttons, and wait to collect the results. In general, however, you may want to change something (initial parameters, channel distribution, electrophysiological features, etc). In this case you should of course know what you are doing.
+
+To run the optimization, it is necessary to have a morphology, a set of mod files for the ion channel or special mechanism kinetics, the stimulation protocols to be used (typically step current clamp stimuli), and the electrophysiological features you would like to use as a reference for the optimization.
+
+The above information is contained in four self-consistent JSON files. Self-consistency is ensured by starting all json files used for a specific optimization with the same string, as shown below.
 
 **********
 morph.json
@@ -68,6 +64,29 @@ protocols.json
 **************
 
 Defines the stimulation protocols that should be used for the optimization. This file is also automatically created by the eFEL GUI app, and it is matched with the information contained in the **features.json** file.
+A typical section looks like:
+
+.. code-block:: json
+
+    {
+        "INT_cAC_noljp": {
+       	    "step_-0.4": {
+                "stimuli": [
+                    {
+                    	"delay": 531.0, 
+                    	"amp": -0.4, 
+                    	"duration": 400.0, 
+                    	"totduration": 1131.0
+                    }, 
+                    {
+                    	"delay": 0.0, 
+                    	"amp": 0.0, 
+                    	"duration": 1131.0, 
+                    	"totduration": 1131.0
+                    }
+                ]
+            }
+    }
 
 ***************
 parameters.json
@@ -77,6 +96,37 @@ This is where a user can strongly determine the quality of the optimization. In 
 
 There are four self-explanatory main blocks defining: 1) the channels to be used in the different regions of a neuron (“mechanisms”), 2) their non-uniform distribution (“distributions”), 3) which parameter should be fixed (“fixed”) and 4) which parameters must be optimized (“optimized”).
 Mechanism and parameter names of course depend on the set of mod files the user choose to equip the cell with.
+A typical section looks like:
+
+.. code-block:: json
+
+    {
+        "INT_cAC_noljp": {
+       	    "mechanisms": {
+        	"all":      ["pas","kdrb", "nax", "kap"],
+        	"somatic":  ["kdb","kmb"],
+        	"axonal":   ["kmb"],
+        	"allnoaxon":["hd", "can", "cal", "cat", "kca", "cacumb","cagk"]
+    	    },
+    	    "distributions": {
+    	    },
+    	    "fixed": {
+        	"global":    [["v_init", -80], ["celsius", 34]],
+        	"all":       [["cm", 1, "secvar"],["ena", 50, "secvar"],["ek", -90, "secvar"]]
+    	    },
+    	    "optimized": {
+                 "axonal": [
+            	    ["gbar_nax", 0.025, 0.15, "uniform" ],
+            	    ["gkdrbar_kdrb", 0.01, 0.08, "uniform" ],
+                    ["gkabar_kap", 0.001, 0.04, "uniform" ],
+                    ["gbar_kmb", 0.004, 0.05, "uniform" ],
+                    ["Ra", 50, 300, "secvar"],
+                    ["g_pas", 1e-6, 8e-5, "uniform" ],
+                    ["e_pas", -95, -75, "uniform" ]
+               ],
+            }
+        }
+    }
 
 The BluePyOpt must also be configured to set the search algorithm. This is done by defining the offspring size and the max number of generations.
 Finally, these use cases require computing resources on a HPC system. In order to carry out the optimization a user must have an account on the Neuroscience Gateway or on one of the HPC systems supporting the Brain Simulation Platform activity, such as CINECA or JSC.
