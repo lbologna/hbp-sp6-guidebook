@@ -1,7 +1,7 @@
 
 This Jupyter Notebook allows the user to:
 
-1. Choose a previous optimization, from the HBP GitHub repository or from the collab storage, and run an analysis by clicking on “View analysis”
+1. Choose either a previous optimization from the HBP GitHub repository; or choose the result of your own optimization from the Collab storage, and then run an analysis by clicking on “View analysis”
 
 2. Save the analysis in the storage by clicking on “Save analysis”. The analysis are saved under the BluePyOptAnalysis/username/foldername (foldername is the name of the optimization)
 

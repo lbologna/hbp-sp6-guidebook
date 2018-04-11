@@ -36,7 +36,7 @@ It allows the user to:
 
 |
 
-3 visualize the electrophysiological features that will be used as a reference by the optimization process (“Features” tab); they cannot be changed
+3 visualize the electrophysiological features that will be used as a reference by the optimization process (“Features” tab); they cannot be changed; they are taken from the 'features.json' file.
 
 .. container:: bsp-container-center
 
