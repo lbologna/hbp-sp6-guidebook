@@ -133,14 +133,23 @@ Finally, these use cases require computing resources on a HPC system. In order t
 
 .. _neuroscience-gateway:
 
-====================
-Neuroscience gateway
-====================
+==========================
+Neuroscience Gateway (NSG)
+==========================
 
 The Neuroscience Gateway (NSG) portal https://www.nsgportal.org/ facilitates access and use of National Science Foundation (NSF) High Performance Computing (HPC) resources by neuroscientists. Computational modeling of cells and networks has become an essential part of neuroscience research, and investigators are using models to address problems of ever increasing complexity, e.g. large scale network models and optimization or exploration of high dimensional parameter spaces. The NSG catalyzes such research by lowering or eliminating the administrative and technical barriers that currently make it difficult for investigators to use HPC resources. It offers free computer time to neuroscientists acquired via the supercomputer time allocation process managed by the Extreme Science and Engineering Discovery Environment (XSEDE) Resource Allocation Committee (XRAC). The portal provides access to the popular computational neuroscience tools installed on various HPC resources. It also provides a community mailing list for neuroscientists to collaborate and share ideas.
 
 NSG can be accessed through a simple web portal or programmatically using RESTful services. The NSG provides an administratively and technologically streamlined environment for uploading models, specifying HPC job parameters, querying running job status, receiving job completion notices, and storing and retrieving output data. The NSG transparently distributes user's jobs to appropriate XSEDE HPC resources.
 
 For the use cases referring to hippocampal cells, NSG will be accessed programmatically using RESTful services.
+
+Successful job submission returns a message at each major processing point, as well as when problems are encountered. Each message has a timestamp, processing stage, and textual description. A job progresses through the following stages:
+•	QUEUE - The job has been validated and placed in NSG's queue.
+•	COMMANDRENDERING - The job has reached the head of the queue and NSG has created the command line that will be run.
+•	INPUTSTAGING - NSG has created a temporary working directory for the job on the execution host and copied the input files over.
+•	SUBMITTED - The job has been submited to the scheduler on the execution host.
+•	LOAD_RESULTS - The job has finished running on the execution host and NSG has begun to transfer the results.
+•	COMPLETED - Results successfully transferred and available.
+
 
 S Sivagnanam, A Majumdar, K Yoshimoto, V Astakhov, A Bandrowski, M. E. Martone, and N. T. Carnevale. Introducing the Neuroscience Gateway, IWSG, volume 993 of CEUR Workshop Proceedings, CEUR-WS.org, 2013.
