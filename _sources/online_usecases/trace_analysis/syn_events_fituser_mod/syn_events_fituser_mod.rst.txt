@@ -131,6 +131,18 @@ On the NSG the number of nodes, number of cores and runtime are set by default t
         
 |
 
+Note that when the job is submitted through UNICORE, the user can specify a title for the job and the account to use for submitting the job on the HPC.
+
+|
+ 
+.. container:: bsp-container-center
+
+ .. image:: images/unicore.png
+     :width: 300px
+     :align: center
+    
+|
+
 The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.
 
 Once the job is completed, the output files will be in the collab storage under different directories, according to the system used.
