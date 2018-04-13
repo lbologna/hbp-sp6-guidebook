@@ -113,7 +113,16 @@ The Validation Framework has a Python Client. This can be downloaded at:
   https://github.com/HumanBrainProject/hbp-validation-client
 
 The documentation is available at:
-  https://www.hbp-validation-client.readthedocs.io
+  https://hbp-validation-client.readthedocs.io
+
+
+.. _vf-restAPI:
+
+*********
+REST APIs
+*********
+The Validation Framework offers various REST APIs to access its various features and functionalities.
+These are described in the documentation:  https://hbp-validation-framework-api.readthedocs.io
 
 
 .. _vf-usecases:

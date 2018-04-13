@@ -43,8 +43,8 @@ As an example, a 3D basic visualization about the connection from Glomeruli to G
 
 
 
-Details for each connection type
-list signs - represent requirements imposed in the code
+Details for each connection type:
+list signs - represent requirements imposed in the code;
 bullet points ● are further target values to be matched
 
 

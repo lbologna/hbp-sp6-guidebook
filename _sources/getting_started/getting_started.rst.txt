@@ -35,6 +35,12 @@ Here you can enter the name of an existing Collab; any matching Collab will be l
     :scale: 90%
     :align: right
 
+If you selected a Collab where the use case is already present, a dialog will appear asking you if you want to replace the content of the files with the new ones or if you want to be redirected to the old use case.
+
+.. image:: images/replace.png
+    :scale: 90%
+    :align: right
+
 
 When you create a new Collab, the steps are easy:
 
