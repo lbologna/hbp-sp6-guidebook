@@ -122,8 +122,7 @@ The documentation is available at:
 REST APIs
 *********
 The Validation Framework offers various REST APIs to access its various features and functionalities.
-These are described in the documentation:
-  https://hbp-validation-framework-api.readthedocs.io
+These are described in the documentation:  https://hbp-validation-framework-api.readthedocs.io
 
 
 .. _vf-usecases:
