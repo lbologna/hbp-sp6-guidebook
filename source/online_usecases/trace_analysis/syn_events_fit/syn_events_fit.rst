@@ -179,12 +179,12 @@ NSG results are saved under the resultsNSG/output_submissionTime folder.
         
 |
 
-5. If you want to start a new fitting from the beginning, click on “Click here to to start a new fit” button.
+5. If you want to start a new fitting from the beginning, click on “Click here to start a new fit” button.
 
 .. container:: bsp-container-center
 
     .. image:: images/Restart.png
-        :width: 600px
+        :width: 1000px
         :align: center
         
 |
