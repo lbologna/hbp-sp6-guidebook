@@ -127,7 +127,7 @@ Note that when the job is submitted through UNICORE, the user can specify a titl
     
 |
 
-Note that when the job is submitted through NSG, next to the status of the job, the user may see the submission date converted to CET time.
+Note that when the job is submitted through NSG, next to the status of the job, the user may see the submission date converted to CET time. It will be useful in the analysis notebook in order to fetch the job.
 
 |
  
