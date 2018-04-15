@@ -233,6 +233,16 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+<p>Note that when the job is submitted through NSG, next to the status of the job, the user may see the submission date converted to CET time. It will be useful in the analysis notebook in order to fetch the job.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/NSGstatus2.png"><img alt="../../../_images/NSGstatus2.png" class="align-center" src="../../../_images/NSGstatus2.png" style="width: 300px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <p>The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.</p>
 <p>Once the job is completed, the output files will be in the collab storage under different directories, according to the system used.</p>
 <p>JURECA: results are saved under the results/output_submissionTime folder;</p>
@@ -259,8 +269,40 @@ The cloned Notebooks are:</p>
 </div>
 <div class="section" id="synaptic-events-fitting-with-user-model-analysis">
 <h2>Synaptic events fitting with user model - Analysis<a class="headerlink" href="#synaptic-events-fitting-with-user-model-analysis" title="Permalink to this headline">¶</a></h2>
-<p>This Jupyter Notebook allows the user to analyse the optimized parameters.
-The user may visualize:</p>
+<p>This Jupyter Notebook allows the user to fetch the fitting results from the storage of the HPC system to the storage of the Collab or to analyse the optimized parameters. If the user wants to view analysis of simulations that are already in the storage of the Collab, he or she may skip the &#8216;View simulations&#8217; tab and may go directly to the &#8216;View analysis&#8217; tab.</p>
+<p>In the &#8216;View simulations&#8217; tab, the user may visualize Name/ID, status, submission date of the simulations submitted on the HPC systems and can fetch output of successful completed jobs.</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/viewsim13.png"><img alt="../../../_images/viewsim13.png" class="align-center" src="../../../_images/viewsim13.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/viewsimulations5.png"><img alt="../../../_images/viewsimulations5.png" class="align-center" src="../../../_images/viewsimulations5.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/viewsimulations23.png"><img alt="../../../_images/viewsimulations23.png" class="align-center" src="../../../_images/viewsimulations23.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/viewsimulations33.png"><img alt="../../../_images/viewsimulations33.png" class="align-center" src="../../../_images/viewsimulations33.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>In the &#8216;View analysis&#8217; tab, the user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage.</p>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/viewanalysis13.png"><img alt="../../../_images/viewanalysis13.png" class="align-center" src="../../../_images/viewanalysis13.png" style="width: 700px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The user may visualize the table data, the box plot and the best fit.</p>
 <ol class="arabic simple">
 <li>The results table (sorted in ascending order by the fitting error).</li>
 </ol>
@@ -289,15 +331,6 @@ The user may visualize:</p>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
-</div>
-<p>The user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage and visualize the table data, the box plot and the best fit. Once a collab storage folder is chosen, the user must select a corresponding experimental file (txt file), configuration file (txt file) and a result file (csv file).</p>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/choose_files3.png"><img alt="../../../_images/choose_files3.png" class="align-center" src="../../../_images/choose_files3.png" style="width: 700px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
