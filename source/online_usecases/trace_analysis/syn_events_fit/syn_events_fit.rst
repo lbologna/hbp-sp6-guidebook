@@ -142,6 +142,18 @@ Note that when the job is submitted through UNICORE, the user can specify a titl
     
 |
 
+Note that when the job is submitted through NSG, next to the status of the job, the user may see the submission date converted to CET time. It will be useful in the analysis notebook in order to fetch the job.
+
+|
+ 
+.. container:: bsp-container-center
+
+ .. image:: images/NSGstatus.png
+     :width: 300px
+     :align: center
+    
+|
+
 The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.
 
 |

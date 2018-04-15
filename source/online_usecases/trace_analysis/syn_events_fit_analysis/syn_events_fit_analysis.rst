@@ -1,5 +1,50 @@
-This Jupyter Notebook allows the user to analyse the optimized parameters.
-The user may visualize:
+This Jupyter Notebook allows the user to fetch the fitting results from the storage of the HPC system to the storage of the Collab or to analyse the optimized parameters. If the user wants to view analysis of simulations that are already in the storage of the Collab, he or she may skip the 'View simulations' tab and may go directly to the 'View analysis' tab.
+
+In the 'View simulations' tab, the user may visualize Name/ID, status, submission date of the simulations submitted on the HPC systems and can fetch output of successful completed jobs.
+
+.. container:: bsp-container-center
+
+     .. image:: ../syn_events_fit_analysis/images/viewsim1.png
+         :width: 700px
+         :align: center
+              
+|
+
+.. container:: bsp-container-center
+
+     .. image:: ../syn_events_fit_analysis/images/viewsimulations.png
+         :width: 700px
+         :align: center
+              
+|
+
+.. container:: bsp-container-center
+
+     .. image:: ../syn_events_fit_analysis/images/viewsimulations2.png
+         :width: 700px
+         :align: center
+              
+|
+
+.. container:: bsp-container-center
+
+     .. image:: ../syn_events_fit_analysis/images/viewsimulations3.png
+         :width: 700px
+         :align: center
+              
+|
+
+In the 'View analysis' tab, the user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage.
+
+.. container:: bsp-container-center
+
+     .. image:: ../syn_events_fit_analysis/images/viewanalysis1.png
+         :width: 700px
+         :align: center
+              
+|
+
+The user may visualize the table data, the box plot and the best fit.
 
 1. The results table (sorted in ascending order by the fitting error).
                         
@@ -31,20 +76,8 @@ The user may visualize:
          :width: 700px
          :align: center
    
+|  
 |
-
-The user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage and visualize the table data, the box plot and the best fit. Once a collab storage folder is chosen, the user must select a corresponding experimental file (txt file), configuration file (txt file) and a result file (csv file).    
-
-.. container:: bsp-container-center
-
-     .. image:: ../syn_events_fit_analysis/images/choose_files.png
-         :width: 700px
-         :align: center
-   
-|
-
-|
-
 
 If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
 
