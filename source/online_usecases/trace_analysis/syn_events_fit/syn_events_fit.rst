@@ -184,7 +184,7 @@ NSG results are saved under the resultsNSG/output_submissionTime folder.
 .. container:: bsp-container-center
 
     .. image:: images/Restart.png
-        :width: 300px
+        :width: 600px
         :align: center
         
 |
