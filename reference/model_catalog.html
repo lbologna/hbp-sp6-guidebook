@@ -64,6 +64,7 @@
 <li><a class="reference internal" href="#viewing-an-individual-model">Viewing an individual model</a></li>
 <li><a class="reference internal" href="#editing-a-model">Editing a model</a></li>
 <li><a class="reference internal" href="#adding-a-model-to-the-catalog">Adding a model to the Catalog</a></li>
+<li><a class="reference internal" href="#access-privileges-to-models-in-the-model-catalog">Access privileges to models in the model catalog</a></li>
 </ul>
 </li>
 </ul>
@@ -174,6 +175,78 @@ which is used to identify the model in some other tools and workflows in the HBP
 To save having to type this long, difficult-to-remember, ID each time,
 you can also create a short alias for the model.</p>
 <a class="reference internal image-reference" href="../_images/model_catalog_model_create.png"><img alt="../_images/model_catalog_model_create.png" class="align-center" src="../_images/model_catalog_model_create.png" style="width: 531px;" /></a>
+</div>
+<div class="section" id="access-privileges-to-models-in-the-model-catalog">
+<h2>Access privileges to models in the model catalog<a class="headerlink" href="#access-privileges-to-models-in-the-model-catalog" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Collabs on the HBP Collaboratory can be either public or private. Public
+Collabs can be accessed by all registered users, whereas private Collabs
+require the user to be granted permission for access.</li>
+<li>Models are created inside specific Collab instances of the <em>Model Catalog</em> app.
+The particular app inside which a model was created is termed its <em>host app</em>.
+Similarly, the Collab containing the <em>host app</em> is termed the <em>host Collab</em>.</li>
+<li>Models can be set as public/private. If public, the model and its associated
+results are available to all users. If private, it can only be seen by users who
+have access to the <em>host Collab</em>. See table below for summary of access privileges.</li>
+<li>No information can be deleted from the <em>Model Catalog</em>
+app. In future, an option to <em>hide</em> data would be implemented. This would offer
+users functionality similar to deleting, but with the data being retained in the
+database back-end.</li>
+<li>Models and model instances can be edited as long as
+there are no results associated with them. Results can never be edited!</li>
+</ul>
+<blockquote>
+<div><div>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:11px 8px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:11px 8px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-6v17{font-weight:bold;font-size:14px;background-color:#d6eebe;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-ynlj{font-size:14px;background-color:#ffffff;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-5jl3{font-style:italic;font-size:14px;background-color:#c3b696;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-iu76{font-weight:bold;font-size:18px;background-color:#ffce93;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7xg9{font-weight:bold;font-style:italic;font-size:16px;background-color:#ffffc7;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-ecuv{font-weight:bold;font-size:18px;background-color:#ffce93;border-color:inherit;text-align:center}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-c3ow" colspan="2" rowspan="3"></th>
+    <th class="tg-iu76" colspan="6">Collab (Private/Public)</th>
+  </tr>
+  <tr>
+    <td class="tg-7xg9" colspan="3">Collab Member</td>
+    <td class="tg-7xg9" colspan="3">Not Collab Member</td>
+  </tr>
+  <tr>
+    <td class="tg-5jl3">View (GET)</td>
+    <td class="tg-5jl3">Create (POST)</td>
+    <td class="tg-5jl3">Edit (PUT)</td>
+    <td class="tg-5jl3">View (GET)</td>
+    <td class="tg-5jl3">Create (POST)</td>
+    <td class="tg-5jl3">Edit (PUT)</td>
+  </tr>
+  <tr>
+    <td class="tg-ecuv" rowspan="2">Model</td>
+    <td class="tg-7xg9">Private</td>
+    <td class="tg-6v17">Yes</td>
+    <td class="tg-6v17">Yes</td>
+    <td class="tg-6v17">Yes</td>
+    <td class="tg-ynlj">No</td>
+    <td class="tg-ynlj">No</td>
+    <td class="tg-ynlj">No</td>
+  </tr>
+  <tr>
+    <td class="tg-7xg9">Public</td>
+    <td class="tg-6v17">Yes</td>
+    <td class="tg-6v17">Yes</td>
+    <td class="tg-6v17">Yes</td>
+    <td class="tg-6v17">Yes</td>
+    <td class="tg-ynlj">No</td>
+    <td class="tg-ynlj">No</td>
+  </tr>
+</table>
+</div></div></blockquote>
 </div>
 </div>
 
