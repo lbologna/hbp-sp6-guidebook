@@ -181,6 +181,15 @@ NSG results are saved under the resultsNSG/output_submissionTime folder.
         
 |
 
+6. If you want to start a new fitting from the beginning, click on “Click here to start a new fit” button.
+
+.. container:: bsp-container-center
+
+    .. image:: images/Restart.png
+        :width: 1000px
+        :align: center
+        
+|
 
 **************************************************
 Synaptic events fitting with user model - Analysis
