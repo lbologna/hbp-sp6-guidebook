@@ -18,15 +18,15 @@ It allows the user to:
 1. Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to fit
 
 .. container:: bsp-container-center
-    
+
      .. image:: images/data_selection.png
          :width: 700px
          :align: center
-        
+
 |
 
 A configuration file corresponding to the experimental file chosen is downloaded from the collab storage. The file includes: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse), the name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters
- 
+
 |
 
 2. Select a default or a local mod file
@@ -50,7 +50,7 @@ When a local mod file is chosen, a form with the values needed to write a corres
     .. image:: images/local_mod.png
         :width: 300px
         :align: center
-        
+
 |
 
 .. container:: bsp-container-center
@@ -58,18 +58,18 @@ When a local mod file is chosen, a form with the values needed to write a corres
     .. image:: images/local_mod_values.png
         :width: 300px
         :align: center
- 
-|       
+
+|
 
 .. container:: bsp-container-center
 
     .. image:: images/local_mod_values_params.png
         :width: 500px
         :align: center
-        
+
 |
 
-   
+
 All the other parameters that are not fitted have their default value as defined in the mod file.
 
 |
@@ -77,17 +77,17 @@ All the other parameters that are not fitted have their default value as defined
 3. Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the status of the job
 
 On JURECA the number of nodes, number of CPUs per node and runtime are set by default to 2, 24 and 10m respectively
-   
+
 |
-   
+
 On MARCONI the number of nodes, number of CPUs per node and runtime are set by default to 2, 36 and 10m respectively
-   
+
 |
-   
+
 The user needs to be aware of the limitations imposed by each HPC system on resources
 
 |
-    
+
 On the NSG the number of nodes, number of cores and runtime are set by default to 2, 24 and 0.5 (hours) respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact nsghelp@sdsc.edu. The maximum number of cores required per node is 24
 
 .. container:: bsp-container-center
@@ -95,7 +95,7 @@ On the NSG the number of nodes, number of cores and runtime are set by default t
     .. image:: images/hpc_selection.png
         :width: 300px
         :align: center
-        
+
 |
 
 .. container:: bsp-container-center
@@ -103,55 +103,55 @@ On the NSG the number of nodes, number of cores and runtime are set by default t
     .. image:: images/run_all_traces.png
         :width: 150px
         :align: center
-        
+
 |
- 
+
 .. container:: bsp-container-center
 
  .. image:: images/set_cores_nodes.png
      :width: 300px
      :align: center
-        
+
 |
- 
+
 .. container:: bsp-container-center
 
  .. image:: images/login.png
      :width: 300px
      :align: center
-        
+
 |
- 
+
 .. container:: bsp-container-center
 
  .. image:: images/job_submitted.png
      :width: 300px
      :align: center
-    
+
 |
 
 Note that when the job is submitted through UNICORE, the user can specify a title for the job and the account to use for submitting the job on the HPC.
 
 |
- 
+
 .. container:: bsp-container-center
 
  .. image:: images/unicore.png
      :width: 300px
      :align: center
-    
+
 |
 
 Note that when the job is submitted through NSG, next to the status of the job, the user may see the submission date converted to CET time. It will be useful in the analysis notebook in order to fetch the job.
 
 |
- 
+
 .. container:: bsp-container-center
 
  .. image:: images/NSGstatus.png
      :width: 300px
      :align: center
-    
+
 |
 
 The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.
@@ -176,7 +176,7 @@ NSG results are saved under the resultsNSG/output_submissionTime folder.
     .. image:: images/toggle_button.png
         :width: 300px
         :align: center
-        
+
 |
 
 5. If you want to start a new fitting from the beginning, click on “Click here to start a new fit” button.
@@ -184,9 +184,9 @@ NSG results are saved under the resultsNSG/output_submissionTime folder.
 .. container:: bsp-container-center
 
     .. image:: images/Restart.png
-        :width: 1000px
+        :width: 300px
         :align: center
-        
+
 |
 
 **********************************
