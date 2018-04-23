@@ -73,15 +73,15 @@ A typical section looks like:
        	    "step_-0.4": {
                 "stimuli": [
                     {
-                    	"delay": 531.0, 
-                    	"amp": -0.4, 
-                    	"duration": 400.0, 
+                    	"delay": 531.0,
+                    	"amp": -0.4,
+                    	"duration": 400.0,
                     	"totduration": 1131.0
-                    }, 
+                    },
                     {
-                    	"delay": 0.0, 
-                    	"amp": 0.0, 
-                    	"duration": 1131.0, 
+                    	"delay": 0.0,
+                    	"amp": 0.0,
+                    	"duration": 1131.0,
                     	"totduration": 1131.0
                     }
                 ]
@@ -144,12 +144,13 @@ NSG can be accessed through a simple web portal or programmatically using RESTfu
 For the use cases referring to hippocampal cells, NSG will be accessed programmatically using RESTful services.
 
 Successful job submission returns a message at each major processing point, as well as when problems are encountered. Each message has a timestamp, processing stage, and textual description. A job progresses through the following stages:
-•	QUEUE - The job has been validated and placed in NSG's queue.
-•	COMMANDRENDERING - The job has reached the head of the queue and NSG has created the command line that will be run.
-•	INPUTSTAGING - NSG has created a temporary working directory for the job on the execution host and copied the input files over.
-•	SUBMITTED - The job has been submited to the scheduler on the execution host.
-•	LOAD_RESULTS - The job has finished running on the execution host and NSG has begun to transfer the results.
-•	COMPLETED - Results successfully transferred and available.
+
+-	QUEUE - The job has been validated and placed in NSG's queue.
+-	COMMANDRENDERING - The job has reached the head of the queue and NSG has created the command line that will be run.
+-	INPUTSTAGING - NSG has created a temporary working directory for the job on the execution host and copied the input files over.
+-	SUBMITTED - The job has been submited to the scheduler on the execution host.
+-	LOAD_RESULTS - The job has finished running on the execution host and NSG has begun to transfer the results.
+-	COMPLETED - Results successfully transferred and available.
 
 
 S Sivagnanam, A Majumdar, K Yoshimoto, V Astakhov, A Bandrowski, M. E. Martone, and N. T. Carnevale. Introducing the Neuroscience Gateway, IWSG, volume 993 of CEUR Workshop Proceedings, CEUR-WS.org, 2013.
