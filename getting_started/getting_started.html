@@ -63,7 +63,10 @@
 <li><a class="reference internal" href="#use-case-organization">Use case Organization</a><ul>
 <li><a class="reference internal" href="#user-experience">User experience</a></li>
 <li><a class="reference internal" href="#use-case-maturity">Use case maturity</a></li>
-<li><a class="reference internal" href="#hpc-access">HPC access</a></li>
+<li><a class="reference internal" href="#hpc-access">HPC access</a><ul>
+<li><a class="reference internal" href="#neuroscience-gateway-nsg">Neuroscience Gateway (NSG)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#service-accessibility">Service Accessibility</a></li>
@@ -230,6 +233,22 @@ Use cases with this icon require a small to medium amount of High-Performance Co
 </div>
 <div class="bsp-inline-text docutils container">
 This type of use cases needs large HPC resources. Typically, use cases showing this icon involve complex simulations of large scale cellular level model of brain areas/regions, that are deployed on JSC and CINECA systems. Subjected to technical compatibility and license agreement, this type of simulations can be delegated to be executed on other HPC systems, outside the BSP.</div>
+<div class="section" id="neuroscience-gateway-nsg">
+<span id="nsg"></span><h4>Neuroscience Gateway (NSG)<a class="headerlink" href="#neuroscience-gateway-nsg" title="Permalink to this headline">¶</a></h4>
+<p>The Neuroscience Gateway (NSG) portal <a class="reference external" href="https://www.nsgportal.org/">https://www.nsgportal.org/</a> facilitates access and use of National Science Foundation (NSF) High Performance Computing (HPC) resources by neuroscientists. Computational modeling of cells and networks has become an essential part of neuroscience research, and investigators are using models to address problems of ever increasing complexity, e.g. large scale network models and optimization or exploration of high dimensional parameter spaces. The NSG catalyzes such research by lowering or eliminating the administrative and technical barriers that currently make it difficult for investigators to use HPC resources. It offers free computer time to neuroscientists acquired via the supercomputer time allocation process managed by the Extreme Science and Engineering Discovery Environment (XSEDE) Resource Allocation Committee (XRAC). The portal provides access to the popular computational neuroscience tools installed on various HPC resources. It also provides a community mailing list for neuroscientists to collaborate and share ideas.</p>
+<p>NSG can be accessed through a simple web portal or programmatically using RESTful services. The NSG provides an administratively and technologically streamlined environment for uploading models, specifying HPC job parameters, querying running job status, receiving job completion notices, and storing and retrieving output data. The NSG transparently distributes user&#8217;s jobs to appropriate XSEDE HPC resources.</p>
+<p>For the use cases referring to hippocampal cells, NSG will be accessed programmatically using RESTful services.</p>
+<p>Successful job submission returns a message at each major processing point, as well as when problems are encountered. Each message has a timestamp, processing stage, and textual description. A job progresses through the following stages:</p>
+<ul class="simple">
+<li>QUEUE - The job has been validated and placed in NSG&#8217;s queue.</li>
+<li>COMMANDRENDERING - The job has reached the head of the queue and NSG has created the command line that will be run.</li>
+<li>INPUTSTAGING - NSG has created a temporary working directory for the job on the execution host and copied the input files over.</li>
+<li>SUBMITTED - The job has been submited to the scheduler on the execution host.</li>
+<li>LOAD_RESULTS - The job has finished running on the execution host and NSG has begun to transfer the results.</li>
+<li>COMPLETED - Results successfully transferred and available.</li>
+</ul>
+<p>S Sivagnanam, A Majumdar, K Yoshimoto, V Astakhov, A Bandrowski, M. E. Martone, and N. T. Carnevale. Introducing the Neuroscience Gateway, IWSG, volume 993 of CEUR Workshop Proceedings, CEUR-WS.org, 2013.</p>
+</div>
 </div>
 </div>
 <div class="section" id="service-accessibility">
