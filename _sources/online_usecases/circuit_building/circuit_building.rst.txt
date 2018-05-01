@@ -8,3 +8,4 @@ Circuit Building
     :maxdepth: 4
 
     cerebellum/cerebellum
+    basalganglia/basalganglia
