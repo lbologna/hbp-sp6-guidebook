@@ -65,7 +65,7 @@ authorization will not be displayed.
 
 
 Contributed raw data files are in the Axon Binary Format (`.abf
-<https://mdc.custhelp.com/euf/assets/content/ABFHelp.pdf>`_) or the Igor Binary
+<http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software>`_) or the Igor Binary
 Format (`.ibw <https://www.wavemetrics.com/index.html>`_) and each file is
 accompanied by a *metadata.json* file in which the contributors describe cell
 and protocol properties (e.g. *cell_id*, *brain_region*, *brain_structure*,
@@ -90,7 +90,7 @@ Users can also upload and visualize their own data, which can be selected, for
 processing, independently or together with traces from the HBP dataset.
 
 At the moment only the (`.abf
-<https://mdc.custhelp.com/euf/assets/content/ABFHelp.pdf>`_) format (Version 2
+<http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software>`_) format (Version 2
 and above), produced with `Molecular Devices
 <http://mdc.custhelp.com/app/home>`_ instruments is supported for upload.
 Additionally, to make sure that the recorded traces represent the outcome of a
@@ -99,7 +99,7 @@ compatibility. The upload is denied in case the file do not fulfill the
 requirements.
 
 Below we report an example of a permitted protocol header extracted from a
-representative `.abf <https://mdc.custhelp.com/euf/assets/content/ABFHelp.pdf>`_
+representative `.abf <http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software>`_
 file with the `neo <https://pypi.python.org/pypi/neo/>`_ package. In this
 example, the stimulus consisted of three periods of duration 500, 10000 and 500
 respectively (the time unit is *ms*) and amplitude initially zero. During the

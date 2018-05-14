@@ -172,7 +172,7 @@ Regardless of the collab from which they are executing the Feature Extraction
 web app, users who are members of, at least, one collab authorized for a set of
 data, have read access to those data. Data for which the users have no
 authorization will not be displayed.</p>
-<p>Contributed raw data files are in the Axon Binary Format (<a class="reference external" href="https://mdc.custhelp.com/euf/assets/content/ABFHelp.pdf">.abf</a>) or the Igor Binary
+<p>Contributed raw data files are in the Axon Binary Format (<a class="reference external" href="http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software">.abf</a>) or the Igor Binary
 Format (<a class="reference external" href="https://www.wavemetrics.com/index.html">.ibw</a>) and each file is
 accompanied by a <em>metadata.json</em> file in which the contributors describe cell
 and protocol properties (e.g. <em>cell_id</em>, <em>brain_region</em>, <em>brain_structure</em>,
@@ -189,14 +189,14 @@ template to fill before data submission.</p>
 <span id="user-data-label"></span><h3>User&#8217;s uploaded data<a class="headerlink" href="#user-s-uploaded-data" title="Permalink to this headline">¶</a></h3>
 <p>Users can also upload and visualize their own data, which can be selected, for
 processing, independently or together with traces from the HBP dataset.</p>
-<p>At the moment only the (<a class="reference external" href="https://mdc.custhelp.com/euf/assets/content/ABFHelp.pdf">.abf</a>) format (Version 2
+<p>At the moment only the (<a class="reference external" href="http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software">.abf</a>) format (Version 2
 and above), produced with <a class="reference external" href="http://mdc.custhelp.com/app/home">Molecular Devices</a> instruments is supported for upload.
 Additionally, to make sure that the recorded traces represent the outcome of a
 step current stimulation experiment, the header of the file is checked for
 compatibility. The upload is denied in case the file do not fulfill the
 requirements.</p>
 <p>Below we report an example of a permitted protocol header extracted from a
-representative <a class="reference external" href="https://mdc.custhelp.com/euf/assets/content/ABFHelp.pdf">.abf</a>
+representative <a class="reference external" href="http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software">.abf</a>
 file with the <a class="reference external" href="https://pypi.python.org/pypi/neo/">neo</a> package. In this
 example, the stimulus consisted of three periods of duration 500, 10000 and 500
 respectively (the time unit is <em>ms</em>) and amplitude initially zero. During the
