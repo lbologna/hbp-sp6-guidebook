@@ -46,14 +46,15 @@ From the **middle** you can configure:
    -  For creation or edition of the item a form will appear
 
       -  *Target*: Name of a target to receive the stimulation
-      -  *Pattern*: Type of the stimulus [Poisson]
-      -  *Lambda*: Configure the random distribution
       -  *Delay*: Time when the stimulus commences, given in
          milliseconds(ms)
       -  *Duration*: Time length of stimulus duration, given in
-         milliseconds(ms)
+         milliseconds(ms)  
+      -  *Synapses per cell*: The number of synapses to create
+      -  *Pattern*: Type of the stimulus [Poisson]
+      -  *Lambda*: Configure the random distribution
       -  *Weight*: The strength of the created synapses
-      -  *Number of synapses*: The number of synapses to create
+
 
    |edit_stimulus|
 
@@ -72,7 +73,6 @@ From the **middle** you can configure:
       -  *EndTime*: Time to stop reporting(ms)
       -  *Dt*: The frequency of reporting in milliseconds(ms)
       -  *Format*: Defines the report output format [Bin, ASCII, HDF5]
-      -  *Number of synapses*: The number of synapses to create
 
    |edit_report|
 
