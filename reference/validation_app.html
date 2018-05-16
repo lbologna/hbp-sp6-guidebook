@@ -4,32 +4,20 @@
 <!DOCTYPE html>
 
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Model Validation app &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    
     <link rel="stylesheet" href="../_static/hbpdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/extra.js"></script>
     <script type="text/javascript" src="../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -38,8 +26,7 @@
     <link rel="prev" title="Model Catalog app" href="model_catalog.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
-  <body role="document">
+  </head><body>
 <div class="hbpdoc-page">
     <section class="hbpdoc-title page-header">
         <a class="project-title" href="../index.html">HBP Brain Simulation Platform Guidebook</a>
@@ -84,12 +71,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -152,11 +141,11 @@ then search for “validation”, and click on “Add to Navigation” to instal
 </div>
 <div class="section" id="choosing-which-models-and-tests-to-view">
 <h2>Choosing which models and tests to view<a class="headerlink" href="#choosing-which-models-and-tests-to-view" title="Permalink to this headline">¶</a></h2>
-<p>When you first click on &#8220;Model Validation app&#8221; in the navigation bar,
+<p>When you first click on “Model Validation app” in the navigation bar,
 you will see a configuration screen with a group of drop-down lists.
 This allows you to filter the catalog, and show only the validation tests and models that are relevant to your collab.</p>
 <a class="reference internal image-reference" href="../_images/validation_app_configure.png"><img alt="../_images/validation_app_configure.png" class="align-center" src="../_images/validation_app_configure.png" style="width: 564px;" /></a>
-<p>When you are finished, click &#8220;Save&#8221;, and then click the &#8220;X&#8221; icon to close the configuration view.
+<p>When you are finished, click “Save”, and then click the “X” icon to close the configuration view.
 You will now see the home page of the app, showing a list of models and of validation tests corresponding to the criteria you have selected.</p>
 <a class="reference internal image-reference" href="../_images/validation_app_hippocampus.png"><img alt="../_images/validation_app_hippocampus.png" class="align-center" src="../_images/validation_app_hippocampus.png" style="width: 681px;" /></a>
 </div>
@@ -188,7 +177,7 @@ data against which models are being validated.</p>
 </div>
 <div class="section" id="browsing-the-test-library">
 <h2>Browsing the test library<a class="headerlink" href="#browsing-the-test-library" title="Permalink to this headline">¶</a></h2>
-<p>From the app home page, clicking on &#8220;Go to Test catalog&#8221; will take you to a list of validation tests
+<p>From the app home page, clicking on “Go to Test catalog” will take you to a list of validation tests
 for the test and model types you specified in the configuration page. This list can make it easier to
 compare tests and see the differences between them, and provides another route to access the results
 for a given test.</p>
@@ -196,7 +185,7 @@ for a given test.</p>
 </div>
 <div class="section" id="adding-a-new-validation-test">
 <h2>Adding a new validation test<a class="headerlink" href="#adding-a-new-validation-test" title="Permalink to this headline">¶</a></h2>
-<p>From the test library, clicking on &#8220;New test&#8221; opens a form which allows you to define a new test,
+<p>From the test library, clicking on “New test” opens a form which allows you to define a new test,
 including the URL of the source code repository containing the test implementation.</p>
 <a class="reference internal image-reference" href="../_images/validation-app-new-test.png"><img alt="../_images/validation-app-new-test.png" class="align-center" src="../_images/validation-app-new-test.png" style="width: 676px;" /></a>
 </div>
@@ -224,7 +213,7 @@ including the URL of the source code repository containing the test implementati
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
     </div>
     </div>
 </div>

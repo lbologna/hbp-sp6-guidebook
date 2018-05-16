@@ -4,32 +4,20 @@
 <!DOCTYPE html>
 
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>Feature Extraction Graphical User Interface &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    
     <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
-        VERSION:     '0.1.1',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../../../_static/extra.js"></script>
     <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -38,8 +26,7 @@
     <link rel="prev" title="Trace Analysis" href="../trace_analysis.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  </head>
-  <body role="document">
+  </head><body>
 <div class="hbpdoc-page">
     <section class="hbpdoc-title page-header">
         <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
@@ -62,7 +49,7 @@
 <li><a class="reference internal" href="#overview">Overview</a></li>
 <li><a class="reference internal" href="#electrophysiological-data">Electrophysiological data</a><ul>
 <li><a class="reference internal" href="#hbp-database">HBP database</a></li>
-<li><a class="reference internal" href="#user-s-uploaded-data">User&#8217;s uploaded data</a></li>
+<li><a class="reference internal" href="#user-s-uploaded-data">User’s uploaded data</a></li>
 <li><a class="reference internal" href="#feature-extraction">Feature extraction</a></li>
 </ul>
 </li>
@@ -91,12 +78,14 @@
    </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -145,7 +134,7 @@ later model parameter optimizations.</p>
 <p>With respect to the data selection, three scenarios are possible: 1) Based on
 her/his data permissions (see <a class="reference internal" href="#electrophys-data-label"><span class="std std-ref">Electrophysiological data</span></a>), the user select
 voltage traces from the Human Brain Project (HBP) database; 2) The user selects
-the voltage traces from the data files she/he uploaded through the &#8220;Upload&#8221;
+the voltage traces from the data files she/he uploaded through the “Upload”
 utility of the GUI; 3) The user select traces from both the HBP database and
 her/his own uploaded file(s).</p>
 <p>The application leverages the Python Electrophys Feature Extract Library (<a class="reference external" href="http://bluebrain.github.io/eFEL/index.html">eFEL</a>) and provides a friendly
@@ -166,8 +155,8 @@ data formats currently in use.</p>
 provided by contributing laboratories internal and external to HBP (the
 contributors are displayed to the user after data selection, see
 <a class="reference internal" href="#trace-selection-label"><span class="std std-ref">Trace selection</span></a>). Each data file is associated with a list of
-&#8220;authorized collabs&#8221;, following the indications of the contributors. An
-&#8220;authorized collab&#8221; is a collab whose team members have read access to the data.
+“authorized collabs”, following the indications of the contributors. An
+“authorized collab” is a collab whose team members have read access to the data.
 Regardless of the collab from which they are executing the Feature Extraction
 web app, users who are members of, at least, one collab authorized for a set of
 data, have read access to those data. Data for which the users have no
@@ -176,7 +165,7 @@ authorization will not be displayed.</p>
 Format (<a class="reference external" href="https://www.wavemetrics.com/index.html">.ibw</a>) and each file is
 accompanied by a <em>metadata.json</em> file in which the contributors describe cell
 and protocol properties (e.g. <em>cell_id</em>, <em>brain_region</em>, <em>brain_structure</em>,
-<em>stimulus_duration</em>, ...) used for data processing and visualization. The data
+<em>stimulus_duration</em>, …) used for data processing and visualization. The data
 are read through the <a class="reference external" href="https://pypi.python.org/pypi/neo/">neo</a> and <a class="reference external" href="https://pypi.python.org/pypi/igor.py/0.9.1">igorpy</a> python packages and converted
 into value arrays before use. The <em>metadata.json</em> files relative to the selected
 traces will be downloadable in a future release of the web app.</p>
@@ -186,7 +175,7 @@ receive further detailed information on the data format and the <em>metadata.jso
 template to fill before data submission.</p>
 </div>
 <div class="section" id="user-s-uploaded-data">
-<span id="user-data-label"></span><h3>User&#8217;s uploaded data<a class="headerlink" href="#user-s-uploaded-data" title="Permalink to this headline">¶</a></h3>
+<span id="user-data-label"></span><h3>User’s uploaded data<a class="headerlink" href="#user-s-uploaded-data" title="Permalink to this headline">¶</a></h3>
 <p>Users can also upload and visualize their own data, which can be selected, for
 processing, independently or together with traces from the HBP dataset.</p>
 <p>At the moment only the (<a class="reference external" href="http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software">.abf</a>) format (Version 2
@@ -203,7 +192,7 @@ respectively (the time unit is <em>ms</em>) and amplitude initially zero. During
 central period, though, the stimulus amplitude is increased by 10.0 at every
 recording sweep, as indicated in the <strong>lEpochLevelInc</strong> parameter (current unit
 is <em>nA</em>).</p>
-<div class="highlight-json"><div class="highlight"><pre><span></span> <span class="p">{</span><span class="nt">&quot;dictEpochInfoPerDAC&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>  <span class="nt">&quot;fEpochInitLevel&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span><span class="nt">&quot;dictEpochInfoPerDAC&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span><span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>  <span class="nt">&quot;fEpochInitLevel&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
                                         <span class="nt">&quot;fEpochLevelInc&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
                                         <span class="nt">&quot;lEpochDurationInc&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
                                         <span class="nt">&quot;lEpochInitDuration&quot;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
@@ -286,7 +275,7 @@ accept the Terms&amp;Conditions for the use of the public data (see figure below
 <p>Once entered in the trace selection page the user can filter the data from the
 HBP dataset, by choosing, from five dropdown menu, the properties of the cell:
 1) Species; 2) Brain structure; 3) Region; 4) Type; 5) Electrical type (<a class="reference external" href="https://bbp.epfl.ch/nmc-portal/glossary">eType</a>). If any of the field is
-missing (e.g. the eType of the cell is not know), the &#8220;unknown&#8221; label is
+missing (e.g. the eType of the cell is not know), the “unknown” label is
 displayed.</p>
 <p>After the data are loaded, the traces contained in each file are showed and data
 files are grouped by cell id (see figure below). The user can select individual
@@ -300,7 +289,7 @@ traces) referring to a single cell can be selected.</p>
 <div class="line"><br /></div>
 </div>
 <p>Alternatively, or concurrently, users can upload their own data (see
-<a class="reference internal" href="#user-data-label"><span class="std std-ref">User&#8217;s uploaded data</span></a>) by browsing their local storage and using the upload
+<a class="reference internal" href="#user-data-label"><span class="std std-ref">User’s uploaded data</span></a>) by browsing their local storage and using the upload
 button (see figure below). The traces will be displayed for selection together
 with the ones selected from the HBP dataset (if any).</p>
 <div class="bsp-container-center docutils container">
@@ -323,7 +312,7 @@ extraction process takes place as described in
 <div class="section" id="results">
 <h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
 <p>Finally, a success message is displayed and results are made available to
-download. The application output consists of a <strong>features.json</strong> and <strong>protocols.json</strong> files which are generated for both individual cells and the entire ensemble. These files contain the feature value averages (computed as outlined in the above section &#8220;Feature extraction&#8221;) and the protocols adopted for the experimental recordings. These files are intended to be used for the data-driven optimization step of the Hodgkin-Huxley Neuron Builder workflow, made available to the user through the Brain Simulation Platform at the <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66898">Highly Integrated Workflows</a> page.</p>
+download. The application output consists of a <strong>features.json</strong> and <strong>protocols.json</strong> files which are generated for both individual cells and the entire ensemble. These files contain the feature value averages (computed as outlined in the above section “Feature extraction”) and the protocols adopted for the experimental recordings. These files are intended to be used for the data-driven optimization step of the Hodgkin-Huxley Neuron Builder workflow, made available to the user through the Brain Simulation Platform at the <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66898">Highly Integrated Workflows</a> page.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/download.png"><img alt="../../../_images/download.png" class="align-right" src="../../../_images/download.png" style="width: 500px;" /></a>
 </div>
@@ -353,7 +342,7 @@ download. The application output consists of a <strong>features.json</strong> an
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
     </div>
     </div>
 </div>
