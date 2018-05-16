@@ -46,14 +46,15 @@ From the **middle** you can configure:
    -  For creation or edition of the item a form will appear
 
       -  *Target*: Name of a target to receive the stimulation
-      -  *Pattern*: Type of the stimulus [Poisson]
-      -  *Lambda*: Configure the random distribution
       -  *Delay*: Time when the stimulus commences, given in
          milliseconds(ms)
       -  *Duration*: Time length of stimulus duration, given in
-         milliseconds(ms)
+         milliseconds(ms)  
+      -  *Synapses per cell*: The number of synapses to create
+      -  *Pattern*: Type of the stimulus [Poisson]
+      -  *Lambda*: Configure the random distribution
       -  *Weight*: The strength of the created synapses
-      -  *Number of synapses*: The number of synapses to create
+
 
    |edit_stimulus|
 
@@ -64,17 +65,14 @@ From the **middle** you can configure:
       -  *Target*: Defines the region from where the data will be
          reported. Note that cell targets versus compartment targets can
          influence report behavior
-      -  *Type*: Compartment means that each compartment outputs
+      -  *Type*: Soma (compartment) means that each compartment outputs
          separately in the report file. Synapse indicates that each
          synapse will have a separate entry in the report [compartment,
          synapse]
-      -  *ReportOn*: The NEURON variable to access
-      -  *Unit*: The unit of the NEURON variable
       -  *StartTime*: Time to start reporting(ms)
       -  *EndTime*: Time to stop reporting(ms)
       -  *Dt*: The frequency of reporting in milliseconds(ms)
       -  *Format*: Defines the report output format [Bin, ASCII, HDF5]
-      -  *Number of synapses*: The number of synapses to create
 
    |edit_report|
 
@@ -86,7 +84,7 @@ From the **bottom** you can ``launch`` the simulation
 
  - *Title*: The title of the job
  - *Computer*: Which supercomputer will run the simulation.
- - *Project*: (optional) If you want to specify under which project the simulation should be run
+ - *Project*: Select under which account you want to run the simulation.
  - *Nodes*: The amount of nodes that will be allocated and used for the simulation
  - *Run Time*: The maximum time before timeout (in seconds)
  - *Preview Config*: This will open a new tab with the complete configuration that is going to be sent (BlueConfig)
