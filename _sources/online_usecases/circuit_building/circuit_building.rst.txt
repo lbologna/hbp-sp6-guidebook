@@ -9,3 +9,4 @@ Circuit Building
 
     cerebellum/cerebellum
     basalganglia/basalganglia
+    hippocampus/hippocampus
