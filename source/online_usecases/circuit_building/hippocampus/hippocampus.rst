@@ -1,4 +1,4 @@
-.. _cb_circuit_building:
+.. _cb_circuit_building_hippo:
 
 ###########
 Hippocampus
