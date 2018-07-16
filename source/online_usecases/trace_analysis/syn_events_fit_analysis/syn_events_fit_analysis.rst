@@ -1,6 +1,6 @@
 This Jupyter Notebook allows the user to fetch the fitting results from the storage of the HPC system to the storage of the Collab or to analyse the optimized parameters. If the user wants to view analysis of simulations that are already in the storage of the Collab, he or she may skip the 'View simulations' tab and may go directly to the 'View analysis' tab.
 
-In the 'View simulations' tab, the user may visualize Name/ID, status, submission date of the simulations submitted on the HPC systems and can fetch output of successful completed jobs.
+In the 'View simulations' tab, the user can visualize Name/ID, status, submission date of the simulations submitted on the HPC systems and can fetch output of successful completed jobs.
 
 .. container:: bsp-container-center
 
