@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
@@ -109,14 +109,14 @@
 
                 <div class="section" id="synaptic-events-fitting">
 <span id="syn-events-fit"></span><h1>Synaptic events fitting<a class="headerlink" href="#synaptic-events-fitting" title="Permalink to this headline">¶</a></h1>
-<p>This use case allows a user to fit synaptic events using data and model from the Neuroinformatics Platform (NIP).</p>
-<p>Selecting this use case, two Jupyter Notebooks are cloned in a private existing/new collab.
+<p>This Use Case allows a user to fit synaptic events using data and models from the Neuroinformatics Platform (NIP).</p>
+<p>Selecting this Use Case, two Jupyter Notebooks are cloned in a private existing/new Collab.
 The cloned Notebooks are:</p>
 <div class="section" id="synaptic-events-fitting-config">
 <h2>Synaptic events fitting - Config<a class="headerlink" href="#synaptic-events-fitting-config" title="Permalink to this headline">¶</a></h2>
 <p>It allows the user to:</p>
 <ol class="arabic simple">
-<li>Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to fit</li>
+<li>Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to be fitted.</li>
 </ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/data_selection.png"><img alt="../../../_images/data_selection.png" class="align-center" src="../../../_images/data_selection.png" style="width: 700px;" /></a>
@@ -124,7 +124,12 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>A configuration file corresponding to the experimental file chosen is downloaded from the collab storage. The file includes: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse), the name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters</p>
+<p>A configuration file corresponding to the selected experimental file is
+downloaded from the Collab storage. This file includes: the number of traces
+in the experimental file, the protocol (voltage clamp amplitude and reversal
+potential of the synapse), the name of the parameters to be fitted, their
+initial values and the allowed variation range, exclusion rules, and an optional
+set of dependencies for other parameters</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -137,8 +142,18 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Of course, we assume that the user knows what we are talking about here, and that the uploaded mod file has been already tested by the user in preliminary simulations. The program does not make any check, from this point of view. An invalid file will result in errors at NEURON compilation time</p>
-<p>When a local mod file is chosen, a form with the values needed to write a corresponding configuration file is opened. The number of traces in the experimental file and the protocol (voltage clamp amplitude and reversal potential of the synapse) are by default filled with the values corresponding to the chosen experimental file. The name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters must be filled by the user. Typical values are shown in the figures below:</p>
+<p>We assume that the user knows what we are talking about here, and that the
+uploaded mod file has been already tested by the user in preliminary
+simulations. The program does not check this. An invalid file will result in
+errors at NEURON compilation time</p>
+<p>When a local mod file is chosen, a form with the values needed to write a
+corresponding configuration file is opened. The number of traces in the
+experimental file and the protocol (voltage clamp amplitude and reversal
+potential of the synapse) are by default filled with the values corresponding
+to the chosen experimental file. The name of the parameters to be fitted, their
+initial values and allowed variation range, exclusion rules, and an optional
+set of dependencies for other parameters must be filled in by the user. Typical
+values are shown in the figures below:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -160,26 +175,29 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>All the other parameters that are not fitted have their default value as defined in the mod file.</p>
+<p>All other parameters that are not fitted have their default value as defined in the mod file.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="3">
-<li>Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the status of the job</li>
+<li>Configure the parameters of the optimization job: node number, core number and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the job status.</li>
 </ol>
-<p>On JURECA the number of nodes, number of CPUs per node and runtime are set by default to 2, 24 and 10m respectively</p>
+<p>On JURECA, the node number, the number of CPUs per node and the runtime are set by default to 2, 24 and 10m respectively.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>On MARCONI the number of nodes, number of CPUs per node and runtime are set by default to 2, 36 and 10m respectively</p>
+<p>On MARCONI, the node number, the number of CPUs per node and the runtime are set by default to 2, 36 and 10m respectively.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>The user needs to be aware of the limitations imposed by each HPC system on resources</p>
+<p>The user needs to be aware of resource limitations imposed by each HPC system.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>On the NSG the number of nodes, number of cores and runtime are set by default to 2, 24 and 0.5 (hours) respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact <a class="reference external" href="mailto:nsghelp&#37;&#52;&#48;sdsc&#46;edu">nsghelp<span>&#64;</span>sdsc<span>&#46;</span>edu</a>. The maximum number of cores required per node is 24</p>
+<p>On the NSG, the node number, the number of cores and the runtime are set by
+default to 2, 24 and 0.5 (hours) respectively. The maximum node number per job
+is 72. If you would require more than 72 nodes, please contact
+<a class="reference external" href="mailto:nsghelp&#37;&#52;&#48;sdsc&#46;edu">nsghelp<span>&#64;</span>sdsc<span>&#46;</span>edu</a>. The maximum number of cores required per node is 24.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/hpc_selection.png"><img alt="../../../_images/hpc_selection.png" class="align-center" src="../../../_images/hpc_selection.png" style="width: 300px;" /></a>
 </div>
@@ -210,7 +228,7 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Note that when the job is submitted through UNICORE, the user can specify a title for the job and the account to use for submitting the job on the HPC.</p>
+<p>Note that when the job is submitted through UNICORE, the user can specify a title for the job and the account to use to submit the job on the HPC.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -234,7 +252,7 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Once the job is completed, the output files will be in the collab storage under different directories, according to the system used.</p>
+<p>Once the job is completed, the output files will be in the Collab storage under different directories, according to the system used.</p>
 <p>JURECA: results are saved under the results/output_submissionTime folder.</p>
 <p>MARCONI: results are saved under the resultsMarconi/output_submissionTime folder.</p>
 <p>NSG results are saved under the resultsNSG/output_submissionTime folder.</p>
@@ -242,7 +260,7 @@ The cloned Notebooks are:</p>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="4">
-<li>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</li>
+<li>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button.</li>
 </ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/toggle_button1.png"><img alt="../../../_images/toggle_button1.png" class="align-center" src="../../../_images/toggle_button1.png" style="width: 300px;" /></a>
@@ -262,8 +280,14 @@ The cloned Notebooks are:</p>
 </div>
 <div class="section" id="synaptic-events-fitting-analysis">
 <h2>Synaptic events fitting - Analysis<a class="headerlink" href="#synaptic-events-fitting-analysis" title="Permalink to this headline">¶</a></h2>
-<p>This Jupyter Notebook allows the user to fetch the fitting results from the storage of the HPC system to the storage of the Collab or to analyse the optimized parameters. If the user wants to view analysis of simulations that are already in the storage of the Collab, he or she may skip the ‘View simulations’ tab and may go directly to the ‘View analysis’ tab.</p>
-<p>In the ‘View simulations’ tab, the user may visualize Name/ID, status, submission date of the simulations submitted on the HPC systems and can fetch output of successful completed jobs.</p>
+<p>This Jupyter Notebook allows the user to fetch the fitting results from the
+storage of the HPC system to the storage of the Collab or to analyze the
+optimized parameters. If the user wants to view an analysis of simulations that
+are already in the storage of the Collab, (s)he can skip the
+‘View simulations’ tab and go directly to the ‘View analysis’ tab.</p>
+<p>In the ‘View simulations’ tab, the user can visualize the Name/ID, status,
+the submission date of the simulations submitted on the HPC systems and (s)he
+can obtain an output of successfully completed jobs.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/viewsim1.png"><img alt="../../../_images/viewsim1.png" class="align-center" src="../../../_images/viewsim1.png" style="width: 700px;" /></a>
 </div>
@@ -288,16 +312,18 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>In the ‘View analysis’ tab, the user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage.</p>
+<p>In the ‘View analysis’ tab, the user can analyze the optimized parameters for
+default data and a mod file combination or browse through the optimized
+parameters available in the Collab storage.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/viewanalysis1.png"><img alt="../../../_images/viewanalysis1.png" class="align-center" src="../../../_images/viewanalysis1.png" style="width: 700px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>The user may visualize the table data, the box plot and the best fit.</p>
+<p>The user can visualize the data in table form, a box plot and the best fit.</p>
 <ol class="arabic simple">
-<li>The results table (sorted in ascending order by the fitting error).</li>
+<li>The table of results (sorted in ascending order by the fitting error).</li>
 </ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/results_table.png"><img alt="../../../_images/results_table.png" class="align-center" src="../../../_images/results_table.png" style="width: 700px;" /></a>
@@ -326,7 +352,8 @@ The cloned Notebooks are:</p>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
-<p>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
+<p>If you are interested in the code, click on the “Click here to toggle on/off
+the source code” button.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/toggle_button2.png"><img alt="../../../_images/toggle_button2.png" class="align-center" src="../../../_images/toggle_button2.png" style="width: 300px;" /></a>
 </div>
@@ -355,7 +382,7 @@ The cloned Notebooks are:</p>
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
     </div>
     </div>
 </div>

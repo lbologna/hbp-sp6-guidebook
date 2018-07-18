@@ -4,14 +4,14 @@
 Synaptic events fitting (user’s model)
 ######################################
 
-This use case allows a user to fit synaptic events using user’s data and model.
+This Use Case allows a user to fit synaptic events using user’s data and model.
 
-Selecting this use case, two Jupyter Notebooks are cloned in a private existing/new collab.
+Selecting this use case, two Jupyter Notebooks are cloned in a private existing/new Collab.
 The cloned Notebooks are:
 
-************************************************
-Synaptic events fitting with user model - Config
-************************************************
+**************************************************
+Synaptic events fitting with a user model - Config
+**************************************************
 
 It allows the user to:
 
@@ -39,13 +39,22 @@ At this time, the only accepted format for the experimental file is a text file 
 
 |
 
-Of course, we assume that the user knows what we are talking about here, and that the uploaded mod file has been already tested by the user in preliminary simulations. The program does not make any check, from this point of view. An invalid file will result in errors at NEURON compilation time
+We assume that the user knows what we are talking about here, and that the 
+uploaded mod file has been already tested by the user in preliminary 
+simulations. The program does not perform checks on this. An invalid file will 
+result in errors at NEURON compilation time
 
-All the other parameters that are not fitted have their default value as defined in the mod file.
+All other parameters that are not fitted have their default value as 
+defined in the mod file.
 
 |
 
-3. Fill the form with the values needed to write a configuration file: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse), the name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters. Typical values are shown in the figure below
+3. Fill in the form with the values needed to write a configuration file: the 
+   number of traces in the experimental file, the protocol (voltage clamp 
+   amplitude and reversal potential of the synapse), the name of the parameters 
+   to be fitted, their initial values and the allowed variation range, 
+   exclusion rules, and an optional set of dependencies for other parameters. 
+   Typical values are shown in the figure below
 
 
 .. container:: bsp-container-center
@@ -143,7 +152,9 @@ Note that when the job is submitted through UNICORE, the user can specify a titl
 
 |
 
-Note that when the job is submitted through NSG, next to the status of the job, the user may see the submission date converted to CET time. It will be useful in the analysis notebook in order to fetch the job.
+Note that when the job is submitted through NSG, the user can see the 
+submission date converted to CET time next to the status of the job. This will 
+be useful in the analysis notebook in order to fetch the job.
 
 |
 
@@ -155,9 +166,12 @@ Note that when the job is submitted through NSG, next to the status of the job, 
 
 |
 
-The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.
+The user can choose to fit all experimental traces 100 times, a single trace 20 
+times or use a demo version where a trace is fitted 5 times. For the single 
+trace and the demo version the user can choose the trace to be fitted.
 
-Once the job is completed, the output files will be in the collab storage under different directories, according to the system used.
+Once the job is completed, the output files will be in the Collab storage under 
+different directories, according to the system used.
 
 JURECA: results are saved under the results/output_submissionTime folder;
 
@@ -171,7 +185,7 @@ NSG results are saved under the resultsNSG/output_submissionTime folder.
 
 |
 
-5. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
+5. If you are interested in the code, click on the “Click here to toggle on/off the source code” button
 
 .. container:: bsp-container-center
 
@@ -181,7 +195,7 @@ NSG results are saved under the resultsNSG/output_submissionTime folder.
 
 |
 
-6. If you want to start a new fitting from the beginning, click on “Click here to start a new fit” button.
+6. If you want to start a new fitting from the beginning, click on the “Click here to start a new fit” button.
 
 .. container:: bsp-container-center
 

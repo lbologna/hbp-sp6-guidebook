@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -46,7 +46,7 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Model Validation app</a><ul>
-<li><a class="reference internal" href="#adding-the-app-to-your-collab">Adding the app to your collab</a></li>
+<li><a class="reference internal" href="#adding-the-app-to-your-collab">Adding the app to your Collab</a></li>
 <li><a class="reference internal" href="#choosing-which-models-and-tests-to-view">Choosing which models and tests to view</a></li>
 <li><a class="reference internal" href="#viewing-the-results-for-a-particular-model">Viewing the results for a particular model</a></li>
 <li><a class="reference internal" href="#viewing-the-results-for-a-particular-test">Viewing the results for a particular test</a></li>
@@ -91,7 +91,7 @@
                 
                 <div class="breadcrumb breadcrumb-meta expand">
                     
-                    <a href="reference_index.html">Reference documentation for platform components</a>
+                    <a href="reference_index.html">Reference documentation for Platform components</a>
                     
                 </div>
                 
@@ -113,14 +113,14 @@
 <h1>Model Validation app<a class="headerlink" href="#model-validation-app" title="Permalink to this headline">¶</a></h1>
 <p>Validation is the process of comparing a model
 (more precisely, the results of computer simulations of the model) to experimental data.</p>
-<p>The Model Validation app can be installed in any collab workspace, and can be used:</p>
+<p>The Model Validation app can be installed in any Collab workspace, and can be used:</p>
 <ul class="simple">
-<li>to search for validation tests approriate to a given type of model
+<li>to search for validation tests appropriate to a given model type
 (e.g. tests for models of hippocampus CA1 pyramidal cells);</li>
 <li>to view the results of validation tests, including:<ul>
-<li>seeing all the tests for a given model,</li>
-<li>tracking change in test results over time (as the model being tested is modified),</li>
-<li>and comparing different models of the same system;</li>
+<li>seeing all the tests for a given model</li>
+<li>tracking changes in test results over time (as the model being tested is modified)</li>
+<li>comparing different models of the same system</li>
 </ul>
 </li>
 <li>to register new validation tests with the HBP validation test library.</li>
@@ -134,7 +134,7 @@ In future the upload will be integrated into many of the online use cases of the
 </ul>
 </div>
 <div class="section" id="adding-the-app-to-your-collab">
-<h2>Adding the app to your collab<a class="headerlink" href="#adding-the-app-to-your-collab" title="Permalink to this headline">¶</a></h2>
+<h2>Adding the app to your Collab<a class="headerlink" href="#adding-the-app-to-your-collab" title="Permalink to this headline">¶</a></h2>
 <p>As shown in the screenshot below, click on the “ADD” button in the left-hand navigation bar,
 then search for “validation”, and click on “Add to Navigation” to install the app.</p>
 <a class="reference internal image-reference" href="../_images/validation_app_add_to_navigation.png"><img alt="../_images/validation_app_add_to_navigation.png" class="align-center" src="../_images/validation_app_add_to_navigation.png" style="width: 858px;" /></a>
@@ -143,10 +143,10 @@ then search for “validation”, and click on “Add to Navigation” to instal
 <h2>Choosing which models and tests to view<a class="headerlink" href="#choosing-which-models-and-tests-to-view" title="Permalink to this headline">¶</a></h2>
 <p>When you first click on “Model Validation app” in the navigation bar,
 you will see a configuration screen with a group of drop-down lists.
-This allows you to filter the catalog, and show only the validation tests and models that are relevant to your collab.</p>
+This allows you to filter the catalog, and show only the validation tests and models that are relevant to your Collab.</p>
 <a class="reference internal image-reference" href="../_images/validation_app_configure.png"><img alt="../_images/validation_app_configure.png" class="align-center" src="../_images/validation_app_configure.png" style="width: 564px;" /></a>
-<p>When you are finished, click “Save”, and then click the “X” icon to close the configuration view.
-You will now see the home page of the app, showing a list of models and of validation tests corresponding to the criteria you have selected.</p>
+<p>When you have finished, click “Save”, and then click the “X” icon to close the configuration view.
+You will now see the home page of the app, showing a list of models and validation tests corresponding to the criteria you have selected.</p>
 <a class="reference internal image-reference" href="../_images/validation_app_hippocampus.png"><img alt="../_images/validation_app_hippocampus.png" class="align-center" src="../_images/validation_app_hippocampus.png" style="width: 681px;" /></a>
 </div>
 <div class="section" id="viewing-the-results-for-a-particular-model">
@@ -166,7 +166,7 @@ data generated by the test simulation.</p>
 <p>From the home page, if you click on one of the validation tests in the right-hand list,
 you will see a page with details about the test, divided into four tabs.</p>
 <p>The <strong>Description</strong> tab shows basic information about the test, including a link to the experimental
-data against which models are being validated.</p>
+data against which models are validated.</p>
 <a class="reference internal image-reference" href="../_images/validation-app-test-description.png"><img alt="../_images/validation-app-test-description.png" class="align-center" src="../_images/validation-app-test-description.png" style="width: 669px;" /></a>
 <p>The <strong>Version</strong> tab shows information about the test implementation(s) (as Python code).</p>
 <a class="reference internal image-reference" href="../_images/validation-app-test-version.png"><img alt="../_images/validation-app-test-version.png" class="align-center" src="../_images/validation-app-test-version.png" style="width: 668px;" /></a>
@@ -213,7 +213,7 @@ including the URL of the source code repository containing the test implementati
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
     </div>
     </div>
 </div>

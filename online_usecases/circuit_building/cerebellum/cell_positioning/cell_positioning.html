@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../../_static/doctools.js"></script>
@@ -102,25 +102,37 @@
 
                 <div class="section" id="cell-positioning">
 <h1>Cell positioning<a class="headerlink" href="#cell-positioning" title="Permalink to this headline">¶</a></h1>
-<p>This usecase places cerebellar neurons (different types: specific simplified geometric features with anisotropic properties and specific density) into a layered-volume of the cerebellum.
-The use case can be found in <em>Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume</em>.</p>
+<p>This Use Case places cerebellar neurons (different types: specific simplified
+geometric features with anisotropic properties and specific density) into a
+layered-volume of the cerebellum.
+This Use Case can be found in
+<em>Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume</em>.</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../../_images/schema1.png"><img alt="../../../../_images/schema1.png" src="../../../../_images/schema1.png" style="width: 373px;" /></a>
 <a class="reference internal image-reference" href="../../../../_images/cerebellum.png"><img alt="../../../../_images/cerebellum.png" src="../../../../_images/cerebellum.png" style="width: 743px;" /></a>
 <a class="reference internal image-reference" href="../../../../_images/placement_flow_chart.png"><img alt="../../../../_images/placement_flow_chart.png" src="../../../../_images/placement_flow_chart.png" style="width: 1829px;" /></a>
 </div></blockquote>
-<p>Approach: the desired number of cells are progressively placed following a random direction from the previous cell with a distance step guaranteeing for not volume overlapping. A “reset” starting point occurs when all the surrounding is occupied. This algorithm is computationally efficient, which is fundamental for high-density volumes, but still keeping a strong random component to achieve a realistic distribution of the pairwise inter-neuron distances. The PC Layer is almost a planar grid in-between GRL and ML, with an inter-soma distance along the x-axis constrained by the not overlapping among adjacent dendritic trees.</p>
+<p>Approach: the desired number of cells are progressively placed following a
+random direction from the previous cell with a distance step guaranteeing that
+they do not overlap. A “reset” starting point occurs when the entire
+surrounding is occupied. This algorithm is computationally efficient, which is
+fundamental for high-density volumes, but still keeps a strong random component
+to achieve a realistic distribution of the pairwise inter-neuron distances.
+The PC Layer is almost a planar grid in-between GRL and ML, with an inter-soma
+distance along the x-axis constrained by the requirement that adjacent
+dendritic trees must not overlap.</p>
 <p><strong>Inputs:</strong> by a simple GUI, the basic parameters can be entered by the user</p>
 <ul class="simple">
 <li>Base sizes (x and z) of the cerebellar volume to be built</li>
 <li>Plot option enabling</li>
 <li>Save option enabling</li>
 </ul>
-<p>For expert users, even other parameters could be modified from scaffold_params.py (in /storage)</p>
+<p>Expert users can modify more parameters from <cite>scaffold_params.py</cite>
+(in <cite>/storage</cite>):</p>
 <ul class="simple">
 <li>Neuron types (with ID)</li>
-<li>Simplified geometric features for each neuron type: radius of the soma, and eventually dendritic field extensions (direction-dependent) if any constraints about not-overlapping are taken into account</li>
-<li>Density for each neuron type, and eventually ratio about density values of different types</li>
+<li>Simplified geometric features for each neuron type: radius of the soma, and eventually dendritic field extensions (direction-dependent) if the constraints of not-overlapping cells are taken into account</li>
+<li>Density for each neuron type, and eventually the ratio of the density values when compagin different types.</li>
 </ul>
 <p><strong>Output:</strong></p>
 <ul class="simple">
@@ -129,48 +141,49 @@ The use case can be found in <em>Online Use Cases/Circuit Building/Cells placeme
 <li>Neuron type ID (from 1 to 7)</li>
 <li>3D coordinates (soma center) of each neuron (x, y, and z)</li>
 </ul>
-<p>Monitoring: sparseness in the subvolume by computing distribution of pairwise distances (monitoring_positioning.py in /storage)</p>
+<p>Monitoring: sparseness in the subvolume by computing the distribution of
+pairwise distances (monitoring_positioning.py in /storage)</p>
 <p>Moreover, a 3D basic visualization is depicted (somas of each neuron, using a different color for each neuron type).</p>
 <p><strong>Additional information:</strong></p>
 <ul class="simple">
-<li>The whole usecase should take about 10 minutes for a volume base of 400 x 400 µm.</li>
-<li>No login to any other computer required</li>
+<li>The whole Use Case should take about 10 minutes for a volume base of 400 x 400 µm.</li>
+<li>No log in to any other computer required.</li>
 </ul>
 <p><strong>EXAMPLE</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li>x = 400 µm, z = 400 µm (→ DCN  200 x 200 µm)</li>
-<li>y = 930 µm (600+ 150+30+150  µm), i.e. thickness DCN + GRL+ PCL + ML</li>
+<li>x = 400 µm, z = 400 µm (→ DCN 200 x 200 µm)</li>
+<li>y = 930 µm (600+ 150+30+150 µm), i.e. thickness DCN + GRL+ PCL + ML</li>
 </ul>
 <p>TOT #NEURONS: 96.887</p>
 <p>Glomeruli (N=7073, radius =1.5 µm, in GRL excluded the upper 10 µm)</p>
 <ul class="simple">
-<li>3D dist = 206 ± 89 µm - gaussian</li>
+<li>3D dist = 206 ± 89 µm - Gaussian</li>
 <li>Min = 4; max =558 µm</li>
 </ul>
 <p>Granule cells (N=88229, radius = 2.5 µm, in the whole GRL)</p>
 <ul class="simple">
-<li>3D dist = 210 ± 90 µm- gaussian</li>
+<li>3D dist = 210 ± 90 µm- Gaussian</li>
 <li>Min =    ; max =     µm</li>
 </ul>
 <p>Golgi cells (N=219, radius = 8 µm, in GRL excluded the bottom 10 µm)</p>
 <ul class="simple">
-<li>3D dist = 214 ± 91 µm – gaussian</li>
+<li>3D dist = 214 ± 91 µm – Gaussian</li>
 <li>Min = 26; max =504 µm</li>
 </ul>
-<p>Purkinje cells (N=78, radius = 7.5 µm, in PCL , planar grid)</p>
+<p>Purkinje cells (N=78, radius = 7.5 µm, in PCL, planar grid)</p>
 <ul class="simple">
 <li>3D dist = 250 ± 121 µm</li>
 <li>Min = 15; max =544 µm</li>
 </ul>
 <p>Basket cells (N=603, radius = 6 µm, in the ML lower half)</p>
 <ul class="simple">
-<li>3D dist = 208 ± 96 µm - gaussian</li>
-<li>Min =  13  ; max = 534    µm</li>
+<li>3D dist = 208 ± 96 µm - Gaussian</li>
+<li>Min = 13; max = 534 µm</li>
 </ul>
-<p>Stellate cells (N=603, radius = 4 µm, in the ML upper half )</p>
+<p>Stellate cells (N=603, radius = 4 µm, in the ML upper half)</p>
 <ul class="simple">
-<li>3D dist = 201 ±94 µm - gaussian</li>
+<li>3D dist = 201 ±94 µm - Gaussian</li>
 <li>Min = 9; max = 534 µm</li>
 </ul>
 <p>Deep Cerebellar projection Neurons (N=12, radius=10 µm, in the Deep Nucleus)</p>
@@ -211,7 +224,7 @@ The use case can be found in <em>Online Use Cases/Circuit Building/Cells placeme
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
     </div>
     </div>
 </div>

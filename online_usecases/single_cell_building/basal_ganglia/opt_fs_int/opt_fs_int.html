@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../../_static/doctools.js"></script>
@@ -102,20 +102,37 @@
 
                 <div class="section" id="optimise-a-striatial-fast-spiking-interneuron">
 <span id="fs-single-cell-opt-guidebook"></span><h1>Optimise a striatial fast-spiking interneuron<a class="headerlink" href="#optimise-a-striatial-fast-spiking-interneuron" title="Permalink to this headline">¶</a></h1>
-<p>This use case demonstrates how BluePyOpt can be used to optimise a striatal fast-spiking interneuron. The notebook is self-contained and runs few steps of the genetic optimisation. For a production run, the population size as well as the number of iterations need to be increased as commented in the notebook.</p>
-<p>The notebook starts by downloading the relevant code from the collab storage and setting up the simulation and graphical environment. Since we are using Neuron we also need to compile the channel mod files.</p>
-<p>The information about the optimisation to be run is stored in <cite>config/</cite> directory:</p>
+<p>This Use Case demonstrates how BluePyOpt can be used to optimize a striatal
+fast-spiking interneuron. The notebook is self-contained and runs a few steps
+of the genetic optimization. For a production run, the population size as well
+as the number of iterations need to be increased as commented in the notebook.</p>
+<p>The notebook starts by downloading the relevant code from the Collab storage
+and setting up the simulation and graphical environment. Since we are using
+Neuron, we also need to compile the channel mod files.</p>
+<p>The information about the optimization to be run is stored in <cite>config/</cite>
+directory:</p>
 <ul class="simple">
 <li><cite>protocols.json</cite></li>
 <li><cite>features.json</cite></li>
 <li><cite>mechanisms.json</cite></li>
 <li><cite>parameters.json</cite> and <cite>parameters-demo.json</cite></li>
 </ul>
-<p>For each set of parameters to be tested a neuron model is instantiated by <cite>evaluator</cite>. A series of current injections are sent to the neuron while the somatic voltage is recorded. From this voltage trace a number of features are extracted, and compared to the same features extracted from the corresponding experimental data.</p>
-<p><cite>protocols.json</cite> lists the protocols and the stimuli that is associated with it. Each protocol also specifies a holding current. The delay, amplitude, duration and total duration is specified for each current injection.</p>
-<p><cite>features.json</cite> lists the features. Each protocol has their own set of features associated with it. For each feature the mean value and standard deviation (SD) is specified. The SD is used when weighting the feature scores together to get the final score for the model. Each feature also has a set of parameters which modifies it.</p>
-<p><cite>mechanisms.json</cite> lists the mechanisms. Each ion channel has a corresponding mod file which is compiled by nrnivmodl.</p>
-<p><cite>parameters.json</cite> lists all the parameters for the model. These can either be specified as a value, or as a range by giving the upper and lower bounds.</p>
+<p>For each set of parameters to be tested a neuron model is instantiated by the
+<cite>evaluator</cite>. A series of current injections is sent to the neuron while
+recording the somatic voltage. A number of features are extracted from this
+voltage trace, and compared to the same features extracted from the
+corresponding experimental data.</p>
+<p><cite>protocols.json</cite> lists the protocols and the associated stimuli. Each protocol
+also specifies a holding current. The delay, amplitude, duration and total
+duration are specified for each current injection.</p>
+<p><cite>features.json</cite> lists the features. Each protocol has its own set of features.
+For each feature the mean value and standard deviation (SD) are specified.
+The SD is used when weighting the feature scores together to get the final
+score for the model. Each feature also has a set of modifying parameters.</p>
+<p><cite>mechanisms.json</cite> lists the mechanisms. Each ion channel has a corresponding
+mod file which is compiled by nrnivmodl.</p>
+<p><cite>parameters.json</cite> lists all the model parameters. These can either be
+specified as a value, or as a range, by giving its upper and lower bounds.</p>
 <p>Morphology of the neuron is located in <cite>morphology/</cite> directory:</p>
 <ul class="simple">
 <li><cite>morphology/BE37A-rep-cor-reg15.swc</cite></li>
@@ -123,13 +140,13 @@
 <div class="bsp-container-center docutils container">
 <img alt="../../../../_images/fs-morpho.png" src="../../../../_images/fs-morpho.png" />
 </div>
-<p>Optimisation phase is followed by the post optimisation analysis within
+<p>The optimization phase is followed by the post optimization analysis within
 the same notebook.  The script plots the evolution of the error scores
 with successive iterations of the genetic algorithm (generations).</p>
 <div class="bsp-container-center docutils container">
 <img alt="../../../../_images/log.png" src="../../../../_images/log.png" />
 </div>
-<p>It displays the top ten individuals that had the best scores and lists
+<p>It displays the top ten individuals with the best scores and lists
 the feature names.</p>
 <div class="bsp-container-center docutils container">
 <img alt="../../../../_images/feature_scores.png" src="../../../../_images/feature_scores.png" />
@@ -140,7 +157,7 @@ experimental data (grey) for the best individual.</p>
 <img alt="../../../../_images/responses.png" src="../../../../_images/responses.png" />
 </div>
 <p>Finally, errors for each feature of the best individual are shown and
-also a mean error score is calculated. Typically the mean score is about
+also a mean error score is calculated. Typically, the mean score is about
 3 standard deviations.</p>
 <div class="bsp-container-center docutils container">
 <img alt="../../../../_images/best_scores.png" src="../../../../_images/best_scores.png" />
@@ -172,7 +189,7 @@ notebook.</p>
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
     </div>
     </div>
 </div>

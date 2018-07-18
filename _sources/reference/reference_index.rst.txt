@@ -1,5 +1,5 @@
 ###############################################
-Reference documentation for platform components
+Reference documentation for Platform components
 ###############################################
 
 

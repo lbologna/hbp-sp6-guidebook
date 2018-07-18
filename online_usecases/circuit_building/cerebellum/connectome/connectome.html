@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../../_static/doctools.js"></script>
@@ -102,7 +102,8 @@
 
                 <div class="section" id="connectome">
 <h1>Connectome<a class="headerlink" href="#connectome" title="Permalink to this headline">¶</a></h1>
-<p>This use case is used to connect cerebellar neurons and can be found in <em>Online Use Cases/Circuit Building/Connectome/Rat cerebellum volume</em>.</p>
+<p>This Use Case is used to connect cerebellar neurons and can be found in
+<em>Online Use Cases/Circuit Building/Connectome/Rat cerebellum volume</em>.</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../../_images/schema2.png"><img alt="../../../../_images/schema2.png" src="../../../../_images/schema2.png" style="width: 373px;" /></a>
 <a class="reference internal image-reference" href="../../../../_images/cerebellum1.png"><img alt="../../../../_images/cerebellum1.png" src="../../../../_images/cerebellum1.png" style="width: 743px;" /></a>
@@ -111,22 +112,22 @@
 <p>Approach: the potential connections are created by imposing geometric constraints (based on the anisotropic simplified geometric features of the pre- and post-synaptic neuron types). Then, if needed, a selection (pruning) is carried out by defining convergence or/and divergence ratios and applying them by distance-dependent probability.</p>
 <p><strong>Inputs:</strong></p>
 <ul class="simple">
-<li>hdf5 matrix (saved in /storage) obtained from the “Cell positioning” use case (found in Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume/)</li>
-<li>The parameters are automatically imported from user-defined parameters filled in the GUI of the “Cell positioning” use case and from scaffold_params.py (in /storage)</li>
+<li>hdf5 matrix (saved in /storage) obtained from the “Cell positioning” Use Case (found in Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume/).</li>
+<li>The parameters are automatically imported from user-defined parameters filled in the GUI of the “Cell positioning” Use Case and from scaffold_params.py (in /storage).</li>
 </ul>
-<p>For expert users, connection-specific parameters could be modified from scaffold_params.py (in /storage)</p>
+<p>Expert users can modify connection-specific parameters could be modified from scaffold_params.py (in /storage)</p>
 <ul class="simple">
 <li>Convergence and divergence ratio of each connection type</li>
 </ul>
 <p><strong>Output:</strong></p>
 <ul class="simple">
-<li>Within the hdf5 file generated from the “Cell positioning” use case, a new key is added named “/connections”. It contains multiple items, one for each connection type (e.g. “/glom_grc”, “/glom_goc”,…). Each of them is made up of a matrix with 2 columns (PRE Neuron ID and POST Neuron ID). The enriched hdf5 file is saved in /storage.</li>
+<li>Within the hdf5 file generated from the “Cell positioning” Use Case, a new key is added named “/connections”. It contains multiple items, one for each connection type (e.g. “/glom_grc”, “/glom_goc”,…). Each of them is made up of a matrix with 2 columns (PRE Neuron ID and POST Neuron ID). The enriched hdf5 file is saved in /storage.</li>
 </ul>
 <p>Monitoring: effective convergence and divergence ratios and pairwise distances among connected neurons (metrics_connectome.py in /storage) and probability of connection dependent on inter-soma distance between connected neurons (monitoring_probConn.py in /storage)</p>
-<p>As an example, a 3D basic visualization about the connection from Glomeruli to Golgi cells is displayed. One PRE Neuron ID is selected, and all the POST neurons receiving its outward connections are plotted (Divergence). Also, one specific POST Neuron ID is selected, and all the PRE neurons sending connections to it are plotted (Convergence).</p>
+<p>As an example, a 3D basic visualization of the connection from Glomeruli to Golgi cells is displayed. One PRE Neuron ID is selected, and all the POST neurons receiving its outward connections are plotted (Divergence). Also, one specific POST Neuron ID is selected, and all the PRE neurons sending connections to it are plotted (Convergence).</p>
 <p><strong>Additional information:</strong></p>
 <ul class="simple">
-<li>The whole usecase should take about 4 minutes for a volume base of 400 x 400 µm. If enabled, the computation of the metrics for each connection type adds about 15 minutes for such network size.</li>
+<li>This whole Use Case should take about 4 minutes for a volume base of 400 x 400 µm. If enabled, the computation of the metrics for each connection type adds about 15 minutes for such a network size.</li>
 <li>No login to any other computer required</li>
 </ul>
 <p>1.1) Glomeruli – Granule Cells (EXC)</p>
@@ -361,7 +362,7 @@
 <blockquote>
 <div><p>From “Cells Placement” in the volume:</p>
 <ul class="simple">
-<li>x = 400 µm, z = 400 µm (→ DCN  200 x 200 µm)</li>
+<li>x = 400 µm, z = 400 µm (→ DCN 200 x 200 µm)</li>
 <li>y = 930 µm (600+ 150+30+150  µm), i.e. thickness DCN + GRL+ PCL + ML</li>
 </ul>
 <p>1.1) Glomeruli – Granule Cells (EXC)</p>
@@ -493,7 +494,7 @@
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
     </div>
     </div>
 </div>

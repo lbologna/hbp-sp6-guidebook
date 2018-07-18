@@ -1,24 +1,25 @@
 .. _single_cell_clamp:
 
-#############################################################
-Single cell in silico experiments under current/voltage clamp
-#############################################################
+###############################################################
+Single cell *in silico* experiments under current/voltage clamp
+###############################################################
 
-*Single cell in silico experiments under current/voltage clamp* use case provides Web UI to access
-**Neuron as a Service** in order to load the single cell models and run model simulations.
+The *Single cell in silico experiments under current/voltage clamp* Use Case 
+provides Web UI to access **Neuron as a Service** in order to load the single 
+cell models and run model simulations.
 
-#. The use case can be found in the *Online Use Cases/Single Cell In Silico Experiments*:
+#. This Use Case can be found in the *Online Use Cases/Single Cell In Silico Experiments*:
 
      .. image:: images/single_cell_in_silico.png
         :width: 700px
 
-#. When you arrive at the *Single cell in silico experiments under current/voltage clamp* use case
+#. When you arrive at the *Single cell in silico experiments under current/voltage clamp* Use Case
    you can select the single cell model from the HBP data:
 
      .. image:: images/single_cell_in_silico_select.png
         :width: 700px
 
-#. As a result the single cell model will open in a new Browser window within the
+#. As a result, the single cell model will open in a new Browser window within the
    **Neuron as a Service** web application. The following screenshot of the app is annotated with
    red text to guide you through the interface:
 
@@ -29,10 +30,10 @@ Single cell in silico experiments under current/voltage clamp
    zoom/rotate/pan using your mouse/scroll wheel/trackpad.
 
 #. Current clamp can be attached to any section by clicking the segment in the cell 3D/2D Dendrogram
-   view and then pressing the *Place current injection* button. Or by selecting the section in the
+   view and then pressing the *Place current injection* button, or by selecting the section in the
    tree view on the right and pressing the same button.
 
-#. In order to run the simulation switch to the **Simulation** tab. When in this view you can click
+#. To run the simulation, switch to the **Simulation** tab. In this view, you can click
    and select the segments to record the voltage from. They are added to the corresponding list. Up to
    10 segments can be recorded from.
 
@@ -42,7 +43,7 @@ Single cell in silico experiments under current/voltage clamp
 #. The graph showing the traces recorded from the cell segments can be zoomed in by clicking and dragging
    in order to select the area to zoom in. Double click on the graph will restore the original zoom level.
 
-#. The recorded traces can be downloaded as csv file. The download link should become available at the
+#. The recorded traces can be downloaded as csv file. The download link is available at the
    bottom right corner of the graph after the simulation has finished.
 
    The following jupyter notebook code shows how it can be loaded with pandas for the further analysis:

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
@@ -50,11 +50,11 @@
 <li><a class="reference internal" href="#electrophysiological-data">Electrophysiological data</a><ul>
 <li><a class="reference internal" href="#hbp-database">HBP database</a></li>
 <li><a class="reference internal" href="#user-s-uploaded-data">User’s uploaded data</a></li>
-<li><a class="reference internal" href="#feature-extraction">Feature extraction</a></li>
+<li><a class="reference internal" href="#feature-extraction">Feature Extraction</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#graphical-user-interface">Graphical User Interface</a><ul>
-<li><a class="reference internal" href="#trace-selection">Trace selection</a></li>
+<li><a class="reference internal" href="#trace-selection">Trace Selection</a></li>
 <li><a class="reference internal" href="#feature-selection">Feature selection</a></li>
 <li><a class="reference internal" href="#results">Results</a></li>
 </ul>
@@ -128,37 +128,37 @@
 <p>The Feature Extraction Graphical User Interface (GUI) is a web application that
 allows users to extract an ensemble of electrophysiological properties from
 voltage traces recorded upon electrical stimulation of neuronal cells (see
-figure on the left). The application main outcome is the generation of two files
-- <em>features.json</em> and <em>protocol.json</em> - that the user will be able to use for
+figure on the left). The main outcome of the application is the generation of two files
+- <em>features.json</em> and <em>protocol.json</em> - that can be used for
 later model parameter optimizations.</p>
-<p>With respect to the data selection, three scenarios are possible: 1) Based on
-her/his data permissions (see <a class="reference internal" href="#electrophys-data-label"><span class="std std-ref">Electrophysiological data</span></a>), the user select
+<p>For data selection, there are three scenarios are possible: 1) Based on
+her/his data permissions (see <a class="reference internal" href="#electrophys-data-label"><span class="std std-ref">Electrophysiological data</span></a>), the user selects
 voltage traces from the Human Brain Project (HBP) database; 2) The user selects
-the voltage traces from the data files she/he uploaded through the “Upload”
-utility of the GUI; 3) The user select traces from both the HBP database and
+the voltage traces from uploaded data files (through the “Upload”
+utility of the GUI); 3) The user selects traces from both the HBP database and
 her/his own uploaded file(s).</p>
-<p>The application leverages the Python Electrophys Feature Extract Library (<a class="reference external" href="http://bluebrain.github.io/eFEL/index.html">eFEL</a>) and provides a friendly
+<p>This application leverages the Python Electrophys Feature Extract Library (<a class="reference external" href="http://bluebrain.github.io/eFEL/index.html">eFEL</a>) and provides a friendly
 interface to select voltage traces (individually or collectively, based on the
-stimulus current applied) and features to be extracted.</p>
+applied stimulus current) and features to be extracted.</p>
 </div>
 <div class="section" id="electrophysiological-data">
 <span id="electrophys-data-label"></span><h2>Electrophysiological data<a class="headerlink" href="#electrophysiological-data" title="Permalink to this headline">¶</a></h2>
-<p>The feature extraction exclusively applies to voltage traces recorded during a
-step current stimulation protocol (see <a class="reference internal" href="#feature-description-label"><span class="std std-ref">Feature extraction</span></a>). The
-HBP data available through the application for public use fulfill this
-requirement and the user will only be allowed to upload data files of the same
-type (see <a class="reference internal" href="#hbp-data-label"><span class="std std-ref">HBP database</span></a>). Below you will find a brief description of the
+<p>The Feature Extraction can only be used for voltage traces recorded during a
+step current stimulation protocol (see <a class="reference internal" href="#feature-description-label"><span class="std std-ref">Feature Extraction</span></a>). The
+HBP data available through the application for public use are of this type, and
+the user can only upload data files of the same
+type (see <a class="reference internal" href="#hbp-data-label"><span class="std std-ref">HBP database</span></a>). Below is a brief description of the
 data formats currently in use.</p>
 <div class="section" id="hbp-database">
 <span id="hbp-data-label"></span><h3>HBP database<a class="headerlink" href="#hbp-database" title="Permalink to this headline">¶</a></h3>
-<p>The data publicly available to the user consist in electrophysiological traces
+<p>Publicly available data consist of electrophysiological traces
 provided by contributing laboratories internal and external to HBP (the
-contributors are displayed to the user after data selection, see
-<a class="reference internal" href="#trace-selection-label"><span class="std std-ref">Trace selection</span></a>). Each data file is associated with a list of
-“authorized collabs”, following the indications of the contributors. An
-“authorized collab” is a collab whose team members have read access to the data.
-Regardless of the collab from which they are executing the Feature Extraction
-web app, users who are members of, at least, one collab authorized for a set of
+contributors are shown to the user after data selection, see
+<a class="reference internal" href="#trace-selection-label"><span class="std std-ref">Trace Selection</span></a>). Each data file is associated with a list of
+“authorized Collabs”, following the indications of the contributors. An
+“authorized Collab” is a collab whose team members have read access to the data.
+Regardless of the Collab from which they are executing the Feature Extraction
+web app, users who are members of, at least, one Collab authorized for a set of
 data, have read access to those data. Data for which the users have no
 authorization will not be displayed.</p>
 <p>Contributed raw data files are in the Axon Binary Format (<a class="reference external" href="http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software">.abf</a>) or the Igor Binary
@@ -166,29 +166,29 @@ Format (<a class="reference external" href="https://www.wavemetrics.com/index.ht
 accompanied by a <em>metadata.json</em> file in which the contributors describe cell
 and protocol properties (e.g. <em>cell_id</em>, <em>brain_region</em>, <em>brain_structure</em>,
 <em>stimulus_duration</em>, …) used for data processing and visualization. The data
-are read through the <a class="reference external" href="https://pypi.python.org/pypi/neo/">neo</a> and <a class="reference external" href="https://pypi.python.org/pypi/igor.py/0.9.1">igorpy</a> python packages and converted
+are read through the <a class="reference external" href="https://pypi.python.org/pypi/neo/">Neo</a> and <a class="reference external" href="https://pypi.python.org/pypi/igor.py/0.9.1">Igorpy</a> Python packages and converted
 into value arrays before use. The <em>metadata.json</em> files relative to the selected
 traces will be downloadable in a future release of the web app.</p>
 <p>If you would like to contribute with your own data to the Feature Extraction GUI
 application, please send an email to <em>bsp-support AT humanbrainproject.eu</em> to
 receive further detailed information on the data format and the <em>metadata.json</em>
-template to fill before data submission.</p>
+template to fill in before data submission.</p>
 </div>
 <div class="section" id="user-s-uploaded-data">
 <span id="user-data-label"></span><h3>User’s uploaded data<a class="headerlink" href="#user-s-uploaded-data" title="Permalink to this headline">¶</a></h3>
 <p>Users can also upload and visualize their own data, which can be selected, for
 processing, independently or together with traces from the HBP dataset.</p>
-<p>At the moment only the (<a class="reference external" href="http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software">.abf</a>) format (Version 2
+<p>At this moment only the (<a class="reference external" href="http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software">.abf</a>) format (Version 2
 and above), produced with <a class="reference external" href="http://mdc.custhelp.com/app/home">Molecular Devices</a> instruments is supported for upload.
-Additionally, to make sure that the recorded traces represent the outcome of a
+To make sure that the recorded traces represent the outcome of a
 step current stimulation experiment, the header of the file is checked for
-compatibility. The upload is denied in case the file do not fulfill the
+compatibility as well. Uploading is denied when a file does not fulfill
 requirements.</p>
-<p>Below we report an example of a permitted protocol header extracted from a
+<p>Below is an example of a permitted protocol header, extracted from a
 representative <a class="reference external" href="http://mdc.custhelp.com/app/answers/detail/a_id/16506/~/pclamp%3A-versions-of-the-abf-file-format-are-associated-with-which-software">.abf</a>
 file with the <a class="reference external" href="https://pypi.python.org/pypi/neo/">neo</a> package. In this
 example, the stimulus consisted of three periods of duration 500, 10000 and 500
-respectively (the time unit is <em>ms</em>) and amplitude initially zero. During the
+<em>ms</em> respectively, with an initial amplitude of zero. During the
 central period, though, the stimulus amplitude is increased by 10.0 at every
 recording sweep, as indicated in the <strong>lEpochLevelInc</strong> parameter (current unit
 is <em>nA</em>).</p>
@@ -230,30 +230,30 @@ is <em>nA</em>).</p>
 </div>
 </div>
 <div class="section" id="feature-extraction">
-<span id="feature-description-label"></span><h3>Feature extraction<a class="headerlink" href="#feature-extraction" title="Permalink to this headline">¶</a></h3>
-<p>The feature extraction process is preparatory to the generation of the
+<span id="feature-description-label"></span><h3>Feature Extraction<a class="headerlink" href="#feature-extraction" title="Permalink to this headline">¶</a></h3>
+<p>The Feature Extraction process precedes the generation of the
 <em>features.json</em> and <em>protocol.json</em> files, which are used for model parameter
 optimization performed through the <a class="reference external" href="https://github.com/BlueBrain/BluePyOpt">BluePyOpt</a> software tool (please refer to the
 BluePyOpt <a class="reference external" href="http://bluepyopt.readthedocs.io/en/latest/">documentation</a> for
-detailed explanations).</p>
-<p>The features the user can select for extraction are described at this <a class="reference external" href="http://bluebrain.github.io/eFEL/index.html">link</a> as well as the eFEL software
+detailed explanation).</p>
+<p>The features that the user can select for extraction are described under this <a class="reference external" href="http://bluebrain.github.io/eFEL/index.html">link</a> as well as the eFEL software
 package used to process the data. See also <a class="reference internal" href="../../single_cell_building/overview/overview.html#hippocampal-neurons"><span class="std std-ref">Hippocampal Neurons</span></a> in this guidebook.</p>
 <p>Features are computed for every trace of the chosen recordings, where a trace
-correponds to a given stimulus current amplitude (indicated to the user when
+corresponds to a given stimulus current amplitude (indicated to the user when
 data are displayed).
-Once the extraction finalized, the values of a feature obtained from traces
+Once the extraction is finalized, the values of a feature obtained from traces
 belonging to an individual cell and corresponding to the same stimulation
 amplitude are averaged.
 The averages computed for all the cells, are averaged a second time
 by stimulus amplitude.
-This will generate two result files (i.e. <em>features.json</em> and  <em>protocol.json</em>)
+This will generate two result files (i.e. <em>features.json</em> and <em>protocols.json</em>)
 per cell plus two supplementary files with the global averages.</p>
 <p>While the <a class="reference external" href="http://bluebrain.github.io/eFEL/index.html">eFEL</a> extracts the
-features of interest from single traces (individually selected or grouped) it
+features of interest from single traces (individually selected or grouped), it
 does not take into account any information on the cell properties, such as the
 <em>cell_id</em> needed to group the results for the generation of the above mentioned
 <em>features.json</em> and <em>protocol.json</em>. To perform this wrapping we used a custom
-python code (please contact <cite>bsp-support AT humanbrainproject.eu</cite> for further
+Python code (please contact <cite>bsp-support AT humanbrainproject.eu</cite> for further
 information).</p>
 </div>
 </div>
@@ -261,26 +261,27 @@ information).</p>
 <h2>Graphical User Interface<a class="headerlink" href="#graphical-user-interface" title="Permalink to this headline">¶</a></h2>
 <p>The GUI guides the user through the feature extraction process in a friendly
 way. The web application homepage shows a brief tutorial on the usage of the
-interface. After the user has read (or skipped) the howto she/he is requested to
-accept the Terms&amp;Conditions for the use of the public data (see figure below).</p>
+interface. After the user has read (or skipped) the howto (s)he is requested to
+accept the Terms &amp; Conditions for the use of the public data (see figure below).</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/termsconds.png"><img alt="../../../_images/termsconds.png" class="align-right" src="../../../_images/termsconds.png" style="width: 500px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>In what follows we give a description of the feature extraction process.</p>
+<p>The following is a description of the Feature Extraction process.</p>
 <div class="section" id="trace-selection">
-<span id="trace-selection-label"></span><h3>Trace selection<a class="headerlink" href="#trace-selection" title="Permalink to this headline">¶</a></h3>
-<p>Once entered in the trace selection page the user can filter the data from the
-HBP dataset, by choosing, from five dropdown menu, the properties of the cell:
-1) Species; 2) Brain structure; 3) Region; 4) Type; 5) Electrical type (<a class="reference external" href="https://bbp.epfl.ch/nmc-portal/glossary">eType</a>). If any of the field is
-missing (e.g. the eType of the cell is not know), the “unknown” label is
+<span id="trace-selection-label"></span><h3>Trace Selection<a class="headerlink" href="#trace-selection" title="Permalink to this headline">¶</a></h3>
+<p>Once the trace selection page is displayed, data can be filtered from the HBP
+dataset by the user, by choosing the following properties of the cell from five
+menu lists:
+1) Species; 2) Brain structure; 3) Region; 4) Type; 5) Electrical type (<a class="reference external" href="https://bbp.epfl.ch/nmc-portal/glossary">eType</a>). If any of the fields is
+missing (e.g. the eType of the cell is not known), the “unknown” label is
 displayed.</p>
-<p>After the data are loaded, the traces contained in each file are showed and data
+<p>When the data are loaded, the traces contained in each file are shown and data
 files are grouped by cell id (see figure below). The user can select individual
-traces by clicking on the corresponding amplitude or she/he can select/deselect
-all the traces in a single file. Additionally, all the files (and then all the
+traces by clicking on the corresponding amplitude or (s)he can select/deselect
+all traces in a single file. Additionally, all files (and then all
 traces) referring to a single cell can be selected.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/traceselect.png"><img alt="../../../_images/traceselect.png" class="align-right" src="../../../_images/traceselect.png" style="width: 500px;" /></a>
@@ -290,7 +291,7 @@ traces) referring to a single cell can be selected.</p>
 </div>
 <p>Alternatively, or concurrently, users can upload their own data (see
 <a class="reference internal" href="#user-data-label"><span class="std std-ref">User’s uploaded data</span></a>) by browsing their local storage and using the upload
-button (see figure below). The traces will be displayed for selection together
+button (see figure below). The traces will be displayed for selection, together
 with the ones selected from the HBP dataset (if any).</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/upload.png"><img alt="../../../_images/upload.png" class="align-right" src="../../../_images/upload.png" style="width: 500px;" /></a>
@@ -304,7 +305,7 @@ voltage features- and can be selected individually or collectively through the
 select/deselect buttons. Given the high number of features, the three types are
 grouped in toggle boxes (see figure below). Upon selection approval, the feature
 extraction process takes place as described in
-<a class="reference internal" href="#feature-description-label"><span class="std std-ref">Feature extraction</span></a>).</p>
+<a class="reference internal" href="#feature-description-label"><span class="std std-ref">Feature Extraction</span></a>).</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/featureselect.png"><img alt="../../../_images/featureselect.png" class="align-right" src="../../../_images/featureselect.png" style="width: 500px;" /></a>
 </div>
@@ -312,7 +313,7 @@ extraction process takes place as described in
 <div class="section" id="results">
 <h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
 <p>Finally, a success message is displayed and results are made available to
-download. The application output consists of a <strong>features.json</strong> and <strong>protocols.json</strong> files which are generated for both individual cells and the entire ensemble. These files contain the feature value averages (computed as outlined in the above section “Feature extraction”) and the protocols adopted for the experimental recordings. These files are intended to be used for the data-driven optimization step of the Hodgkin-Huxley Neuron Builder workflow, made available to the user through the Brain Simulation Platform at the <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66898">Highly Integrated Workflows</a> page.</p>
+download. The application output consists of a <strong>features.json</strong> and <strong>protocols.json</strong> files which are generated for both individual cells and the entire ensemble. These files contain the feature value averages (computed as outlined in the above section “Feature Extraction”) and the protocols adopted for the experimental recordings. These files are intended to be used for the data-driven optimization step of the Hodgkin-Huxley Neuron Builder workflow, made available to the user through the Brain Simulation Platform at the <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66898">Highly Integrated Workflows</a> page.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/download.png"><img alt="../../../_images/download.png" class="align-right" src="../../../_images/download.png" style="width: 500px;" /></a>
 </div>
@@ -342,7 +343,7 @@ download. The application output consists of a <strong>features.json</strong> an
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
     </div>
     </div>
 </div>

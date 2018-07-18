@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
@@ -46,7 +46,7 @@
   <h3><a href="../../../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Synaptic events fitting (user’s model)</a><ul>
-<li><a class="reference internal" href="#synaptic-events-fitting-with-user-model-config">Synaptic events fitting with user model - Config</a></li>
+<li><a class="reference internal" href="#synaptic-events-fitting-with-a-user-model-config">Synaptic events fitting with a user model - Config</a></li>
 <li><a class="reference internal" href="#synaptic-events-fitting-with-user-model-analysis">Synaptic events fitting with user model - Analysis</a></li>
 </ul>
 </li>
@@ -109,11 +109,11 @@
 
                 <div class="section" id="synaptic-events-fitting-users-model">
 <span id="syn-events-fit-user-mod"></span><h1>Synaptic events fitting (user’s model)<a class="headerlink" href="#synaptic-events-fitting-users-model" title="Permalink to this headline">¶</a></h1>
-<p>This use case allows a user to fit synaptic events using user’s data and model.</p>
-<p>Selecting this use case, two Jupyter Notebooks are cloned in a private existing/new collab.
+<p>This Use Case allows a user to fit synaptic events using user’s data and model.</p>
+<p>Selecting this use case, two Jupyter Notebooks are cloned in a private existing/new Collab.
 The cloned Notebooks are:</p>
-<div class="section" id="synaptic-events-fitting-with-user-model-config">
-<h2>Synaptic events fitting with user model - Config<a class="headerlink" href="#synaptic-events-fitting-with-user-model-config" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="synaptic-events-fitting-with-a-user-model-config">
+<h2>Synaptic events fitting with a user model - Config<a class="headerlink" href="#synaptic-events-fitting-with-a-user-model-config" title="Permalink to this headline">¶</a></h2>
 <p>It allows the user to:</p>
 <ol class="arabic simple">
 <li>Select a local experimental file</li>
@@ -137,13 +137,22 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Of course, we assume that the user knows what we are talking about here, and that the uploaded mod file has been already tested by the user in preliminary simulations. The program does not make any check, from this point of view. An invalid file will result in errors at NEURON compilation time</p>
-<p>All the other parameters that are not fitted have their default value as defined in the mod file.</p>
+<p>We assume that the user knows what we are talking about here, and that the
+uploaded mod file has been already tested by the user in preliminary
+simulations. The program does not perform checks on this. An invalid file will
+result in errors at NEURON compilation time</p>
+<p>All other parameters that are not fitted have their default value as
+defined in the mod file.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="3">
-<li>Fill the form with the values needed to write a configuration file: the number of traces in the experimental file, the protocol (voltage clamp amplitude and reversal potential of the synapse), the name of the parameters to be fitted, their initial values and allowed range of variation, exclusion rules, and an optional set of dependencies for other parameters. Typical values are shown in the figure below</li>
+<li>Fill in the form with the values needed to write a configuration file: the
+number of traces in the experimental file, the protocol (voltage clamp
+amplitude and reversal potential of the synapse), the name of the parameters
+to be fitted, their initial values and the allowed variation range,
+exclusion rules, and an optional set of dependencies for other parameters.
+Typical values are shown in the figure below</li>
 </ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/fill_form1.png"><img alt="../../../_images/fill_form1.png" class="align-center" src="../../../_images/fill_form1.png" style="width: 450px;" /></a>
@@ -222,7 +231,9 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Note that when the job is submitted through NSG, next to the status of the job, the user may see the submission date converted to CET time. It will be useful in the analysis notebook in order to fetch the job.</p>
+<p>Note that when the job is submitted through NSG, the user can see the
+submission date converted to CET time next to the status of the job. This will
+be useful in the analysis notebook in order to fetch the job.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -232,8 +243,11 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.</p>
-<p>Once the job is completed, the output files will be in the collab storage under different directories, according to the system used.</p>
+<p>The user can choose to fit all experimental traces 100 times, a single trace 20
+times or use a demo version where a trace is fitted 5 times. For the single
+trace and the demo version the user can choose the trace to be fitted.</p>
+<p>Once the job is completed, the output files will be in the Collab storage under
+different directories, according to the system used.</p>
 <p>JURECA: results are saved under the results/output_submissionTime folder;</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -247,7 +261,7 @@ The cloned Notebooks are:</p>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="5">
-<li>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</li>
+<li>If you are interested in the code, click on the “Click here to toggle on/off the source code” button</li>
 </ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/toggle_button6.png"><img alt="../../../_images/toggle_button6.png" class="align-center" src="../../../_images/toggle_button6.png" style="width: 300px;" /></a>
@@ -256,7 +270,7 @@ The cloned Notebooks are:</p>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="6">
-<li>If you want to start a new fitting from the beginning, click on “Click here to start a new fit” button.</li>
+<li>If you want to start a new fitting from the beginning, click on the “Click here to start a new fit” button.</li>
 </ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/Restart2.png"><img alt="../../../_images/Restart2.png" class="align-center" src="../../../_images/Restart2.png" style="width: 300px;" /></a>
@@ -267,8 +281,14 @@ The cloned Notebooks are:</p>
 </div>
 <div class="section" id="synaptic-events-fitting-with-user-model-analysis">
 <h2>Synaptic events fitting with user model - Analysis<a class="headerlink" href="#synaptic-events-fitting-with-user-model-analysis" title="Permalink to this headline">¶</a></h2>
-<p>This Jupyter Notebook allows the user to fetch the fitting results from the storage of the HPC system to the storage of the Collab or to analyse the optimized parameters. If the user wants to view analysis of simulations that are already in the storage of the Collab, he or she may skip the ‘View simulations’ tab and may go directly to the ‘View analysis’ tab.</p>
-<p>In the ‘View simulations’ tab, the user may visualize Name/ID, status, submission date of the simulations submitted on the HPC systems and can fetch output of successful completed jobs.</p>
+<p>This Jupyter Notebook allows the user to fetch the fitting results from the
+storage of the HPC system to the storage of the Collab or to analyze the
+optimized parameters. If the user wants to view an analysis of simulations that
+are already in the storage of the Collab, (s)he can skip the
+‘View simulations’ tab and go directly to the ‘View analysis’ tab.</p>
+<p>In the ‘View simulations’ tab, the user can visualize the Name/ID, status,
+the submission date of the simulations submitted on the HPC systems and (s)he
+can obtain an output of successfully completed jobs.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/viewsim13.png"><img alt="../../../_images/viewsim13.png" class="align-center" src="../../../_images/viewsim13.png" style="width: 700px;" /></a>
 </div>
@@ -293,16 +313,18 @@ The cloned Notebooks are:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>In the ‘View analysis’ tab, the user may analyse the optimized parameters for a default data and mod file combination or browse through the optimized parameters available in the collab storage.</p>
+<p>In the ‘View analysis’ tab, the user can analyze the optimized parameters for
+default data and a mod file combination or browse through the optimized
+parameters available in the Collab storage.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/viewanalysis13.png"><img alt="../../../_images/viewanalysis13.png" class="align-center" src="../../../_images/viewanalysis13.png" style="width: 700px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>The user may visualize the table data, the box plot and the best fit.</p>
+<p>The user can visualize the data in table form, a box plot and the best fit.</p>
 <ol class="arabic simple">
-<li>The results table (sorted in ascending order by the fitting error).</li>
+<li>The table of results (sorted in ascending order by the fitting error).</li>
 </ol>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/results_table3.png"><img alt="../../../_images/results_table3.png" class="align-center" src="../../../_images/results_table3.png" style="width: 700px;" /></a>
@@ -331,7 +353,8 @@ The cloned Notebooks are:</p>
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
-<p>If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button</p>
+<p>If you are interested in the code, click on the “Click here to toggle on/off
+the source code” button.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/toggle_button7.png"><img alt="../../../_images/toggle_button7.png" class="align-center" src="../../../_images/toggle_button7.png" style="width: 300px;" /></a>
 </div>
@@ -360,7 +383,7 @@ The cloned Notebooks are:</p>
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2017, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
     </div>
     </div>
 </div>
