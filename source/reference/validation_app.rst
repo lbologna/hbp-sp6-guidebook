@@ -5,15 +5,15 @@ Model Validation app
 Validation is the process of comparing a model
 (more precisely, the results of computer simulations of the model) to experimental data.
 
-The Model Validation app can be installed in any collab workspace, and can be used:
+The Model Validation app can be installed in any Collab workspace, and can be used:
 
-- to search for validation tests approriate to a given type of model
+- to search for validation tests appropriate to a given model type 
   (e.g. tests for models of hippocampus CA1 pyramidal cells);
 - to view the results of validation tests, including:
 
-  - seeing all the tests for a given model,
-  - tracking change in test results over time (as the model being tested is modified),
-  - and comparing different models of the same system;
+  - seeing all the tests for a given model
+  - tracking changes in test results over time (as the model being tested is modified)
+  - comparing different models of the same system
 
 - to register new validation tests with the HBP validation test library.
 
@@ -24,7 +24,7 @@ The Model Validation app can be installed in any collab workspace, and can be us
     - To register new models for validation, use the :ref:`model-catalog-app`.
 
 
-Adding the app to your collab
+Adding the app to your Collab
 -----------------------------
 
 As shown in the screenshot below, click on the “ADD” button in the left-hand navigation bar,
@@ -40,14 +40,14 @@ Choosing which models and tests to view
 
 When you first click on "Model Validation app" in the navigation bar,
 you will see a configuration screen with a group of drop-down lists.
-This allows you to filter the catalog, and show only the validation tests and models that are relevant to your collab.
+This allows you to filter the catalog, and show only the validation tests and models that are relevant to your Collab.
 
 .. image:: images/validation_app_configure.png
    :width: 564
    :align: center
 
-When you are finished, click "Save", and then click the "X" icon to close the configuration view.
-You will now see the home page of the app, showing a list of models and of validation tests corresponding to the criteria you have selected.
+When you have finished, click "Save", and then click the "X" icon to close the configuration view.
+You will now see the home page of the app, showing a list of models and validation tests corresponding to the criteria you have selected.
 
 .. image:: images/validation_app_hippocampus.png
    :width: 681
@@ -84,7 +84,7 @@ From the home page, if you click on one of the validation tests in the right-han
 you will see a page with details about the test, divided into four tabs.
 
 The **Description** tab shows basic information about the test, including a link to the experimental
-data against which models are being validated.
+data against which models are validated.
 
 .. image:: images/validation-app-test-description.png
    :width: 669

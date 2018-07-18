@@ -1,10 +1,9 @@
 
-Configure and run a rat hippocampus CA1 region using preconfigured HBP model and data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configure and run a rat hippocampus CA1 region using a preconfigured HBP model and data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
-This use case allows a user to configure and launch a simulation on HBP HPAC infrastructure using `Unicore API <https://www.unicore.eu/>`__.
+This Use Case allows a user to configure and launch a simulation on the HBP 
+HPAC infrastructure using `Unicore API <https://www.unicore.eu/>`__.
 
 Run Simulations
 ===============
@@ -13,21 +12,20 @@ Run Simulations
 
 ----------------
 
-From the **top** you can configure:
+In the **top** section you can configure:
 
    |run_simulation_top|
 
--  ``Duration``: Time length of stimulus duration, given in
-   milliseconds(ms)
--  ``Forward Skip``: Time length in milliseconds (ms) of running the
+-  ``Duration``: Stimulus duration, in milliseconds(ms)
+-  ``Forward Skip``: Duration in milliseconds (ms) of running the
    simulation without stimulus and without reporting. This is to get the
    neuronal cells past any initial transience
--  ``View Simulations``: From here you can see all the history of
-   simulations (explained in section **2**)
+-  ``View Simulations``: Here you can see the complete simulation history 
+   (explained in section **2**)
 
 --------------
 
-From the **middle** you can configure:
+In the **middle** section you can configure:
 
    |run_simulation_middle|
 
@@ -36,20 +34,18 @@ From the **middle** you can configure:
 
    |edit_buttons|
 
--  ``Slices Selector`` allows to pick a slice of the hippocampus and it
+-  ``Slices Selector`` allows to pick a slice of the hippocampus, it
    will add this to the *stimulus* / *report*
 
    |stimulus_selector|
 
 -  ``Stimulations``
 
-   -  For creation or edition of the item a form will appear
+   -  For creation or edition of the item a form will appear with th following fields:
 
-      -  *Target*: Name of a target to receive the stimulation
-      -  *Delay*: Time when the stimulus commences, given in
-         milliseconds(ms)
-      -  *Duration*: Time length of stimulus duration, given in
-         milliseconds(ms)  
+      -  *Target*: Name of the target that will receive the stimulation
+      -  *Delay*: Starting time of the stimulus in milliseconds(ms)
+      -  *Duration*: Duration of the stimulus in milliseconds(ms)  
       -  *Synapses per cell*: The number of synapses to create
       -  *Pattern*: Type of the stimulus [Poisson]
       -  *Lambda*: Configure the random distribution
@@ -60,33 +56,34 @@ From the **middle** you can configure:
 
 -  ``Reports``
 
-   -  For creation or edition of the item a form will appear
+   -  For creation or edition of an item a form will appear:
 
-      -  *Target*: Defines the region from where the data will be
+      -  *Target*: Defines the region of interest, from where the data will be
          reported. Note that cell targets versus compartment targets can
-         influence report behavior
-      -  *Type*: Soma (compartment) means that each compartment outputs
-         separately in the report file. Synapse indicates that each
+         influence report behavior.
+      -  *Type*: Soma (compartment) means that each compartment will have a 
+         separate output in the report file. Synapse indicates that each
          synapse will have a separate entry in the report [compartment,
          synapse]
       -  *StartTime*: Time to start reporting(ms)
       -  *EndTime*: Time to stop reporting(ms)
-      -  *Dt*: The frequency of reporting in milliseconds(ms)
+      -  *Dt*: The reporting frequency in milliseconds(ms)
       -  *Format*: Defines the report output format [Bin, ASCII, HDF5]
 
    |edit_report|
 
 --------------
 
-From the **bottom** you can ``launch`` the simulation
+In the **bottom** section you can ``launch`` the simulation
 
-- This will open a form to configure the parameters before executing the jobs on the supercomputer
+- This will open a form to configure the parameters before executing the jobs on the supercomputer:
 
  - *Title*: The title of the job
  - *Computer*: Which supercomputer will run the simulation.
- - *Project*: Select under which account you want to run the simulation.
  - *Nodes*: The amount of nodes that will be allocated and used for the simulation
  - *Run Time*: The maximum time before timeout (in seconds)
+ - *CPUs Per Node*: The number of CPUs per node to be used 
+ - *Project*: Select under which account you want to run the simulation.
  - *Preview Config*: This will open a new tab with the complete configuration that is going to be sent (BlueConfig)
 
    |run_simulation_form|
@@ -98,37 +95,37 @@ View Simulations
 
 --------------
 
-From the **top** you are able to: |view_simulation_top|
+In the **top** you can: |view_simulation_top|
 
 -  ``Filter`` by *Title*, *Status*, *Supercomputer*
 -  ``Create Simulation``: this goes back to *Configure and Launch
-   simuation* page
+   simulation* page
 -  ``Reload``: to fetch the latest simulations and status
 
 --------------
 
-From the **middle** you are able to:
+In the **middle** section you can:
 
 |view_simulation_middle|
 
--  ``Check status`` of Simulation and Analysis steps:
+-  ``Check the status`` of Simulation and Analysis steps:
 
    - ready |done|
    - queue |sync|
    - aborted |block|
    - failed |error|
 
--  ``Run Analysis`` if no analysis was launched you can do it from the
+-  ``Run Analysis`` if no analysis was launched you can do it at the
    analysis step
 
    -  This will open a form to configure the parameters before executing
       the analysis on the supercomputer
 
       -  *Title*: Title of the job
-      -  *Origin*: Supercomputer where the simulation output are located
-      -  *Destination*: Supercomputer that the output files from
-         simulation will be copied to and start the analysis
-      -  *Nodes*: Number of nodes dedicated for the analysis job
+      -  *Origin*: Supercomputer where the simulation output is located
+      -  *Destination*: Supercomputer to which the output files from
+         the simulation will be copied to, that will start the analysis
+      -  *Nodes*: Number of nodes dedicated to the analysis job
 
          |run_analysis_form|
 
@@ -140,7 +137,7 @@ Simulation Details
 
 |simulation_details|
 
-From the **top** you are able to see:
+In the **top** section you can see:
 
 |simulation_details_top|
 
@@ -152,7 +149,7 @@ From the **top** you are able to see:
    - *Submission Date*
    - *Auto Sync* while the job is running reload the information
 
-From the **middle** you are able to see:
+In the **middle** section you can see:
 
    |simulation_details_middle|
 
@@ -162,7 +159,7 @@ From the **middle** you are able to see:
    - *Stderr*: Logs of the simulation
    - *Stdout*: Output information of the simulation
 
-In ``Analysis`` section shows the different analysis the user has run
+The ``Analysis`` section shows the different analyses the user has run.
 
    |simulation_details_analysis|
 

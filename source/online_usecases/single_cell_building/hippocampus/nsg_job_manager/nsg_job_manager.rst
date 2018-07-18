@@ -1,6 +1,6 @@
 This Jupyter Notebook allows the user to:
    
-1. login to Neuroscience Gateway (NSG) and load the Job Manager by clicking on “Job manager”
+1. Log in to the Neuroscience Gateway (NSG) and load the Job Manager by clicking on “Job manager”:
    
 .. container:: bsp-container-center
 
@@ -10,11 +10,11 @@ This Jupyter Notebook allows the user to:
 
 |
 
-2. copy completed jobs from NSG to the Collab storage by clicking on the arrow icon → 
+2. eopy completed jobs from NSG to the Collab storage by clicking on the arrow icon → 
 
 |
 
-3. refresh jobs on NSG by clicking on |wait_symbol|
+3. Refresh jobs on the NSG by clicking on |wait_symbol|:
 
 .. |wait_symbol| image:: ../nsg_job_manager/images/wait.png
 
@@ -26,7 +26,7 @@ This Jupyter Notebook allows the user to:
 
 |
 
-a job can be stored only if completed
+A job can be stored only if completed:
 
 .. container:: bsp-container-center
 

@@ -5,16 +5,16 @@ Model Catalog app
 #################
 
 The HBP Model Catalog contains information about models developed and/or used within the ecosystem of tools
-provided by the HBP platforms.
+provided by the HBP Platforms.
 
-The Model Catalog app can be installed in any collab workspace, and can be used:
+The Model Catalog app can be installed in any Collab workspace, and can be used:
 
 - to search for models of a given brain region, cell type, modelling scale, etc.
 - to provide information/metadata about a model
 - to register a model and obtain a unique identifier for use with other tools and workflows, such as model validation
 
 
-Adding the app to your collab
+Adding the app to your Collab
 -----------------------------
 
 As shown in the screenshot below, click on the "ADD" button in the left-hand navigation bar,
@@ -28,13 +28,13 @@ Choose which models to view
 ---------------------------
 
 When you first click on "Model Catalog" in the navigation bar, you will see a configuration screen with a group of drop-down lists.
-This allows you to filter the catalog, and show only the model(s) that is/are relevant to your collab.
+This allows you to filter the catalog, and show only the model(s) that is/are relevant to your Collab.
 
 .. image:: images/model_catalog_configure.png
    :width: 429
    :align: center
 
-When you are finished, click "Save", and then click the "X" icon to close the configuration view.
+When you have finished, click "Save", and then click the "X" icon to close the configuration view.
 This then shows a list of the models corresponding to the criteria you have selected.
 These models can be further filtered dynamically using the drop-down lists at the top of the model list.
 
@@ -57,14 +57,14 @@ zip archives, etc.)
 Editing a model
 ---------------
 
-For access-control purposes, each model is associated with a "home" collab.
-If you are a member of that collab you can edit the model's details.
+For access-control purposes, each model is associated with a "home" Collab.
+If you are a member of that Collab you can edit the details of the models.
 
 Note that the model description field accepts Markdown_ syntax for adding sub-headings, lists, italics, bold text,
 hyperlinks, images, etc.
 
 Models may also be marked as public or private.
-Private models may only be viewed by people who are members of the model's home collab.
+Private models may only be viewed by people who are members of the model's home Collab.
 
 .. image:: images/model_catalog_model_edit_kali_freund.png
    :width: 519
@@ -74,14 +74,14 @@ Adding a model to the Catalog
 -----------------------------
 
 At the upper-left of the model list is a "New model" button,
-which opens a form allowing any user to register a model with the Catalog.
+which opens a form allowing any user to register a model in the Catalog.
 
-The collab in which the model is first created is the "home" collab of the model,
-and only members of that collab can subsequently edit the model.
+The Collab in which the model is first created is the "home" Collab of that model,
+and only members of that Collab can subsequently edit the model.
 
 When you create a model, it receives a unique ID, a long hexadecimal string
-which is used to identify the model in some other tools and workflows in the HBP platforms.
-To save having to type this long, difficult-to-remember, ID each time,
+which is used to identify the model in some other tools and workflows in the HBP Platforms.
+To avoid having to type this long, difficult-to-remember, ID each time,
 you can also create a short alias for the model.
 
 .. image:: images/model_catalog_model_create.png
@@ -99,13 +99,13 @@ Access privileges to models in the model catalog
   The particular app inside which a model was created is termed its *host app*.
   Similarly, the Collab containing the *host app* is termed the *host Collab*.
 
-* Models can be set as public/private. If public, the model and its associated
+* Models can be set as public or private. If public, the model and its associated
   results are available to all users. If private, it can only be seen by users who
-  have access to the *host Collab*. See table below for summary of access privileges.
+  have access to the *host Collab*. See table below for a summary of access privileges.
 
 * No information can be deleted from the *Model Catalog*
-  app. In future, an option to *hide* data would be implemented. This would offer
-  users functionality similar to deleting, but with the data being retained in the
+  app. In the future, an option to *hide* data will be implemented. This will offer
+  users a functionality similar to deleting, while retaining the data in the
   database back-end.
 
 * Models and model instances can be edited as long as
