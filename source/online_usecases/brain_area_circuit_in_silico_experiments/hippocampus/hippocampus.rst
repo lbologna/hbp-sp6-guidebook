@@ -1,4 +1,4 @@
-.. _hippocampus_bac:
+.. _hippocampus:
 
 ###########
 Hippocampus
