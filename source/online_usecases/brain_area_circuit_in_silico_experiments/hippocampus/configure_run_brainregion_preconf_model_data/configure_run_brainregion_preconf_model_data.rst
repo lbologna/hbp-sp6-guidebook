@@ -166,7 +166,6 @@ In ``Analysis`` section shows the different analysis the user has run
 .. |run_simulation_top| image:: images/run_simulation_top.png
 .. |run_simulation_middle| image:: images/run_simulation_middle.png
 .. |edit_buttons| image:: images/edit_buttons.png
-.. |stimulus_selector| image:: images/stimulus_selector.png
 .. |edit_stimulus| image:: images/edit_stimulus.png
 .. |edit_report| image:: images/edit_report.png
 .. |run_simulation_form| image:: images/run_simulation_form.png
