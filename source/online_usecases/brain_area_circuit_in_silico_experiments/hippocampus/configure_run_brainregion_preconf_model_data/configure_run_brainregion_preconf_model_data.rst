@@ -17,6 +17,7 @@ From the **top** you can configure:
 
    |run_simulation_top|
 
+-  ``Model``: Circuit target to be loaded by the simulator.
 -  ``Duration``: Time length of stimulus duration, given in
    milliseconds(ms)
 -  ``Forward Skip``: Time length in milliseconds (ms) of running the
@@ -36,26 +37,21 @@ From the **middle** you can configure:
 
    |edit_buttons|
 
--  ``Slices Selector`` allows to pick a slice of the hippocampus and it
-   will add this to the *stimulus* / *report*
-
-   |stimulus_selector|
 
 -  ``Stimulations``
 
    -  For creation or edition of the item a form will appear
 
       -  *Target*: Name of a target to receive the stimulation
-      -  *Pattern*: Type of the stimulus [Poisson]
-      -  *Lambda*: Configure the random distribution
       -  *Delay*: Time when the stimulus commences, given in
          milliseconds(ms)
       -  *Duration*: Time length of stimulus duration, given in
          milliseconds(ms)
-      -  *Weight*: The strength of the created synapses
       -  *Number of synapses*: The number of synapses to create
+      -  *Lambda*: Configure the random distribution
+      -  *Weight*: The strength of the created synapses
 
-   |edit_stimulus|
+         |edit_stimulus|
 
 -  ``Reports``
 
@@ -68,15 +64,12 @@ From the **middle** you can configure:
          separately in the report file. Synapse indicates that each
          synapse will have a separate entry in the report [compartment,
          synapse]
-      -  *ReportOn*: The NEURON variable to access
-      -  *Unit*: The unit of the NEURON variable
       -  *StartTime*: Time to start reporting(ms)
       -  *EndTime*: Time to stop reporting(ms)
       -  *Dt*: The frequency of reporting in milliseconds(ms)
       -  *Format*: Defines the report output format [Bin, ASCII, HDF5]
-      -  *Number of synapses*: The number of synapses to create
 
-   |edit_report|
+         |edit_report|
 
 --------------
 
@@ -88,8 +81,10 @@ From the **bottom** you can ``launch`` the simulation
  - *Computer*: Which supercomputer will run the simulation.
  - *Project*: (optional) If you want to specify under which project the simulation should be run
  - *Nodes*: The amount of nodes that will be allocated and used for the simulation
- - *Run Time*: The maximum time before timeout (in seconds)
- - *Preview Config*: This will open a new tab with the complete configuration that is going to be sent (BlueConfig)
+ - *Run Time*: The maximum time before timeout (in seconds).
+ - *CPUs Per Node*: Number of CPUs that are going to be used for the simulation.
+ - *Total Processors*: The total amount (nodes * cpus).
+ - *Preview BlueConfig*: This will open a new tab with the complete configuration that is going to be sent
 
    |run_simulation_form|
 
@@ -102,10 +97,9 @@ View Simulations
 
 From the **top** you are able to: |view_simulation_top|
 
--  ``Filter`` by *Title*, *Status*, *Supercomputer*
--  ``Create Simulation``: this goes back to *Configure and Launch
+-  ``Filter`` by *Title*, *Status*, *Supercomputer*, *Project*
+-  ``Launch Simulation``: this goes back to *Configure and Launch
    simuation* page
--  ``Reload``: to fetch the latest simulations and status
 
 --------------
 
@@ -127,15 +121,14 @@ From the **middle** you are able to:
       the analysis on the supercomputer
 
       -  *Title*: Title of the job
-      -  *Origin*: Supercomputer where the simulation output are located
-      -  *Destination*: Supercomputer that the output files from
-         simulation will be copied to and start the analysis
-      -  *Nodes*: Number of nodes dedicated for the analysis job
+      -  *Analysis*: Type of analysis to run
+      -  *Target*: Target used for the simulation
+      -  *Report*: Report created by the simulation
+      -  *Cells*: Number of random cells to analyze
 
          |run_analysis_form|
 
 -  ``Delete`` the simulation
--  ``Abort`` the simulation
 
 Simulation Details
 ==================
@@ -152,17 +145,17 @@ From the **top** you are able to see:
    - *ID*
    - *Status*
    - *Submission Date*
-   - *Auto Sync* while the job is running reload the information
 
 From the **middle** you are able to see:
-
-   |simulation_details_middle|
 
    - *Analysis*: Plots of the analysis will be shown here
    - *BlueConfig*: The configuration that was sent to run the simulation
    - *Unicore Logs*
+   - *Files*: List of files that the simulation produced
    - *Stderr*: Logs of the simulation
    - *Stdout*: Output information of the simulation
+
+      |simulation_details_middle|
 
 In ``Analysis`` section shows the different analysis the user has run
 
