@@ -20,9 +20,6 @@ From the **top** you can configure:
 -  ``Model``: Circuit target to be loaded by the simulator.
 -  ``Duration``: Time length of stimulus duration, given in
    milliseconds(ms)
--  ``Forward Skip``: Time length in milliseconds (ms) of running the
-   simulation without stimulus and without reporting. This is to get the
-   neuronal cells past any initial transience
 -  ``View Simulations``: From here you can see all the history of
    simulations (explained in section **2**)
 
@@ -48,6 +45,7 @@ From the **middle** you can configure:
       -  *Duration*: Time length of stimulus duration, given in
          milliseconds(ms)
       -  *Number of synapses*: The number of synapses to create
+      -  *Pattern*: Type of stimulus to inject
       -  *Lambda*: Configure the random distribution
       -  *Weight*: The strength of the created synapses
 
@@ -73,9 +71,24 @@ From the **middle** you can configure:
 
 --------------
 
-From the **bottom** you can ``launch`` the simulation
+From the **bottom** you can modify the ``connections`` and ``launch`` the simulation
 
-- This will open a form to configure the parameters before executing the jobs on the supercomputer
+- You can modify the connection between populations on the circuit specifying
+
+ - *Source:* This target defines presynaptic cells
+ - *Destination:* This target defines postsynaptic cells
+ - *Delay (ms):* A delay after which the modifications are applied
+ - *Weight:* A scaling factor to adjust the synaptic strength (default = 1)
+ - *MinisFreq:* The Poisson mean rate for miniature events
+ - *Synapse Configuration:* Snippets of hoc code to manipulate additional synaptic parameters
+
+   |connection_manipulation|
+
+   - If you want to modify a synpase just click *configure* and a pop-up will appear
+
+      |synapse_configurator|
+
+- Launching a simulation will open a form to configure the parameters before executing the jobs on the supercomputer
 
  - *Title*: The title of the job
  - *Computer*: Which supercomputer will run the simulation.
@@ -98,6 +111,7 @@ View Simulations
 From the **top** you are able to: |view_simulation_top|
 
 -  ``Filter`` by *Title*, *Status*, *Supercomputer*, *Project*
+-  ``Import Simulation`` providing the full path to simulation folder on that HPC
 -  ``Launch Simulation``: this goes back to *Configure and Launch
    simuation* page
 
@@ -168,6 +182,8 @@ In ``Analysis`` section shows the different analysis the user has run
 .. |edit_buttons| image:: images/edit_buttons.png
 .. |edit_stimulus| image:: images/edit_stimulus.png
 .. |edit_report| image:: images/edit_report.png
+.. |connection_manipulation| image:: images/connection_manipulation.png
+.. |synapse_configurator| image:: images/synapse_configurator.png
 .. |run_simulation_form| image:: images/run_simulation_form.png
 .. |view_simulation| image:: images/view_simulation.png
 .. |view_simulation_top| image:: images/view_simulation_top.png
