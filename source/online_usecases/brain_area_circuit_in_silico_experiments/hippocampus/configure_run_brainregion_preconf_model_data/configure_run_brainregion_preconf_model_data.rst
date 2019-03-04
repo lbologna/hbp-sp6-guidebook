@@ -17,7 +17,7 @@ From the **top** you can configure:
 
    |run_simulation_top|
 
--  ``Model``: Circuit target to be loaded by the simulator.
+-  ``Population``: Circuit target to be loaded by the simulator.
 -  ``Duration``: Time length of stimulus duration, given in
    milliseconds(ms)
 -  ``View Simulations``: From here you can see all the history of
