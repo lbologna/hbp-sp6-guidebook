@@ -39,7 +39,7 @@ From the **middle** you can configure:
 
    -  For creation or edition of the item a form will appear
 
-      -  *Target*: Name of a target to receive the stimulation
+      -  *Population*: Name of a population to receive the stimulation
       -  *Delay*: Time when the stimulus commences, given in
          milliseconds(ms)
       -  *Duration*: Time length of stimulus duration, given in
@@ -55,9 +55,8 @@ From the **middle** you can configure:
 
    -  For creation or edition of the item a form will appear
 
-      -  *Target*: Defines the region from where the data will be
-         reported. Note that cell targets versus compartment targets can
-         influence report behavior
+      -  *Population*: Defines the region from where the data will be
+         reported.
       -  *Type*: Compartment means that each compartment outputs
          separately in the report file. Synapse indicates that each
          synapse will have a separate entry in the report [compartment,
