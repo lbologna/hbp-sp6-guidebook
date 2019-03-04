@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Cerebellum" href="../../cerebellum/cerebellum.html" />
-    <link rel="prev" title="Hippocampus" href="../hippocampus.html" />
+    <link rel="prev" title="Configure and run a hippocampus column" href="../configure_and_run_a_hippocampus_column/configure_and_run_a_hippocampus_column.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   </head><body>
@@ -54,8 +54,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../hippocampus.html"
-                        title="previous chapter">Hippocampus</a></p>
+  <p class="topless"><a href="../configure_and_run_a_hippocampus_column/configure_and_run_a_hippocampus_column.html"
+                        title="previous chapter">Configure and run a hippocampus column</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../../cerebellum/cerebellum.html"
                         title="next chapter">Cerebellum</a></p>
@@ -100,7 +100,7 @@
                 <aside class="hbpdoc-hnav hbpdoc-hnav-top">
                     
                     <span class="hbpdoc-hnav-previous">
-                        previous: <a class="hbpdoc-hnav-link" href="../hippocampus.html">Hippocampus</a>
+                        previous: <a class="hbpdoc-hnav-link" href="../configure_and_run_a_hippocampus_column/configure_and_run_a_hippocampus_column.html">Configure and run a hippocampus column</a>
                     </span>
                     
                     
@@ -121,12 +121,9 @@
 <blockquote>
 <div><img alt="run_simulation_top" src="../../../../_images/run_simulation_top.png" /></div></blockquote>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">Model</span></code>: Circuit target to be loaded by the simulator.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Population</span></code>: Population of cells to be loaded by the simulator.</li>
 <li><code class="docutils literal notranslate"><span class="pre">Duration</span></code>: Time length of stimulus duration, given in
 milliseconds(ms)</li>
-<li><code class="docutils literal notranslate"><span class="pre">Forward</span> <span class="pre">Skip</span></code>: Time length in milliseconds (ms) of running the
-simulation without stimulus and without reporting. This is to get the
-neuronal cells past any initial transience</li>
 <li><code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Simulations</span></code>: From here you can see all the history of
 simulations (explained in section <strong>2</strong>)</li>
 </ul>
@@ -143,7 +140,7 @@ double-click on the timeline to add or edit)</p>
 <ul>
 <li><p class="first">For creation or edition of the item a form will appear</p>
 <ul>
-<li><p class="first"><em>Target</em>: Name of a target to receive the stimulation</p>
+<li><p class="first"><em>Population</em>: Name of a population to receive the stimulation</p>
 </li>
 <li><p class="first"><em>Delay</em>: Time when the stimulus commences, given in
 milliseconds(ms)</p>
@@ -152,6 +149,8 @@ milliseconds(ms)</p>
 milliseconds(ms)</p>
 </li>
 <li><p class="first"><em>Number of synapses</em>: The number of synapses to create</p>
+</li>
+<li><p class="first"><em>Pattern</em>: Type of stimulus to inject</p>
 </li>
 <li><p class="first"><em>Lambda</em>: Configure the random distribution</p>
 </li>
@@ -166,9 +165,8 @@ milliseconds(ms)</p>
 <ul>
 <li><p class="first">For creation or edition of the item a form will appear</p>
 <ul>
-<li><p class="first"><em>Target</em>: Defines the region from where the data will be
-reported. Note that cell targets versus compartment targets can
-influence report behavior</p>
+<li><p class="first"><em>Population</em>: Defines the region from where the data will be
+reported.</p>
 </li>
 <li><p class="first"><em>Type</em>: Compartment means that each compartment outputs
 separately in the report file. Synapse indicates that each
@@ -190,9 +188,36 @@ synapse]</p>
 </li>
 </ul>
 <hr class="docutils" />
-<p>From the <strong>bottom</strong> you can <code class="docutils literal notranslate"><span class="pre">launch</span></code> the simulation</p>
+<p>From the <strong>bottom</strong> you can modify the <code class="docutils literal notranslate"><span class="pre">connections</span></code> and <code class="docutils literal notranslate"><span class="pre">launch</span></code> the simulation</p>
 <ul class="simple">
-<li>This will open a form to configure the parameters before executing the jobs on the supercomputer</li>
+<li>You can modify the connection between populations on the circuit specifying</li>
+</ul>
+<blockquote>
+<div><ul>
+<li><p class="first"><em>Source:</em> This target defines presynaptic cells</p>
+</li>
+<li><p class="first"><em>Destination:</em> This target defines postsynaptic cells</p>
+</li>
+<li><p class="first"><em>Delay (ms):</em> A delay after which the modifications are applied</p>
+</li>
+<li><p class="first"><em>Weight:</em> A scaling factor to adjust the synaptic strength (default = 1)</p>
+</li>
+<li><p class="first"><em>MinisFreq:</em> The Poisson mean rate for miniature events</p>
+</li>
+<li><p class="first"><em>Synapse Configuration:</em> Snippets of hoc code to manipulate additional synaptic parameters</p>
+<p><img alt="connection_manipulation" src="../../../../_images/connection_manipulation.png" /></p>
+<ul>
+<li><p class="first">If you want to modify a synpase just click <em>configure</em> and a pop-up will appear</p>
+<blockquote>
+<div><p><img alt="synapse_configurator" src="../../../../_images/synapse_configurator.png" /></p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li>Launching a simulation will open a form to configure the parameters before executing the jobs on the supercomputer</li>
 </ul>
 <blockquote>
 <div><ul>
@@ -223,6 +248,7 @@ synapse]</p>
 <p>From the <strong>top</strong> you are able to: <img alt="view_simulation_top" src="../../../../_images/view_simulation_top.png" /></p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">Filter</span></code> by <em>Title</em>, <em>Status</em>, <em>Supercomputer</em>, <em>Project</em></li>
+<li><code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Simulation</span></code> providing the full path to simulation folder on that HPC</li>
 <li><code class="docutils literal notranslate"><span class="pre">Launch</span> <span class="pre">Simulation</span></code>: this goes back to <em>Configure and Launch
 simuation</em> page</li>
 </ul>
@@ -248,7 +274,7 @@ the analysis on the supercomputer</p>
 </li>
 <li><p class="first"><em>Analysis</em>: Type of analysis to run</p>
 </li>
-<li><p class="first"><em>Target</em>: Target used for the simulation</p>
+<li><p class="first"><em>Population</em>: Population cells used for the simulation</p>
 </li>
 <li><p class="first"><em>Report</em>: Report created by the simulation</p>
 </li>
@@ -311,7 +337,7 @@ the analysis on the supercomputer</p>
             <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
                 
                 <span class="hbpdoc-hnav-previous">
-                    previous: <a class="hbpdoc-hnav-link" href="../hippocampus.html">Hippocampus</a>
+                    previous: <a class="hbpdoc-hnav-link" href="../configure_and_run_a_hippocampus_column/configure_and_run_a_hippocampus_column.html">Configure and run a hippocampus column</a>
                 </span>
                 
                 
