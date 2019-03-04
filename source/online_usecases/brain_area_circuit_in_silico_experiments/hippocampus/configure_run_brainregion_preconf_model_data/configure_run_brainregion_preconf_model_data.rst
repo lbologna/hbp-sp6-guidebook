@@ -17,7 +17,7 @@ From the **top** you can configure:
 
    |run_simulation_top|
 
--  ``Population``: Circuit target to be loaded by the simulator.
+-  ``Population``: Population of cells to be loaded by the simulator.
 -  ``Duration``: Time length of stimulus duration, given in
    milliseconds(ms)
 -  ``View Simulations``: From here you can see all the history of
@@ -135,7 +135,7 @@ From the **middle** you are able to:
 
       -  *Title*: Title of the job
       -  *Analysis*: Type of analysis to run
-      -  *Target*: Target used for the simulation
+      -  *Population*: Population cells used for the simulation
       -  *Report*: Report created by the simulation
       -  *Cells*: Number of random cells to analyze
 
