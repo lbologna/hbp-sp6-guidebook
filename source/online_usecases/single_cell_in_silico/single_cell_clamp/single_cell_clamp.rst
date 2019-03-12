@@ -72,7 +72,7 @@ cell models and run model simulations.
    traces. If trace names following the naming convention: SECTION\_SEGMENTINDEX\_ANYNAME then the
    corresponding segment will be highlighted when user hovers the mouse over the trace.
 
-#. If the model folder contains file named `synapses_meta.json` in the following format:
+#. If the model folder contains file named :file:`synapses_meta.json` in the following format:
 
     .. sourcecode:: json
 
