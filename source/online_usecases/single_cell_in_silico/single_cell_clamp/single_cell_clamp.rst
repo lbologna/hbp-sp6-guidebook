@@ -57,7 +57,7 @@ cell models and run model simulations.
 
 #. In order to initialize simulation parameters with certain values it is possible to prepend the application
    URL with, for example, the following:
-   `?delay=0&vinit=-86&dt=.025&amp=0&hypamp=0&tstop=500&delay=100&dur=800&celsius=37`
+   ``?delay=0&vinit=-86&dt=.025&amp=0&hypamp=0&tstop=500&delay=100&dur=800&celsius=37``
 
 #. If the model folder contains file named `traces.dat` containing experimental traces in the following format:
 
