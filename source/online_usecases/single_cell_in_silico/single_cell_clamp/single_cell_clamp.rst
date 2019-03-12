@@ -81,7 +81,7 @@ cell models and run model simulations.
             "inh": ["GABAAB_EMS"]
         }
 
-   Then those channel mechanism will be visualized on the morphology with the corresponding coloring for
+   Then those channel mechanisms will be visualized on the morphology with the corresponding coloring for
    excitatory and inhibitory.
 
 #. If you have spines modeled as additional sections it is assumed that they are constructed from a single
