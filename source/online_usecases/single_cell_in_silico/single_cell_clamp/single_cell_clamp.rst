@@ -69,7 +69,7 @@ cell models and run model simulations.
         0.084,-87.254,-87.013,-86.503,-86.861,-86.445,-85.776
 
    Then, traces from this file, will be loaded after the simulation completes in addition to the simulation
-   traces. If trace names following the naming convention: SECTION\_SEGMENTINDEX\_ANYNAME then the
+   traces. If trace names following the naming convention: ``SECTION\_SEGMENTINDEX\_ANYNAME`` then the
    corresponding segment will be highlighted when user hovers the mouse over the trace.
 
 #. If the model folder contains file named :file:`synapses_meta.json` in the following format:
