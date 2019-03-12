@@ -151,6 +151,38 @@ bottom right corner of the graph after the simulation has finished.</p>
 </div>
 </div></blockquote>
 </li>
+<li><p class="first">In order to initialize simulation parameters with certain values it is possible to append the application
+URL with, for example, the following:
+<code class="docutils literal notranslate"><span class="pre">?delay=0&amp;vinit=-86&amp;dt=.025&amp;amp=0&amp;hypamp=0&amp;tstop=500&amp;delay=100&amp;dur=800&amp;celsius=37</span></code></p>
+</li>
+<li><p class="first">If the model folder contains file named <code class="file docutils literal notranslate"><span class="pre">traces.dat</span></code> containing experimental traces in the following format:</p>
+<blockquote>
+<div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>time,soma[0]_0_exp,soma[0]_1_exp,soma[0]_2_exp,soma[0]_3_exp,soma[0]_4_exp,soma[0]_5_exp
+0.004,-87.179,-87.136,-86.605,-86.825,-86.453,-85.763
+0.044,-87.249,-87.053,-86.521,-86.863,-86.425,-85.787
+0.084,-87.254,-87.013,-86.503,-86.861,-86.445,-85.776
+</pre></div>
+</div>
+</div></blockquote>
+<p>Then traces from this file will be loaded after the simulation completes, and in addition to the simulation
+traces. If trace names following the naming convention: <code class="docutils literal notranslate"><span class="pre">SECTION\_SEGMENTINDEX\_ANYNAME</span></code> then the
+corresponding segment will be highlighted when user hovers the mouse over the trace.</p>
+</li>
+<li><p class="first">If the model folder contains file named <code class="file docutils literal notranslate"><span class="pre">synapses_meta.json</span></code> in the following format:</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;exc&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;AMPANMDA_EMS&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;inh&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GABAAB_EMS&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Then those channel mechanisms will be visualized on the morphology with the corresponding coloring for
+excitatory and inhibitory.</p>
+</li>
+<li><p class="first">If you have spines modeled as additional sections, it is assumed that they are constructed from a single
+segment. They will also be correctly positioned and visualized on the morphology.</p>
+</li>
 </ol>
 </div>
 
@@ -175,7 +207,7 @@ bottom right corner of the graph after the simulation has finished.</p>
     <div class="hbpdoc-footer">
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Brain Simulation Platform members.
+        &#169; Copyright 2019, Brain Simulation Platform members.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
     </div>
     </div>
