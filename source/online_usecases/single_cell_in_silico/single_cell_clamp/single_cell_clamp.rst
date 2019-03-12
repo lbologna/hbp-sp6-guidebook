@@ -55,7 +55,7 @@ cell models and run model simulations.
         df = pd.read_csv('sim_CA1_int_bAC_011023HP2_20170510120324_2017-06-21_14-36-10_amp-soma_0-0.7nA.csv')
         df.plot.line(x='time', y='soma[0]_0')
 
-#. In order to initialize simulation parameters with certain values it is possible to prepend the application
+#. In order to initialize simulation parameters with certain values it is possible to append the application
    URL with, for example, the following:
    ``?delay=0&vinit=-86&dt=.025&amp=0&hypamp=0&tstop=500&delay=100&dur=800&celsius=37``
 
