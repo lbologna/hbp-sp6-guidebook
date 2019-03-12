@@ -85,4 +85,4 @@ cell models and run model simulations.
    excitatory and inhibitory.
 
 #. If you have spines modeled as additional sections it is assumed that they are constructed from a single
-   segment. They should be also correctly positioned and visualized on the morphology.
+   segment. They will also be correctly positioned and visualized on the morphology.
