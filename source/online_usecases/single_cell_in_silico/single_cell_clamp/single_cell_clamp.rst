@@ -55,3 +55,34 @@ cell models and run model simulations.
         df = pd.read_csv('sim_CA1_int_bAC_011023HP2_20170510120324_2017-06-21_14-36-10_amp-soma_0-0.7nA.csv')
         df.plot.line(x='time', y='soma[0]_0')
 
+#. In order to initialize simulation parameters with certain values it is possible to append the application
+   URL with, for example, the following:
+   ``?delay=0&vinit=-86&dt=.025&amp=0&hypamp=0&tstop=500&delay=100&dur=800&celsius=37``
+
+#. If the model folder contains file named :file:`traces.dat` containing experimental traces in the following format:
+
+    .. sourcecode:: text
+
+        time,soma[0]_0_exp,soma[0]_1_exp,soma[0]_2_exp,soma[0]_3_exp,soma[0]_4_exp,soma[0]_5_exp
+        0.004,-87.179,-87.136,-86.605,-86.825,-86.453,-85.763
+        0.044,-87.249,-87.053,-86.521,-86.863,-86.425,-85.787
+        0.084,-87.254,-87.013,-86.503,-86.861,-86.445,-85.776
+
+   Then traces from this file will be loaded after the simulation completes, and in addition to the simulation
+   traces. If trace names following the naming convention: ``SECTION\_SEGMENTINDEX\_ANYNAME`` then the
+   corresponding segment will be highlighted when user hovers the mouse over the trace.
+
+#. If the model folder contains file named :file:`synapses_meta.json` in the following format:
+
+    .. sourcecode:: json
+
+        {
+            "exc": ["AMPANMDA_EMS"],
+            "inh": ["GABAAB_EMS"]
+        }
+
+   Then those channel mechanisms will be visualized on the morphology with the corresponding coloring for
+   excitatory and inhibitory.
+
+#. If you have spines modeled as additional sections, it is assumed that they are constructed from a single
+   segment. They will also be correctly positioned and visualized on the morphology.
