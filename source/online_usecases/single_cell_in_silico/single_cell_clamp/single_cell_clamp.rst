@@ -84,5 +84,5 @@ cell models and run model simulations.
    Then those channel mechanisms will be visualized on the morphology with the corresponding coloring for
    excitatory and inhibitory.
 
-#. If you have spines modeled as additional sections it is assumed that they are constructed from a single
+#. If you have spines modeled as additional sections, it is assumed that they are constructed from a single
    segment. They will also be correctly positioned and visualized on the morphology.
