@@ -59,7 +59,7 @@ cell models and run model simulations.
    URL with, for example, the following:
    ``?delay=0&vinit=-86&dt=.025&amp=0&hypamp=0&tstop=500&delay=100&dur=800&celsius=37``
 
-#. If the model folder contains file named `traces.dat` containing experimental traces in the following format:
+#. If the model folder contains file named :file:`traces.dat` containing experimental traces in the following format:
 
     .. sourcecode:: text
 
