@@ -158,4 +158,8 @@ to carry out the optimization, a user must have an account on the Neuroscience
 Gateway or on one of the HPC systems supporting the Brain Simulation Platform 
 activity, such as CINECA or JSC.
 
-For details on NSG see :ref:`Neuroscience Gateway <nsg>`
+For details on NSG see |nsg_link|
+
+.. |nsg_link| raw:: html  
+
+    <a href="https://www.nsgportal.org/" target="_blank">Neuroscience Gateway</a>.
