@@ -16,7 +16,6 @@ As a result, the unique functionality of the Platform allows novel questions to 
 
    getting_started/getting_started
    online_usecases/online_usecases
-   service_account/service_account
    official_documents/official_documents
    reference/reference_index
 
