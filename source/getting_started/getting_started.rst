@@ -193,6 +193,25 @@ HPC access
 
     This type of use cases needs large HPC resources. Typically, use cases showing this icon involve complex simulations of large scale cellular level model of brain areas/regions, that are deployed on JSC and CINECA systems. Subjected to technical compatibility and license agreement, this type of simulations can be delegated to be executed on other HPC systems, outside the BSP.
 
+
+.. _service_account:
+
+"""""""""""""""
+Service Account
+"""""""""""""""
+
+The Service Account is a REST API service allowing developers to submit jobs,
+on behalf of HBP Collaboratory users, to remote HPC systems.
+
+For a thourough explanation on how to use the service, please refer to the
+|sa_doc_link|
+
+.. |sa_doc_link| raw:: html  
+
+    <a href="https://humanbrainproject.github.io/hbp-bsp-service-account/" target="_blank">BSP Service Account documentation</a>.
+
+
+
 .. _nsg:
 
 """"""""""""""""""""""""""
