@@ -24,7 +24,7 @@ number of protein complexes in the postsynaptic proteome to be
 expressed straightforwardly. Simulations of rule-based models are
 stochastic and thus can deal with the small copy numbers of proteins
 and complexes in the PSD. Second generation rule-based languages such
-as Kappa and BNGL allow rules (essentially generalised reactions) to
+as Kappa and BNGL allow rules (essentially generalized reactions) to
 be expressed using a well-defined syntax. Their associated simulators
 allow these model definitions to be simulated.
 
@@ -33,7 +33,7 @@ electrical aspects of neurons: the calcium current entering the
 synapse depends both on the membrane potential in the spine head,
 which controls the conductance of NMDAR receptors, but also on the
 free intracellular calcium, since this influences the I-V relationship
-of the channel, which can be modelled using the GHK equations. This
+of the channel, which can be modeled using the GHK equations. This
 coupling motivated the development of the KappaNEURON package, which
 integrates NEURON and the SpatialKappa kappa simulator. It allows for
 detailed synaptic models to be simulated in the context of the
@@ -45,11 +45,11 @@ electrical activity of the cell, as illustrated below.
 Example of a rule-based model
 =============================
 
-The first use case in the collab (currently at
+The first use case in the Collab (currently at
 https://collab.humanbrainproject.eu/#/collab/2184/nav/204920) is a
 simple demonstration of using KappaNEURON to model a calcium pump. It
 demonstrates the principle of how KappaNEURON works, though in
-pracitice there is not particular advantage in using KappaNEURON for
+practice there is not particular advantage in using KappaNEURON for
 such a simple situation; the second use case gives a more realistic
 example in which the benefits of KappaNEURON are apparent.
 
@@ -101,7 +101,7 @@ calcium should be created as a result of ion channels or receptors.
 .. sidebar:: Comment
    
    Should I describe this kappa file in more depth? It's covered to an
-   extent in the python notebook.
+   extent in the python notebook. ANSWER: Maybe mention here that it is covered in the notebook; maybe also a link to your KappaNEURON repo might help the user?
   
 Principle of integration
 ========================
@@ -111,7 +111,7 @@ Principle of integration
 
 KappaNEURON integrates the NEURON and SpatialKappa parts of the
 simulations by running them alternately every NEURON Δt (typically
-25μs), and synchronising at every timestep so that the charge in the
+25μs), and synchronizing at every timestep so that the charge in the
 Kappa simulation is consistent with the membrane potential.
            
 The procedure KappaNEURON uses to update the time from t to t + Δt
@@ -132,7 +132,7 @@ The procedure KappaNEURON uses to update the time from t to t + Δt
 Demonstration
 =============
 
-The use case in the BSP collab demonstates and documents the python
+The use case in the BSP Collab demonstates and documents the python
 code required to run the example simulation.
 
    
