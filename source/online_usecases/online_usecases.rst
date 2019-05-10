@@ -16,3 +16,4 @@ Online Use Cases
     brain_area_circuit_in_silico_experiments/brain_area_circuit_in_silico_experiments
     validation_framework/validation_framework.rst
     highly_integrated_workflows/highly_integrated_workflows
+    molecular_level/molecular_level
