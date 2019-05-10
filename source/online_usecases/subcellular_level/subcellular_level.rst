@@ -1,8 +1,8 @@
-.. _complex_molecular_electrical_modelling:
+.. _subcellular_level:
 
-######################################
-Complex molecular-electrical modelling
-######################################
+#################
+Subcellular level
+#################
 
 KappaNEURON is a python package that integrates the NEURON simulator
 with the SpatialKappa simulator of rule-based models. Rule-based

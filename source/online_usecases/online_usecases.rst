@@ -7,6 +7,7 @@ Online Use Cases
 .. toctree::
     :maxdepth: 4
 
+    subcellular_level/subcellular_level
     trace_analysis/trace_analysis
     morphology_analysis/morphology_analysis
     single_cell_building/single_cell_building
@@ -16,4 +17,3 @@ Online Use Cases
     brain_area_circuit_in_silico_experiments/brain_area_circuit_in_silico_experiments
     validation_framework/validation_framework.rst
     highly_integrated_workflows/highly_integrated_workflows
-    complex_molecular_electrical_modelling/complex_molecular_electrical_modelling
