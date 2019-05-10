@@ -7,7 +7,7 @@ interaction between electrical activity in neurons and the synaptic
 proteome. This example (currently at
 https://collab.humanbrainproject.eu/#/collab/2184/nav/303192) shows
 how interactions between a number of ions, proteins and second
-messengers can be modelled.
+messengers can be modeled.
 
 Proteins involved
 -----------------
