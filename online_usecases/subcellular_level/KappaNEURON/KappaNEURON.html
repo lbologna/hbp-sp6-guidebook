@@ -1,0 +1,322 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>KappaNEURON &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Synaptic plasticity pathways" href="../synaptic_plasticity_pathways/synaptic_plasticity_pathways.html" />
+    <link rel="prev" title="Subcellular level" href="../subcellular_level.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">KappaNEURON</a><ul>
+<li><a class="reference internal" href="#scientific-motivation">Scientific motivation</a></li>
+<li><a class="reference internal" href="#example-of-a-rule-based-model">Example of a rule-based model</a></li>
+<li><a class="reference internal" href="#principle-of-integration">Principle of integration</a></li>
+<li><a class="reference internal" href="#demonstration">Demonstration</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../subcellular_level.html"
+                        title="previous chapter">Subcellular level</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../synaptic_plasticity_pathways/synaptic_plasticity_pathways.html"
+                        title="next chapter">Synaptic plasticity pathways</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/online_usecases/subcellular_level/KappaNEURON/KappaNEURON.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../subcellular_level.html">Subcellular level</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../subcellular_level.html">Subcellular level</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../synaptic_plasticity_pathways/synaptic_plasticity_pathways.html">Synaptic plasticity pathways</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="kappaneuron">
+<h1>KappaNEURON<a class="headerlink" href="#kappaneuron" title="Permalink to this headline">¶</a></h1>
+<p>KappaNEURON is a python package that integrates the NEURON simulator
+with the SpatialKappa simulator of rule-based models. Rule-based
+models allow interactions between the combinatorially large number of
+protein complexes in the postsynaptic proteome to be expressed
+straightforwardly.</p>
+<div class="section" id="scientific-motivation">
+<h2>Scientific motivation<a class="headerlink" href="#scientific-motivation" title="Permalink to this headline">¶</a></h2>
+<p>Synaptic plasticity depends on the interaction between electrical
+activity in neurons and the synaptic proteome, the collection of over
+1000 proteins in the post-synaptic density (PSD) of synapses.</p>
+<p>Currently the largest dynamic models of synaptic plasticity contain
+around 40 distinct proteins, second messengers and ions <a class="reference internal" href="#heil2018" id="id1">[Heil2018]</a>.
+These proteins often have multiple binding sites, allowing large
+numbers of distinct complexes (combinations of bound proteins) to
+form. For example, calcium can bind to four sites on calmodulin
+molecule, and calmodulin bound with varying numbers of calcium ions
+can bind to many combinations of sites on CaMKII dodecamers. This
+quickly leads to a combinatorial explosion in the number of complexes
+that can form in a synapse.</p>
+<p>Rule-based models allow specification and simulation of proteins and
+protein complexes with combinatorially large numbers of states which
+arise from protein-protein interactions, post-translational
+modifictions and conformational changes <a class="reference internal" href="#stefan2014" id="id2">[Stefan2014]</a>. Second
+generation rule-based languages such as Kappa and BNGL have a
+well-defined syntax for <em>rules</em>, generalized reactions which express
+binding between sites and modifications such as phosphorylation.
+Simulations of rule-based models are stochastic and thus can deal with
+small copy numbers. Rule-based are thus suited to modeling the large
+number (order of 100s) of distinct proteins in postsynaptic proteome
+many of which exist in small numbers (often &lt;100) due to the
+restricted space of the spine head.</p>
+<p>In synapses there is an intimate coupling between the molecular and
+electrical aspects of neurons: the calcium current entering the
+synapse depends both on the membrane potential in the spine head,
+which controls the conductance of NMDAR receptors, but also on the
+free intracellular calcium, since this influences the I-V relationship
+of the channel, which can be modeled using the GHK equations. This
+coupling motivated the development of the <a class="reference external" href="https://github.com/davidcsterratt/KappaNEURON">KappaNEURON</a> package
+<a class="reference internal" href="#sterratt2015" id="id3">[Sterratt2015]</a>, which integrates <a class="reference external" href="https://neuron.yale.edu/neuron/">NEURON</a> 7.4 and the <a class="reference external" href="https://github.com/davidcsterratt/SpatialKappa">SpatialKappa</a> kappa
+simulator. It allows for detailed synaptic models to be simulated in
+the context of the electrical activity of the cell, as illustrated
+below.</p>
+<a class="reference internal image-reference" href="../../../_images/system.png"><img alt="../../../_images/system.png" src="../../../_images/system.png" style="width: 600px;" /></a>
+</div>
+<div class="section" id="example-of-a-rule-based-model">
+<h2>Example of a rule-based model<a class="headerlink" href="#example-of-a-rule-based-model" title="Permalink to this headline">¶</a></h2>
+<p>The first use case in the <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/2184/nav/204920">KappaNEURON use case</a> is a simple
+demonstration of using <a class="reference external" href="https://github.com/davidcsterratt/KappaNEURON">KappaNEURON</a>, a python module, to model a calcium pump. It
+demonstrates the principle of how KappaNEURON works, though in
+practice there is not particular advantage in using KappaNEURON for
+such a simple situation; the second use case gives a more realistic
+example in which the benefits of KappaNEURON are apparent.</p>
+<p>The Kappa code for a simple calcium pump, which we can imagine as
+being in a spine head, is shown below:</p>
+<pre class="code python literal-block">
+<span class="ln"> 1 </span><span class="comment single">## File caPump.ka - Simple calcium pump</span>
+<span class="ln"> 2 </span><span class="comment single">## Agent declarations, showing the agent names and binding sites</span>
+<span class="ln"> 3 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">ca</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span> <span class="comment single"># Calcium with binding site</span>
+<span class="ln"> 4 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">P</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span> <span class="comment single"># Pump molecule with binding site</span>
+<span class="ln"> 5 </span>
+<span class="ln"> 6 </span><span class="comment single">## Variable declarations</span>
+<span class="ln"> 7 </span><span class="operator">%</span><span class="name">var</span><span class="punctuation">:</span> <span class="error">’</span><span class="name">vol</span><span class="error">’</span> <span class="literal number integer">1</span> <span class="comment single"># Volume of spine head in um3</span>
+<span class="ln"> 8 </span><span class="operator">%</span><span class="name">var</span><span class="punctuation">:</span> <span class="error">’</span><span class="name">NA</span><span class="error">’</span> <span class="literal number float">6.02205E23</span> <span class="comment single"># Avogadro’s constant</span>
+<span class="ln"> 9 </span><span class="operator">%</span><span class="name">var</span><span class="punctuation">:</span> <span class="error">’</span><span class="name">agconc</span><span class="error">’</span> <span class="literal number float">1E18</span><span class="operator">/</span><span class="punctuation">(</span><span class="error">’</span><span class="name">NA</span><span class="error">’</span> <span class="operator">*</span> <span class="error">’</span><span class="name">vol</span><span class="error">’</span><span class="punctuation">)</span> <span class="comment single"># Concentration of one agent (in mM) in the volume</span>
+<span class="ln">10 </span>
+<span class="ln">11 </span><span class="comment single"># Rate constants in /mM-ms or /ms, depending on the number of complexes on LHS of rule</span>
+<span class="ln">12 </span><span class="operator">%</span><span class="name">var</span><span class="punctuation">:</span> <span class="error">’</span><span class="name">k1</span><span class="error">’</span> <span class="literal number float">0.001</span> <span class="comment single"># /mM-ms</span>
+<span class="ln">13 </span><span class="operator">%</span><span class="name">var</span><span class="punctuation">:</span> <span class="error">’</span><span class="name">k2</span><span class="error">’</span> <span class="literal number integer">1</span> <span class="comment single"># /ms</span>
+<span class="ln">14 </span>
+<span class="ln">15 </span><span class="comment single">## Rules</span>
+<span class="ln">16 </span><span class="comment single"># Note the scaling of the rate constant of the bimolecular reaction</span>
+<span class="ln">17 </span><span class="error">’</span><span class="name">ca</span> <span class="name">binding</span><span class="error">’</span> <span class="name">ca</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">),</span> <span class="name">P</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> <span class="name">ca</span><span class="punctuation">(</span><span class="name">x</span><span class="error">!</span><span class="literal number integer">1</span><span class="punctuation">),</span> <span class="name">P</span><span class="punctuation">(</span><span class="name">x</span><span class="error">!</span><span class="literal number integer">1</span><span class="punctuation">)</span> <span class="error">&#64;</span> <span class="error">’</span><span class="name">k1</span><span class="error">’</span> <span class="operator">*</span> <span class="error">’</span><span class="name">agconc</span><span class="error">’</span>
+<span class="ln">18 </span><span class="error">’</span><span class="name">ca</span> <span class="name">release</span><span class="error">’</span> <span class="name">ca</span><span class="punctuation">(</span><span class="name">x</span><span class="error">!</span><span class="literal number integer">1</span><span class="punctuation">),</span> <span class="name">P</span><span class="punctuation">(</span><span class="name">x</span><span class="error">!</span><span class="literal number integer">1</span><span class="punctuation">)</span> <span class="operator">-&gt;</span> <span class="name">P</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span> <span class="error">&#64;</span> <span class="error">’</span><span class="name">k2</span><span class="error">’</span>
+<span class="ln">19 </span>
+<span class="ln">20 </span><span class="comment single">## Initialisation of agent numbers</span>
+<span class="ln">21 </span><span class="comment single"># Overwritten by NEURON but needed for SpatialKappa parser</span>
+<span class="ln">22 </span><span class="operator">%</span><span class="name">init</span><span class="punctuation">:</span> <span class="literal number integer">1000</span> <span class="name">ca</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span>
+<span class="ln">23 </span><span class="operator">%</span><span class="name">init</span><span class="punctuation">:</span> <span class="literal number integer">10000</span> <span class="name">P</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span>
+<span class="ln">24 </span>
+<span class="ln">25 </span><span class="comment single">## Observations</span>
+<span class="ln">26 </span><span class="operator">%</span><span class="name">obs</span><span class="punctuation">:</span> <span class="error">’</span><span class="name">ca</span><span class="error">’</span> <span class="name">ca</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span> <span class="comment single"># Free Ca</span>
+<span class="ln">27 </span><span class="operator">%</span><span class="name">obs</span><span class="punctuation">:</span> <span class="error">’</span><span class="name">P</span><span class="operator">-</span><span class="name">Ca</span><span class="error">’</span> <span class="name">ca</span><span class="punctuation">(</span><span class="name">x</span><span class="error">!</span><span class="literal number integer">1</span><span class="punctuation">),</span> <span class="name">P</span><span class="punctuation">(</span><span class="name">x</span><span class="error">!</span><span class="literal number integer">1</span><span class="punctuation">)</span> <span class="comment single"># Bound Ca-P</span>
+<span class="ln">28 </span><span class="operator">%</span><span class="name">obs</span><span class="punctuation">:</span> <span class="error">’</span><span class="name">P</span><span class="error">’</span> <span class="name">P</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span> <span class="comment single"># Free P</span>
+</pre>
+<p>This model description can be interpreted by Kappa simulators such as
+<a class="reference external" href="https://github.com/davidcsterratt/SpatialKappa">SpatialKappa</a> or <a class="reference external" href="https://github.com/Kappa-Dev/KaSim">KaSim</a> version 3, which simulate the model using
+a method based on Gillespie’s method, in which transitions (here
+calcium-pump binding and unbinding events) are simulated one-by-one.
+The time between events is random - there is no fixed dt.</p>
+<p>A brief description of how this file works is in the <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/2184/nav/204920">KappaNEURON use
+case</a>. KappaNEURON allows the user to use this file in place of a NEURON mod
+file. NEURON is responsible for telling the Kappa model how much
+calcium should be created as a result of ion channels or receptors.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Kappa syntax</p>
+<p class="last">There is a short description of Kappa syntax in Section 2.1 of the
+<a class="reference external" href="https://github.com/davidcsterratt/SpatialKappa/blob/master/docs/manual/SpatialKappaManual-v2.1.0.pdf">SpatialKappa manual</a>. A full description of version 3 of the
+Kappa language can be found in chapters 4 and 6 of the <a class="reference external" href="https://github.com/davidcsterratt/SpatialKappa/blob/master/docs/manual/KaSim_manual_v3.5.pdf">KaSim 3.5
+manual</a>. SpatialKappa differs from KaSim 3 in that it adds spatial
+extensions (not used in KappaNEURON) and does not implement the
+perturbation language (Chapter 6 of the <a class="reference external" href="https://github.com/davidcsterratt/SpatialKappa/blob/master/docs/manual/KaSim_manual_v3.5.pdf">KaSim 3.5 manual</a>) fully.
+The syntax of version 4 of the Kappa language is different from
+version 3, used by SpatialKappa. This may be updated in the future.</p>
+</div>
+</div>
+<div class="section" id="principle-of-integration">
+<h2>Principle of integration<a class="headerlink" href="#principle-of-integration" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../../../_images/integration.png"><img alt="../../../_images/integration.png" src="../../../_images/integration.png" style="width: 400px;" /></a>
+<div class="sidebar">
+<p class="first sidebar-title">Implementation</p>
+<p class="last">KappaNEURON is a python module. It links NEURON and SpatialKappa
+via the <code class="docutils literal notranslate"><span class="pre">rxd</span></code> (reaction diffusion) subystem of NEURON 7.4 and the
+python interface to SpatialKappa, which in turn depends on the py4j
+module to link the Java core of SpatialKappa with python.</p>
+</div>
+<p>KappaNEURON integrates the NEURON and SpatialKappa parts of the
+simulations by running them alternately every NEURON Δt (typically
+25μs), and synchronizing at every timestep so that the charge in the
+Kappa simulation is consistent with the membrane potential.</p>
+<p>The procedure KappaNEURON uses to update the time from t to t + Δt is:</p>
+<ol class="arabic simple">
+<li>Pass all relevant variables from NEURON to Kappa, e.g. conductances
+and voltages needed to compute the membrane current through
+channels.</li>
+<li>Run the rule-based simulator from t to t + Δt.</li>
+<li>Compute the net change in the total number of each bridging species
+S (including in any complexes) over the time step and convert back
+to a current, which is then passed to NEURON.</li>
+<li>Run NEURON forward by Δt.</li>
+</ol>
+<p>For full details of the integration see <a class="reference internal" href="#sterratt2015" id="id4">[Sterratt2015]</a>.</p>
+</div>
+<div class="section" id="demonstration">
+<h2>Demonstration<a class="headerlink" href="#demonstration" title="Permalink to this headline">¶</a></h2>
+<p>The use case in the <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/2184/nav/204920">KappaNEURON use case</a> demonstrates and documents the python
+code required to run the example simulation.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<table class="docutils citation" frame="void" id="heil2018" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[Heil2018]</a></td><td>Heil K. F., Wysocka. E., Sorokina, O., Kotaleski, J. H.,
+Simpson, T. I., Armstrong, J. D., Sterratt, D. C.
+(2018). ‘Analysis of proteins in computational models of
+synaptic plasticity’.
+<a class="reference external" href="https://doi.org/10.1101/254094">doi:10.1101/254094</a>.
+<a class="reference external" href="https://www.biorxiv.org/content/early/2018/01/28/254094">bioRxiv:254094</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="stefan2014" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[Stefan2014]</a></td><td>Stefan M. I., Bartol T. M., Sejnowski, T. J.,
+Kennedy M. B. (2014). ‘Multi-state Modeling of
+Biomolecules’ PLOS Comp. Biol. 10.
+<a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1003844">doi:10.1371/journal.pcbi.1003844</a></td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="sterratt2015" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[Sterratt2015]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> Sterratt, D. C., Sorokina, O. and Armstrong, J. D.
+(2015). ‘Integration of rule-based models and
+compartmental models of neurons’. In O. Maler, Á.
+Halász, T. Dang and C. Piazza, eds., Hybrid Systems
+Biology: Second International Workshop, HSB 2013,
+Taormina, Italy, September 2, 2013 and Third
+International Workshop, HSB 2014, Vienna, Austria,
+July 23-24, 2014, Revised Selected Papers, vol. 7699
+of Lecture Notes in Bioinformatics, pp. 143–158.
+Springer International Publishing, Cham. <a class="reference external" href="https://doi.org/10.1007/978-3-319-27656-4_9">doi:
+10.1007/978-3-319-27656-4_9</a>.
+Preprint at <a class="reference external" href="http://arxiv.org/abs/1411.4980">arXiv:1411.4980</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../subcellular_level.html">Subcellular level</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../synaptic_plasticity_pathways/synaptic_plasticity_pathways.html">Synaptic plasticity pathways</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>

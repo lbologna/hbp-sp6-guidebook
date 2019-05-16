@@ -1,0 +1,193 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Synaptic plasticity pathways &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Trace Analysis" href="../../trace_analysis/trace_analysis.html" />
+    <link rel="prev" title="KappaNEURON" href="../KappaNEURON/KappaNEURON.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Synaptic plasticity pathways</a><ul>
+<li><a class="reference internal" href="#proteins-involved">Proteins involved</a></li>
+<li><a class="reference internal" href="#rules">Rules</a></li>
+<li><a class="reference internal" href="#results">Results</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../KappaNEURON/KappaNEURON.html"
+                        title="previous chapter">KappaNEURON</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../trace_analysis/trace_analysis.html"
+                        title="next chapter">Trace Analysis</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/online_usecases/subcellular_level/synaptic_plasticity_pathways/synaptic_plasticity_pathways.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../subcellular_level.html">Subcellular level</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../KappaNEURON/KappaNEURON.html">KappaNEURON</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../../trace_analysis/trace_analysis.html">Trace Analysis</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="synaptic-plasticity-pathways">
+<h1>Synaptic plasticity pathways<a class="headerlink" href="#synaptic-plasticity-pathways" title="Permalink to this headline">¶</a></h1>
+<p>As discussed in the previous section, the motivation is to model the
+interaction between electrical activity in neurons and the synaptic
+proteome. This example (currently at
+<a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/2184/nav/303192">https://collab.humanbrainproject.eu/#/collab/2184/nav/303192</a>) shows
+how interactions between a number of ions, proteins and second
+messengers can be modeled.</p>
+<div class="section" id="proteins-involved">
+<h2>Proteins involved<a class="headerlink" href="#proteins-involved" title="Permalink to this headline">¶</a></h2>
+<p>The full list of “agents” in the <cite>molecule_definitions.ka</cite> file is:</p>
+<pre class="code python literal-block">
+<span class="ln"> 1 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">ca</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span>
+<span class="ln"> 2 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">Glu</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span>
+<span class="ln"> 3 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">NMDA</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span> <span class="name">b0</span><span class="punctuation">,</span> <span class="name">b1</span><span class="punctuation">,</span> <span class="name">state</span><span class="operator">~</span><span class="name">R</span><span class="operator">~</span><span class="name">RA</span><span class="operator">~</span><span class="name">RA2</span><span class="operator">~</span><span class="name">d1</span><span class="operator">~</span><span class="name">d2</span><span class="operator">~</span><span class="literal number integer">2</span><span class="name">f</span><span class="operator">~</span><span class="literal number integer">2</span><span class="name">s</span><span class="operator">~</span><span class="name">o</span><span class="punctuation">,</span> <span class="name builtin">type</span><span class="operator">~</span><span class="name">A</span><span class="operator">~</span><span class="name">B</span><span class="punctuation">,</span> <span class="name">mgb</span><span class="punctuation">)</span>
+<span class="ln"> 4 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">mg</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span>
+<span class="ln"> 5 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">AMPA</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span> <span class="name">loc</span><span class="operator">~</span><span class="name">m</span><span class="operator">~</span><span class="name">b</span><span class="operator">~</span><span class="name">t</span><span class="punctuation">,</span> <span class="name">ser845</span><span class="operator">~</span><span class="name">u</span><span class="operator">~</span><span class="name">p</span><span class="punctuation">,</span> <span class="name">ser831</span><span class="operator">~</span><span class="name">u</span><span class="operator">~</span><span class="name">p</span><span class="punctuation">,</span> <span class="name">b1</span><span class="punctuation">,</span> <span class="name">b2</span><span class="punctuation">,</span> <span class="name">b3</span><span class="punctuation">,</span> <span class="name">b4</span><span class="punctuation">,</span> <span class="name">state</span><span class="operator">~</span><span class="name">c0</span><span class="operator">~</span><span class="name">c1</span><span class="operator">~</span><span class="name">c2</span><span class="operator">~</span><span class="name">c3</span><span class="operator">~</span><span class="name">c4</span><span class="operator">~</span><span class="name">d1</span><span class="operator">~</span><span class="name">d2</span><span class="operator">~</span><span class="name">d3</span><span class="operator">~</span><span class="name">d4</span><span class="operator">~</span><span class="name">o1</span><span class="operator">~</span><span class="name">o2</span><span class="operator">~</span><span class="name">o3</span><span class="operator">~</span><span class="name">o4</span><span class="punctuation">)</span>
+<span class="ln"> 6 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">PMCA</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span> <span class="name">cam</span><span class="punctuation">)</span>
+<span class="ln"> 7 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">NCX</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span>
+<span class="ln"> 8 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">IMCBP</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span>
+<span class="ln"> 9 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">CaB</span><span class="punctuation">(</span><span class="name">h1</span><span class="punctuation">,</span> <span class="name">h2</span><span class="punctuation">,</span> <span class="name">h3</span><span class="punctuation">,</span> <span class="name">m1</span><span class="punctuation">)</span>
+<span class="ln">10 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">CaM</span><span class="punctuation">(</span><span class="name">site1</span><span class="punctuation">,</span> <span class="name">c1</span><span class="punctuation">,</span> <span class="name">c2</span><span class="punctuation">,</span> <span class="name">n1</span><span class="punctuation">,</span> <span class="name">n2</span><span class="punctuation">)</span>
+<span class="ln">11 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">CaMKII</span><span class="punctuation">(</span><span class="name">A</span><span class="punctuation">,</span> <span class="name">B</span><span class="punctuation">,</span> <span class="name">D</span><span class="punctuation">,</span> <span class="name">cam</span><span class="punctuation">,</span> <span class="name">sub</span><span class="punctuation">,</span> <span class="name">phos</span><span class="punctuation">,</span> <span class="name">Thr286</span><span class="operator">~</span><span class="name">u</span><span class="operator">~</span><span class="name">p</span><span class="punctuation">,</span> <span class="name">Thr305</span><span class="operator">~</span><span class="name">u</span><span class="operator">~</span><span class="name">p</span><span class="punctuation">)</span>
+<span class="ln">12 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">NG</span><span class="punctuation">(</span><span class="name">cam</span><span class="punctuation">)</span>
+<span class="ln">13 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">CaN</span><span class="punctuation">(</span><span class="name">cam</span><span class="punctuation">,</span> <span class="name">sub</span><span class="punctuation">,</span> <span class="name">m1</span><span class="punctuation">,</span> <span class="name">m2</span><span class="punctuation">)</span>
+<span class="ln">14 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">AC1</span><span class="punctuation">(</span><span class="name">cam</span><span class="punctuation">)</span>
+<span class="ln">15 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">AC8</span><span class="punctuation">(</span><span class="name">cam</span><span class="punctuation">,</span> <span class="name">camLoc</span><span class="operator">~</span><span class="name">none</span><span class="operator">~</span><span class="name">nLobe</span><span class="operator">~</span><span class="name">cLobe</span><span class="punctuation">)</span>
+<span class="ln">16 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">PDE1B</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span> <span class="name">cam</span><span class="punctuation">,</span> <span class="name">phos</span><span class="operator">~</span><span class="name">u</span><span class="operator">~</span><span class="name">p</span><span class="punctuation">)</span>
+<span class="ln">17 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">PDE4</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span> <span class="name">pka</span><span class="punctuation">,</span> <span class="name">phos</span><span class="operator">~</span><span class="name">u</span><span class="operator">~</span><span class="name">p</span><span class="punctuation">)</span>
+<span class="ln">18 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">cAMP</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">)</span>
+<span class="ln">19 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">PKA</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span> <span class="name">A1</span><span class="punctuation">,</span> <span class="name">B1</span><span class="punctuation">,</span> <span class="name">A2</span><span class="punctuation">,</span> <span class="name">B2</span><span class="punctuation">,</span> <span class="name builtin">type</span><span class="operator">~</span><span class="name">f</span><span class="operator">~</span><span class="name">r</span><span class="operator">~</span><span class="name">c</span><span class="punctuation">)</span> <span class="comment single">#full/regulatory/catalytic</span>
+<span class="ln">20 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">I1</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span> <span class="name">thr35</span><span class="operator">~</span><span class="name">u</span><span class="operator">~</span><span class="name">p</span><span class="punctuation">)</span>
+<span class="ln">21 </span><span class="operator">%</span><span class="name">agent</span><span class="punctuation">:</span> <span class="name">PP1</span><span class="punctuation">(</span><span class="name">x</span><span class="punctuation">,</span> <span class="name">i1</span><span class="punctuation">)</span>
+</pre>
+</div>
+<div class="section" id="rules">
+<h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
+<p>These lines from the <cite>molecule_definitions.ka</cite> demonstrate how binding
+cAMP to PDE4 in an unphosphorylated state:</p>
+<p>These lines demonstrate phosphorylation of PDE4 by PKAc:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span>&#39;PKAc phosphorylating PDE4&#39; PKA(x!1, type~c), PDE4(x!1, phos~u) -&gt; PKA(x, type~c), PDE4(x, phos~p) @ &#39;PKAPDE4cat&#39;
+&#39;4Ca-CaM-CaN dephosphorylating PDE4 phos&#39; CaN(cam!2, sub!1),
+CaM(site1!2, c1!_, c2!_, n1!_, n2!_), PDE4(x!1, phos~p) -&gt;
+  CaN(cam!2, sub), CaM(site1!2, c1!_, c2!_, n1!_, n2!_), PDE4(x, phos~u) @ &#39;CaNPDE4cat&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>The output of the simulation is shown below:</p>
+<img alt="../../../_images/simulation-results.png" src="../../../_images/simulation-results.png" />
+</div>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../KappaNEURON/KappaNEURON.html">KappaNEURON</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../../trace_analysis/trace_analysis.html">Trace Analysis</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>
