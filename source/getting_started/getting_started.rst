@@ -143,6 +143,8 @@ User experience
     .. image:: images/developer_tag.png
         :scale: 70%
 
+|
+
 **Code developers:** Designers and early adopters of initial versions of Collabs/apps/webservices/models. These users are top experts in their respective ICT and/or neuroscience field. Use Cases with this icon are usually restricted to Collabs with a team composed of mostly HBP partners, they serve the purpose of developing/testing advanced topics.
 
 |
@@ -156,6 +158,8 @@ Use Case maturity
     .. image:: images/beta_tag.png
         :scale: 50%
 
+|
+
 .. container:: bsp-inline-text
 
     A service of this maturity level has reached a certain robustness and may be used by early adopters.
@@ -164,6 +168,8 @@ Use Case maturity
 
     .. image:: images/experimental_tag.png
         :scale: 50%
+
+|
 
 .. container:: bsp-inline-text
 
@@ -192,6 +198,23 @@ HPC access
 .. container:: bsp-inline-text
 
     This type of use cases needs large HPC resources. Typically, use cases showing this icon involve complex simulations of large scale cellular level model of brain areas/regions, that are deployed on JSC and CINECA systems. Subjected to technical compatibility and license agreement, this type of simulations can be delegated to be executed on other HPC systems, outside the BSP.
+
+
+
+===============
+Video Tutorials
+===============
+
+.. container:: bsp-container-left
+
+    .. image:: images/interactive_tutorial.png
+        :scale: 20%
+
+|
+
+.. container:: bsp-inline-text
+
+    Use cases with this icon provide a video tutorial that illustrates, in an interactive way, how to complete the entire Use Case. The user will be able to simulate the entire Use Case execution by clicking on ad-hoc buttons. 
 
 
 .. _service_account:
