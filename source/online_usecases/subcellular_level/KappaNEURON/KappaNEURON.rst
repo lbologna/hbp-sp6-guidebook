@@ -109,8 +109,9 @@ case`_. KappaNEURON allows the user to use this file in place of a NEURON mod
 file. NEURON is responsible for telling the Kappa model how much
 calcium should be created as a result of ion channels or receptors.
 
+|
 
-.. sidebar:: Kappa syntax
+   Kappa syntax
 
    There is a short description of Kappa syntax in Section 2.1 of the
    `SpatialKappa manual`_. A full description of version 3 of the
@@ -121,20 +122,25 @@ calcium should be created as a result of ion channels or receptors.
    The syntax of version 4 of the Kappa language is different from
    version 3, used by SpatialKappa. This may be updated in the future.
    
-  
+|
+
 Principle of integration
 ========================
 
 .. image:: images/integration.png
    :width: 400 px
 
-.. sidebar:: Implementation
+|
+
+   Implementation 
 
    KappaNEURON is a python module. It links NEURON and SpatialKappa
    via the ``rxd`` (reaction diffusion) subystem of NEURON 7.4 and the
    python interface to SpatialKappa, which in turn depends on the py4j
    module to link the Java core of SpatialKappa with python.
-           
+
+|
+
 KappaNEURON integrates the NEURON and SpatialKappa parts of the
 simulations by running them alternately every NEURON Δt (typically
 25μs), and synchronizing at every timestep so that the charge in the
@@ -157,7 +163,6 @@ The procedure KappaNEURON uses to update the time from t to t + Δt is:
 For full details of the integration see [Sterratt2015]_.
 
 
-
 Demonstration
 =============
 
@@ -166,6 +171,8 @@ code required to run the example simulation.
 
 References
 ==========
+
+|
 
 .. [Heil2018] Heil K. F., Wysocka. E., Sorokina, O., Kotaleski, J. H.,
               Simpson, T. I., Armstrong, J. D., Sterratt, D. C.
@@ -195,7 +202,7 @@ References
                   <https://doi.org/10.1007/978-3-319-27656-4_9>`_.
                   Preprint at `arXiv:1411.4980
                   <http://arxiv.org/abs/1411.4980>`_
-                       
+
 .. _KappaNEURON: https://github.com/davidcsterratt/KappaNEURON
 .. _SpatialKappa: https://github.com/davidcsterratt/SpatialKappa
 .. _SpatialKappa manual: https://github.com/davidcsterratt/SpatialKappa/blob/master/docs/manual/SpatialKappaManual-v2.1.0.pdf
