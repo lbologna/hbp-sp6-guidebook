@@ -87,6 +87,21 @@ From the **bottom** you can modify the ``connections`` and ``launch`` the simula
 
       |synapse_configurator|
 
+- You can modify the projection going to the circuit
+
+ - *Weight:* A scaling factor to adjust the synaptic strength (default = 1)
+ - *Minis Projection:* Frequency of the spontaneous activity
+ - *Spike Replay Projection:* Generate inputs based on distribution
+    - *Target:* From which cells the projection is coming
+    - *Frequency (Hz):* The Poisson mean rate
+    - *Type:* Type of projection (default = Poisson)
+
+   |projection_manipulation|
+
+   - If you want to modify a projection just click *configure* and a pop-up will appear
+
+      |projection_edition|
+
 - Launching a simulation will open a form to configure the parameters before executing the jobs on the supercomputer
 
  - *Title*: The title of the job
@@ -163,10 +178,11 @@ From the **middle** you are able to see:
 
    - *Analysis*: Plots of the analysis will be shown here
    - *BlueConfig*: The configuration that was sent to run the simulation
-   - *Unicore Logs*
    - *Files*: List of files that the simulation produced
-   - *Stderr*: Logs of the simulation
-   - *Stdout*: Output information of the simulation
+   - *Technical Logs*
+      - *Unicore Logs*
+      - *Stderr*: Logs of the simulation
+      - *Stdout*: Output information of the simulation
 
       |simulation_details_middle|
 
@@ -183,6 +199,8 @@ In ``Analysis`` section shows the different analysis the user has run
 .. |edit_report| image:: images/edit_report.png
 .. |connection_manipulation| image:: images/connection_manipulation.png
 .. |synapse_configurator| image:: images/synapse_configurator.png
+.. |projection_manipulation| image:: images/projection_manipulation.png
+.. |projection_edition| image:: images/projection_edition.png
 .. |run_simulation_form| image:: images/run_simulation_form.png
 .. |view_simulation| image:: images/view_simulation.png
 .. |view_simulation_top| image:: images/view_simulation_top.png
