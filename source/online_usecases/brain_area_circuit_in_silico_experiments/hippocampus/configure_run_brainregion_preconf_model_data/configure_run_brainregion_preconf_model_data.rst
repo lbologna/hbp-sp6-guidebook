@@ -1,3 +1,4 @@
+.. _conf_run_hippo_pre:
 
 Configure and run a rat hippocampus CA1 region using preconfigured HBP model and data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
