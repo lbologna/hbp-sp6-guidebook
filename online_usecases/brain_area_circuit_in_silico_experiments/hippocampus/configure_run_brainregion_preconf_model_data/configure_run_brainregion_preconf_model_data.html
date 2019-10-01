@@ -112,7 +112,7 @@
                 </aside>
 
                 <div class="section" id="configure-and-run-a-rat-hippocampus-ca1-region-using-preconfigured-hbp-model-and-data">
-<h1>Configure and run a rat hippocampus CA1 region using preconfigured HBP model and data<a class="headerlink" href="#configure-and-run-a-rat-hippocampus-ca1-region-using-preconfigured-hbp-model-and-data" title="Permalink to this headline">¶</a></h1>
+<span id="conf-run-hippo-pre"></span><h1>Configure and run a rat hippocampus CA1 region using preconfigured HBP model and data<a class="headerlink" href="#configure-and-run-a-rat-hippocampus-ca1-region-using-preconfigured-hbp-model-and-data" title="Permalink to this headline">¶</a></h1>
 <p>This use case allows a user to configure and launch a simulation on HBP HPAC infrastructure using <a class="reference external" href="https://www.unicore.eu/">Unicore API</a>.</p>
 <div class="section" id="run-simulations">
 <h2>Run Simulations<a class="headerlink" href="#run-simulations" title="Permalink to this headline">¶</a></h2>
@@ -218,6 +218,35 @@ synapse]</p>
 </ul>
 </div></blockquote>
 <ul class="simple">
+<li>You can modify the projection going to the circuit</li>
+</ul>
+<blockquote>
+<div><ul>
+<li><p class="first"><em>Weight:</em> A scaling factor to adjust the synaptic strength (default = 1)</p>
+</li>
+<li><p class="first"><em>Minis Projection:</em> Frequency of the spontaneous activity</p>
+</li>
+<li><dl class="first docutils">
+<dt><em>Spike Replay Projection:</em> Generate inputs based on distribution</dt>
+<dd><ul class="first last simple">
+<li><em>Target:</em> From which cells the projection is coming</li>
+<li><em>Frequency (Hz):</em> The Poisson mean rate</li>
+<li><em>Type:</em> Type of projection (default = Poisson)</li>
+</ul>
+</dd>
+</dl>
+<p><img alt="projection_manipulation" src="../../../../_images/projection_manipulation.png" /></p>
+<ul>
+<li><p class="first">If you want to modify a projection just click <em>configure</em> and a pop-up will appear</p>
+<blockquote>
+<div><p><img alt="projection_edition" src="../../../../_images/projection_edition.png" /></p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
 <li>Launching a simulation will open a form to configure the parameters before executing the jobs on the supercomputer</li>
 </ul>
 <blockquote>
@@ -314,16 +343,18 @@ the analysis on the supercomputer</p>
 </li>
 <li><p class="first"><em>BlueConfig</em>: The configuration that was sent to run the simulation</p>
 </li>
-<li><p class="first"><em>Unicore Logs</em></p>
-</li>
 <li><p class="first"><em>Files</em>: List of files that the simulation produced</p>
 </li>
-<li><p class="first"><em>Stderr</em>: Logs of the simulation</p>
-</li>
-<li><p class="first"><em>Stdout</em>: Output information of the simulation</p>
-<blockquote>
-<div><p><img alt="simulation_details_middle" src="../../../../_images/simulation_details_middle.png" /></p>
-</div></blockquote>
+<li><dl class="first docutils">
+<dt><em>Technical Logs</em></dt>
+<dd><ul class="first simple">
+<li><em>Unicore Logs</em></li>
+<li><em>Stderr</em>: Logs of the simulation</li>
+<li><em>Stdout</em>: Output information of the simulation</li>
+</ul>
+<p class="last"><img alt="simulation_details_middle" src="../../../../_images/simulation_details_middle.png" /></p>
+</dd>
+</dl>
 </li>
 </ul>
 </div></blockquote>
