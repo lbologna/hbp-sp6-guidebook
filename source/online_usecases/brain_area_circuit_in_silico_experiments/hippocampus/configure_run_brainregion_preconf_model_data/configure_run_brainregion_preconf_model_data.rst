@@ -13,7 +13,7 @@ Run Simulations
 
 ----------------
 
-From the **top** you can configure:
+In the **top section** you can configure:
 
    |run_simulation_top|
 
@@ -21,11 +21,11 @@ From the **top** you can configure:
 -  ``Duration``: Time length of stimulus duration, given in
    milliseconds(ms)
 -  ``View Simulations``: From here you can see all the history of
-   simulations (explained in section **2**)
+   simulations (explained in section **View Simulations**)
 
 --------------
 
-From the **middle** you can configure:
+In the **next section** you can configure:
 
    |run_simulation_middle|
 
@@ -44,7 +44,7 @@ From the **middle** you can configure:
          milliseconds(ms)
       -  *Duration*: Time length of stimulus duration, given in
          milliseconds(ms)
-      -  *Number of synapses*: The number of synapses to create
+      -  *Synapses per cell*: The number of synapses to create
       -  *Pattern*: Type of stimulus to inject
       -  *Lambda*: Configure the random distribution
       -  *Weight*: The strength of the created synapses
@@ -63,14 +63,14 @@ From the **middle** you can configure:
          synapse]
       -  *StartTime*: Time to start reporting(ms)
       -  *EndTime*: Time to stop reporting(ms)
-      -  *Dt*: The frequency of reporting in milliseconds(ms)
-      -  *Format*: Defines the report output format [Bin, ASCII, HDF5]
+      -  *dt*: The frequency of reporting in milliseconds(ms)
+      -  *Format*: Defines the report output format [Binary, ASCII, HDF5]
 
          |edit_report|
 
 --------------
 
-From the **bottom** you can modify the ``connections`` and ``launch`` the simulation
+In the **next section** you can modify the ``connections``, ``projections`` and ``launch`` the simulation
 
 - You can modify the connection between populations on the circuit specifying
 
@@ -78,7 +78,7 @@ From the **bottom** you can modify the ``connections`` and ``launch`` the simula
  - *Destination:* This target defines postsynaptic cells
  - *Delay (ms):* A delay after which the modifications are applied
  - *Weight:* A scaling factor to adjust the synaptic strength (default = 1)
- - *MinisFreq:* The Poisson mean rate for miniature events
+ - *MinisFreq:* The Poisson mean rate for spontaneous synaptic activity
  - *Synapse Configuration:* Snippets of hoc code to manipulate additional synaptic parameters
 
    |connection_manipulation|
@@ -90,11 +90,12 @@ From the **bottom** you can modify the ``connections`` and ``launch`` the simula
 - You can modify the projection going to the circuit
 
  - *Weight:* A scaling factor to adjust the synaptic strength (default = 1)
- - *Minis Projection:* Frequency of the spontaneous activity
- - *Spike Replay Projection:* Generate inputs based on distribution
+ - *Minis Projection:* Generate inputs based on spontaneous synaptic activity
+   - *Frequency (Hz):* Frequency of the spontaneous synaptic activity
+ - *Spike Replay Projection:* Generate inputs based on a given distribution
     - *Target:* From which cells the projection is coming
-    - *Frequency (Hz):* The Poisson mean rate
-    - *Type:* Type of projection (default = Poisson)
+    - *Frequency (Hz):* The input mean rate
+    - *Stimulus Type:* Type of distribution (default = Poisson)
 
    |projection_manipulation|
 
@@ -122,7 +123,7 @@ View Simulations
 
 --------------
 
-From the **top** you are able to: |view_simulation_top|
+In the **top section** you are able to:
 
 -  ``Filter`` by *Title*, *Status*, *Supercomputer*, *Project*
 -  ``Import Simulation`` providing the full path to simulation folder on that HPC
@@ -131,9 +132,7 @@ From the **top** you are able to: |view_simulation_top|
 
 --------------
 
-From the **middle** you are able to:
-
-|view_simulation_middle|
+In the **next section** you are able to:
 
 -  ``Check status`` of Simulation and Analysis steps:
 
@@ -142,19 +141,18 @@ From the **middle** you are able to:
    - aborted |block|
    - failed |error|
 
--  ``Run Analysis`` if no analysis was launched you can do it from the
-   analysis step
+-  ``View`` the details page of the simulation.
 
-   -  This will open a form to configure the parameters before executing
+-  ``Analyse`` will open a form to configure the parameters before executing
       the analysis on the supercomputer
 
-      -  *Title*: Title of the job
-      -  *Analysis*: Type of analysis to run
-      -  *Population*: Population cells used for the simulation
-      -  *Report*: Report created by the simulation
-      -  *Cells*: Number of random cells to analyze
+   -  *Title*: Title of the job UPDATE TEXT
+   -  *Analysis*: Type of analysis to run
+   -  *Population*: Population cells used for the simulation
+   -  *Report*: Report created by the simulation
+   -  *Cells*: Number of random cells to analyze
 
-         |run_analysis_form|
+      |run_analysis_form|
 
 -  ``Delete`` the simulation
 
@@ -163,7 +161,7 @@ Simulation Details
 
 |simulation_details|
 
-From the **top** you are able to see:
+In the **top section** you are able to see:
 
 |simulation_details_top|
 
@@ -174,7 +172,7 @@ From the **top** you are able to see:
    - *Status*
    - *Submission Date*
 
-From the **middle** you are able to see:
+In the **next section** you are able to see:
 
    - *Analysis*: Plots of the analysis will be shown here
    - *BlueConfig*: The configuration that was sent to run the simulation
@@ -186,7 +184,7 @@ From the **middle** you are able to see:
 
       |simulation_details_middle|
 
-In ``Analysis`` section shows the different analysis the user has run
+The ``Analysis`` section shows the different analyses the user has run
 
    |simulation_details_analysis|
 
