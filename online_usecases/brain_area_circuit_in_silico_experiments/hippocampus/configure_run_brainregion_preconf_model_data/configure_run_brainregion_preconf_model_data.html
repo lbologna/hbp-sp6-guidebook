@@ -118,7 +118,7 @@
 <h2>Run Simulations<a class="headerlink" href="#run-simulations" title="Permalink to this headline">¶</a></h2>
 <p><img alt="run_simulation" src="../../../../_images/run_simulation.png" /></p>
 <hr class="docutils" />
-<p>From the <strong>top</strong> you can configure:</p>
+<p>In the <strong>top section</strong> you can configure:</p>
 <blockquote>
 <div><img alt="run_simulation_top" src="../../../../_images/run_simulation_top.png" /></div></blockquote>
 <ul class="simple">
@@ -126,10 +126,10 @@
 <li><code class="docutils literal notranslate"><span class="pre">Duration</span></code>: Time length of stimulus duration, given in
 milliseconds(ms)</li>
 <li><code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Simulations</span></code>: From here you can see all the history of
-simulations (explained in section <strong>2</strong>)</li>
+simulations (explained in section <strong>View Simulations</strong>)</li>
 </ul>
 <hr class="docutils" />
-<p>From the <strong>middle</strong> you can configure:</p>
+<p>In the <strong>next section</strong> you can configure:</p>
 <blockquote>
 <div><img alt="run_simulation_middle" src="../../../../_images/run_simulation_middle.png" /></div></blockquote>
 <ul>
@@ -149,7 +149,7 @@ milliseconds(ms)</p>
 <li><p class="first"><em>Duration</em>: Time length of stimulus duration, given in
 milliseconds(ms)</p>
 </li>
-<li><p class="first"><em>Number of synapses</em>: The number of synapses to create</p>
+<li><p class="first"><em>Synapses per cell</em>: The number of synapses to create</p>
 </li>
 <li><p class="first"><em>Pattern</em>: Type of stimulus to inject</p>
 </li>
@@ -178,9 +178,9 @@ synapse]</p>
 </li>
 <li><p class="first"><em>EndTime</em>: Time to stop reporting(ms)</p>
 </li>
-<li><p class="first"><em>Dt</em>: The frequency of reporting in milliseconds(ms)</p>
+<li><p class="first"><em>dt</em>: The frequency of reporting in milliseconds(ms)</p>
 </li>
-<li><p class="first"><em>Format</em>: Defines the report output format [Bin, ASCII, HDF5]</p>
+<li><p class="first"><em>Format</em>: Defines the report output format [Binary, ASCII, HDF5]</p>
 <p><img alt="edit_report" src="../../../../_images/edit_report.png" /></p>
 </li>
 </ul>
@@ -189,7 +189,7 @@ synapse]</p>
 </li>
 </ul>
 <hr class="docutils" />
-<p>From the <strong>bottom</strong> you can modify the <code class="docutils literal notranslate"><span class="pre">connections</span></code> and <code class="docutils literal notranslate"><span class="pre">launch</span></code> the simulation</p>
+<p>In the <strong>next section</strong> you can modify the <code class="docutils literal notranslate"><span class="pre">connections</span></code>, <code class="docutils literal notranslate"><span class="pre">projections</span></code> and <code class="docutils literal notranslate"><span class="pre">launch</span></code> the simulation</p>
 <ul class="simple">
 <li>You can modify the connection between populations on the circuit specifying</li>
 </ul>
@@ -203,7 +203,7 @@ synapse]</p>
 </li>
 <li><p class="first"><em>Weight:</em> A scaling factor to adjust the synaptic strength (default = 1)</p>
 </li>
-<li><p class="first"><em>MinisFreq:</em> The Poisson mean rate for miniature events</p>
+<li><p class="first"><em>MinisFreq:</em> The Poisson mean rate for spontaneous synaptic activity</p>
 </li>
 <li><p class="first"><em>Synapse Configuration:</em> Snippets of hoc code to manipulate additional synaptic parameters</p>
 <p><img alt="connection_manipulation" src="../../../../_images/connection_manipulation.png" /></p>
@@ -224,14 +224,15 @@ synapse]</p>
 <div><ul>
 <li><p class="first"><em>Weight:</em> A scaling factor to adjust the synaptic strength (default = 1)</p>
 </li>
-<li><p class="first"><em>Minis Projection:</em> Frequency of the spontaneous activity</p>
+<li><p class="first"><em>Minis Projection:</em> Generate inputs based on spontaneous synaptic activity
+- <em>Frequency (Hz):</em> Frequency of the spontaneous synaptic activity</p>
 </li>
 <li><dl class="first docutils">
-<dt><em>Spike Replay Projection:</em> Generate inputs based on distribution</dt>
+<dt><em>Spike Replay Projection:</em> Generate inputs based on a given distribution</dt>
 <dd><ul class="first last simple">
 <li><em>Target:</em> From which cells the projection is coming</li>
-<li><em>Frequency (Hz):</em> The Poisson mean rate</li>
-<li><em>Type:</em> Type of projection (default = Poisson)</li>
+<li><em>Frequency (Hz):</em> The input mean rate</li>
+<li><em>Stimulus Type:</em> Type of distribution (default = Poisson)</li>
 </ul>
 </dd>
 </dl>
@@ -275,7 +276,7 @@ synapse]</p>
 <h2>View Simulations<a class="headerlink" href="#view-simulations" title="Permalink to this headline">¶</a></h2>
 <p><img alt="view_simulation" src="../../../../_images/view_simulation.png" /></p>
 <hr class="docutils" />
-<p>From the <strong>top</strong> you are able to: <img alt="view_simulation_top" src="../../../../_images/view_simulation_top.png" /></p>
+<p>In the <strong>top section</strong> you are able to:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">Filter</span></code> by <em>Title</em>, <em>Status</em>, <em>Supercomputer</em>, <em>Project</em></li>
 <li><code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Simulation</span></code> providing the full path to simulation folder on that HPC</li>
@@ -283,8 +284,7 @@ synapse]</p>
 simuation</em> page</li>
 </ul>
 <hr class="docutils" />
-<p>From the <strong>middle</strong> you are able to:</p>
-<p><img alt="view_simulation_middle" src="../../../../_images/view_simulation_middle.png" /></p>
+<p>In the <strong>next section</strong> you are able to:</p>
 <ul>
 <li><p class="first"><code class="docutils literal notranslate"><span class="pre">Check</span> <span class="pre">status</span></code> of Simulation and Analysis steps:</p>
 <ul class="simple">
@@ -294,13 +294,15 @@ simuation</em> page</li>
 <li>failed <img alt="error" src="../../../../_images/error.png" /></li>
 </ul>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">Analysis</span></code> if no analysis was launched you can do it from the
-analysis step</p>
+<li><p class="first"><code class="docutils literal notranslate"><span class="pre">View</span></code> the details page of the simulation.</p>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal notranslate"><span class="pre">Analyse</span></code> will open a form to configure the parameters before executing</dt>
+<dd><p class="first last">the analysis on the supercomputer</p>
+</dd>
+</dl>
 <ul>
-<li><p class="first">This will open a form to configure the parameters before executing
-the analysis on the supercomputer</p>
-<ul>
-<li><p class="first"><em>Title</em>: Title of the job</p>
+<li><p class="first"><em>Title</em>: Title of the job UPDATE TEXT</p>
 </li>
 <li><p class="first"><em>Analysis</em>: Type of analysis to run</p>
 </li>
@@ -313,8 +315,6 @@ the analysis on the supercomputer</p>
 </li>
 </ul>
 </li>
-</ul>
-</li>
 <li><p class="first"><code class="docutils literal notranslate"><span class="pre">Delete</span></code> the simulation</p>
 </li>
 </ul>
@@ -322,7 +322,7 @@ the analysis on the supercomputer</p>
 <div class="section" id="simulation-details">
 <h2>Simulation Details<a class="headerlink" href="#simulation-details" title="Permalink to this headline">¶</a></h2>
 <p><img alt="simulation_details" src="../../../../_images/simulation_details.png" /></p>
-<p>From the <strong>top</strong> you are able to see:</p>
+<p>In the <strong>top section</strong> you are able to see:</p>
 <p><img alt="simulation_details_top" src="../../../../_images/simulation_details_top.png" /></p>
 <ul>
 <li><p class="first"><code class="docutils literal notranslate"><span class="pre">Simulation</span></code> with the following information</p>
@@ -336,7 +336,7 @@ the analysis on the supercomputer</p>
 </div></blockquote>
 </li>
 </ul>
-<p>From the <strong>middle</strong> you are able to see:</p>
+<p>In the <strong>next section</strong> you are able to see:</p>
 <blockquote>
 <div><ul>
 <li><p class="first"><em>Analysis</em>: Plots of the analysis will be shown here</p>
@@ -358,7 +358,7 @@ the analysis on the supercomputer</p>
 </li>
 </ul>
 </div></blockquote>
-<p>In <code class="docutils literal notranslate"><span class="pre">Analysis</span></code> section shows the different analysis the user has run</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Analysis</span></code> section shows the different analyses the user has run</p>
 <blockquote>
 <div><img alt="simulation_details_analysis" src="../../../../_images/simulation_details_analysis.png" /></div></blockquote>
 </div>
