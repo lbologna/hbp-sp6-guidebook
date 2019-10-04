@@ -6,102 +6,88 @@ Configure and run a rat hippocampus CA1 region using preconfigured HBP model and
 
 This use case allows a user to configure and launch a simulation on HBP HPAC infrastructure using `Unicore API <https://www.unicore.eu/>`__.
 
+===============
 Run Simulations
 ===============
 
 |run_simulation|
 
-----------------
 
-In the **top section** you can configure:
-
-   |run_simulation_top|
+In the **Section 1)** you can configure:
 
 -  ``Population``: Population of cells to be loaded by the simulator.
 -  ``Duration``: Time length of stimulus duration, given in
    milliseconds(ms)
 -  ``View Simulations``: From here you can see all the history of
-   simulations (explained in section **View Simulations**)
+   simulations (explained in page `View Simulations <#view-simulations>`_)
 
---------------
 
-In the **next section** you can configure:
+In the **Section 2)** you can configure:
 
-   |run_simulation_middle|
 
--  ``add`` new stimulus/report, ``edit`` or ``remove`` (You can also
+-  Using the buttons |edit_buttons| you can ``add``, ``edit`` or ``remove`` new stimulus/report (You can also
    double-click on the timeline to add or edit)
 
-   |edit_buttons|
+-  ``Stimulations`` configuration:
 
+  -  *Population*: Name of a population to receive the stimulation
+  -  *Delay*: Time when the stimulus commences, given in
+     milliseconds(ms)
+  -  *Duration*: Time length of stimulus duration, given in
+     milliseconds(ms)
+  -  *Pattern*: Type of stimulus to inject
+  -  *Synapses per cell*: The number of synapses to create
+  -  *Lambda*: Configure the random distribution
+  -  *Weight*: The strength of the created synapses
 
--  ``Stimulations``
-
-   -  For creation or edition of the item a form will appear
-
-      -  *Population*: Name of a population to receive the stimulation
-      -  *Delay*: Time when the stimulus commences, given in
-         milliseconds(ms)
-      -  *Duration*: Time length of stimulus duration, given in
-         milliseconds(ms)
-      -  *Synapses per cell*: The number of synapses to create
-      -  *Pattern*: Type of stimulus to inject
-      -  *Lambda*: Configure the random distribution
-      -  *Weight*: The strength of the created synapses
-
-         |edit_stimulus|
+    |edit_stimulus|
 
 -  ``Reports``
 
-   -  For creation or edition of the item a form will appear
+  -  *Population*: Defines the region from where the data will be reported.
+  -  *StartTime*: Time to start reporting(ms)
+  -  *EndTime*: Time to stop reporting(ms)
+  -  *Compartments*: Compartment means that each compartment outputs
+     separately in the report file. Synapse indicates that each
+     synapse will have a separate entry in the report [compartment,
+     synapse]
+  -  *ReportOn*: What to report while recording [Voltage, Calcium Concentration, Current Summation (for LFP), All Currents Summation]
+  -  *dt*: The frequency of reporting in milliseconds(ms)
+  -  *Format*: Defines the report output format [Binary, ASCII, HDF5]
 
-      -  *Population*: Defines the region from where the data will be
-         reported.
-      -  *Type*: Compartment means that each compartment outputs
-         separately in the report file. Synapse indicates that each
-         synapse will have a separate entry in the report [compartment,
-         synapse]
-      -  *StartTime*: Time to start reporting(ms)
-      -  *EndTime*: Time to stop reporting(ms)
-      -  *dt*: The frequency of reporting in milliseconds(ms)
-      -  *Format*: Defines the report output format [Binary, ASCII, HDF5]
+    |edit_report|
 
-         |edit_report|
 
---------------
+In the **Section 3)** you can modify the **connection** between populations on the circuit specifying:
 
-In the **next section** you can modify the ``connections``, ``projections`` and ``launch`` the simulation
+- *Source:* This target defines presynaptic cells
+- *Destination:* This target defines postsynaptic cells
+- *Delay (ms):* A delay after which the modifications are applied
+- *Weight:* A scaling factor to adjust the synaptic strength (default = 1)
+- *MinisFreq:* The Poisson mean rate for spontaneous synaptic activity
+- *Synapse Configuration:* Snippets of hoc code to manipulate additional synaptic parameters
 
-- You can modify the connection between populations on the circuit specifying
+  |connection_manipulation|
 
- - *Source:* This target defines presynaptic cells
- - *Destination:* This target defines postsynaptic cells
- - *Delay (ms):* A delay after which the modifications are applied
- - *Weight:* A scaling factor to adjust the synaptic strength (default = 1)
- - *MinisFreq:* The Poisson mean rate for spontaneous synaptic activity
- - *Synapse Configuration:* Snippets of hoc code to manipulate additional synaptic parameters
+  - If you want to modify a synpase just click *configure* and a pop-up will appear
 
-   |connection_manipulation|
+    |synapse_configurator|
 
-   - If you want to modify a synpase just click *configure* and a pop-up will appear
+In the **Section 4)**  you can modify the **projection** going to the circuit
 
-      |synapse_configurator|
+- *Weight:* A scaling factor to adjust the synaptic strength (default = 1)
+- *Minis Projection:* Generate inputs based on spontaneous synaptic activity
+  - *Frequency (Hz):* Frequency of the spontaneous synaptic activity
+- *Spike Replay Projection:* Generate inputs based on a given distribution
+  - *Target:* From which cells the projection is coming
+  - *Frequency (Hz):* The input mean rate
+  - *Stimulus Type:* Type of distribution (default = Poisson)
 
-- You can modify the projection going to the circuit
+    |projection_manipulation|
 
- - *Weight:* A scaling factor to adjust the synaptic strength (default = 1)
- - *Minis Projection:* Generate inputs based on spontaneous synaptic activity
-   - *Frequency (Hz):* Frequency of the spontaneous synaptic activity
- - *Spike Replay Projection:* Generate inputs based on a given distribution
-    - *Target:* From which cells the projection is coming
-    - *Frequency (Hz):* The input mean rate
-    - *Stimulus Type:* Type of distribution (default = Poisson)
+  - If you want to modify a projection just click *configure* and a pop-up will appear
 
-   |projection_manipulation|
-
-   - If you want to modify a projection just click *configure* and a pop-up will appear
-
-      |projection_edition|
+    |projection_edition|
 
 - Launching a simulation will open a form to configure the parameters before executing the jobs on the supercomputer
 
@@ -116,23 +102,26 @@ In the **next section** you can modify the ``connections``, ``projections`` and 
 
    |run_simulation_form|
 
+
+--------------
+
+================
 View Simulations
 ================
 
 |view_simulation|
 
---------------
 
-In the **top section** you are able to:
+
+In the **Section 1)** you are able to:
 
 -  ``Filter`` by *Title*, *Status*, *Supercomputer*, *Project*
 -  ``Import Simulation`` providing the full path to simulation folder on that HPC
 -  ``Launch Simulation``: this goes back to *Configure and Launch
    simuation* page
 
---------------
 
-In the **next section** you are able to:
+In the **Section 2)** you are able to:
 
 -  ``Check status`` of Simulation and Analysis steps:
 
@@ -143,10 +132,9 @@ In the **next section** you are able to:
 
 -  ``View`` the details page of the simulation.
 
--  ``Analyse`` will open a form to configure the parameters before executing
-      the analysis on the supercomputer
+-  ``Analyse`` will open a form to configure the parameters before executing the analysis on the supercomputer
 
-   -  *Title*: Title of the job UPDATE TEXT
+   -  *Title*: Title of the job
    -  *Analysis*: Type of analysis to run
    -  *Population*: Population cells used for the simulation
    -  *Report*: Report created by the simulation
@@ -156,37 +144,37 @@ In the **next section** you are able to:
 
 -  ``Delete`` the simulation
 
+--------------
+
+
+==================
 Simulation Details
 ==================
 
 |simulation_details|
 
-In the **top section** you are able to see:
-
-|simulation_details_top|
+In the **Section 1)** you are able to see:
 
 - ``Simulation`` with the following information
 
-   - *Name*
-   - *ID*
-   - *Status*
-   - *Submission Date*
+  - *Name*
+  - *ID*
+  - *Status*
+  - *Submission Date*
 
-In the **next section** you are able to see:
+In the **Section 2)** you are able to see:
 
-   - *Analysis*: Plots of the analysis will be shown here
-   - *BlueConfig*: The configuration that was sent to run the simulation
-   - *Files*: List of files that the simulation produced
-   - *Technical Logs*
-      - *Unicore Logs*
-      - *Stderr*: Logs of the simulation
-      - *Stdout*: Output information of the simulation
-
-      |simulation_details_middle|
+  - *Analysis*: Plots of the analysis will be shown here
+  - *BlueConfig*: The configuration that was sent to run the simulation
+  - *Files*: List of files that the simulation produced
+  - *Technical Logs*:
+    - *Unicore Logs*
+    - *Stderr*: Logs of the simulation
+    - *Stdout*: Output information of the simulation
 
 The ``Analysis`` section shows the different analyses the user has run
 
-   |simulation_details_analysis|
+  |simulation_details_analysis|
 
 
 .. |run_simulation| image:: images/run_simulation.png
