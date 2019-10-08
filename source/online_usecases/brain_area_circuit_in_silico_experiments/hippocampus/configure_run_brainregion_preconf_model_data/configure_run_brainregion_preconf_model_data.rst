@@ -45,16 +45,13 @@ In the **Section 2)** you can configure:
 
 -  ``Reports``
 
-  -  *Population*: Defines the region from where the data will be reported.
+  -  *Population*: Defines the population from where the data will be reported.
   -  *StartTime*: Time to start reporting(ms)
   -  *EndTime*: Time to stop reporting(ms)
-  -  *Compartments*: Compartment means that each compartment outputs
-     separately in the report file. Synapse indicates that each
-     synapse will have a separate entry in the report [compartment,
-     synapse]
-  -  *ReportOn*: What to report while recording [Voltage, Calcium Concentration, Current Summation (for LFP), All Currents Summation]
+  -  *Compartments*: Which compartment(s) to report [Soma = compartment, Soma + Dendrites = AllCompartments]
+  -  *ReportOn*: What to report [Voltage, Calcium Concentration, Current Summation (for LFP), All Currents Summation]
   -  *dt*: The frequency of reporting in milliseconds(ms)
-  -  *Format*: Defines the report output format [Binary, ASCII, HDF5]
+  -  *Format*: Defines the report output format [Binary (.bbp), ASCII, HDF5]
 
     |edit_report|
 
@@ -179,8 +176,6 @@ The ``Analysis`` section shows the different analyses the user has run
 
 
 .. |run_simulation| image:: images/run_simulation.png
-.. |run_simulation_top| image:: images/run_simulation_top.png
-.. |run_simulation_middle| image:: images/run_simulation_middle.png
 .. |edit_buttons| image:: images/edit_buttons.png
 .. |edit_stimulus| image:: images/edit_stimulus.png
 .. |edit_report| image:: images/edit_report.png
@@ -190,14 +185,10 @@ The ``Analysis`` section shows the different analyses the user has run
 .. |projection_edition| image:: images/projection_edition.png
 .. |run_simulation_form| image:: images/run_simulation_form.png
 .. |view_simulation| image:: images/view_simulation.png
-.. |view_simulation_top| image:: images/view_simulation_top.png
-.. |view_simulation_middle| image:: images/view_simulation_middle.png
 .. |done| image:: images/done.png
 .. |sync| image:: images/sync.png
 .. |block| image:: images/block.png
 .. |error| image:: images/error.png
 .. |run_analysis_form| image:: images/run_analysis_form.png
 .. |simulation_details| image:: images/simulation_details.png
-.. |simulation_details_middle| image:: images/simulation_details_middle.png
 .. |simulation_details_analysis| image:: images/simulation_details_analysis.png
-.. |simulation_details_top| image:: images/simulation_details_top.png
