@@ -49,7 +49,7 @@ In the **Section 2)** you can configure:
   -  *StartTime*: Time to start reporting(ms)
   -  *EndTime*: Time to stop reporting(ms)
   -  *Compartments*: Which compartment(s) to report [Soma = compartment, Soma + Dendrites = AllCompartments]
-  -  *ReportOn*: What to report [Voltage, Calcium Concentration, Current Summation (for LFP), All Currents Summation]
+  -  *ReportOn*: What to report [Voltage, Calcium Concentration, Current Summation (for LFP)]
   -  *dt*: The frequency of reporting in milliseconds(ms)
   -  *Format*: Defines the report output format [Binary (.bbp), ASCII, HDF5]
 
@@ -77,6 +77,7 @@ In the **Section 4)**  you can modify the **projection** going to the circuit
 - *Minis Projection:* Generate inputs based on spontaneous synaptic activity
   - *Frequency (Hz):* Frequency of the spontaneous synaptic activity
 - *Spike Replay Projection:* Generate inputs based on a given distribution
+
   - *Target:* From which cells the projection is coming
   - *Frequency (Hz):* The input mean rate
   - *Stimulus Type:* Type of distribution (default = Poisson)
@@ -166,6 +167,7 @@ In the **Section 2)** you are able to see:
   - *BlueConfig*: The configuration that was sent to run the simulation
   - *Files*: List of files that the simulation produced
   - *Technical Logs*:
+
     - *Unicore Logs*
     - *Stderr*: Logs of the simulation
     - *Stdout*: Output information of the simulation

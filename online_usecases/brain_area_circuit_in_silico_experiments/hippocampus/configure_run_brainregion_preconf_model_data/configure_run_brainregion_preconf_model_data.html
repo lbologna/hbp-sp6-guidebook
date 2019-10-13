@@ -155,7 +155,7 @@ milliseconds(ms)</li>
 <li><em>StartTime</em>: Time to start reporting(ms)</li>
 <li><em>EndTime</em>: Time to stop reporting(ms)</li>
 <li><em>Compartments</em>: Which compartment(s) to report [Soma = compartment, Soma + Dendrites = AllCompartments]</li>
-<li><em>ReportOn</em>: What to report [Voltage, Calcium Concentration, Current Summation (for LFP), All Currents Summation]</li>
+<li><em>ReportOn</em>: What to report [Voltage, Calcium Concentration, Current Summation (for LFP)]</li>
 <li><em>dt</em>: The frequency of reporting in milliseconds(ms)</li>
 <li><em>Format</em>: Defines the report output format [Binary (.bbp), ASCII, HDF5]</li>
 </ul>
@@ -190,14 +190,15 @@ milliseconds(ms)</li>
 <li><p class="first"><em>Minis Projection:</em> Generate inputs based on spontaneous synaptic activity
 - <em>Frequency (Hz):</em> Frequency of the spontaneous synaptic activity</p>
 </li>
-<li><p class="first"><em>Spike Replay Projection:</em> Generate inputs based on a given distribution
-- <em>Target:</em> From which cells the projection is coming
-- <em>Frequency (Hz):</em> The input mean rate
-- <em>Stimulus Type:</em> Type of distribution (default = Poisson)</p>
-<blockquote>
-<div><p><img alt="projection_manipulation" src="../../../../_images/projection_manipulation.png" /></p>
-</div></blockquote>
+<li><p class="first"><em>Spike Replay Projection:</em> Generate inputs based on a given distribution</p>
 <ul>
+<li><p class="first"><em>Target:</em> From which cells the projection is coming</p>
+</li>
+<li><p class="first"><em>Frequency (Hz):</em> The input mean rate</p>
+</li>
+<li><p class="first"><em>Stimulus Type:</em> Type of distribution (default = Poisson)</p>
+<p><img alt="projection_manipulation" src="../../../../_images/projection_manipulation.png" /></p>
+</li>
 <li><p class="first">If you want to modify a projection just click <em>configure</em> and a pop-up will appear</p>
 <p><img alt="projection_edition" src="../../../../_images/projection_edition.png" /></p>
 </li>
@@ -290,10 +291,12 @@ simuation</em> page</li>
 <li><em>Analysis</em>: Plots of the analysis will be shown here</li>
 <li><em>BlueConfig</em>: The configuration that was sent to run the simulation</li>
 <li><em>Files</em>: List of files that the simulation produced</li>
-<li><em>Technical Logs</em>:
-- <em>Unicore Logs</em>
-- <em>Stderr</em>: Logs of the simulation
-- <em>Stdout</em>: Output information of the simulation</li>
+<li><em>Technical Logs</em>:<ul>
+<li><em>Unicore Logs</em></li>
+<li><em>Stderr</em>: Logs of the simulation</li>
+<li><em>Stdout</em>: Output information of the simulation</li>
+</ul>
+</li>
 </ul>
 </div></blockquote>
 <p>The <code class="docutils literal notranslate"><span class="pre">Analysis</span></code> section shows the different analyses the user has run</p>
