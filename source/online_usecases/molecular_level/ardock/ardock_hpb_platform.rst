@@ -36,7 +36,7 @@ Targeted audience
 -----------------
 All scientists working in biology related areas where protein study is relevant with a focus on structural biologists and biochemists.
 
-Additional ressources
+Additional resources
 ---------------------
 * A `tutorial <https://ardock.ibcp.fr/tutorial>`_ was set up by the Ardock team
 * Publications describing `methods <https://www.ncbi.nlm.nih.gov/pubmed/22559010>`_ and `implementations <https://www.ncbi.nlm.nih.gov/pubmed/29905873>`_
