@@ -1,0 +1,191 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The ARDOCK service &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/load_ga.js"></script>
+    <script type="text/javascript" src="../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Subcellular level" href="../../subcellular_level/subcellular_level.html" />
+    <link rel="prev" title="Molecular level" href="../molecular_level.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The ARDOCK service</a><ul>
+<li><a class="reference internal" href="#scientific-purposes">Scientific Purposes</a></li>
+<li><a class="reference internal" href="#how-it-works">How it works ?</a></li>
+<li><a class="reference internal" href="#inputs">Inputs</a></li>
+<li><a class="reference internal" href="#outputs">Outputs</a></li>
+<li><a class="reference internal" href="#targeted-audience">Targeted audience</a></li>
+<li><a class="reference internal" href="#additional-resources">Additional resources</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../molecular_level.html"
+                        title="previous chapter">Molecular level</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../subcellular_level/subcellular_level.html"
+                        title="next chapter">Subcellular level</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/online_usecases/molecular_level/ardock/ardock_hpb_platform.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../molecular_level.html">Molecular level</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../molecular_level.html">Molecular level</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../../subcellular_level/subcellular_level.html">Subcellular level</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="the-ardock-service">
+<h1>The ARDOCK service<a class="headerlink" href="#the-ardock-service" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="scientific-purposes">
+<h2>Scientific Purposes<a class="headerlink" href="#scientific-purposes" title="Permalink to this headline">¶</a></h2>
+<p>ArDock is a structural bioinformatics web server for the prediction and the visualization of
+potential interaction regions at protein surfaces. Many biological function rely on the
+formation of protein-protein complexes. The identification protein interaction region is
+therefore of critical interest for our understanding of biology. The service is accessible
+through a web interface, both for submission and the reporting of results.</p>
+</div>
+<div class="section" id="how-it-works">
+<h2>How it works ?<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>ArDock&nbsp;ranks&nbsp;the&nbsp;surface&nbsp;residues&nbsp;of&nbsp;a&nbsp;protein&nbsp;according&nbsp;to&nbsp;their&nbsp;tendency&nbsp;to&nbsp;form&nbsp;interfaces
+in&nbsp;a&nbsp;set&nbsp;of&nbsp;predefined&nbsp;docking&nbsp;experiments&nbsp;between&nbsp;the&nbsp;query&nbsp;protein&nbsp;and&nbsp;a&nbsp;set&nbsp;of&nbsp;arbitrary
+protein&nbsp;probes.&nbsp;The&nbsp;ArDock&nbsp;methodology&nbsp;is&nbsp;derived&nbsp;from&nbsp;large&nbsp;scale&nbsp;cross-docking&nbsp;studies&nbsp;where
+it&nbsp;was&nbsp;observed&nbsp;that&nbsp;randomly&nbsp;chosen&nbsp;proteins&nbsp;tend&nbsp;to&nbsp;dock&nbsp;in&nbsp;a&nbsp;non-random&nbsp;way&nbsp;at&nbsp;protein&nbsp;surfaces.
+This&nbsp;method&nbsp;is&nbsp;implemented&nbsp;on&nbsp;a computational&nbsp;cluster,&nbsp;where&nbsp;docking&nbsp;calculations&nbsp;run&nbsp;in&nbsp;parallel
+and&nbsp;results&nbsp;are&nbsp;aggregated&nbsp;and&nbsp;returned&nbsp;to&nbsp;the&nbsp;web client.</p>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>A protein structure in <a class="reference external" href="http://www.rcsb.org">PDB format</a></li>
+<li>Tokens&nbsp;obtained&nbsp;in&nbsp;previous&nbsp;analysis&nbsp;can&nbsp;be&nbsp;given&nbsp;to&nbsp;the server&nbsp;to&nbsp;restore&nbsp;their&nbsp;results</li>
+</ul>
+</div>
+<div class="section" id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Interactive and 3D vizualisation of the results on the protein structure</li>
+<li>Interactive scoreboard of the protein residue scores</li>
+<li>Result files available for download in CSV and PDB formats</li>
+</ul>
+</div>
+<div class="section" id="targeted-audience">
+<h2>Targeted audience<a class="headerlink" href="#targeted-audience" title="Permalink to this headline">¶</a></h2>
+<p>All scientists working in biology related areas where protein study is relevant with a focus on structural biologists and biochemists.</p>
+</div>
+<div class="section" id="additional-resources">
+<h2>Additional resources<a class="headerlink" href="#additional-resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>A <a class="reference external" href="https://ardock.ibcp.fr/tutorial">tutorial</a> was set up by the Ardock team</li>
+<li>Publications describing <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/22559010">methods</a> and <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/29905873">implementations</a></li>
+<li>The public database of protein structures is avaible at <a class="reference external" href="http://rcsb.org">the PDB web site</a></li>
+</ul>
+</div>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../molecular_level.html">Molecular level</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../../subcellular_level/subcellular_level.html">Subcellular level</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>

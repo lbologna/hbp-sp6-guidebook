@@ -1,15 +1,12 @@
 .. _molecular_level:
 
 ###############
-Molecular Level
+Molecular level
 ###############
-
-Presentation paragraph
 
 .. toctree::
     :maxdepth: 4
 
-    bioactive_conformers/bioactive_conformers
-    protein_trajectories/protein_trajectories
-
+    ardock/ardock_hpb_platform
+               
 
