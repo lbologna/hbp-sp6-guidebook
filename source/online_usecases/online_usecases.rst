@@ -7,6 +7,7 @@ Online Use Cases
 .. toctree::
     :maxdepth: 4
 
+    molecular_level/molecular_level
     subcellular_level/subcellular_level
     trace_analysis/trace_analysis
     morphology_analysis/morphology_analysis
