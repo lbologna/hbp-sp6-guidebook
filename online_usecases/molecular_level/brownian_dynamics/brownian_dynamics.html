@@ -114,10 +114,10 @@
 <h1>Analyse the results of a Brownian dynamics (BD) simulation for calculating protein-protein association rate constants<a class="headerlink" href="#analyse-the-results-of-a-brownian-dynamics-bd-simulation-for-calculating-protein-protein-association-rate-constants" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>In this use case, we analyse the results of BD simulations of the association of the <span class="math notranslate nohighlight">\(G_olf\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span> - subunit to the enzyme adenylyl cyclase 5 (AC5) [An upcoming use case “Set Up a Brownian Dynamics simulation for calculation of protein association rate constant” will explain how to set up and run these simulations].</p>
+<p>In this use case, we analyse the results of BD simulations of the association of the <span class="math notranslate nohighlight">\(G_{olf}\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span> - subunit to the enzyme adenylyl cyclase 5 (AC5) [An upcoming use case “Set Up a Brownian Dynamics simulation for calculation of protein association rate constant” will explain how to set up and run these simulations].</p>
 <p>This use case will explain:</p>
 <ul class="simple">
-<li>The functionality provided by SDA to calculate the biomolecular rate of <span class="math notranslate nohighlight">\(G_olf\)</span> associating to AC5 by analyzing the contact formation between the two protein species during a set of 50 000 completed Brownian dynamics simulation trajectories.</li>
+<li>The functionality provided by SDA to calculate the biomolecular rate of <span class="math notranslate nohighlight">\(G_{olf}\)</span> associating to AC5 by analyzing the contact formation between the two protein species during a set of 50 000 completed Brownian dynamics simulation trajectories.</li>
 <li>The use of a bootstrapping procedure to estimate the error in the predicted rates.</li>
 <li>The use of matplotlib to plot the dependence of association rates on how we define the end point of association based on contact formation.</li>
 </ul>
@@ -148,32 +148,32 @@
 <div class="figure">
 <a class="reference internal image-reference" href="https://projects.h-its.org/mcmsoft/hbpdata/sda_bsurface_csurface.gif"><img alt="https://projects.h-its.org/mcmsoft/hbpdata/sda_bsurface_csurface.gif" src="https://projects.h-its.org/mcmsoft/hbpdata/sda_bsurface_csurface.gif" style="width: 300pt;" /></a>
 </div>
-<p>During each trajectory, we monitor the formation of polar contacts present in the native state of the complex formed by the two solutes. If we define a set of reaction criteria that means that a reactive encounter occurs when <em>N</em> native contacts are within a certain distance, we can calculate the fraction <span class="math notranslate nohighlight">\(\beta\)</span> of our trajectories in which these criteria are met, and estimate the bimolecular association rate constant <span class="math notranslate nohighlight">\(k_on\)</span> from</p>
+<p>During each trajectory, we monitor the formation of polar contacts present in the native state of the complex formed by the two solutes. If we define a set of reaction criteria that means that a reactive encounter occurs when <em>N</em> native contacts are within a certain distance, we can calculate the fraction <span class="math notranslate nohighlight">\(\beta\)</span> of our trajectories in which these criteria are met, and estimate the bimolecular association rate constant <span class="math notranslate nohighlight">\(k_{on}\)</span> from</p>
 <div class="math notranslate nohighlight">
 \[k_{on} = \frac{k_b\beta}{1-(1-\beta)\frac{k_b}{k_c}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(k_b\)</span> and <span class="math notranslate nohighlight">\(k_c\)</span> are the rates at which the solutes diffuse to separations <em>b</em> and <em>c</em>, respectively. If we assume the interactions between the solutes do not depend on their relative orientations at these large distances, these rates can be calculated analytically.</p>
 </div>
 <div class="section" id="input-data">
 <h2>Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h2>
-<p>In this example, we estimate the the rate constant of <span class="math notranslate nohighlight">\(G_olf\)</span> associating to AC5 using a reaction criterion of two contacts at a distance of 6 <em>Angstrom</em>.
+<p>In this example, we estimate the the rate constant of <span class="math notranslate nohighlight">\(G_{olf}\)</span> associating to AC5 using a reaction criterion of two contacts at a distance of 6 <em>Angstrom</em>.
 For this, we downloaded a file called <em>assoc_bootstrap.log</em> from CSCS storage. This file gives a concise representation of the results of 50 000 Brownian dynamics simulation trajectories. The header to the file gives some information about the simulations that have been run.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="14%" />
-<col width="12%" />
+<col width="11%" />
 <col width="20%" />
 <col width="21%" />
 <col width="14%" />
-<col width="14%" />
+<col width="15%" />
 <col width="5%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head"><span class="math notranslate nohighlight">\(nb_contact\)</span></th>
-<th class="head"><span class="math notranslate nohighlight">\(nb_win\)</span></th>
-<th class="head"><span class="math notranslate nohighlight">\(first_win\)</span> <em>Angstrom</em></th>
-<th class="head"><span class="math notranslate nohighlight">\(width_win\)</span> <em>Angstrom</em></th>
-<th class="head"><span class="math notranslate nohighlight">\(b_rate\)</span> 1/Ms</th>
-<th class="head"><span class="math notranslate nohighlight">\(c_rate\)</span> 1/Ms</th>
+<tr class="row-odd"><th class="head"><span class="math notranslate nohighlight">\(nb_{contact}\)</span></th>
+<th class="head"><span class="math notranslate nohighlight">\(nb_{win}\)</span></th>
+<th class="head"><span class="math notranslate nohighlight">\(first_{win}\)</span> <em>Angstrom</em></th>
+<th class="head"><span class="math notranslate nohighlight">\(width_{win}\)</span> <em>Angstrom</em></th>
+<th class="head"><span class="math notranslate nohighlight">\(b_{rate}\)</span> 1/Ms</th>
+<th class="head"><span class="math notranslate nohighlight">\(c_{rate}\)</span> 1/Ms</th>
 <th class="head">nrun</th>
 </tr>
 </thead>
@@ -188,7 +188,7 @@ For this, we downloaded a file called <em>assoc_bootstrap.log</em> from CSCS sto
 </tr>
 </tbody>
 </table>
-<p>In each trajectory, we monitor the formation of up to <span class="math notranslate nohighlight">\(nb_contact\)</span> native contacts over <span class="math notranslate nohighlight">\(nb_wind\)</span> distance windows of <span class="math notranslate nohighlight">\(width_win\)</span>, starting from a distance of <span class="math notranslate nohighlight">\(first_win\)</span>. The <span class="math notranslate nohighlight">\(b_rate\)</span> and <span class="math notranslate nohighlight">\(c_rate\)</span>, correspond to <span class="math notranslate nohighlight">\(k_b\)</span> and <span class="math notranslate nohighlight">\(k_c\)</span> in the equation above. In total, <em>nrun</em> trajectories were run. The rest of the file is separated into sections corresponding to each number of contacts that we monitor. Each line represents a single trajectory, and contains a number showing the closest window at which that number of contacts was obtained during the trajectory.</p>
+<p>In each trajectory, we monitor the formation of up to <span class="math notranslate nohighlight">\(nb_{contact}\)</span> native contacts over <span class="math notranslate nohighlight">\(nb_{wind}\)</span> distance windows of <span class="math notranslate nohighlight">\(width_{win}\)</span>, starting from a distance of <span class="math notranslate nohighlight">\(first_{win}\)</span>. The <span class="math notranslate nohighlight">\(b_{rate}\)</span> and <span class="math notranslate nohighlight">\(c_{rate}\)</span>, correspond to <span class="math notranslate nohighlight">\(k_b\)</span> and <span class="math notranslate nohighlight">\(k_c\)</span> in the equation above. In total, <em>nrun</em> trajectories were run. The rest of the file is separated into sections corresponding to each number of contacts that we monitor. Each line represents a single trajectory, and contains a number showing the closest window at which that number of contacts was obtained during the trajectory.</p>
 </div>
 <div class="section" id="interpretation-of-results">
 <h2>Interpretation of results<a class="headerlink" href="#interpretation-of-results" title="Permalink to this headline">¶</a></h2>

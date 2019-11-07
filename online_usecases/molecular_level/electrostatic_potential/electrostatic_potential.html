@@ -129,14 +129,14 @@
 </ul>
 <p>An electrostatic potential <em>ϕ</em>  describes the potential energy of a unit charge located at a position <em>r</em> in an electric field. In a uniform dielectric medium with a dielectric constant <em>ϵ</em>, the electrostatic potential at a position <em>r</em> due to a set of fixed charges <span class="math notranslate nohighlight">\(q_i\)</span> can be calculated from Coulomb’s equation:</p>
 <div class="math notranslate nohighlight">
-\[ϕ(r) = \sum_{i}q_i / (4 \pi \epsilon r_i)\]</div>
-<p>where <span class="math notranslate nohighlight">\(r_i\)</span> is the distance from point <strong>r</strong> to the <span class="math notranslate nohighlight">\(i^th\)</span> charge. For a protein in solution, we no longer have a uniform dielectric, as the interior has a much lower dielectric than the solvent. Here, we can calculate the potential by solving the Poisson equation:</p>
+\[ϕ(r) = \sum_{i} \frac{q_i}{4 \pi \epsilon r_i}\]</div>
+<p>where <span class="math notranslate nohighlight">\(r_i\)</span> is the distance from point <strong>r</strong> to the <span class="math notranslate nohighlight">\(i^{th}\)</span> charge. For a protein in solution, we no longer have a uniform dielectric, as the interior has a much lower dielectric than the solvent. Here, we can calculate the potential by solving the Poisson equation:</p>
 <div class="math notranslate nohighlight">
 \[▽(−\epsilon (r)⋅▽ϕ(r))=ρ(r)\]</div>
 <p>which links the gradient of the electrostatic field <span class="math notranslate nohighlight">\((−\epsilon (r)⋅▽ϕ(r))\)</span> with the charge density <em>ρ(r)</em>. Biological solvents are rarely pure water, and instead contain small dissolved charged ions. The total charge density in the region of the protein is then represented by the charge density due to the fixed charges in the protein (<em>p(r)</em>) and the dissolved ions, which are assumed to have a Boltzmann distribution. This leads to the Poisson-Boltzmann equation:</p>
 <div class="math notranslate nohighlight">
-\[▽(−\epsilon (r)⋅▽ϕ(r))=ρ_0(r) + ρ(r) \sum_{i}z_i e_l c_i^0 exp{ \left( \frac{\partial z_i e_l ϕ(r)}{\partial k_b T} \right)}\]</div>
-<p>where <span class="math notranslate nohighlight">\(z_i\)</span> is the net atomic charge of dissolved ion type <em>i</em>, <span class="math notranslate nohighlight">\(c_0\)</span> is its bulk concentration, <span class="math notranslate nohighlight">\(e_l\)</span> is the elementary charge, <span class="math notranslate nohighlight">\(k_B\)</span> is the Boltzmann constant and TT the temperature. If the argument of the exponential function is small, and there is a 1:1 ratio of positive and negative charge ions of equal magnitude, this differential equation can be linearised to simplify its solution.</p>
+\[▽(−\epsilon (r)⋅▽ϕ(r))=ρ_0(r) + ρ(r) \sum_{i}z_i e_l c_i^0 exp{ \left( \frac{\partial z_i e_l ϕ(r)}{\partial k_B T} \right)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(z_i\)</span> is the net atomic charge of dissolved ion type <em>i</em>, <span class="math notranslate nohighlight">\(c_0\)</span> is its bulk concentration, <span class="math notranslate nohighlight">\(e_l\)</span> is the elementary charge, <span class="math notranslate nohighlight">\(k_B\)</span> is the Boltzmann constant and T the temperature. If the argument of the exponential function is small, and there is a 1:1 ratio of positive and negative charge ions of equal magnitude, this differential equation can be linearised to simplify its solution.</p>
 </div>
 <div class="section" id="input-data">
 <h2>Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h2>
