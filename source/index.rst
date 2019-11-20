@@ -15,6 +15,7 @@ As a result, the unique functionality of the Platform allows novel questions to 
    :maxdepth: 6 
 
    getting_started/getting_started
+   hpc_status_monitor/hpc_status_monitor
    online_usecases/online_usecases
    official_documents/official_documents
    reference/reference_index
