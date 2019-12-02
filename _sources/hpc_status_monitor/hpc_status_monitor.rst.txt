@@ -77,7 +77,7 @@ successful, an error message is displayed (see Fig. 3).
 |
 
 .. image:: images/hpc_monitor_error.png
-    :scale: 80%
+    :scale: 40%
     :align: right
 
 Fig. 3. Error message. In this example, the query to the HPC system was not
