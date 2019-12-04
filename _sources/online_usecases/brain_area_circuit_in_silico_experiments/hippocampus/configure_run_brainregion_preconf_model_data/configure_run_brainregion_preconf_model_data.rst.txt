@@ -134,12 +134,24 @@ In the **Section 2)** you are able to:
 -  ``Analyse`` will open a form to configure the parameters before executing the analysis on the supercomputer
 
    -  *Title*: Title of the job
-   -  *Analysis*: Type of analysis to run
-   -  *Population*: Population cells used for the simulation
    -  *Report*: Report created by the simulation
-   -  *Cells*: Number of random cells to analyze
+   -  *Raster / Traces*: (Basic Analysis) Type of analysis to run
+         -  *Whole Population*: Population cells
+         -  *Cells GIDs*: Specify single GID and/or ranges of GIDs
+         -  *Random Cells*: Amount of random cells (from the report) to analyze
+
 
       |run_analysis_form|
+
+
+   -  *LFP*: (Advanced Analysis) Type of analysis to run
+         -  *Population*: Population cells
+         -  *Plots*: Type of plots to get as a result of the LFP calculation
+         -  *Duration*: Start and End duration of the LFP calculation
+         -  *Points*: Either write or upload a file with points to calculate LFP
+
+      |run_lfp_analysis_form|
+
 
 -  ``Delete`` the simulation
 
@@ -192,5 +204,6 @@ The ``Analysis`` section shows the different analyses the user has run
 .. |block| image:: images/block.png
 .. |error| image:: images/error.png
 .. |run_analysis_form| image:: images/run_analysis_form.png
+.. |run_lfp_analysis_form| image:: images/run_lfp_analysis_form.png
 .. |simulation_details| image:: images/simulation_details.png
 .. |simulation_details_analysis| image:: images/simulation_details_analysis.png
