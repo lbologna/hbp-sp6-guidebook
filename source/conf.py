@@ -18,6 +18,7 @@
 #
 # import os
 # import sys
+
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -38,7 +39,9 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages']
+    'sphinx.ext.githubpages',
+    #'docxsphinx'
+    ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -54,7 +57,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'HBP Brain Simulation Platform Guidebook'
-copyright = u'2017, Brain Simulation Platform members'
+copyright = u'2019, Brain Simulation Platform members'
 author = u'Brain Simulation Platform members'
 
 # The version info for the project you're documenting, acts as replacement for

@@ -1,0 +1,84 @@
+.. _hpc_status_monitor:
+
+##################
+HPC Status Monitor
+##################
+
+The HPC Status Monitor allows to check the status of the HPC systems available 
+for job submission from the HBP Collaboratory and the remaining quotas reserved 
+to the user on each of them. 
+
+In order to run a job in the HPC systems, the HBP user needs to be
+mapped on and to be part of (at least) a project on those systems.
+If the user does not have any access and allocation to any systems, she/he can 
+still submit jobs (with limited quotas) through the available service accounts.
+For further details on the service account please refer to the dedicated 
+:ref:`service_account` documentation.
+
+|
+
+.. _hpc_system_status:
+
+*****************
+HPC system status
+*****************
+
+The HPC Status Monitor's top panel indicates the status of the HPC systems and whether
+they provide the Service Account submission functionality (see Fig. 1).
+The green icon indicates that the system is running while the red cross
+shows the system and/or the Service Account for that system is not currently 
+available. 
+
+The refresh and info icons, in the top right part of the panel, allow to 
+update the HPC system status and open the HPC monitor Guidebook page
+respectively.
+
+|
+
+.. image:: images/hpc_monitor_main.png
+    :scale: 40%
+    :align: right
+
+Fig. 1 Top panel of the HPC Status Monitor.
+
+|
+
+*********************************
+HPC system status: user's details
+*********************************
+
+After clicking on any of the HPC system names in the top panel, the **User's 
+Details** section unfolds and the user's quotas (including the Service Account
+one) as well as the corresponding projects are shown (see Fig. 2). 
+While an HPC system might be online (i.e. the green icon is shown in the top 
+panel) the user might not be able to submit jobs on that system (for example if 
+the default node for job submission is temporarily unavailable). 
+
+In order to check whether the user is able to submit
+a job on a specific project, a **Check** button is displayed on the rightmost 
+column of the user's details panel. The button's status changes, namely turns 
+into the green or the red cross icon, depending on the possibility for the user 
+to submit job at the moment of checking.
+
+|
+
+.. image:: images/hpc_monitor_pizdaint.png
+    :scale: 80%
+    :align: right
+
+Fig. 2 User's details panel. The projects the user belongs to on the
+selected HPC system and the relative quotas are shown.
+
+|
+
+In case the user does not have any quota on a system, or the query has not been
+successful, an error message is displayed (see Fig. 3).
+
+|
+
+.. image:: images/hpc_monitor_error.png
+    :scale: 40%
+    :align: right
+
+Fig. 3. Error message. In this example, the query to the HPC system was not
+successful

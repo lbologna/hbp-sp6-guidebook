@@ -1,9 +1,13 @@
 
 This Jupyter Notebook allows the user to:
 
-1. Choose either a previous optimization from the HBP GitHub repository; or choose the result of your own optimization from the Collab storage, and then run an analysis by clicking on “View analysis”
+1. Choose either a previous optimization from the HBP GitHub repository; or 
+   choose the result of your own optimization from the Collab storage, and then 
+   run an analysis by clicking on “View analysis”
 
-2. Save the analysis in the storage by clicking on “Save analysis”. The analysis are saved under the BluePyOptAnalysis/username/foldername (foldername is the name of the optimization)
+2. Save the analysis in the storage by clicking on “Save analysis”. The 
+   analyses are saved under the BluePyOptAnalysis/username/foldername 
+   (foldername is the name of the optimization)
 
 .. container:: bsp-container-center
 
@@ -51,7 +55,7 @@ This Jupyter Notebook allows the user to:
      :width: 500px
      :align: right
 
-3. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button
+3. If you are interested in looking at the code, click on “Click here to toggle on/off the source code” button:
  
 .. container:: bsp-container-center
 

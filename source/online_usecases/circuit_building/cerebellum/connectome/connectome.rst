@@ -3,7 +3,8 @@ Connectome
 ##########
 
 
-This use case is used to connect cerebellar neurons and can be found in *Online Use Cases/Circuit Building/Connectome/Rat cerebellum volume*.
+This Use Case is used to connect cerebellar neurons and can be found in 
+*Online Use Cases/Circuit Building/Connectome/Rat cerebellum volume*.
 
      .. image:: images/schema.png
         :width: 373px
@@ -18,25 +19,25 @@ Approach: the potential connections are created by imposing geometric constraint
 
 **Inputs:**
 
-•	hdf5 matrix (saved in /storage) obtained from the “Cell positioning” use case (found in Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume/)
-•	The parameters are automatically imported from user-defined parameters filled in the GUI of the “Cell positioning” use case and from scaffold_params.py (in /storage)
+•	hdf5 matrix (saved in /storage) obtained from the “Cell positioning” Use Case (found in Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume/).
+•	The parameters are automatically imported from user-defined parameters filled in the GUI of the “Cell positioning” Use Case and from scaffold_params.py (in /storage).
 
-For expert users, connection-specific parameters could be modified from scaffold_params.py (in /storage)
+Expert users can modify connection-specific parameters could be modified from scaffold_params.py (in /storage)
 
 •	Convergence and divergence ratio of each connection type
 
 **Output:**
 
-•	Within the hdf5 file generated from the “Cell positioning” use case, a new key is added named “/connections”. It contains multiple items, one for each connection type (e.g. “/glom_grc”, “/glom_goc”,…). Each of them is made up of a matrix with 2 columns (PRE Neuron ID and POST Neuron ID). The enriched hdf5 file is saved in /storage.
+•	Within the hdf5 file generated from the “Cell positioning” Use Case, a new key is added named “/connections”. It contains multiple items, one for each connection type (e.g. “/glom_grc”, “/glom_goc”,…). Each of them is made up of a matrix with 2 columns (PRE Neuron ID and POST Neuron ID). The enriched hdf5 file is saved in /storage.
 
 Monitoring: effective convergence and divergence ratios and pairwise distances among connected neurons (metrics_connectome.py in /storage) and probability of connection dependent on inter-soma distance between connected neurons (monitoring_probConn.py in /storage)
 
-As an example, a 3D basic visualization about the connection from Glomeruli to Golgi cells is displayed. One PRE Neuron ID is selected, and all the POST neurons receiving its outward connections are plotted (Divergence). Also, one specific POST Neuron ID is selected, and all the PRE neurons sending connections to it are plotted (Convergence).
+As an example, a 3D basic visualization of the connection from Glomeruli to Golgi cells is displayed. One PRE Neuron ID is selected, and all the POST neurons receiving its outward connections are plotted (Divergence). Also, one specific POST Neuron ID is selected, and all the PRE neurons sending connections to it are plotted (Convergence).
 
 
 **Additional information:**
 
-•	The whole usecase should take about 4 minutes for a volume base of 400 x 400 µm. If enabled, the computation of the metrics for each connection type adds about 15 minutes for such network size.
+•	This whole Use Case should take about 4 minutes for a volume base of 400 x 400 µm. If enabled, the computation of the metrics for each connection type adds about 15 minutes for such a network size.
 •	No login to any other computer required
 
 
@@ -168,7 +169,7 @@ As an example, a 3D basic visualization about the connection from Glomeruli to G
 
     From "Cells Placement" in the volume:
 
-    -	x = 400 µm, z = 400 µm (→ DCN  200 x 200 µm)
+    -	x = 400 µm, z = 400 µm (→ DCN 200 x 200 µm)
     -	y = 930 µm (600+ 150+30+150  µm), i.e. thickness DCN + GRL+ PCL + ML
 
     1.1) Glomeruli – Granule Cells (EXC)

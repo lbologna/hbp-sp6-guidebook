@@ -56,7 +56,7 @@ More detailed tutorials will be published soon.
 General Info
 **************
 
-- From the above descriptions, it can be identified that *running a particular
+- It is clear from the descriptions above, that *running a particular
   test for a model* under the validation framework is more accurately described as
   the *running of a specific test instance for a specific model instance*.
 
@@ -64,11 +64,11 @@ General Info
   retrieved from the validation framework. This involves authenticating your HBP
   login credentials.
 
-- The model being tested can be registered on the *Model Catalog* beforehand,
-  or asked to be registered automatically after the test is complete, just
+- The model that is tested can be registered on the *Model Catalog* beforehand,
+  or after completion of the test by asking to register it automatically, just
   before registering the result on the validation framework.
 
-* Registration of the model and its test results also require authenticating
+* Registration of the model and its test results also requires authenticating
   your HBP login credentials.
 
 - It should be noted that an HBP account can be created even by non-HBP users.
@@ -79,8 +79,8 @@ General Info
   require the user to be granted permission for access.
 
 - The *Model Catalog* and the *Validation Framework* apps can be added to any
-  Collab. A Collab may have multiple instances of these apps. The apps require
-  to be *configured* by setting the provided filters appropriately before they
+  Collab. A Collab may have multiple instances of these apps. The apps must 
+  be *configured* by setting the provided filters appropriately before they
   can be used. These filters restrict the type of data displayed in that particular
   instance of the app.
 
@@ -91,13 +91,13 @@ General Info
   The particular app inside which a model was created is termed its *host app*.
   Similarly, the Collab containing the *host app* is termed the *host Collab*.
 
-* Models can be set as public/private. If public, the model and its associated
+* Models can be set as public or private. If public, the model and its associated
   results are available to all users. If private, it can only be seen by users who
   have access to the *host Collab*.
 
 - No information can be deleted from the *Model Catalog* and *Validation Framework*
-  apps. In future, an option to *hide* data would be implemented. This would offer
-  users functionality similar to deleting, but with the data being retained in the
+  apps. In the future, an option to *hide* data will be implemented. This will offer
+  users a functionality similar to deleting, while retaining the data in the
   database back-end.
 
 * Models, model instances, tests and test instances can be edited as long as
@@ -130,7 +130,7 @@ These are described in the documentation:  https://hbp-validation-framework-api.
 *******************
 Validation UseCases
 *******************
-We currently have the following usecases on the Collaboratory:
+We currently have the following Use Cases on the Collaboratory:
 
 **1) Validation Framework Demo (Walkthrough)**
   This is designed as a walkthrough on using the validation framework. The specific example shown is for the Cerebellum.
@@ -154,7 +154,7 @@ We currently have the following usecases on the Collaboratory:
 
     The PSP Attenuation Test evaluates how much the post synaptic potential (using EPSC stimulus) attenuates from the dendrite (different distances) to the soma. The soma/dendrite attenuation is compared to data from Magee & Cook 2000 (http://dx.doi.org/10.1038/78800).
 
-The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework are not found in the current Collab, then these are created. Additionally, a test report is generated and this can be viewed within the Jupyter notebook, or downloaded.
+The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework is not found in the current Collab, then these are created. Additionally, a test report is generated which can be viewed within the Jupyter notebook, or downloaded.
 
 **3) Basal Ganglia - BluePyOpt Optimized Model Validation - Multiple HOF**
   This test shall take as input a BluePyOpt optimized output file, containing a hall_of_fame.json file specifying a collection of parameter sets. The validation test would then evaluate the model for all (or specified) parameter sets against various eFEL features. The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework are not found in the current Collab, then these are created. Additionally, a test report is generated and this can be viewed within the Jupyter notebook, or downloaded.

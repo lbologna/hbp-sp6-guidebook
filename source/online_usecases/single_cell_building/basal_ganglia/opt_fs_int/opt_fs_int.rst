@@ -1,39 +1,86 @@
 .. _FS_single_cell_opt_guidebook:
 
 #############################################
-Optimise a striatial fast spiking interneuron
+Optimise a striatial fast-spiking interneuron
 #############################################
 
-This use case demonstrates how BluePyOpt can be used to optimised a striatal fast spiking interneuron. The notebook is self contained and runs the first steps of the genetic optimisation. For a production run, the population size as well as the number of iterations needs to be increased.
+This Use Case demonstrates how BluePyOpt can be used to optimize a striatal 
+fast-spiking interneuron. The notebook is self-contained and runs a few steps 
+of the genetic optimization. For a production run, the population size as well 
+as the number of iterations need to be increased as commented in the notebook.
 
-The notebook starts by downloading the relevant code from the collab storage. This step only needs to be done once. Since we are using neuron we also need to compile the channel mod files. If this step is skipped neuron will complain that the mechanism naf is not found.
+The notebook starts by downloading the relevant code from the Collab storage 
+and setting up the simulation and graphical environment. Since we are using 
+Neuron, we also need to compile the channel mod files.
 
-The information about the optimisation to be run is stored in config/FS-info.json which refers to additional json files:
+The information about the optimization to be run is stored in `config/` 
+directory:
 
-- FS-protocols.json
-- FS-features-generated.json
-- FS-mechanisms.json
-- FS-parameters.json
+- `protocols.json`
+- `features.json`
+- `mechanisms.json`
+- `parameters.json` and `parameters-demo.json`
 
-For each set of parameters to be tested a neuron model is instantiated by the Neuron_evaluator. A series of current injections are sent to the neuron while the somatic voltage is recorded. From this voltage trace a number of features are extracted, and compared to the same features extracted from the corresponding experimental data.
+For each set of parameters to be tested a neuron model is instantiated by the 
+`evaluator`. A series of current injections is sent to the neuron while 
+recording the somatic voltage. A number of features are extracted from this 
+voltage trace, and compared to the same features extracted from the 
+corresponding experimental data.
 
-**FS-protocols.json** lists the protocols and the stimuli that is associated with it. Each protocol also specifies a holding current. The delay, amplitude, duration and total duration is specified for each current injection.
+`protocols.json` lists the protocols and the associated stimuli. Each protocol 
+also specifies a holding current. The delay, amplitude, duration and total 
+duration are specified for each current injection.
 
-**FS-features-generated.json** lists the features. Each protocol has their own set of features associated with it. For each feature the mean value and standard deviation (SD) is specified. The SD is used when weighting the feature scores together to get the final score for the model. Each feature also has a set of parameters which modifies it.
+`features.json` lists the features. Each protocol has its own set of features. 
+For each feature the mean value and standard deviation (SD) are specified. 
+The SD is used when weighting the feature scores together to get the final 
+score for the model. Each feature also has a set of modifying parameters.
 
-**FS-mechanisms.json** lists the mechanisms. Each ion channel has a corresponding mod file which is compiled by nrnivmodl.
+`mechanisms.json` lists the mechanisms. Each ion channel has a corresponding 
+mod file which is compiled by nrnivmodl.
 
-**FS-parameters.json** lists all the parameters for the model. These can either be specified as a value, or as a range by giving the upper and lower bounds.
+`parameters.json` lists all the model parameters. These can either be 
+specified as a value, or as a range, by giving its upper and lower bounds.
   
 
-The main json file also points to the morphology of the neuron:
+Morphology of the neuron is located in `morphology/` directory:
 
-- morphology/FSi-E.CNG.swc.
+- `morphology/BE37A-rep-cor-reg15.swc`
 
-To increase the population size and the number of generations for the genetic algorithm edit the following. Please note that this might increase runtime considerably. For production runs a super computer cluster is recommended.
+.. container:: bsp-container-center
 
-opt.run(max_ngen=10,offspring_size=10,continue_cp=False,cp_filename='save/FS-notebook-run.pickle')
+  .. image:: images/fs-morpho.png
 
-The post optimisation analysis is done by Neuron_analysis. It displays the top ten individuals that had the best scores and lists their parameters. It also displays the simulated protocols (blue) overlaid on the experimental data (red). The best candidate is displayed in dark blue, the others in light blue. The script also plots how the scores change with successive iterations of the genetic algorithm.
+The optimization phase is followed by the post optimization analysis within
+the same notebook.  The script plots the evolution of the error scores
+with successive iterations of the genetic algorithm (generations).
 
+.. container:: bsp-container-center
 
+  .. image:: images/log.png
+
+It displays the top ten individuals with the best scores and lists
+the feature names.
+
+.. container:: bsp-container-center
+
+  .. image:: images/feature_scores.png
+
+It also displays the simulated protocols (blue) overlaid on the
+experimental data (grey) for the best individual.
+
+.. container:: bsp-container-center
+
+  .. image:: images/responses.png
+
+Finally, errors for each feature of the best individual are shown and
+also a mean error score is calculated. Typically, the mean score is about
+3 standard deviations.
+
+.. container:: bsp-container-center
+
+  .. image:: images/best_scores.png
+
+It is possible to inspect any of the 10 candidate individuals as shown above
+for the best individual. Corresponding instructions are given in the
+notebook.

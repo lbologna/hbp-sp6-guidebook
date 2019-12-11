@@ -10,19 +10,19 @@ Overview
 
 
 The Hodgkin-Huxley Neuron Builder is a web-application that allows the user to
-interactively go through the entire cell model building pipeline.  The workflow
+interactively go through the entire cell model building pipeline. The workflow
 consists of three steps: 1) electrophysiological feature extraction from voltage
-traces; 2) model parameter optimization; 3) in silico experiments using the
+traces; 2) model parameter optimization; 3) *in silico* experiments using the
 optimized model cell.
 
-The user is provided with a friendly interface enabling to  interact with both
-the HBP collaboratory storage and the High Performance Computing (HPC)
-resources. The application has been built in a flexible way so as to allow the
+The user is provided with a friendly interface enabling to interact with both
+the HBP Collaboratory storage and the High Performance Computing (HPC)
+resources. The application has been built in a flexible way to allow the
 user to enter the workflow at any desired step, by either interacting with HBP
 resources or uploading his own files.
 
-The web-application homepage (see figure below) allow the user to initiate a new
-workflow or select a workflow previously saved in the current collab storage.
+The web-application homepage (see figure below) allows the user to initiate a new
+workflow or to select a workflow previously saved in the current Collab storage.
 
 |
 
@@ -72,7 +72,7 @@ optimization parameters (see figure below).
   interacts with and is integrated into the Hodgkin Huxley Neuron Builder
   framework (as shown in the figure below) and allows the user to extract
   features of interest from a dataset of electrophysiological traces provided by
-  HBP or from data upload by the user himself. For a detailed explanation of the
+  HBP or from data uploaded by the user himself. For a detailed explanation of the
   Feature Extraction GUI, please refer to the dedicated page of this guidebook
   (:ref:`efel_gui`). Alternatively, the user can upload his own
   *features.json* and *protocols.json* files through the "Upload files"
@@ -90,7 +90,7 @@ optimization parameters (see figure below).
 
 * The model to be optimized is chosen among a dataset displayed to the user
   after clicking the "Choose from database" button. The dataset is made up of
-  `NEURON <https://www.neuron.yale.edu/>`_ based models.
+  `NEURON <https://www.neuron.yale.edu/>`_-based models.
   When choosing the model, the user is provided with two images representing the reconstructed morphology of
   the neuron and an example of the simulated activity of the model, after it has
   been optimized via a different set of electrophysiological features (see figure
@@ -98,8 +98,8 @@ optimization parameters (see figure below).
   optimized by using the features extracted/uploaded in the previous step. The
   model parameters will be optimized via the `BluePyOpt
   <https://github.com/BlueBrain/BluePyOpt>`_ tool through an optimization procedure
-  based on genetic algorithm. For a complete reference to the BluePyOpt, please
-  refer to the original article at this `link <https://www.frontiersin.org/articles/10.3389/fninf.2016.00017/full>`_.
+  based on a genetic algorithm. For a complete reference to the BluePyOpt, please
+  refer to the original article at this `link <https://www.frontiersin.org/articles/10.3389/fninf.2016.00017/full>`__.
 
 |
 
@@ -114,12 +114,12 @@ optimization parameters (see figure below).
 * Before launching the optimization, the user must set the optimization
   parameters by clicking the "Set parameters/Choose HPC" button of the
   "Optimization settings" panel. A form is presented to the user (see image
-  below), to be filled with: i) parameters concerning the genetic algorithm,
-  namely the maximum number of generation the user wants
+  below), to be filled in with: i) parameters concerning the genetic algorithm,
+  namely the maximum number of generations the user wants
   to adopt as well as the number of offsprings to be considered; ii) system
   parameters for the optimization run, namely the number of nodes and cores to be
-  reserved on the hpc system and the maximum time the process is allowed to be
-  running for; iii) the hpc system to be used.
+  reserved on the HPC system and the maximum time the process is allowed to be
+  running; iii) the HPC system to be used.
 
 |
 
@@ -145,8 +145,8 @@ optimization can be launched (see figure below).
 
 |
 
-Upon successful submission, the flag icon is changed and the submission button deactivated so as to forbid a second
-submission with the same workflow id (see figure below).
+Upon successful submission, the flag icon is changed and the submission button 
+deactivated to prevent a second submission with the same workflow id (see figure below).
 
 |
 
@@ -171,7 +171,7 @@ Simulation Run" panel (see next paragraph), through the "Fetch results" button.
 Single Cell Simulation Run 
 **************************
 
-After the optimization phase has successfully terminated, the optimized model can
+After successful termination of the optimization phase, the optimized model can
 be retrieved and used for simulations. This step is performed through the
 "Single Cell Simulation Run" panel (see figure below).
 
@@ -190,12 +190,12 @@ The user can fetch the results from the HPC system of choice through the "Fetch
 results" button which allows to select the HPC system the optimization
 files reside in and, successively, select the result file of interest (see
 figures below).
-At the moment, only the Neuroscience Gateway hpc system can be used for running
+At the moment, only the Neuroscience Gateway HPC system can be used for running
 the optimization scripts. A full description of the meaning of the job status
-tags can be found at this `link <http://www.nsgportal.org/guide.html#UnderstandJobStatus>`_.
+tags can be found under this `link <http://www.nsgportal.org/guide.html#UnderstandJobStatus>`__.
 Please note that, while the job status can be "Completed", the outcome of the
 optimization might be empty, if, for example, the optimization parameters are
-not chose appropriately (e.g. if the "Runtime" value is set so as not to allow
+not chosen appropriately (e.g. if the "Runtime" value is set so as not to allow
 the optimization to come to an end).
 
 |
@@ -222,12 +222,12 @@ the optimization to come to an end).
 
 Alternatively, the user can upload a *.zip* package containing the files needed for the
 simulation, through the upload button. For an example of how the *.zip* file
-content must be structured, please refer to the following `link <https://github.com/lbologna/bsp_data_repository/raw/master/optimizations/>`_.
+content must be structured, please refer to the following `link <https://github.com/lbologna/bsp_data_repository/raw/master/optimizations/>`__.
 
 Once the model files are integrated into the pipeline, the simulation can be run
 by clicking the "Run Simulation" button. The model is fed to the "Neuron As A Service"
 web-application, integrated into the neuron builder (see figure below), which
-allow the user to visualize the morphology of the chosen model (both in 3D
+allows the user to visualize the morphology of the chosen model (both in 3D
 and as a dendogram) and set the simulation run parameters.
 
 |
