@@ -162,7 +162,7 @@ We currently have the following Use Cases on the Collaboratory:
 
     Tests signal integration in oblique dendrites for increasing number of synchronous and asynchronous synaptic inputs. The experimental data is obtained from Losonczy and Magee 2006 (https://doi.org/10.1016/j.neuron.2006.03.016).
 
-The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework is not found in the current Collab, then these are created. Additionally, a test report is generated which can be viewed within the Jupyter notebook.
+  The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework is not found in the current Collab, then these are created. Additionally, a test report is generated which can be viewed within the Jupyter notebook.
 
 **3) Basal Ganglia Single Cell Validation**
   This test shall take as input a BluePyOpt optimized output file, containing a hall_of_fame.json file specifying a collection of parameter sets. The validation test would then evaluate the model for all (or specified) parameter sets against various eFEL features. The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework are not found in the current Collab, then these are created. Additionally, a test report is generated and this can be viewed within the Jupyter notebook, or downloaded.
@@ -192,6 +192,6 @@ The results are registered on the HBP Validation Framework app. If an instance o
 Notes
 *****
 
-- Access to the validation tools and services requries HBP SGA2 accreditation. Non-HBP members should contact “support@humanbrainproject.eu” for access.
+- Access to the validation tools and services requires HBP SGA2 accreditation. Non-HBP members should contact “support@humanbrainproject.eu” for access.
 
 * The validation use cases are only Python 3 compatible! Python 2 support has been dropped since v3.0 of the use cases.
