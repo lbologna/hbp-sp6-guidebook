@@ -35,7 +35,7 @@ of models geometry and results of simulations.
 The molecular repository is a publicly available database of biological
 information relevant for brain molecular network modeling.
 
-It contains several types of biological information which are not available
+It accomodates several types of biological information which are not available
 from existing public databases, such as concentrations of proteins in
 different subcellular compartments of neuronal and glial cells, kinetic data
 on proteins interactions specific for brain and synaptic signaling and
@@ -57,7 +57,8 @@ Usage
 
     * To load a public model click an arrow to expand a list of public models
       in `Subcellular models repository`, choose one, then click `Load`
-    * To import `BNGL`_ or `SBML`_ model click `Import` in `Model` menu
+    * To import `BNGL`_ or `SBML`_ (`Atomizer`_ is used for latter) model click
+      `Import` in `Model` menu
     * To create a new model specify all model parameters and reaction equations
       sequentially opening and filling tables in the `Model` menu (upper left
       of the UI). Each table corresponds to a particular section of the
@@ -261,3 +262,4 @@ can be downloaded as well as inspected with integrated:
 .. _BNGL: https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409
 .. _SBML: http://sbml.org/Main_Page
 .. _TetGen: http://wias-berlin.de/software/tetgen/fformats.html
+.. _Atomizer: https://ruleworld.github.io/atomizer/
