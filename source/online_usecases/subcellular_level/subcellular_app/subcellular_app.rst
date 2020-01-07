@@ -17,7 +17,7 @@ The subcellular application was designed as a hub web based environment
 for creation and simulation of reaction-diffusion models integrated with
 the molecular repository.
 It allows also importing, combining and simulation of existing models
-expressed on BioNetGen and SBML languages.
+expressed with `BNGL`_ and `SBML`_ languages.
 
 Two types of models are supported: rule-based models convenient and
 computationally efficient for modeling of big protein signaling complexes
@@ -41,7 +41,7 @@ different subcellular compartments of neuronal and glial cells, kinetic data
 on proteins interactions specific for brain and synaptic signaling and
 plasticity, data on molecules mobility.
 
-The repolitory is integrated with the subcellular application. They share
+The repository is integrated with the subcellular application. They share
 the same set of entities described by BioNetGen expressions. The molecular
 repository can be queried from the subcellular application and the results
 of query can be added to a molecular network model.
@@ -57,7 +57,7 @@ Usage
 
     * To load a public model click an arrow to expand a list of public models
       in `Subcellular models repository`, choose one, then click `Load`
-    * To import BNGL or SBML model click `Import` in `Model` menu
+    * To import `BNGL`_ or `SBML`_ model click `Import` in `Model` menu
     * To create a new model specify all model parameters and reaction equations
       sequentially opening and filling tables in the `Model` menu (upper left
       of the UI). Each table corresponds to a particular section of the
@@ -65,13 +65,15 @@ Usage
       section). All expressions should comply with BioNetGen language.
 #.  To add diffusion (needed if using STEPS) navigate to corresponding section
     of the model, click `New diffusion` and specify an arbitrary name
-    of diffusive, affected structure where corresponding species will diffuse,
-    BNGL expression for those and diffusion coefficient in m^2/s units.
+    of diffusive species or molecules, affected structure where corresponding
+    species will diffuse, `BNGL`_ expression for those and diffusion
+    coefficient in m^2/s units.
 #.  To add geometry (required if using STEPS) click `Add geometry` in
-    corresponding model section: specify it's name, add TetGen tetrahedral mesh
-    and a geometry specification file (geometry.json, contains relationship
-    between structures and their corresponding tetrahedra and triangles, free
-    diffusion boundaries and geometry scale ration, see examples below)
+    corresponding model section: specify it's name, add `TetGen`_ tetrahedral
+    mesh and a geometry specification file (geometry.json, contains
+    relationship between structures and their corresponding tetrahedra and
+    triangles, free diffusion boundaries and geometry scale coefficient
+    converting mesh vertices position units to meters, see examples below)
 #.  At any stage model can be:
 
     * saved using `Model` -> `Save` sequence, and then loaded from `My models`
@@ -244,7 +246,8 @@ Results
 =====================
 
 Simulation result (available when sim has been started with live updates)
-can be inspected with:
+can be downloaded as well as inspected with integrated:
+
 - cumulative per-observable concentration chart
 - spatial molecule distribution visualizer
 
@@ -255,3 +258,6 @@ can be inspected with:
 .. _SubcellularApp: https://subcellular.humanbrainproject.eu
 .. _STEPS: http://steps.sourceforge.net/STEPS/default.php
 .. _NFSim: http://michaelsneddon.net/nfsim/
+.. _BNGL: https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409
+.. _SBML: http://sbml.org/Main_Page
+.. _TetGen: http://wias-berlin.de/software/tetgen/fformats.html
