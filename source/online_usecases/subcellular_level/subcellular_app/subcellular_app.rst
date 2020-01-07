@@ -89,7 +89,9 @@ Usage
 Example
 =====================
 
-Parameters::
+Parameters
+
+.. code:: text
 
   fac       1
   kCa       0 * fac
@@ -112,7 +114,9 @@ Parameters::
   CaMC1_off 2600 * fac
   CaMC2_off 6.5 * fac
 
-Functions::
+Functions
+
+.. code:: text
 
   k__5()  = Ca_in
   k__6()  = Ca_out
@@ -136,20 +140,26 @@ Functions::
   k__10() = 1000 / 50
   k__11() = 10 * 2 * 700 / 40 / 50 * 1000
 
-Structures::
+Structures
+
+.. code:: text
 
   Dendrite 3 1.1649e-18
   Synapse  3 3.9820e-19
   PSD      2 3.8885e-13
 
-Molecule types::
+Molecule types
+
+.. code:: text
 
   Ca(x)
   CaM(N1,N2,C1,C2,K,Kp~0~1)
   CB(N1,N2,C1,C2)
   NMDA(pore~C~O,ank~0~1)
 
-Species::
+Species
+
+.. code:: text
 
   @Dendrite:Ca(x)                   8e-08
   @Dendrite:CaM(N1,N2,C1,C2,K,Kp~0) 8e-05
@@ -159,7 +169,9 @@ Species::
   @Synapse:CB(N1,N2,C1,C2)          3e-05
   @PSD:NMDA(pore~C,ank~1)           40.0
 
-Reaction Rules::
+Reaction Rules
+
+.. code:: text
 
   NMDA_opening:  @PSD:NMDA(pore~C) -> @PSD:NMDA(pore~O)                       k__9()
   NMDA_closing:  @PSD:NMDA(pore~O) -> @PSD:NMDA(pore~C)                       k__10()
@@ -185,7 +197,9 @@ Reaction Rules::
   CB_C1_Ca_off:  CB(C1!1,C2).Ca(x!1) -> CB(C1,C2) + Ca(x)                     k_11()
   CB_C2_Ca_off:  CB(C1!+,C2!1).Ca(x!1) -> CB(C1!+,C2) + Ca(x)                 k_12()
 
-Geometry specification (geometry.json)::
+Geometry specification (geometry.json)
+
+.. code:: json
 
   {
     "meshNameRoot": "spine",
@@ -198,13 +212,17 @@ Geometry specification (geometry.json)::
     "freeDiffusionBoundaries": [{ "triIdxs": [203, 350], "name": "diffb_0" }]
   }
 
-Simulation config::
+Simulation config
+
+.. code:: text
 
   max_dt: 0.02
   t_end:  2
   solver: STEPS
 
-Stimulation::
+Stimulation
+
+.. code:: text
 
   0.1   setParam kCa 1
   0.105 setParam kCa 0
