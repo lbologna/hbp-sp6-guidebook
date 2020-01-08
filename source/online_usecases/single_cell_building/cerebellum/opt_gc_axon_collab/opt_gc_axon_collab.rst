@@ -1,8 +1,8 @@
-.. _multi_crb_gc_collab:
+.. _opt_gc_axon_collab:
 
-#################################################################
-Multi compartmental Cerebellar Granule cell (2019) custom axon
-#################################################################
+#############################################################################
+Multi compartmental Cerebellar Granule cell optimization - custom axon (2019)
+#############################################################################
 
 The cerebellum is part of the central nervous system and functions as a highly 
 parallel machine capable of processing sensory and motor information coming 
