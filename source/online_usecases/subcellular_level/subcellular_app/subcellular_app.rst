@@ -35,7 +35,7 @@ of models geometry and results of simulations.
 The molecular repository is a publicly available database of biological
 information relevant for brain molecular network modeling.
 
-It accomodates several types of biological information which are not available
+It accommodates several types of biological information which are not available
 from existing public databases, such as concentrations of proteins in
 different subcellular compartments of neuronal and glial cells, kinetic data
 on proteins interactions specific for brain and synaptic signaling and
@@ -64,7 +64,7 @@ Usage
       of the UI). Each table corresponds to a particular section of the
       BioNetGen file of the model (with except for `Diffusions` and `Geometry`
       section). All expressions should comply with BioNetGen language.
-#.  To add diffusion (needed if using STEPS) navigate to corresponding section
+#.  To add diffusion (required if using STEPS) navigate to corresponding section
     of the model, click `New diffusion` and specify an arbitrary name
     of diffusive species or molecules, affected structure where corresponding
     species will diffuse, `BNGL`_ expression for those and diffusion
