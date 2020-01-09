@@ -1,8 +1,8 @@
 .. _opt_gc_axon_collab:
 
-#############################################################################
-Multi compartmental Cerebellar Granule cell optimization - custom axon (2019)
-#############################################################################
+##############################################
+Custom Axon Cerebellar Granule cell simulation
+##############################################
 
 The cerebellum is part of the central nervous system and functions as a highly 
 parallel machine capable of processing sensory and motor information coming 
@@ -63,8 +63,10 @@ Action potential processing in a detailed Purkinje cell model reveals a critical
 Frontiers in Cellular Neuroscience, 9(February), 1–22.)
 
 The custom Ascending Axon, Parallel Fibers and FHF nav1.6 sodium channel were built following experimental data obtained from granule cell.
+
 Dover, K., Solinas, S., D’Angelo, E., & Goldfarb, M. (2010). Long-term inactivation particle for voltage-gated sodium channels. 
 The Journal of Physiology, 588(Pt 19), 3695–3711.
+
 Dover, K., Marra, C., Solinas, S., Popovic, M., Subramaniyam, S., Zecevic, D., … Goldfarb, M. (2016). 
 FHF-independent conduction of action potentials along the leak-resistant cerebellar granule cell axon. 
 Nature Communications, 7, 12895. 
