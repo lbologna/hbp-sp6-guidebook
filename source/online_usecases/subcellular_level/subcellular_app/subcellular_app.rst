@@ -7,7 +7,7 @@ as a software environment for simulation of brain molecular networks.
 
 It was designed to reach several objectives related to major restrictions
 of currently available software tools, such as the lack of integration
-with existing biological data relevant for modeling and low compatibility
+with existing biological data relevant for modeling and the low compatibility
 of different types of models.
 
 General info
@@ -16,11 +16,11 @@ General info
 The subcellular application was designed as a hub web based environment
 for creation and simulation of reaction-diffusion models integrated with
 the molecular repository.
-It allows also importing, combining and simulation of existing models
+It allows also to import, combine and simulate existing models
 expressed with `BNGL`_ and `SBML`_ languages.
 
 Two types of models are supported: rule-based models convenient and
-computationally efficient for modeling of big protein signaling complexes
+computationally efficient for modeling big protein signaling complexes
 and chemical reaction network models.
 
 The subcellular application is integrated with a number of solvers for
@@ -29,22 +29,22 @@ distributed systems using STEPS (stochastic engine for pathway simulation) –
 which provides spatial stochastic and deterministic solvers for simulation
 of reactions and diffusion on tetrahedral meshes.
 
-Application as well provides a number of facilities for a visualization
-of models geometry and results of simulations.
+The application provides as well a number of facilities for visualizing
+the models geometry and the results of the simulations.
 
 The molecular repository is a publicly available database of biological
-information relevant for brain molecular network modeling.
+information, relevant for brain molecular network modeling.
 
 It accommodates several types of biological information which are not available
 from existing public databases, such as concentrations of proteins in
 different subcellular compartments of neuronal and glial cells, kinetic data
-on proteins interactions specific for brain and synaptic signaling and
+on protein interactions specific for brain and synaptic signaling and
 plasticity, data on molecules mobility.
 
 The repository is integrated with the subcellular application. They share
 the same set of entities described by BioNetGen expressions. The molecular
 repository can be queried from the subcellular application and the results
-of query can be added to a molecular network model.
+of the query can be added to a molecular network model.
 
 .. image:: images/model_reactions.png
    :width: 800 px
@@ -52,25 +52,25 @@ of query can be added to a molecular network model.
 Usage
 =====================
 
-#.  Open subcellular application by using link: `SubcellularApp`_
+#.  Open subcellular application by using this link: `SubcellularApp`_
 #.  Create a new model or load/import an existing one
 
-    * To load a public model click an arrow to expand a list of public models
+    * To load a public model click the arrow to expand a list of public models
       in `Subcellular models repository`, choose one, then click `Load`
-    * To import `BNGL`_ or `SBML`_ (`Atomizer`_ is used for latter) model click
+    * To import `BNGL`_ or `SBML`_ (`Atomizer`_ is used for the latter) model click
       `Import` in `Model` menu
     * To create a new model specify all model parameters and reaction equations
-      sequentially opening and filling tables in the `Model` menu (upper left
+      sequentially opening and filling the tables in the `Model` menu (upper left
       of the UI). Each table corresponds to a particular section of the
       BioNetGen file of the model (with except for `Diffusions` and `Geometry`
-      section). All expressions should comply with BioNetGen language.
-#.  To add diffusion (required if using STEPS) navigate to corresponding section
+      section). All expressions should comply with the BioNetGen language.
+#.  To add diffusion (required if using STEPS) navigate to the corresponding section
     of the model, click `New diffusion` and specify an arbitrary name
-    of diffusive species or molecules, affected structure where corresponding
-    species will diffuse, `BNGL`_ expression for those and diffusion
+    of diffusive species or molecules, the affected structure where the corresponding
+    species will diffuse, the `BNGL`_ expression for those and the diffusion
     coefficient in m^2/s units.
 #.  To add geometry (required if using STEPS) click `Add geometry` in
-    corresponding model section: specify it's name, add `TetGen`_ tetrahedral
+    the corresponding model section: specify it's name, add `TetGen`_ tetrahedral
     mesh and a geometry specification file (geometry.json, contains
     relationship between structures and their corresponding tetrahedra and
     triangles, free diffusion boundaries and geometry scale coefficient
@@ -81,12 +81,12 @@ Usage
       in `Subcellular models repository`
     * exported to file using `Model` -> `Export` in different formats
 #.  To simulate a model select `Simulations` on the `Model` panel, then create
-    new simulation by clicking corresponding button, specify solver
-    (`STEPS`_ or `NFSim`_), change default simulation parameters and add
-    stimulation (can be imported from a CSV or NFSim .rnf file) if needed;
-    click `Apply` in the bottom of the form and finally `Run` to start
+    new simulation by clicking the corresponding button, specify the solver
+    (`STEPS`_ or `NFSim`_), change the default simulation parameters and add
+    stimulation (this can be imported from a CSV or NFSim .rnf file) if needed;
+    click `Apply` in the bottom of the form and finally `Run` to start the
     simulation.
-#.  Simulation logs and charts are available for inspection once simulation
+#.  Simulation logs and charts are available for inspection once the simulation
     is started by clicking on `Graph` or `Log` buttons.
 
 Example
@@ -240,13 +240,13 @@ Stimulation
   1.1   setParam kCa 1
   1.102 setParam kCa 0
 
-Above mentioned model with geometry and simulation configuration can be found
+The above mentioned model with geometry and simulation configuration can be found
 in `Public models` as `CaM_Ca_spatial` model.
 
 Results
 =====================
 
-Simulation result (available when sim has been started with live updates)
+Simulation results (available when sim has been started with live updates)
 can be downloaded as well as inspected with integrated:
 
 - cumulative per-observable concentration chart
