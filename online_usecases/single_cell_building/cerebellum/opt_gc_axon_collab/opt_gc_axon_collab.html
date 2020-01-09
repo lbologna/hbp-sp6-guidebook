@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Multi compartmental Cerebellar Granule cell optimization - custom axon (2019) &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <title>Custom Axon Cerebellar Granule cell simulation &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
     <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
@@ -101,8 +101,8 @@
                     
                 </aside>
 
-                <div class="section" id="multi-compartmental-cerebellar-granule-cell-optimization-custom-axon-2019">
-<span id="opt-gc-axon-collab"></span><h1>Multi compartmental Cerebellar Granule cell optimization - custom axon (2019)<a class="headerlink" href="#multi-compartmental-cerebellar-granule-cell-optimization-custom-axon-2019" title="Permalink to this headline">¶</a></h1>
+                <div class="section" id="custom-axon-cerebellar-granule-cell-simulation">
+<span id="opt-gc-axon-collab"></span><h1>Custom Axon Cerebellar Granule cell simulation<a class="headerlink" href="#custom-axon-cerebellar-granule-cell-simulation" title="Permalink to this headline">¶</a></h1>
 <p>The cerebellum is part of the central nervous system and functions as a highly
 parallel machine capable of processing sensory and motor information coming
 from the brain, brain steam and spinal cord. For many years it was recognized
@@ -118,21 +118,26 @@ fear responses, was recognized.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Granule cells are the most abundant type of neurons in the entire central
+<p>Granule cells (5) are the most abundant type of neurons in the entire central
 nervous system and they reach the highest density in the cerebellum, where they
-form the granular cell layer together with Golgi, Lugaro and UBC neurons.</p>
+form the granular cell layer (3) together with Golgi (6), Lugaro (9) and UBC neurons (8).
+They receive excitatory synaptic inputs from the mossy fibers (1) and inhibitory inputs from
+Golgi (6) and Purkinje cells (PC).</p>
 <p>From a morphological point of view, granule cells show a structural
 simplicity, with a small soma, four short dendrites and a long axon (over 4mm)
-that splits into two parts to form the parallel fibers. This simplicity is
+that splits into two parts to form the parallel fibers (4). This simplicity is
 compensated by a complex interaction of many families of ion channels, a
 specific calcium buffer and complex synaptic receptors and plasticity.
 During the last three decades many models, both simplified and
 multi-compartmental were built to explore their intrinsic and extrinsic
 physiological properties.</p>
+<p>(D’Angelo, E., Antonietti, A., Casali, S., Casellato, C., Garrido, J. A., Luque, N. R., … Ros, E. (2016).
+Modeling the Cerebellar Microcircuit: New Strategies for a Long-Standing Issue. Frontiers in Cellular Neuroscience, 10, 176.)</p>
 <p>The “Custom Axon Cerebellar Granule cell” usecase contains the 2019 version
-of the multicompartmental granule cell model (Masoli et al, 2019). The model is composed by:
-four dendrites, soma, Hillock, AIS, a custom built multisection Ascending Axon (7 sections)
-and two 1mm long Parallel Fibers (over 140 sections each).</p>
+of the multicompartmental granule cell model. The model is composed by: four dendrites, soma, Hillock,
+AIS, a custom built multisection Ascending Axon (7 sections) and two 1mm long Parallel Fibers (over 140 sections each).
+(Masoli, S., Tognolina, M., &amp; Angelo, D. (2019). Parameter tuning differentiates granule cell
+subtypes enriching the repertoire of retransmission properties at the cerebellum input stage.)</p>
 <p>The purpose of this usecase is to show that, with custom code, BluePyOpt allows the definition
 of custom sectionlists which can be used to increase the morphological complexity of a model.
 This approach can be used to define different locations in the dendritic tree too.</p>
@@ -141,10 +146,17 @@ the voltage-dependent ionic channels and the conductances obtained from the opti
 cells contain code examples and explanations on how to use and integrate the custom code into the main
 optimization code.</p>
 <p>Some of the ionic channels mechanisms, passive properties and morphology were taken from a previously published
-granule cell model (Diwakar <em>et al.,</em> 2006) (<a class="reference external" href="https://senselab.med.yale.edu/modeldb/showModel.cshtml?model=116835">https://senselab.med.yale.edu/modeldb/showModel.cshtml?model=116835</a>).
-The custom Ascending Axon, Parallal Fibers were built following published morphological data (Dover et al, 2016).
-Some of the ionic channels were taken or modified from (Masoli et al.,2015).</p>
-<p>Further information can be found on Biorxiv - <a class="reference external" href="https://www.biorxiv.org/content/10.1101/638247v1">https://www.biorxiv.org/content/10.1101/638247v1</a></p>
+granule cell mode. (Diwakar, S., Magistretti, J., Goldfarb, M., Naldi, G., &amp; D’Angelo, E. (2009). Axonal Na+ channels
+ensure fast spike activation and back-propagation in cerebellar granule cells. Journal of Neurophysiology, 101(2), 519–532.)</p>
+<p>The rest of the ionic channels were taken from (Masoli, S., Solinas, S., &amp; D’Angelo, E. (2015).
+Action potential processing in a detailed Purkinje cell model reveals a critical role for axonal compartmentalization.
+Frontiers in Cellular Neuroscience, 9(February), 1–22.)</p>
+<p>The custom Ascending Axon, Parallel Fibers and FHF nav1.6 sodium channel were built following experimental data obtained from granule cell.</p>
+<p>Dover, K., Solinas, S., D’Angelo, E., &amp; Goldfarb, M. (2010). Long-term inactivation particle for voltage-gated sodium channels.
+The Journal of Physiology, 588(Pt 19), 3695–3711.</p>
+<p>Dover, K., Marra, C., Solinas, S., Popovic, M., Subramaniyam, S., Zecevic, D., … Goldfarb, M. (2016).
+FHF-independent conduction of action potentials along the leak-resistant cerebellar granule cell axon.
+Nature Communications, 7, 12895.</p>
 <p>(Code and testing - Stefano Masoli PhD)</p>
 </div>
 
