@@ -116,61 +116,61 @@
 as a software environment for simulation of brain molecular networks.</p>
 <p>It was designed to reach several objectives related to major restrictions
 of currently available software tools, such as the lack of integration
-with existing biological data relevant for modeling and low compatibility
+with existing biological data relevant for modeling and the low compatibility
 of different types of models.</p>
 <div class="section" id="general-info">
 <h2>General info<a class="headerlink" href="#general-info" title="Permalink to this headline">¶</a></h2>
 <p>The subcellular application was designed as a hub web based environment
 for creation and simulation of reaction-diffusion models integrated with
 the molecular repository.
-It allows also importing, combining and simulation of existing models
+It allows also to import, combine and simulate existing models
 expressed with <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> and <a class="reference external" href="http://sbml.org/Main_Page">SBML</a> languages.</p>
 <p>Two types of models are supported: rule-based models convenient and
-computationally efficient for modeling of big protein signaling complexes
+computationally efficient for modeling big protein signaling complexes
 and chemical reaction network models.</p>
 <p>The subcellular application is integrated with a number of solvers for
 reaction-diffusion systems of equations. It supports simulation of spatially
 distributed systems using STEPS (stochastic engine for pathway simulation) –
 which provides spatial stochastic and deterministic solvers for simulation
 of reactions and diffusion on tetrahedral meshes.</p>
-<p>Application as well provides a number of facilities for a visualization
-of models geometry and results of simulations.</p>
+<p>The application provides as well a number of facilities for visualizing
+the models geometry and the results of the simulations.</p>
 <p>The molecular repository is a publicly available database of biological
-information relevant for brain molecular network modeling.</p>
+information, relevant for brain molecular network modeling.</p>
 <p>It accommodates several types of biological information which are not available
 from existing public databases, such as concentrations of proteins in
 different subcellular compartments of neuronal and glial cells, kinetic data
-on proteins interactions specific for brain and synaptic signaling and
+on protein interactions specific for brain and synaptic signaling and
 plasticity, data on molecules mobility.</p>
 <p>The repository is integrated with the subcellular application. They share
 the same set of entities described by BioNetGen expressions. The molecular
 repository can be queried from the subcellular application and the results
-of query can be added to a molecular network model.</p>
+of the query can be added to a molecular network model.</p>
 <a class="reference internal image-reference" href="../../../_images/model_reactions.png"><img alt="../../../_images/model_reactions.png" src="../../../_images/model_reactions.png" style="width: 800px;" /></a>
 </div>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Open subcellular application by using link: <a class="reference external" href="https://subcellular.humanbrainproject.eu">SubcellularApp</a></li>
+<li>Open subcellular application by using this link: <a class="reference external" href="https://subcellular.humanbrainproject.eu">SubcellularApp</a></li>
 <li>Create a new model or load/import an existing one<ul>
-<li>To load a public model click an arrow to expand a list of public models
+<li>To load a public model click the arrow to expand a list of public models
 in <cite>Subcellular models repository</cite>, choose one, then click <cite>Load</cite></li>
-<li>To import <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> or <a class="reference external" href="http://sbml.org/Main_Page">SBML</a> (<a class="reference external" href="https://ruleworld.github.io/atomizer/">Atomizer</a> is used for latter) model click
+<li>To import <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> or <a class="reference external" href="http://sbml.org/Main_Page">SBML</a> (<a class="reference external" href="https://ruleworld.github.io/atomizer/">Atomizer</a> is used for the latter) model click
 <cite>Import</cite> in <cite>Model</cite> menu</li>
 <li>To create a new model specify all model parameters and reaction equations
-sequentially opening and filling tables in the <cite>Model</cite> menu (upper left
+sequentially opening and filling the tables in the <cite>Model</cite> menu (upper left
 of the UI). Each table corresponds to a particular section of the
 BioNetGen file of the model (with except for <cite>Diffusions</cite> and <cite>Geometry</cite>
-section). All expressions should comply with BioNetGen language.</li>
+section). All expressions should comply with the BioNetGen language.</li>
 </ul>
 </li>
-<li>To add diffusion (required if using STEPS) navigate to corresponding section
+<li>To add diffusion (required if using STEPS) navigate to the corresponding section
 of the model, click <cite>New diffusion</cite> and specify an arbitrary name
-of diffusive species or molecules, affected structure where corresponding
-species will diffuse, <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> expression for those and diffusion
+of diffusive species or molecules, the affected structure where the corresponding
+species will diffuse, the <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> expression for those and the diffusion
 coefficient in m^2/s units.</li>
 <li>To add geometry (required if using STEPS) click <cite>Add geometry</cite> in
-corresponding model section: specify it’s name, add <a class="reference external" href="http://wias-berlin.de/software/tetgen/fformats.html">TetGen</a> tetrahedral
+the corresponding model section: specify it’s name, add <a class="reference external" href="http://wias-berlin.de/software/tetgen/fformats.html">TetGen</a> tetrahedral
 mesh and a geometry specification file (geometry.json, contains
 relationship between structures and their corresponding tetrahedra and
 triangles, free diffusion boundaries and geometry scale coefficient
@@ -182,12 +182,12 @@ in <cite>Subcellular models repository</cite></li>
 </ul>
 </li>
 <li>To simulate a model select <cite>Simulations</cite> on the <cite>Model</cite> panel, then create
-new simulation by clicking corresponding button, specify solver
-(<a class="reference external" href="http://steps.sourceforge.net/STEPS/default.php">STEPS</a> or <a class="reference external" href="http://michaelsneddon.net/nfsim/">NFSim</a>), change default simulation parameters and add
-stimulation (can be imported from a CSV or NFSim .rnf file) if needed;
-click <cite>Apply</cite> in the bottom of the form and finally <cite>Run</cite> to start
+new simulation by clicking the corresponding button, specify the solver
+(<a class="reference external" href="http://steps.sourceforge.net/STEPS/default.php">STEPS</a> or <a class="reference external" href="http://michaelsneddon.net/nfsim/">NFSim</a>), change the default simulation parameters and add
+stimulation (this can be imported from a CSV or NFSim .rnf file) if needed;
+click <cite>Apply</cite> in the bottom of the form and finally <cite>Run</cite> to start the
 simulation.</li>
-<li>Simulation logs and charts are available for inspection once simulation
+<li>Simulation logs and charts are available for inspection once the simulation
 is started by clicking on <cite>Graph</cite> or <cite>Log</cite> buttons.</li>
 </ol>
 </div>
@@ -323,12 +323,12 @@ CB_C2_Ca_off:  CB(C1!+,C2!1).Ca(x!1) -&gt; CB(C1!+,C2) + Ca(x)                 k
 <span class="mf">1.102</span> <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<p>Above mentioned model with geometry and simulation configuration can be found
+<p>The above mentioned model with geometry and simulation configuration can be found
 in <cite>Public models</cite> as <cite>CaM_Ca_spatial</cite> model.</p>
 </div>
 <div class="section" id="results">
 <h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
-<p>Simulation result (available when sim has been started with live updates)
+<p>Simulation results (available when sim has been started with live updates)
 can be downloaded as well as inspected with integrated:</p>
 <ul class="simple">
 <li>cumulative per-observable concentration chart</li>
