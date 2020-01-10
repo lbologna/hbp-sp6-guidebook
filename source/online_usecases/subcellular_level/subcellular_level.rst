@@ -9,5 +9,4 @@ Subcellular level
 
     KappaNEURON/KappaNEURON
     synaptic_plasticity_pathways/synaptic_plasticity_pathways
-               
-
+    subcellular_app/subcellular_app
