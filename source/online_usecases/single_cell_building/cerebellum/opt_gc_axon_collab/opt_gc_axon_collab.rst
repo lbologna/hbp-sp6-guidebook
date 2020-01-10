@@ -54,8 +54,9 @@ granule cell mode [3].
 The rest of the ionic channels were taken from a published Purkinje cell model [4]. 
 The custom Ascending Axon, Parallel Fibers and FHF nav1.6 sodium channel were built following experimental data obtained from granule cell [5][6].
 
+|
 
-Bibliography.
+**Bibliography**
 
 [1] D’Angelo, E., Antonietti, A., Casali, S., Casellato, C., Garrido, J. A., Luque, N. R., … Ros, E. (2016). 
 Modeling the Cerebellar Microcircuit: New Strategies for a Long-Standing Issue. Frontiers in Cellular Neuroscience, 10, 176.
