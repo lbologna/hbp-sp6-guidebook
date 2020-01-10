@@ -34,16 +34,11 @@ compensated by a complex interaction of many families of ion channels, a
 specific calcium buffer and complex synaptic receptors and plasticity.
 During the last three decades many models, both simplified and 
 multi-compartmental were built to explore their intrinsic and extrinsic 
-physiological properties. 
-
-(D’Angelo, E., Antonietti, A., Casali, S., Casellato, C., Garrido, J. A., Luque, N. R., … Ros, E. (2016). 
-Modeling the Cerebellar Microcircuit: New Strategies for a Long-Standing Issue. Frontiers in Cellular Neuroscience, 10, 176.)
+physiological properties [1]. 
 
 The "Custom Axon Cerebellar Granule cell" usecase contains the 2019 version
 of the multicompartmental granule cell model. The model is composed by: four dendrites, soma, Hillock, 
-AIS, a custom built multisection Ascending Axon (7 sections) and two 1mm long Parallel Fibers (over 140 sections each).
-(Masoli, S., Tognolina, M., & Angelo, D. (2019). Parameter tuning differentiates granule cell
-subtypes enriching the repertoire of retransmission properties at the cerebellum input stage.)
+AIS, a custom built multisection Ascending Axon (7 sections) and two 1mm long Parallel Fibers (over 140 sections each) [2].
 
 The purpose of this usecase is to show that, with custom code, BluePyOpt allows the definition
 of custom sectionlists which can be used to increase the morphological complexity of a model. 
@@ -55,19 +50,31 @@ cells contain code examples and explanations on how to use and integrate the cus
 optimization code. 
 
 Some of the ionic channels mechanisms, passive properties and morphology were taken from a previously published 
-granule cell mode. (Diwakar, S., Magistretti, J., Goldfarb, M., Naldi, G., & D’Angelo, E. (2009). Axonal Na+ channels 
-ensure fast spike activation and back-propagation in cerebellar granule cells. Journal of Neurophysiology, 101(2), 519–532.)
+granule cell mode [3]. 
+The rest of the ionic channels were taken from a published Purkinje cell model [4]. 
+The custom Ascending Axon, Parallel Fibers and FHF nav1.6 sodium channel were built following experimental data obtained from granule cell [5][6].
 
-The rest of the ionic channels were taken from (Masoli, S., Solinas, S., & D’Angelo, E. (2015). 
+|
+
+**Bibliography**
+
+[1] D’Angelo, E., Antonietti, A., Casali, S., Casellato, C., Garrido, J. A., Luque, N. R., … Ros, E. (2016). 
+Modeling the Cerebellar Microcircuit: New Strategies for a Long-Standing Issue. Frontiers in Cellular Neuroscience, 10, 176.
+
+[2] Masoli, S., Tognolina, M., & Angelo, D. (2019). Parameter tuning differentiates granule cell
+subtypes enriching the repertoire of retransmission properties at the cerebellum input stage.
+
+[3] Diwakar, S., Magistretti, J., Goldfarb, M., Naldi, G., & D’Angelo, E. (2009). Axonal Na+ channels 
+ensure fast spike activation and back-propagation in cerebellar granule cells. Journal of Neurophysiology, 101(2), 519–532.
+
+[4] Masoli, S., Solinas, S., & D’Angelo, E. (2015). 
 Action potential processing in a detailed Purkinje cell model reveals a critical role for axonal compartmentalization. 
-Frontiers in Cellular Neuroscience, 9(February), 1–22.)
+Frontiers in Cellular Neuroscience, 9(February), 1–22.
 
-The custom Ascending Axon, Parallel Fibers and FHF nav1.6 sodium channel were built following experimental data obtained from granule cell.
-
-Dover, K., Solinas, S., D’Angelo, E., & Goldfarb, M. (2010). Long-term inactivation particle for voltage-gated sodium channels. 
+[5] Dover, K., Solinas, S., D’Angelo, E., & Goldfarb, M. (2010). Long-term inactivation particle for voltage-gated sodium channels. 
 The Journal of Physiology, 588(Pt 19), 3695–3711.
 
-Dover, K., Marra, C., Solinas, S., Popovic, M., Subramaniyam, S., Zecevic, D., … Goldfarb, M. (2016). 
+[6] Dover, K., Marra, C., Solinas, S., Popovic, M., Subramaniyam, S., Zecevic, D., … Goldfarb, M. (2016). 
 FHF-independent conduction of action potentials along the leak-resistant cerebellar granule cell axon. 
 Nature Communications, 7, 12895. 
 
