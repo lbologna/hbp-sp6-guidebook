@@ -6,7 +6,7 @@ Overview
 This **use case** aims to illustrate the process of **parameterizing a small molecule**,
 to be used in a Molecular Dynamics simulation, step by step.
 The particular example used is the **Imipramine molecule** (PDB code
-`IXX <https://www.rcsb.org/ligand/IXX>`_, DrugBank code `DB00458 <drugbank.ca/drugs/DB00458>`_).
+`IXX <https://www.rcsb.org/ligand/IXX>`_, DrugBank code `DB00458 <http://drugbank.ca/drugs/DB00458>`_).
 
 **Imipramine** is a tricyclic antidepressant (TCA) which is used mainly in the treatment
 of **depression**. It can also reduce symptoms of **agitation and anxiety**.
