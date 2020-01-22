@@ -46,6 +46,7 @@ These lines from the `molecule_definitions.ka` demonstrate how binding
 cAMP to PDE4 in an unphosphorylated state:
 
 .. code:: python  
+
    'PDE4 binding cAMP' PDE4(x, phos~u), cAMP(x) -> PDE4(x!1, phos~u), cAMP(x!1) @ 'PDE4cAMPk+'
    'PDE4 unbinding cAMP' PDE4(x!1, phos~u), cAMP(x!1) -> PDE4(x, phos~u), cAMP(x) @ 'PDE4cAMPk-'
    'PDE4 destroys cAMP' PDE4(x!1, phos~u), cAMP(x!1) -> PDE4(x, phos~u) @ 'PDE4cAMPcat'
