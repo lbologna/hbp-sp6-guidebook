@@ -148,6 +148,11 @@ messengers can be modeled.</p>
 <h2>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h2>
 <p>These lines from the <cite>molecule_definitions.ka</cite> demonstrate how binding
 cAMP to PDE4 in an unphosphorylated state:</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span>&#39;PDE4 binding cAMP&#39; PDE4(x, phos~u), cAMP(x) -&gt; PDE4(x!1, phos~u), cAMP(x!1) @ &#39;PDE4cAMPk+&#39;
+&#39;PDE4 unbinding cAMP&#39; PDE4(x!1, phos~u), cAMP(x!1) -&gt; PDE4(x, phos~u), cAMP(x) @ &#39;PDE4cAMPk-&#39;
+&#39;PDE4 destroys cAMP&#39; PDE4(x!1, phos~u), cAMP(x!1) -&gt; PDE4(x, phos~u) @ &#39;PDE4cAMPcat&#39;
+</pre></div>
+</div>
 <p>These lines demonstrate phosphorylation of PDE4 by PKAc:</p>
 <div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span>&#39;PKAc phosphorylating PDE4&#39; PKA(x!1, type~c), PDE4(x!1, phos~u) -&gt; PKA(x, type~c), PDE4(x, phos~p) @ &#39;PKAPDE4cat&#39;
 &#39;4Ca-CaM-CaN dephosphorylating PDE4 phos&#39; CaN(cam!2, sub!1),

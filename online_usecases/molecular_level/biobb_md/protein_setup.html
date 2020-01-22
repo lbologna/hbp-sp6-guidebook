@@ -1,0 +1,242 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Preparing a protein to run an atomistic Molecular Dynamics simulation &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/load_ga.js"></script>
+    <script type="text/javascript" src="../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Preparing a protein-ligand complex to run an atomistic Molecular Dynamics simulation" href="protein_complex_setup.html" />
+    <link rel="prev" title="The ARDOCK service" href="../ardock/ardock_hpb_platform.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Preparing a protein to run an atomistic Molecular Dynamics simulation</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#background">Background</a></li>
+<li><a class="reference internal" href="#how-it-works">How it works ?</a></li>
+<li><a class="reference internal" href="#outcomes-steps">Outcomes / Steps</a></li>
+<li><a class="reference internal" href="#input">Input</a></li>
+<li><a class="reference internal" href="#outputs">Outputs</a></li>
+<li><a class="reference internal" href="#targeted-audience">Targeted audience</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../ardock/ardock_hpb_platform.html"
+                        title="previous chapter">The ARDOCK service</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="protein_complex_setup.html"
+                        title="next chapter">Preparing a protein-ligand complex to run an atomistic Molecular Dynamics simulation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/online_usecases/molecular_level/biobb_md/protein_setup.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../molecular_level.html">Molecular level</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../ardock/ardock_hpb_platform.html">The ARDOCK service</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="protein_complex_setup.html">Preparing a protein-ligand complex to run an atomistic Molecular Dynamics simulation</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="preparing-a-protein-to-run-an-atomistic-molecular-dynamics-simulation">
+<h1>Preparing a protein to run an atomistic Molecular Dynamics simulation<a class="headerlink" href="#preparing-a-protein-to-run-an-atomistic-molecular-dynamics-simulation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This <strong>use case</strong> aims to illustrate the process of setting up an <strong>atomistic
+Molecular Dynamics simulation</strong> system containing a <strong>protein</strong>, step by step.
+The particular example used is the <strong>Parvalbumin Calcium-binding</strong> protein
+(PDB code <a class="reference external" href="https://www.rcsb.org/structure/1B8R">1B8R</a>).</p>
+<p><strong>Parvalbumin</strong> is a calcium binding protein that is found in subsets of sensory
+<strong>neurons</strong>, inhibitory <strong>interneurons</strong> and <strong>motoneurons</strong>. Alterations in the
+function of parvalbumin-expressing <strong>neurons</strong> have been implicated in various
+areas of clinical interest such as <strong>Alzheimer’s disease</strong>, <strong>autism</strong>,
+<strong>schizophrenia</strong>, age-related <strong>cognitive defects</strong> and some forms of <strong>cancer</strong>.</p>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p><strong>Molecular Dynamics (MD) simulation</strong> is the most popular theoretical technique to
+obtain <strong>macromolecular dynamic information</strong>. <strong>Classical mechanics</strong> is used to represent
+<strong>atoms as spheres</strong> of a given radius, hardness, charge and mass. The <strong>energy functional</strong> used by
+<strong>force-fields</strong> is usually composed of two terms: <strong>bonded</strong> and <strong>non-bonded</strong> components:</p>
+<div class="math notranslate nohighlight">
+\[E_{pot} = E_{bonded} + E_{non-bonded}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[E_{bonded} = E_{bond} + E_{angle} + E_{dihedral}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[E_{non-bonded} = E_{elec} + E_{VdW}\]</div>
+<div class="figure">
+<a class="reference internal image-reference" href="../../../_images/MD.png"><img alt="../../../_images/MD.png" src="../../../_images/MD.png" style="width: 500pt;" /></a>
+</div>
+<p>The combination of the <strong>force-fields</strong> with the <strong>laws of classical mechanics</strong>
+(Newton’s second law of motion), allows the calculation of the
+<strong>time evolution</strong> of the system.
+<strong>Trajectories</strong> of atoms and molecules are determined by numerically solving
+Newton’s equations of motion for a system of interacting particles, where forces
+between the particles and their potential energies are calculated using
+the <strong>force-field energy functionals</strong>.</p>
+</div>
+<div class="section" id="how-it-works">
+<h2>How it works ?<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>This workflow makes extensive use of the <strong>BioExcel Building Blocks library</strong>
+(<a class="reference external" href="https://github.com/bioexcel/biobb">biobb</a>). Each step of the process is
+performed by a <strong>building block</strong> (bb), which are wrappers of tools/scripts
+that computes a particular functionality (e.g. Solvating a system).
+If you are interested in expanding/modifying the current workflow,
+please visit the <strong>existing documentation</strong> for each of the packages
+<a class="reference external" href="https://github.com/bioexcel/biobb">here</a>.</p>
+<p>Most of the steps performed in this pipeline run <strong>GROMACS MD package</strong> tools,
+one of the most popular MD packages available.</p>
+<p>Although the <strong>pipeline</strong> is presented <strong>step by step</strong> with associated
+information, it is extremely advisable to previously spend some time reading
+documentation about <strong>Molecular Dynamics simulations</strong>, to get familiar with
+the terms used, especially for newcomers to the field.
+This workflow is based on the official <strong>GROMACS MD setup tutorial</strong>:
+<a class="reference external" href="http://www.mdtutorials.com/gmx/lysozyme/index.html">http://www.mdtutorials.com/gmx/lysozyme/index.html</a></p>
+</div>
+<div class="section" id="outcomes-steps">
+<h2>Outcomes / Steps<a class="headerlink" href="#outcomes-steps" title="Permalink to this headline">¶</a></h2>
+<p>This use case will explain:</p>
+<ul class="simple">
+<li>How to fetch a <strong>PDB structure</strong> from the <strong>RCSB PDB database</strong></li>
+<li>How to <strong>fix a protein structure</strong> (add missing atoms)</li>
+<li>How to create a <strong>protein system topology</strong></li>
+<li>How to create a <strong>solvent box</strong> surrounding the protein</li>
+<li>How to fill the box with <strong>water molecules</strong></li>
+<li>How to <strong>energetically neutralize</strong> the system with the addition of <strong>counterions</strong></li>
+<li>How to <strong>energetically minimize</strong> the system</li>
+<li>How to <strong>equilibrate</strong> the system in two steps (NVT, NPT)</li>
+<li>How to run a <strong>free Molecular Dynamics (MD) simulation</strong></li>
+<li>How to <strong>post-process</strong> and <strong>visualize</strong> the resulting <strong>3D trajectory</strong></li>
+<li>How to <strong>find</strong> and <strong>download</strong> the generated <strong>output files</strong></li>
+</ul>
+</div>
+<div class="section" id="input">
+<h2>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>A <strong>PDB code</strong> of a <strong>protein structure</strong></li>
+</ul>
+</div>
+<div class="section" id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Interactive and 3D vizualisation</strong> of the <strong>intermediate results</strong> on the protein structure</li>
+<li><strong>Interactive and 3D vizualisation</strong> of the <strong>resulting trajectory</strong></li>
+<li><strong>Interactive visualization</strong> of <strong>2D analyses plots</strong> (energies, temperature, RMSd)</li>
+<li>Short (100ps) <strong>trajectory file</strong> generated from the final <strong>free MD simulation</strong> step</li>
+<li>Collection of <strong>files needed to extend the MD simulation</strong> available to download</li>
+</ul>
+</div>
+<div class="section" id="targeted-audience">
+<h2>Targeted audience<a class="headerlink" href="#targeted-audience" title="Permalink to this headline">¶</a></h2>
+<p>All scientists working in biology related areas where protein study is relevant
+with a focus on <strong>structural biologists</strong> and <strong>biochemists</strong>. Especially directed to
+scientists interested in <strong>protein dynamics</strong> and <strong>flexibility</strong>.</p>
+</div>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../ardock/ardock_hpb_platform.html">The ARDOCK service</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="protein_complex_setup.html">Preparing a protein-ligand complex to run an atomistic Molecular Dynamics simulation</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>
