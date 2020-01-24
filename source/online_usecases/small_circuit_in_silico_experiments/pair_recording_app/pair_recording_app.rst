@@ -39,8 +39,9 @@ will appear with controls facilitating cell selection.
 
 Cells in the view are colour-coded by one of their's properties, user can
 change this property with a `Color by` select on the bottom of the view.
-Form to the right consists of various controls and allows user to filter and
-select cells. Two types of filters are available: property and connectivity.
+The form to the right consists of various controls and allows user to filter
+and select cells. Two types of filters are available: property and
+connectivity.
 
 Property(display) filters can be used to show only cells with particular
 properties (include subtype) or filter out a subset of particular cells based
@@ -59,15 +60,15 @@ and click the `Add` button.
 
 When cell selection is done a user can proceed to simulation configuration by
 clicking a corresponding button which will load and render morphologies for
-selected cells.
+the selected cells.
 
 .. image:: images/step_4.png
    :width: 800 px
 
 A user can add stimulation and/or recordings by clicking on sections of
 interest and choosing a type of instrument being added (stimulus, recording or
-synaptic input - which is available only if clicking on soma). Each added
-stimulus and synaptic input can be configured in the right panel.
+synaptic input - the latter is only available for a soma). Each added stimulus
+and synaptic input can be configured in the right panel.
 
 Available types of stimuli are:
 
