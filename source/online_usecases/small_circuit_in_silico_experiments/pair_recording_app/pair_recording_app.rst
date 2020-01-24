@@ -47,9 +47,8 @@ properties (include subtype) or filter out a subset of particular cells based
 on their properties. By default, multiple added filters use OR (union) logic to
 compose a subset of affected cells, and when required,  user can switch this
 mode to use AND (intersection) logic. This applies to both types of filters:
-`include` and `exclude`
-Connectivity filter can be used to show neurons with afferent of efferent
-connections to a selected cell.
+`include` and `exclude`. Connectivity filter can be used to show neurons with
+afferent of efferent connections to a selected cell.
 
 Cells can be selected for later simulations by clicking on them in the
 interactive view or, if known beforehand, specifying their `gid`s in the form
@@ -79,7 +78,7 @@ Available types of stimuli are:
 
 Synaptic input will provide a cell with a presynaptic spike train of a
 given frequency with Poisson distribution for synapses with selected
-pre-synaptic cells (filtered by a given pre-synaptic cell property)
+pre-synaptic cells (filtered by a given pre-synaptic cell property).
 
 .. image:: images/step_5.png
    :width: 800 px
