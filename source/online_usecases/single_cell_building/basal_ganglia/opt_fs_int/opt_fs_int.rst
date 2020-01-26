@@ -1,8 +1,8 @@
 .. _FS_single_cell_opt_guidebook:
 
-#############################################
-Optimise a striatial fast-spiking interneuron
-#############################################
+############################################
+Optimise a striatal fast-spiking interneuron
+############################################
 
 This Use Case demonstrates how BluePyOpt can be used to optimize a striatal 
 fast-spiking interneuron. The notebook is self-contained and runs a few steps 
