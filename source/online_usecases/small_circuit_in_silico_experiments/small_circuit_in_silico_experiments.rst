@@ -9,4 +9,4 @@ To be defined ...
 .. toctree::
     :maxdepth: 4
 
-
+    pair_recording_app/pair_recording_app
