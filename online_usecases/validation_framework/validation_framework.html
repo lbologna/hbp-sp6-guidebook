@@ -262,8 +262,8 @@ there are no results associated with them. Results can never be edited!</li>
 <dt><strong>4) BluePyOpt Optimized Model Validation</strong></dt>
 <dd>This test shall take as input a BluePyOpt optimized output file. The validation test would then evaluate the model for all parameter sets against various eFEL features. It should be noted that the reference data used is that located within the model, so this test can be considered as a quantification of the goodness of fitting the model. The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework are not found in the current Collab, then these are created. Additionally, a test report is generated and this can be viewed within the Jupyter notebook, or downloaded.</dd>
 <dt><strong>5) Basal Ganglia Morphology Validation</strong></dt>
-<dd><p class="first">This test shall take as input a directory containing neuronal morphologies (currently supports swc format). The user decides whether to run the validations for all available morphologies, or a subset of these.</p>
-<p>The validations are carried out using ‘NeuroM’ (<a class="reference external" href="https://github.com/BlueBrain/NeuroM">https://github.com/BlueBrain/NeuroM</a>). The validation test evaluates the morphology in two stages:</p>
+<dd><p class="first">This test shall take as input a directory containing neuronal morphologies. The features extraction is carried out using ‘NeuroM’ (<a class="reference external" href="https://github.com/BlueBrain/NeuroM">https://github.com/BlueBrain/NeuroM</a>), so the test currently supports only ‘NeuroM’ compatible formats.</p>
+<p>The user decides whether to run the validations for all available morphologies, or a subset of these. The validation test evaluates the morphology in two stages:</p>
 <ul class="last">
 <li><p class="first"><strong>Hard Constraints</strong>
 Here we evaluate the integrity of the neuronal reconstruction in order to determine if it is appropriate for further evaluations. The evaluations here can be sub-divided into the following NeuroM features (apps): - morph_check - cut_plane_detection</p>
@@ -271,7 +271,23 @@ Here we evaluate the integrity of the neuronal reconstruction in order to determ
 <li><p class="first"><strong>Soft Constraints</strong> <em>[Currently only available for Fast Spiking Interneurons]</em>
 Neuronal reconstructions that pass the ‘Hard Constraints’ are evaluated here for their morphometric features. The features are extracted using NeuroM’s morph_stats app, wherever possible, either directly or as a combination of multiple features. These are then compared against experimentally obtained data, as determined by the particular validation test being executed.</p>
 <p>Some of the features currently included are soma’s diameter and the maximal branch order in the dendrites, besides the number of trunk sections, -X,Y,Z- extents, field’s diameter and total path-length of both the axon and the dendrites.</p>
-<p><strong>Note:</strong> Currently only FS interneurons can be considered, since observation data is missing for other neuron types.</p>
+<p><strong>Note:</strong> Currently only Striatum Fast-Spiking Interneurons (FSI) can be considered, since observation data is missing for other neuron types.</p>
+</li>
+</ul>
+</dd>
+<dt><strong>6) Basal Ganglia Population Morphology Validation</strong></dt>
+<dd><p class="first">The average morphometrics of a population of (digitally reconstructed) Fast-Spiking Interneurons (FSI) in Striatum, is validated against experimental data. Additional plots are provided to visualize some statistics derived from the morphometrics of the indiviual cells, e.g. linear regression analysis, histograms and Kernel-Distribution-Estimates (KDE) for single features, and bi-dimensionl joint KDEs for pairs of uncorrelated features.</p>
+<p>This test shall take as input a directory containing neuronal morphologies. The features extraction is carried out using ‘NeuroM’ (<a class="reference external" href="https://github.com/BlueBrain/NeuroM">https://github.com/BlueBrain/NeuroM</a>), so the test currently supports only ‘NeuroM’ compatible formats.</p>
+<p>The user decides whether to run the validations for all available morphologies, or a subset of these. The validation test evaluates the morphology in two stages:</p>
+<ul class="last">
+<li><p class="first"><strong>Hard Constraints</strong>
+Here we evaluate the integrity of the neuronal reconstruction in order to determine if it is appropriate for further evaluations. The evaluations here can be sub-divided into the following NeuroM features (apps): - morph_check - cut_plane_detection</p>
+</li>
+<li><p class="first"><strong>Soft Constraints</strong> <em>[Currently only available for Fast Spiking Interneurons]</em>
+Neuronal reconstructions that pass the ‘Hard Constraints’ are evaluated here for their morphometric features. The features are extracted using NeuroM’s morph_stats app, wherever possible, either directly or as a combination of multiple features. The average morphometrics of the population of neurons is then computed. Those mean values are then compared against experimentally obtained data, as determined by the particular validation test being executed.</p>
+<p>Some of the features currently included are soma’s diameter and the maximal branch order in the dendrites, besides the number of trunk sections, -X,Y,Z- extents, field’s diameter and total path-length of both the axon and the dendrites.</p>
+<p>Additional plots are provided to visualize some statistics derived from the morphometrics of the indiviual cells, e.g. linear regression analysis, histograms and Kernel-Distribution-Estimates (KDE) for single features, and bi-dimensionl joint KDEs for pairs of uncorrelated features.</p>
+<p><strong>Note:</strong> Currently only Striatum Fast-Spiking Interneurons (FSI) can be considered, since observation data is missing for other neuron types.</p>
 </li>
 </ul>
 </dd>
@@ -283,7 +299,7 @@ Neuronal reconstructions that pass the ‘Hard Constraints’ are evaluated here
 <li>Access to the validation tools and services requires HBP SGA2 accreditation. Non-HBP members should contact “<a class="reference external" href="mailto:support&#37;&#52;&#48;humanbrainproject&#46;eu">support<span>&#64;</span>humanbrainproject<span>&#46;</span>eu</a>” for access.</li>
 </ul>
 <ul class="simple">
-<li>The validation use cases are only Python 3 compatible! Python 2 support has been dropped since v3.0 of the use cases.</li>
+<li>The validation use cases are only Python 3 compatible! Python 2 support has been dropped as it reached the end of its life on January 1st, 2020.</li>
 </ul>
 </div>
 </div>
