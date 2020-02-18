@@ -172,7 +172,7 @@ We currently have the following Use Cases on the Collaboratory:
   This test shall take as input a BluePyOpt optimized output file. The validation test would then evaluate the model for all parameter sets against various eFEL features. It should be noted that the reference data used is that located within the model, so this test can be considered as a quantification of the goodness of fitting the model. The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework are not found in the current Collab, then these are created. Additionally, a test report is generated and this can be viewed within the Jupyter notebook, or downloaded.
 
 **5) Basal Ganglia Morphology Validation**
-  This test shall take as input a directory containing neuronal morphologies. The features extraction is carried out using 'NeuroM' (https://github.com/BlueBrain/NeuroM), so the test currently supports only 'NeuroM' compatible formats.
+  This test shall take as input a directory containing neuronal morphologies. The features extraction is carried out using 'NeuroM' (https://github.com/BlueBrain/NeuroM), so the test currently supports only NeuroM compatible formats.
 
   The user decides whether to run the validations for all available morphologies, or a subset of these. The validation test evaluates the morphology in two stages:
 
@@ -187,9 +187,9 @@ We currently have the following Use Cases on the Collaboratory:
     **Note:** Currently only Striatum Fast-Spiking Interneurons (FSI) can be considered, since observation data is missing for other neuron types.
 
 **6) Basal Ganglia Population Morphology Validation**
-  The average morphometrics of a population of (digitally reconstructed) Fast-Spiking Interneurons (FSI) in Striatum, is validated against experimental data. Additional plots are provided to visualize some statistics derived from the morphometrics of the indiviual cells, e.g. linear regression analysis, histograms and Kernel-Distribution-Estimates (KDE) for single features, and bi-dimensionl joint KDEs for pairs of uncorrelated features.
+  The average morphometrics of a population of (digitally reconstructed) Fast-Spiking Interneurons (FSI) in Striatum, is validated against experimental data. Additional plots are provided to visualize some statistics derived from the morphometrics of the individual cells, e.g. linear regression analysis, histograms and Kernel-Distribution-Estimates (KDE) for single features, and bi-dimensional joint KDEs for pairs of uncorrelated features.
 
-  This test shall take as input a directory containing neuronal morphologies. The features extraction is carried out using 'NeuroM' (https://github.com/BlueBrain/NeuroM), so the test currently supports only 'NeuroM' compatible formats.
+  This test shall take as input a directory containing neuronal morphologies. The features extraction is carried out using 'NeuroM' (https://github.com/BlueBrain/NeuroM), so the test currently supports only NeuroM compatible formats.
 
   The user decides whether to run the validations for all available morphologies, or a subset of these. The validation test evaluates the morphology in two stages:
 
@@ -201,7 +201,7 @@ We currently have the following Use Cases on the Collaboratory:
 
     Some of the features currently included are soma's diameter and the maximal branch order in the dendrites, besides the number of trunk sections, -X,Y,Z- extents, field's diameter and total path-length of both the axon and the dendrites.
 
-    Additional plots are provided to visualize some statistics derived from the morphometrics of the indiviual cells, e.g. linear regression analysis, histograms and Kernel-Distribution-Estimates (KDE) for single features, and bi-dimensionl joint KDEs for pairs of uncorrelated features.
+    Additional plots are provided to visualize some statistics derived from the morphometrics of the individual cells, e.g. linear regression analysis, histograms and Kernel-Distribution-Estimates (KDE) for single features, and bi-dimensional joint KDEs for pairs of uncorrelated features.
 
     **Note:** Currently only Striatum Fast-Spiking Interneurons (FSI) can be considered, since observation data is missing for other neuron types.
 
