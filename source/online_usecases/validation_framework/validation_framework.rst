@@ -172,9 +172,9 @@ We currently have the following Use Cases on the Collaboratory:
   This test shall take as input a BluePyOpt optimized output file. The validation test would then evaluate the model for all parameter sets against various eFEL features. It should be noted that the reference data used is that located within the model, so this test can be considered as a quantification of the goodness of fitting the model. The results are registered on the HBP Validation Framework app. If an instance of the Model Catalog and Validation Framework are not found in the current Collab, then these are created. Additionally, a test report is generated and this can be viewed within the Jupyter notebook, or downloaded.
 
 **5) Basal Ganglia Morphology Validation**
-  This test shall take as input a directory containing neuronal morphologies (currently supports swc format). The user decides whether to run the validations for all available morphologies, or a subset of these.
+  This test shall take as input a directory containing neuronal morphologies. The features extraction is carried out using 'NeuroM' (https://github.com/BlueBrain/NeuroM), so the test currently supports only NeuroM compatible formats.
 
-  The validations are carried out using 'NeuroM' (https://github.com/BlueBrain/NeuroM). The validation test evaluates the morphology in two stages:
+  The user decides whether to run the validations for all available morphologies, or a subset of these. The validation test evaluates the morphology in two stages:
 
   - **Hard Constraints**
     Here we evaluate the integrity of the neuronal reconstruction in order to determine if it is appropriate for further evaluations. The evaluations here can be sub-divided into the following NeuroM features (apps): - morph_check - cut_plane_detection
@@ -184,7 +184,26 @@ We currently have the following Use Cases on the Collaboratory:
 
     Some of the features currently included are soma's diameter and the maximal branch order in the dendrites, besides the number of trunk sections, -X,Y,Z- extents, field's diameter and total path-length of both the axon and the dendrites.
 
-    **Note:** Currently only FS interneurons can be considered, since observation data is missing for other neuron types.
+    **Note:** Currently only Striatum Fast-Spiking Interneurons (FSI) can be considered, since observation data is missing for other neuron types.
+
+**6) Basal Ganglia Population Morphology Validation**
+  The average morphometrics of a population of (digitally reconstructed) Fast-Spiking Interneurons (FSI) in Striatum, is validated against experimental data. Additional plots are provided to visualize some statistics derived from the morphometrics of the individual cells, e.g. linear regression analysis, histograms and Kernel-Distribution-Estimates (KDE) for single features, and bi-dimensional joint KDEs for pairs of uncorrelated features.
+
+  This test shall take as input a directory containing neuronal morphologies. The features extraction is carried out using 'NeuroM' (https://github.com/BlueBrain/NeuroM), so the test currently supports only NeuroM compatible formats.
+
+  The user decides whether to run the validations for all available morphologies, or a subset of these. The validation test evaluates the morphology in two stages:
+
+  - **Hard Constraints** 
+    Here we evaluate the integrity of the neuronal reconstruction in order to determine if it is appropriate for further evaluations. The evaluations here can be sub-divided into the following NeuroM features (apps): - morph_check - cut_plane_detection
+
+  - **Soft Constraints** *[Currently only available for Fast Spiking Interneurons]*
+    Neuronal reconstructions that pass the 'Hard Constraints' are evaluated here for their morphometric features. The features are extracted using NeuroM's morph_stats app, wherever possible, either directly or as a combination of multiple features. The average morphometrics of the population of neurons is then computed. Those mean values are then compared against experimentally obtained data, as determined by the particular validation test being executed.
+
+    Some of the features currently included are soma's diameter and the maximal branch order in the dendrites, besides the number of trunk sections, -X,Y,Z- extents, field's diameter and total path-length of both the axon and the dendrites.
+
+    Additional plots are provided to visualize some statistics derived from the morphometrics of the individual cells, e.g. linear regression analysis, histograms and Kernel-Distribution-Estimates (KDE) for single features, and bi-dimensional joint KDEs for pairs of uncorrelated features.
+
+    **Note:** Currently only Striatum Fast-Spiking Interneurons (FSI) can be considered, since observation data is missing for other neuron types.
 
 .. _vf-notes:
 
@@ -194,4 +213,4 @@ Notes
 
 - Access to the validation tools and services requires HBP SGA2 accreditation. Non-HBP members should contact “support@humanbrainproject.eu” for access.
 
-* The validation use cases are only Python 3 compatible! Python 2 support has been dropped since v3.0 of the use cases.
+* The validation use cases are only Python 3 compatible! Python 2 support has been dropped as it reached the end of its life on January 1st, 2020.
