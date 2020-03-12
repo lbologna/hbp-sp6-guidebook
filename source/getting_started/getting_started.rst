@@ -214,14 +214,197 @@ Video Tutorials
 
 .. container:: bsp-inline-text
 
-    Use cases with this icon provide a video tutorial that illustrates, in an interactive way, how to complete the entire Use Case. The user will be able to simulate the entire Use Case execution by clicking on ad-hoc buttons. 
+    Use Cases with this icon provide a video tutorial that illustrates how to complete the entire Use Case. 
+    The video tutorials allow the user to simulate the entire Use Case execution by clicking *ad-hoc* buttons. 
+    They are intended to be used in a point-and-click interactive way, so please do not make use of the video progress bar while playing the videos so as not to disrupt the execution flow.
 
+    There are currently 15 video tutorials available on the BSP. We group them by Use Case topic in the list below. 
+    Please click the "Play" button if you want to execute a video tutorial or the "Download" button to download it locally (after downloading a video .zip file, unzip it and double click on the "index.html" file in order to play the video tutorial in your browser).
+
+|
+
+**Trace Analysis**
+
+Feature extraction |ta_fe_video_link| - |ta_fe_zip_link|
+
+.. |ta_fe_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/FeatureExtraction/index.html" target="_blank">Play</a>
+
+.. |ta_fe_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/FeatureExtraction.zip" target="_blank">Download</a>
+
+
+Synaptic events fitting |ta_sef_video_link| - |ta_sef_zip_link|
+
+.. |ta_sef_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/SynapticEventsFitting/index.html" target="_blank">Play</a>
+
+.. |ta_sef_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/SynapticEventsFitting.zip" target="_blank">Download</a>
+
+
+Synaptic events fitting with user model |ta_sefum_video_link| - |ta_sefum_zip_link|
+
+.. |ta_sefum_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/SynapticEventsFittingWithUserModel/index.html" target="_blank">Play</a>
+
+.. |ta_sefum_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/SynapticEventsFittingWithUserModel.zip" target="_blank">Download</a>
+
+
+Synaptic events fitting with user data |ta_sefud_video_link| - |ta_sefud_zip_link|
+
+.. |ta_sefud_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/SynapticEventsFittingWithUserData/index.html" target="_blank">Play</a>
+
+.. |ta_sefud_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/SynapticEventsFittingWithUserData.zip" target="_blank">Download</a>
+
+|
+
+**Morphology Analysis**
+
+Morphology analysis |ma_ma_video_link| - |ma_ma_zip_link|
+
+.. |ma_ma_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/MorphologyAnalysis/index.html" target="_blank">Play</a>
+
+.. |ma_ma_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/MorphologyAnalysis.zip" target="_blank">Download</a>
+    
+
+Morphology visualization |ma_mv_video_link| - |ma_mv_zip_link|
+
+.. |ma_mv_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/MorphologyVisualization/index.html" target="_blank">Play</a>
+
+.. |ma_mv_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/MorphologyVisualization.zip" target="_blank">Download</a>
+
+|
+
+**Single Cell Building**
+
+Hodgkin-Huxley Neuron Builder |scb_hhnb_video_link| - |scb_hhnb_zip_link|
+
+.. |scb_hhnb_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/HodgkinHuxleyNeuronBuilder/index.html" target="_blank">Play</a>
+
+.. |scb_hhnb_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/HodgkinHuxleyNeuronBuilder.zip" target="_blank">Download</a>
+
+
+Rebuild an existing single hippocampal cell model |scb_rem_video_link| - |scb_rem_zip_link|
+
+.. |scb_rem_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/RebuildAnExistingSingleHippocampalCellModel/index.html" target="_blank">Play</a>
+
+.. |scb_rem_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/RebuildAnExistingSingleHippocampalCellModel.zip" target="_blank">Download</a>
+
+
+Build your own single hippocampal cell model using HBP data |scb_byo_video_link| - |scb_byo_zip_link|
+
+.. |scb_byo_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/BuildYourOwnSingleHippocampalCellModel/index.html" target="_blank">Play</a>
+
+.. |scb_byo_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/BuildYourOwnSingleHippocampalCellModel.zip" target="_blank">Download</a>
+
+
+Mono compartmental Cerebellar Granule cell optimization |scb_mocc_video_link| - |scb_mocc_zip_link|
+
+.. |scb_mocc_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/MonoCompartmentalCerebellarGranuleCellOptimization/index.html" target="_blank">Play</a>
+
+.. |scb_mocc_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/MonoCompartmentalCerebellarGranuleCellOptimization.zip" target="_blank">Download</a>
+
+
+Multi compartmental Cerebellar Granule cell optimization |scb_mucc_video_link| - |scb_mucc_zip_link|
+
+.. |scb_mucc_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/MultiCompartmentalCerebellarGranuleCellOptimization/index.html" target="_blank">Play</a>
+
+.. |scb_mucc_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/MultiCompartmentalCerebellarGranuleCellOptimization.zip" target="_blank">Download</a>
+
+
+Custom Axon Cerebellar Granule cell simulation |scb_cac_video_link| - |scb_cac_zip_link|
+
+.. |scb_cac_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/CustomAxonCerebellarGranuleCellOptimization/index.html" target="_blank">Play</a>
+
+.. |scb_cac_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/CustomAxonCerebellarGranuleCellOptimization.zip" target="_blank">Download</a>
+
+
+Simulation and validation of a mouse Purkinje cell multicompartmental model |scb_svp_video_link| - |scb_svp_zip_link|
+
+.. |scb_svp_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/SimulationAndValidationOfAMousePurkinjeCellMulticompartmentalModel/index.html" target="_blank">Play</a>
+
+.. |scb_svp_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/SimulationAndValidationOfAMousePurkinjeCellMulticompartmentalModel.zip" target="_blank">Download</a>
+
+
+Optimize a striatal fast-spiking interneuron |scb_osfs_video_link| - |scb_osfs_zip_link|
+
+.. |scb_osfs_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/OptimiseAStriatalFastSpikingInterneuron/index.html" target="_blank">Play</a>
+
+.. |scb_osfs_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/OptimiseAStriatalFastSpikingInterneuron.zip" target="_blank">Download</a>
+
+|
+
+**Single Cell In Silico Experiments**
+
+Single cell in silico experiments under current clamp |sce_sce_video_link| - |sce_sce_zip_link|
+
+.. |sce_sce_video_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/SingleCellInSilicoExperimentsUnderCurrentClamp/index.html" target="_blank">Play</a>
+
+.. |sce_sce_zip_link| raw:: html  
+
+    <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/SingleCellInSilicoExperimentsUnderCurrentClamp.zip" target="_blank">Download</a>
+
+|
 
 .. _service_account:
 
-"""""""""""""""
+===============
 Service Account
-"""""""""""""""
+===============
 
 The Service Account is a REST API service allowing developers to submit jobs,
 on behalf of HBP Collaboratory users, to remote HPC systems.
@@ -237,9 +420,9 @@ For a thourough explanation on how to use the service, please refer to the
 
 .. _nsg:
 
-""""""""""""""""""""""""""
+==========================
 Neuroscience Gateway (NSG)
-""""""""""""""""""""""""""
+==========================
 
 The Neuroscience Gateway (NSG) portal https://www.nsgportal.org/ facilitates access and use of National Science Foundation (NSF) High Performance Computing (HPC) resources by neuroscientists. Computational modeling of cells and networks has become an essential part of neuroscience research, and researchers are using models to address problems of ever increasing complexity, e.g. large-scale network models and optimization or exploration of high dimensional parameter spaces. The NSG catalyzes such research by lowering or eliminating the administrative and technical barriers that currently make it difficult for researchers to use HPC resources. It offers free computer time to neuroscientists acquired via the supercomputer time allocation process managed by the Extreme Science and Engineering Discovery Environment (XSEDE) Resource Allocation Committee (XRAC). The portal provides access to the popular computational neuroscience tools installed on various HPC resources. It also provides a community mailing list for neuroscientists to collaborate and share ideas.
 
