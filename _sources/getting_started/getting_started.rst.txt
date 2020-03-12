@@ -225,7 +225,7 @@ Video Tutorials
 
 **Trace Analysis**
 
-Feature extraction |ta_fe_video_link| - |ta_fe_zip_link|
+- Feature extraction (|ta_fe_video_link| - |ta_fe_zip_link|)
 
 .. |ta_fe_video_link| raw:: html  
 
@@ -236,7 +236,7 @@ Feature extraction |ta_fe_video_link| - |ta_fe_zip_link|
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/FeatureExtraction.zip" target="_blank">Download</a>
 
 
-Synaptic events fitting |ta_sef_video_link| - |ta_sef_zip_link|
+- Synaptic events fitting (|ta_sef_video_link| - |ta_sef_zip_link|)
 
 .. |ta_sef_video_link| raw:: html  
 
@@ -247,7 +247,7 @@ Synaptic events fitting |ta_sef_video_link| - |ta_sef_zip_link|
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/SynapticEventsFitting.zip" target="_blank">Download</a>
 
 
-Synaptic events fitting with user model |ta_sefum_video_link| - |ta_sefum_zip_link|
+- Synaptic events fitting with user model (|ta_sefum_video_link| - |ta_sefum_zip_link|)
 
 .. |ta_sefum_video_link| raw:: html  
 
@@ -258,7 +258,7 @@ Synaptic events fitting with user model |ta_sefum_video_link| - |ta_sefum_zip_li
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/SynapticEventsFittingWithUserModel.zip" target="_blank">Download</a>
 
 
-Synaptic events fitting with user data |ta_sefud_video_link| - |ta_sefud_zip_link|
+- Synaptic events fitting with user data (|ta_sefud_video_link| - |ta_sefud_zip_link|)
 
 .. |ta_sefud_video_link| raw:: html  
 
@@ -272,7 +272,7 @@ Synaptic events fitting with user data |ta_sefud_video_link| - |ta_sefud_zip_lin
 
 **Morphology Analysis**
 
-Morphology analysis |ma_ma_video_link| - |ma_ma_zip_link|
+- Morphology analysis (|ma_ma_video_link| - |ma_ma_zip_link|)
 
 .. |ma_ma_video_link| raw:: html  
 
@@ -283,7 +283,7 @@ Morphology analysis |ma_ma_video_link| - |ma_ma_zip_link|
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/MorphologyAnalysis.zip" target="_blank">Download</a>
     
 
-Morphology visualization |ma_mv_video_link| - |ma_mv_zip_link|
+- Morphology visualization (|ma_mv_video_link| - |ma_mv_zip_link|)
 
 .. |ma_mv_video_link| raw:: html  
 
@@ -297,7 +297,7 @@ Morphology visualization |ma_mv_video_link| - |ma_mv_zip_link|
 
 **Single Cell Building**
 
-Hodgkin-Huxley Neuron Builder |scb_hhnb_video_link| - |scb_hhnb_zip_link|
+- Hodgkin-Huxley Neuron Builder (|scb_hhnb_video_link| - |scb_hhnb_zip_link|)
 
 .. |scb_hhnb_video_link| raw:: html  
 
@@ -308,7 +308,7 @@ Hodgkin-Huxley Neuron Builder |scb_hhnb_video_link| - |scb_hhnb_zip_link|
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/HodgkinHuxleyNeuronBuilder.zip" target="_blank">Download</a>
 
 
-Rebuild an existing single hippocampal cell model |scb_rem_video_link| - |scb_rem_zip_link|
+- Rebuild an existing single hippocampal cell model (|scb_rem_video_link| - |scb_rem_zip_link|)
 
 .. |scb_rem_video_link| raw:: html  
 
@@ -319,7 +319,7 @@ Rebuild an existing single hippocampal cell model |scb_rem_video_link| - |scb_re
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/RebuildAnExistingSingleHippocampalCellModel.zip" target="_blank">Download</a>
 
 
-Build your own single hippocampal cell model using HBP data |scb_byo_video_link| - |scb_byo_zip_link|
+- Build your own single hippocampal cell model using HBP data (|scb_byo_video_link| - |scb_byo_zip_link|)
 
 .. |scb_byo_video_link| raw:: html  
 
@@ -330,7 +330,7 @@ Build your own single hippocampal cell model using HBP data |scb_byo_video_link|
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/BuildYourOwnSingleHippocampalCellModel.zip" target="_blank">Download</a>
 
 
-Mono compartmental Cerebellar Granule cell optimization |scb_mocc_video_link| - |scb_mocc_zip_link|
+- Mono compartmental Cerebellar Granule cell optimization (|scb_mocc_video_link| - |scb_mocc_zip_link|)
 
 .. |scb_mocc_video_link| raw:: html  
 
@@ -341,7 +341,7 @@ Mono compartmental Cerebellar Granule cell optimization |scb_mocc_video_link| - 
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/MonoCompartmentalCerebellarGranuleCellOptimization.zip" target="_blank">Download</a>
 
 
-Multi compartmental Cerebellar Granule cell optimization |scb_mucc_video_link| - |scb_mucc_zip_link|
+- Multi compartmental Cerebellar Granule cell optimization (|scb_mucc_video_link| - |scb_mucc_zip_link|)
 
 .. |scb_mucc_video_link| raw:: html  
 
@@ -352,7 +352,7 @@ Multi compartmental Cerebellar Granule cell optimization |scb_mucc_video_link| -
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/MultiCompartmentalCerebellarGranuleCellOptimization.zip" target="_blank">Download</a>
 
 
-Custom Axon Cerebellar Granule cell simulation |scb_cac_video_link| - |scb_cac_zip_link|
+- Custom Axon Cerebellar Granule cell simulation (|scb_cac_video_link| - |scb_cac_zip_link|)
 
 .. |scb_cac_video_link| raw:: html  
 
@@ -363,7 +363,7 @@ Custom Axon Cerebellar Granule cell simulation |scb_cac_video_link| - |scb_cac_z
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/CustomAxonCerebellarGranuleCellOptimization.zip" target="_blank">Download</a>
 
 
-Simulation and validation of a mouse Purkinje cell multicompartmental model |scb_svp_video_link| - |scb_svp_zip_link|
+- Simulation and validation of a mouse Purkinje cell multicompartmental model (|scb_svp_video_link| - |scb_svp_zip_link|)
 
 .. |scb_svp_video_link| raw:: html  
 
@@ -374,7 +374,7 @@ Simulation and validation of a mouse Purkinje cell multicompartmental model |scb
     <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/web-resources-bsp/bsp-video-tutorials/zip/SimulationAndValidationOfAMousePurkinjeCellMulticompartmentalModel.zip" target="_blank">Download</a>
 
 
-Optimize a striatal fast-spiking interneuron |scb_osfs_video_link| - |scb_osfs_zip_link|
+- Optimize a striatal fast-spiking interneuron (|scb_osfs_video_link| - |scb_osfs_zip_link|)
 
 .. |scb_osfs_video_link| raw:: html  
 
@@ -388,7 +388,7 @@ Optimize a striatal fast-spiking interneuron |scb_osfs_video_link| - |scb_osfs_z
 
 **Single Cell In Silico Experiments**
 
-Single cell in silico experiments under current clamp |sce_sce_video_link| - |sce_sce_zip_link|
+- Single cell in silico experiments under current clamp (|sce_sce_video_link| - |sce_sce_zip_link|)
 
 .. |sce_sce_video_link| raw:: html  
 
