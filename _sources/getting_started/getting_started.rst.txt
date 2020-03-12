@@ -219,7 +219,7 @@ Video Tutorials
     They are intended to be used in a point-and-click interactive way, so please do not make use of the video progress bar while playing the videos so as not to disrupt the execution flow.
 
     There are currently 15 video tutorials available on the BSP. We group them by Use Case topic in the list below. 
-    Please click the "Play" button if you want to execute them or the "Download" button to download them locally (after downloading a video .zip file, unzip it and click on the "index.html" file to play it in your browser).
+    Please click the "Play" button if you want to execute a video tutorial or the "Download" button to download it locally (after downloading a video .zip file, unzip it and double click on the "index.html" file in order to play the video tutorial in your browser).
 
 |
 
