@@ -10,3 +10,4 @@ To be defined ...
     :maxdepth: 4
 
     pair_recording_app/pair_recording_app
+    cxsystem2/cxsystem2
