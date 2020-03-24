@@ -8,7 +8,7 @@ Identify potential protein binding sites by comparing the electrostatic potentia
 Overview
 ********
 
-This use case describes how to compare the electrostatic potentials of nine isoforms of the enzyme adenylyl cyclase  protein at many sites on its surface. The electrostatic similarities at these sites is compared to find isoform-specific regulation patterns for the inhibitory protein, to predict the likely binding site of regulatory proteins. It uses the multipipsa software tool, which also elps to automate these calculations by providing a python wrapper for the following open source software tools:
+This use case describes how to compare the electrostatic potentials of nine isoforms of the enzyme adenylyl cyclase  protein at many sites on its surface. The electrostatic similarities at these sites is compared to find isoform-specific regulation patterns for the inhibitory protein, to predict the likely binding site of regulatory proteins. It uses the multipipsa software tool, which also helps to automate these calculations by providing a python wrapper for the following open source software tools:
 
 * PDB2PQR: A tool that takes a protein structure in PDB format, adds missing hydrogen atoms, and creates a structure file in PQR format. The PQR file format is derived from the PDB format for describing atomic data, but with the occupancy and temperature factor fields replaced with atomic partial charges and radii.
 
