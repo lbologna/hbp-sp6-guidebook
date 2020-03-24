@@ -46,12 +46,14 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Identify potential protein binding sites by comparing the electrostatic potentials of a set of protein isoforms</a></li>
+<li><a class="reference internal" href="#">Identify potential protein binding sites by comparing the electrostatic potentials of a set of protein isoforms</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
 <li><a class="reference internal" href="#background">Background</a></li>
 <li><a class="reference internal" href="#input-data">Input Data</a></li>
 <li><a class="reference internal" href="#procedure">Procedure</a></li>
 <li><a class="reference internal" href="#results">Results</a></li>
+</ul>
+</li>
 </ul>
 
   <h4>Previous topic</h4>
@@ -111,9 +113,8 @@
 
                 <div class="section" id="identify-binding-sites">
 <span id="identify-potential-protein-binding-sites-by-comparing-the-electrostatic-potentials-of-a-set-of-protein-isoforms"></span><h1>Identify potential protein binding sites by comparing the electrostatic potentials of a set of protein isoforms<a class="headerlink" href="#identify-binding-sites" title="Permalink to this headline">¶</a></h1>
-</div>
 <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>This use case describes how to compare the electrostatic potentials of nine isoforms of the enzyme adenylyl cyclase  protein at many sites on its surface. The electrostatic similarities at these sites is compared to find isoform-specific regulation patterns for the inhibitory protein, to predict the likely binding site of regulatory proteins. It uses the multipipsa software tool, which also elps to automate these calculations by providing a python wrapper for the following open source software tools:</p>
 <ul class="simple">
 <li>PDB2PQR: A tool that takes a protein structure in PDB format, adds missing hydrogen atoms, and creates a structure file in PQR format. The PQR file format is derived from the PDB format for describing atomic data, but with the occupancy and temperature factor fields replaced with atomic partial charges and radii.</li>
@@ -124,7 +125,7 @@
 </div>
 </div>
 <div class="section" id="background">
-<h1>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h1>
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>For details on computation of the electrostatic potential see <a class="reference internal" href="../electrostatic_potential/electrostatic_potential.html#electrostatic-potential"><span class="std std-ref">Calculate the electrostatic potential of a protein from its atomic structure</span></a>.</li>
 </ul>
@@ -133,7 +134,7 @@
 </div>
 </div>
 <div class="section" id="input-data">
-<h1>Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h1>
+<h2>Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h2>
 <p>In this use case, we use as our input structure a structure of the catalytic domain of the enzyme adenylyl cyclase 5 (AC5), modelled during the work described in <a href="https://doi.org/10.1002/prot.25167" target="_blank">Tong et al (2016)</a>.
 The structures of the AC isoforms were created via homology modelling using the same template. The region where there are significant structural differences between the isoforms is in a flexible loop region that was not defined in the template structure. There are also variations in sequence length across AC isoforms in this region.</p>
 <div class="line-block">
@@ -141,7 +142,7 @@ The structures of the AC isoforms were created via homology modelling using the 
 </div>
 </div>
 <div class="section" id="procedure">
-<h1>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h1>
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Structure of AC5 is visualized. The catalytic domain of AC5 is a dimer consisting of two protein chains. In the full structure of AC5 these two chains are connected by a series of transmembrane helices that anchor the protein in the post-synaptic membrane.</li>
 <li>Then the Pdb2Pqr method is used to generate hydrogen atoms in the protein structure. Proteins contain a number of ionisable amino acids, which can exist in different protonation states, depending on the pH of the solution they are in. PDB2PQR can predict the states of these amino acids, at a given pH (defined as 7.4 in the last cell, a normal physiological pH), then add all missing hydrogen atoms to the structure, and assign atomic charges and radii to all atoms. By default, multipipsa assigns charges and radii from the Amber force field.</li>
@@ -153,10 +154,11 @@ The structures of the AC isoforms were created via homology modelling using the 
 </div>
 </div>
 <div class="section" id="results">
-<h1>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h1>
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
 <p>The similarity of AC5 isoforms is indicated by the surface color from the most dissimilar regions (-1, shown in red) to the highly similar regions (+1, shown in white):</p>
 <div class="figure">
 <img alt="../../../_images/Similarity.png" src="../../../_images/Similarity.png" />
+</div>
 </div>
 </div>
 
