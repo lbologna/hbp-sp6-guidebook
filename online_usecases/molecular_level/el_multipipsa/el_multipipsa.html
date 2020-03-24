@@ -1,0 +1,219 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Compare electrostatic potentials surrounding a set of protein isoforms with multipipsa &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/load_ga.js"></script>
+    <script type="text/javascript" src="../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Compare a specific region of the electrostatic potentials surrounding a set of protein isoforms with multipipsa" href="../el_region_multipipsa/el_region_multipipsa.html" />
+    <link rel="prev" title="Calculate the electrostatic potential of a protein from its atomic structure" href="../electrostatic_potential/electrostatic_potential.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Compare electrostatic potentials surrounding a set of protein isoforms with multipipsa</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#background">Background</a></li>
+<li><a class="reference internal" href="#input-data">Input Data</a></li>
+<li><a class="reference internal" href="#procedure">Procedure</a></li>
+<li><a class="reference internal" href="#results">Results</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../electrostatic_potential/electrostatic_potential.html"
+                        title="previous chapter">Calculate the electrostatic potential of a protein from its atomic structure</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../el_region_multipipsa/el_region_multipipsa.html"
+                        title="next chapter">Compare a specific region of the electrostatic potentials surrounding a set of protein isoforms with multipipsa</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/online_usecases/molecular_level/el_multipipsa/el_multipipsa.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../molecular_level.html">Molecular level</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../electrostatic_potential/electrostatic_potential.html">Calculate the electrostatic potential of a protein from its atomic structure</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../el_region_multipipsa/el_region_multipipsa.html">Compare a specific region of the electrostatic potentials surrounding a set of protein isoforms with multipipsa</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="compare-electrostatic-potentials-surrounding-a-set-of-protein-isoforms-with-multipipsa">
+<span id="el-multipipsa"></span><h1>Compare electrostatic potentials surrounding a set of protein isoforms with multipipsa<a class="headerlink" href="#compare-electrostatic-potentials-surrounding-a-set-of-protein-isoforms-with-multipipsa" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This use case describes how multipipsa  software can be used to compare electrostatic potentials of different protein isoforms and to cluster these isoforms by similarity of their electrostatic potentials.
+Multipipsa software tool uses the  following open source software tools:</p>
+<ul class="simple">
+<li>PDB2PQR: A tool that takes a protein structure in PDB format, adds missing hydrogen atoms, and creates a structure file in PQR format. The PQR file format is derived from the PDB format for describing atomic data, but with the occupancy and temperature factor fields replaced with atomic partial charges and radii.</li>
+<li>APBS: A tool that calculates electrostatic potentials through solution of the Poisson-Boltzmann equation, one of the most common continuum models for describing electrostatic interactions between molecular solutes in salty, aqueous media.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>For details on computation of the electrostatic potential see <a class="reference internal" href="../electrostatic_potential/electrostatic_potential.html#electrostatic-potential"><span class="std std-ref">Calculate the electrostatic potential of a protein from its atomic structure</span></a></li>
+<li>PIPSA analysis: PIPSA provides a method for quantitatively comparing the three dimensional interaction property fields of a set of structurally similar proteins. The structures of the proteins must be suitably aligned for the comparison to be reasonable. The method was first described in <a href="https://doi.org/10.1002/(SICI)1097-0134(19991115)37:3<379::AID-PROT6>3.0.CO;2-K" target="_blank">Blomberg et al (1999)</a>. In this use case, the interaction property we consider is the electrostatic potential. In the PIPSA method, interaction potential fields are discretised on three dimensional grids, and compared at grid points lying within a skin surrounding the proteins. The skin of the protein is defined as the region begining at a distance  <span class="math notranslate nohighlight">\(\sigma\)</span> from the van-der-Waals surface of the protein’s atoms with a thickness  <span class="math notranslate nohighlight">\(\delta\)</span> . Commonly used parameters for this skin are <span class="math notranslate nohighlight">\(\sigma\)</span>  =3 Angstrom and <span class="math notranslate nohighlight">\(\delta\)</span>  = 4 Angstrom. The region to be compared can be further restricted as the intersection of this skin with a sphere or as cone (as shown in the figure below).</li>
+</ul>
+<div class="figure">
+<img alt="../../../_images/protein_surface.png" src="../../../_images/protein_surface.png" />
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ul class="simple">
+<li>Similarity measure: The interaction fields of two structures can be compared quantitatively by calculating pairwise similarity indices. One such measure is the Hodgkin index, which is given by:</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[SI_{12} =2(p1,p2) / ((p1,p2)+(p2,p1))\]</div>
+<p>where <em>(p1,p2)(p1,p2)</em> is the scalar product of the fields surrounding proteins  11  and  22  in the analysis region. They can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[(p1,p2) = \sum_{i,j,k}ϕ_1(i,j,k)ϕ_2(i,j,k)\]</div>
+<p>where  <em>ii</em>, <em>jj</em> and <em>kk</em> are the three-dimensional spatial coordinates, and  <span class="math notranslate nohighlight">\(ϕ_1(i,j,k)ϕ_2(i,j,k)\)</span>   is the potential at point  <em>(i,j,k)</em>  on the grid for the template protein. The similarity index runs from  −1 , for completely anti-correlated potentials, to  1  for identical potentials. At 0 , there is no correlation between the two potentials. The pairwise similarity can be converted to a distance measure, for use in clustering, using</p>
+<div class="math notranslate nohighlight">
+\[D_{12} = \sqrt(2-2SI_{12})\]</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="input-data">
+<h2>Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h2>
+<p>In this use case, we use as our input structure a structure of the catalytic domain of the enzyme adenylyl cyclase 5 (AC5), modelled during the work described in <a href="https://doi.org/10.1002/prot.25167" target="_blank">Tong et al (2016)</a>.
+The structures of the AC isoforms were created via homology modelling using the same template. The region where there are significant structural differences between the isoforms is in a flexible loop region that was not defined in the template structure. There are also variations in sequence length across AC isoforms in this region.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="procedure">
+<h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Structure of AC5 is visualized. The catalytic domain of AC5 is a dimer consisting of two protein chains. In the full structure of AC5 these are two chains connected by a series of transmembrane helices that anchor the protein in the post-synaptic membrane.</li>
+<li>Then the Pdb2Pqr method is used to generate hydrogen atoms in the protein structure. Proteins contain a number of ionisable amino acids, which can exist in different protonation states, depending on the pH of the solution they are in. PDB2PQR can predict the states of these amino acids, at a given pH (defined as 7.4, a normal physiological pH), then add all missing hydrogen atoms to the structure, and assign atomic charges and radii to all atoms. By default, multipipsa assigns charges and radii from the Amber force field.</li>
+<li>The  APBS method used to solve the linearised Poisson-Boltzmann equation to obtain the electrostatic potential in the dx and UHBD file formats. It also creates a dx file describing the solvent excluded volume of AC5. This is used for visualisation later.</li>
+<li>Finally, electrostatic similarity between AC isoforms is computed.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>Visualization of the AC5 dimer structure:</p>
+<div class="figure">
+<img alt="../../../_images/system_electrostratics_2.png" src="../../../_images/system_electrostratics_2.png" />
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The MultiPIPSA analysis creates as output an image file showing the pairwise distances between AC isoforms as a 2D heatmap. The results are also clustered using a single linkage hierachical method. The resulting dendograms are shown along the edges of the heatmap.</p>
+<div class="figure">
+<img alt="../../../_images/clustering_electrostratics.png" src="../../../_images/clustering_electrostratics.png" />
+</div>
+</div>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../electrostatic_potential/electrostatic_potential.html">Calculate the electrostatic potential of a protein from its atomic structure</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../el_region_multipipsa/el_region_multipipsa.html">Compare a specific region of the electrostatic potentials surrounding a set of protein isoforms with multipipsa</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>

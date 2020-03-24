@@ -1,0 +1,191 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Identify potential protein binding sites by comparing the electrostatic potentials of a set of protein isoforms &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/load_ga.js"></script>
+    <script type="text/javascript" src="../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="The ARDOCK service" href="../ardock/ardock_hpb_platform.html" />
+    <link rel="prev" title="Compare a specific region of the electrostatic potentials surrounding a set of protein isoforms with multipipsa" href="../el_region_multipipsa/el_region_multipipsa.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Identify potential protein binding sites by comparing the electrostatic potentials of a set of protein isoforms</a></li>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#background">Background</a></li>
+<li><a class="reference internal" href="#input-data">Input Data</a></li>
+<li><a class="reference internal" href="#procedure">Procedure</a></li>
+<li><a class="reference internal" href="#results">Results</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../el_region_multipipsa/el_region_multipipsa.html"
+                        title="previous chapter">Compare a specific region of the electrostatic potentials surrounding a set of protein isoforms with multipipsa</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../ardock/ardock_hpb_platform.html"
+                        title="next chapter">The ARDOCK service</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/online_usecases/molecular_level/identify_binding_sites/identify_binding_sites.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../molecular_level.html">Molecular level</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../el_region_multipipsa/el_region_multipipsa.html">Compare a specific region of the electrostatic potentials surrounding a set of protein isoforms with multipipsa</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../ardock/ardock_hpb_platform.html">The ARDOCK service</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="identify-binding-sites">
+<span id="identify-potential-protein-binding-sites-by-comparing-the-electrostatic-potentials-of-a-set-of-protein-isoforms"></span><h1>Identify potential protein binding sites by comparing the electrostatic potentials of a set of protein isoforms<a class="headerlink" href="#identify-binding-sites" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>This use case describes how to compare the electrostatic potentials of nine isoforms of the enzyme adenylyl cyclase  protein at many sites on its surface. The electrostatic similarities at these sites is compared to find isoform-specific regulation patterns for the inhibitory protein, to predict the likely binding site of regulatory proteins. It uses the multipipsa software tool, which also elps to automate these calculations by providing a python wrapper for the following open source software tools:</p>
+<ul class="simple">
+<li>PDB2PQR: A tool that takes a protein structure in PDB format, adds missing hydrogen atoms, and creates a structure file in PQR format. The PQR file format is derived from the PDB format for describing atomic data, but with the occupancy and temperature factor fields replaced with atomic partial charges and radii.</li>
+<li>APBS: A tool that calculates electrostatic potentials through solution of the Poisson-Boltzmann equation, one of the most common continuum models for describing electrostatic interactions between molecular solutes in salty, aqueous media.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="background">
+<h1>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>For details on computation of the electrostatic potential see <a class="reference internal" href="../electrostatic_potential/electrostatic_potential.html#electrostatic-potential"><span class="std std-ref">Calculate the electrostatic potential of a protein from its atomic structure</span></a>.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="input-data">
+<h1>Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h1>
+<p>In this use case, we use as our input structure a structure of the catalytic domain of the enzyme adenylyl cyclase 5 (AC5), modelled during the work described in <a href="https://doi.org/10.1002/prot.25167" target="_blank">Tong et al (2016)</a>.
+The structures of the AC isoforms were created via homology modelling using the same template. The region where there are significant structural differences between the isoforms is in a flexible loop region that was not defined in the template structure. There are also variations in sequence length across AC isoforms in this region.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="procedure">
+<h1>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Structure of AC5 is visualized. The catalytic domain of AC5 is a dimer consisting of two protein chains. In the full structure of AC5 these two chains are connected by a series of transmembrane helices that anchor the protein in the post-synaptic membrane.</li>
+<li>Then the Pdb2Pqr method is used to generate hydrogen atoms in the protein structure. Proteins contain a number of ionisable amino acids, which can exist in different protonation states, depending on the pH of the solution they are in. PDB2PQR can predict the states of these amino acids, at a given pH (defined as 7.4 in the last cell, a normal physiological pH), then add all missing hydrogen atoms to the structure, and assign atomic charges and radii to all atoms. By default, multipipsa assigns charges and radii from the Amber force field.</li>
+<li>The  APBS method used to solve the linearised Poisson-Boltzmann equation to obtain the electrostatic potential in the dx and UHBD file formats. It also creates a dx file describing the solvent excluded volume of AC5. This is used for visualisation later.</li>
+<li>Finally, electrostatic similarity between AC isoforms is computed.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="results">
+<h1>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h1>
+<p>The similarity of AC5 isoforms is indicated by the surface color from the most dissimilar regions (-1, shown in red) to the highly similar regions (+1, shown in white):</p>
+<div class="figure">
+<img alt="../../../_images/Similarity.png" src="../../../_images/Similarity.png" />
+</div>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../el_region_multipipsa/el_region_multipipsa.html">Compare a specific region of the electrostatic potentials surrounding a set of protein isoforms with multipipsa</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../ardock/ardock_hpb_platform.html">The ARDOCK service</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>

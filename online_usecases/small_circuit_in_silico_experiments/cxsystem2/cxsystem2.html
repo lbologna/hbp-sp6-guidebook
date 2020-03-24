@@ -100,11 +100,20 @@
                 </aside>
 
                 <div class="section" id="configure-and-run-a-simplified-cortical-circuit-with-the-cxsystem2-simulation-framework">
-<h1>Configure and run a simplified cortical circuit with the CxSystem2 simulation framework<a class="headerlink" href="#configure-and-run-a-simplified-cortical-circuit-with-the-cxsystem2-simulation-framework" title="Permalink to this headline">¶</a></h1>
+<span id="scise-cxsys2"></span><h1>Configure and run a simplified cortical circuit with the CxSystem2 simulation framework<a class="headerlink" href="#configure-and-run-a-simplified-cortical-circuit-with-the-cxsystem2-simulation-framework" title="Permalink to this headline">¶</a></h1>
 <p>CxSystem2 is a simulation framework for cortical networks which uses <a href="https://briansimulator.org/" target="_blank">Brian</a>
-as main simulation backend but can also use <a href="http://genn-team.github.io/genn/" target="_blank">GeNN</a> for GPU-based simulations.</p>
+as main simulation backend. Simulations can be run in native Python code, which is
+most productive for development and small circuits. For longer and heavier simulations
+CxSystem2 supports automatic compilation to a c++ device. For very long single model
+simulations you can also use <a href="http://genn-team.github.io/genn/" target="_blank">GeNN</a> device which allows GPU-acceleration.</p>
 <p>In the BSP we provide a user-friendly GUI to configure and run simplified
-cortical circuits, visualize and download the simulation results.</p>
+cortical circuits, visualize and download the simulation results.
+In order to run the tool in your own Collab, please go to the <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66855" target="_blank">Small Circuit In Silico Experiments</a> Use Case list,
+click on the <em>Configure and run a simplified cortical circuit with the CxSystem2 simulation framework</em>
+panel and follow the instructions provided in the <a class="reference internal" href="../../../getting_started/getting_started.html#working-with-collabs"><span class="std std-ref">Working with Collabs</span></a> section of this Guidebook.</p>
+<p>The CxSystem2 includes Neurodynlib, a set of jupyter notebooks, which allows the
+exploration of single-neuron models behavior before incorporating them into a network.
+The jupyter notebooks are publicly available in this <a href="https://collab.humanbrainproject.eu/#/collab/67332/nav/457373" target="_blank">collab</a> under the <a href="https://collab.humanbrainproject.eu/#/collab/67332/nav/457379" target="_blank">Tutorial</a> item.</p>
 <p>In order to learn how to use this Use Case, please refer to the following
 <a href="https://cxsystem2.readthedocs.io/en/latest/tutorials.html" target="_blank">tutorial</a>.</p>
 <p>A complete documentation on CxSystem2 can be found <a href="https://cxsystem2.readthedocs.io/en/latest/index.html" target="_blank">here</a>.</p>
