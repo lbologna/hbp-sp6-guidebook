@@ -22,7 +22,7 @@ Background
 
 * For details on computation of the electrostatic potential see :ref:`electrostatic_potential`.
 
-* For details on the similarity computations and multipipsa algorythm, see collab  "Compare the electrostatic potentials surrounding a set of protein isoforms with multipipsa"
+* For details on the similarity computations and multipipsa algorithm, see :ref:`el_multipipsa`
 
 |
 
@@ -66,7 +66,7 @@ Structure of the AC5 dimer:
 
 a blue sphere shows where the analysis is centered (the analysis region is defined as a sphere of radius 10 Angstrom). It lies on the edge of a groove formed by three helices (located at Cα atom of residue 32).
 
-The MultiPIPSA analysis creates as output an image file showing the pairwise distances between AC isoforms as a 2D heatmap. The results are also clustered using a single linkage hierachical method. The resulting dendograms are shown along the edges of the heatmap.
+The MultiPIPSA analysis creates as output an image file showing the pairwise distances between AC isoforms as a 2D heatmap. The results are also clustered using a single linkage hierarchical method. The resulting dendograms are shown along the edges of the heatmap.
 
 |
 

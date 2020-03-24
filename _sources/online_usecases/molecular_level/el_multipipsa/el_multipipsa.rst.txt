@@ -23,7 +23,7 @@ Background
 
 * For details on computation of the electrostatic potential see :ref:`electrostatic_potential` 
 
-* PIPSA analysis: PIPSA provides a method for quantitatively comparing the three dimensional interaction property fields of a set of structurally similar proteins. The structures of the proteins must be suitably aligned for the comparison to be reasonable. The method was first described in |doi_blomberg|. In this use case, the interaction property we consider is the electrostatic potential. In the PIPSA method, interaction potential fields are discretised on three dimensional grids, and compared at grid points lying within a skin surrounding the proteins. The skin of the protein is defined as the region begining at a distance  :math:`\sigma` from the van-der-Waals surface of the protein's atoms with a thickness  :math:`\delta` . Commonly used parameters for this skin are :math:`\sigma`  =3 Angstrom and :math:`\delta`  = 4 Angstrom. The region to be compared can be further restricted as the intersection of this skin with a sphere or as cone (as shown in the figure below).
+* PIPSA analysis: PIPSA provides a method for quantitatively comparing the three dimensional interaction property fields of a set of structurally similar proteins. The structures of the proteins must be suitably aligned for the comparison to be reasonable. The method was first described in |doi_blomberg|. In this use case, the interaction property we consider is the electrostatic potential. In the PIPSA method, interaction potential fields are discretised on three dimensional grids, and compared at grid points lying within a skin surrounding the proteins. The skin of the protein is defined as the region beginning at a distance  :math:`\sigma` from the van-der-Waals surface of the protein's atoms with a thickness  :math:`\delta` . Commonly used parameters for this skin are :math:`\sigma`  =3 Angstrom and :math:`\delta`  = 4 Angstrom. The region to be compared can be further restricted as the intersection of this skin with a sphere or as cone (as shown in the figure below).
 
 .. |doi_blomberg| raw:: html  
 
@@ -88,7 +88,7 @@ Visualization of the AC5 dimer structure:
 
 |
 
-The MultiPIPSA analysis creates as output an image file showing the pairwise distances between AC isoforms as a 2D heatmap. The results are also clustered using a single linkage hierachical method. The resulting dendograms are shown along the edges of the heatmap. 
+The MultiPIPSA analysis creates as output an image file showing the pairwise distances between AC isoforms as a 2D heatmap. The results are also clustered using a single linkage hierarchical method. The resulting dendograms are shown along the edges of the heatmap. 
 
 
 .. figure:: clustering_electrostratics.png
