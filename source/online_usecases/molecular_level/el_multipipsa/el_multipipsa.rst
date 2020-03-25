@@ -39,12 +39,12 @@ Background
 .. math::
  SI_{12} =2(p1,p2) / ((p1,p2)+(p2,p1))
 
-where *(p1,p2)(p1,p2)* is the scalar product of the fields surrounding proteins  11  and  22  in the analysis region. They can be calculated as:
+where *(p1,p2)(p1,p2)* is the scalar product of the fields surrounding proteins 1 and 2 in the analysis region. They can be calculated as:
 
 .. math::
  (p1,p2) = \sum_{i,j,k}ϕ_1(i,j,k)ϕ_2(i,j,k)
 
-where  *ii*, *jj* and *kk* are the three-dimensional spatial coordinates, and  :math:`ϕ_1(i,j,k)ϕ_2(i,j,k)`   is the potential at point  *(i,j,k)*  on the grid for the template protein. The similarity index runs from  −1 , for completely anti-correlated potentials, to  1  for identical potentials. At 0 , there is no correlation between the two potentials. The pairwise similarity can be converted to a distance measure, for use in clustering, using
+where  *i*, *j* and *k* are the three-dimensional spatial coordinates, and  :math:`ϕ_1(i,j,k)ϕ_2(i,j,k)`   is the potential at point  *(i,j,k)*  on the grid for the template protein. The similarity index runs from  −1 , for completely anti-correlated potentials, to  1  for identical potentials. At 0 , there is no correlation between the two potentials. The pairwise similarity can be converted to a distance measure, for use in clustering, using
 
 .. math::
  D_{12} = \sqrt(2-2SI_{12})
@@ -72,7 +72,7 @@ Procedure
 
 * Then the Pdb2Pqr method is used to generate hydrogen atoms in the protein structure. Proteins contain a number of ionisable amino acids, which can exist in different protonation states, depending on the pH of the solution they are in. PDB2PQR can predict the states of these amino acids, at a given pH (defined as 7.4, a normal physiological pH), then add all missing hydrogen atoms to the structure, and assign atomic charges and radii to all atoms. By default, multipipsa assigns charges and radii from the Amber force field. 
 
-* The  APBS method used to solve the linearised Poisson-Boltzmann equation to obtain the electrostatic potential in the dx and UHBD file formats. It also creates a dx file describing the solvent excluded volume of AC5. This is used for visualisation later.
+* The  APBS method is used to solve the linearised Poisson-Boltzmann equation to obtain the electrostatic potential in the dx and UHBD file formats. It also creates a dx file describing the solvent excluded volume of AC5. This is used for visualisation later.
 
 * Finally, electrostatic similarity between AC isoforms is computed.
 

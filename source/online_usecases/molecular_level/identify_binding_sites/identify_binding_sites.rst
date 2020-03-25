@@ -22,6 +22,9 @@ Background
 
 * For details on computation of the electrostatic potential see :ref:`electrostatic_potential`.
 
+* For details on the similarity computations and pipsa algorithm, see :ref:`el_multipipsa`
+
+
 |
 
 **********
@@ -55,6 +58,6 @@ Procedure
 Results
 *******
 
-The similarity of AC5 isoforms is indicated by the surface color from the most dissimilar regions (-1, shown in red) to the highly similar regions (+1, shown in white):
+The similarity of AC5 isoforms is indicated by the surface color from the most dissimilar regions (:math:`D_{12}=-1`, shown in red) to the highly similar regions (:math:`D_{12}=1`, shown in white):
 
 .. figure:: Similarity.png
