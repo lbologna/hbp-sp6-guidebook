@@ -140,14 +140,19 @@ Multipipsa software tool uses the  following open source software tools:</p>
 <ul class="simple">
 <li>Similarity measure: The interaction fields of two structures can be compared quantitatively by calculating pairwise similarity indices. One such measure is the Hodgkin index, which is given by:</li>
 </ul>
-<div class="math notranslate nohighlight">
-\[SI_{12} =2(p1,p2) / ((p1,p2)+(p2,p1))\]</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/SI12_equation.png"><img alt="../../../_images/SI12_equation.png" class="align-right" src="../../../_images/SI12_equation.png" style="width: 189.9px; height: 42.3px;" /></a>
+</div>
 <p>where <em>(p1,p2)(p1,p2)</em> is the scalar product of the fields surrounding proteins 1 and 2 in the analysis region. They can be calculated as:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <div class="math notranslate nohighlight">
 \[(p1,p2) = \sum_{i,j,k}ϕ_1(i,j,k)ϕ_2(i,j,k)\]</div>
 <p>where  <em>i</em>, <em>j</em> and <em>k</em> are the three-dimensional spatial coordinates, and  <span class="math notranslate nohighlight">\(ϕ_1(i,j,k)ϕ_2(i,j,k)\)</span>   is the potential at point  <em>(i,j,k)</em>  on the grid for the template protein. The similarity index runs from  −1 , for completely anti-correlated potentials, to  1  for identical potentials. At 0 , there is no correlation between the two potentials. The pairwise similarity can be converted to a distance measure, for use in clustering, using</p>
-<div class="math notranslate nohighlight">
-\[D_{12} = \sqrt(2-2SI_{12})\]</div>
+<div class="bsp-container-center docutils container">
+<a class="reference internal image-reference" href="../../../_images/D12_equation.png"><img alt="../../../_images/D12_equation.png" class="align-right" src="../../../_images/D12_equation.png" style="width: 134.1px; height: 22.5px;" /></a>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
