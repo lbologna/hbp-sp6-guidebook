@@ -36,18 +36,26 @@ Background
 
 * Similarity measure: The interaction fields of two structures can be compared quantitatively by calculating pairwise similarity indices. One such measure is the Hodgkin index, which is given by:
 
-.. math::
- SI_{12} =2(p1,p2) / ((p1,p2)+(p2,p1))
+.. container:: bsp-container-center
+
+    .. image:: SI12_equation.png
+        :scale: 90%
+        :align: right
 
 where *(p1,p2)(p1,p2)* is the scalar product of the fields surrounding proteins 1 and 2 in the analysis region. They can be calculated as:
+
+|
 
 .. math::
  (p1,p2) = \sum_{i,j,k}ϕ_1(i,j,k)ϕ_2(i,j,k)
 
 where  *i*, *j* and *k* are the three-dimensional spatial coordinates, and  :math:`ϕ_1(i,j,k)ϕ_2(i,j,k)`   is the potential at point  *(i,j,k)*  on the grid for the template protein. The similarity index runs from  −1 , for completely anti-correlated potentials, to  1  for identical potentials. At 0 , there is no correlation between the two potentials. The pairwise similarity can be converted to a distance measure, for use in clustering, using
 
-.. math::
- D_{12} = \sqrt(2-2SI_{12})
+.. container:: bsp-container-center
+
+    .. image:: D12_equation.png
+        :scale: 90%
+        :align: right
 
 |
 

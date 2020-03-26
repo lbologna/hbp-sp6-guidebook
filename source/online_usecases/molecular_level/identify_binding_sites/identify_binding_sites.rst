@@ -58,6 +58,6 @@ Procedure
 Results
 *******
 
-The similarity of AC5 isoforms is indicated by the surface color from the most dissimilar regions (:math:`D_{12}=-1`, shown in red) to the highly similar regions (:math:`D_{12}=1`, shown in white):
+The similarity of AC5 isoforms is indicated by the surface color from the most dissimilar regions (:math:`SI_{12}=-1`, shown in red) to the highly similar regions (:math:`SI_{12}=1`, shown in white):
 
 .. figure:: Similarity.png
