@@ -1,9 +1,12 @@
+.. _electrostatic_potential:
 
+============================================================================
 Calculate the electrostatic potential of a protein from its atomic structure
 ============================================================================
 
+********
 Overview
---------
+********
 
 This use case describes how you can calculate an electrostatic potential surrounding a protein in aqueous solution. It uses the multipipsa software tool, which helps to automate these calculations by providing a python wrapper for the following open source software tools:
 
@@ -14,9 +17,11 @@ This use case describes how you can calculate an electrostatic potential surroun
 
 * In addition to automating these calculations, the main use of multipipsa is to compare the electrostatic potentials surrounding a set of similar protein structures. These comparisons are described in other molecular use cases.
 
+|
 
+***********
 Background
-----------
+***********
 
 * What is an electrostatic potential?
 
@@ -38,13 +43,23 @@ which links the gradient of the electrostatic field :math:`(−\epsilon (r)⋅�
 
 where :math:`z_i` is the net atomic charge of dissolved ion type *i*, :math:`c_0` is its bulk concentration, :math:`e_l` is the elementary charge, :math:`k_B` is the Boltzmann constant and T the temperature. If the argument of the exponential function is small, and there is a 1:1 ratio of positive and negative charge ions of equal magnitude, this differential equation can be linearised to simplify its solution.
 
+|
+
+**********
 Input Data
-----------
+**********
 
-In this use case, we use as our input structure a structure of the catalytic domain of the enzyme adenylyl cyclase 5 (AC5), modelled during the work described in Tong et al (2016)[https://doi.org/10.1002/prot.25167]. The following cell downloads this structure from the CSCS storage area.
+In this use case, we use as our input structure a structure of the catalytic domain of the enzyme adenylyl cyclase 5 (AC5), modelled during the work described in |doi_tong|. The following cell downloads this structure from the CSCS storage area.
 
+.. |doi_tong| raw:: html  
+
+    <a href="https://doi.org/10.1002/prot.25167" target="_blank">Tong et al (2016)</a>
+
+|
+
+*********
 Procedure
----------
+*********
 
 * Structure of AC5 is visualized. The catalytic domain of AC5 is a dimer consisting of two protein chains. In the full structure of AC5 these two chains are connected by a series of transmembrane helices that anchor the protein in the post-synaptic membrane.
 
@@ -52,8 +67,11 @@ Procedure
 
 * The  APBS method used to solve the linearised Poisson-Boltzmann equation to obtain the electrostatic potential in the dx and UHBD file formats. It also creates a dx file describing the solvent excluded volume of AC5. This is used for visualization later.
 
+|
+
+*******
 Results
--------
+*******
 
 .. figure:: complex.png
 
@@ -62,4 +80,4 @@ This figure illustrates a structure of enzyme adenylyl cyclase 5 (AC5) .
 .. figure:: electrostatics.png
 
 
-This is a representation of a molecular viewer that demonstrates a computed electrostatic potential. The potential is set to zero inside the solvent excluded volume of AC5, to make visualization easier. The potential is displayed as two isopotential surfaces, at potentials of 1 :math:`k_B T/e`  (blue) and :math:`-k_B T/e`  (red). For comparison, the same potential is shown in Figure 4F of Tong et al (2016) [https://doi.org/10.1002/prot.25167].
+This is a representation of a molecular viewer that demonstrates a computed electrostatic potential. The potential is set to zero inside the solvent excluded volume of AC5, to make visualization easier. The potential is displayed as two isopotential surfaces, at potentials of 1 :math:`k_B T/e`  (blue) and :math:`-k_B T/e`  (red). For comparison, the same potential is shown in Figure 4F of |doi_tong|.
