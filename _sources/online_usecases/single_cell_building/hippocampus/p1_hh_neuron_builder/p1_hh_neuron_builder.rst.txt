@@ -222,7 +222,8 @@ the optimization to come to an end).
 
 Alternatively, the user can upload a *.zip* package containing the files needed for the
 simulation, through the upload button. For an example of how the *.zip* file
-content must be structured, please refer to the following `link <https://github.com/lbologna/bsp_data_repository/raw/master/optimizations/>`__.
+content must be structured, please refer to the following 
+`example <https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/hippocampus_optimization/rat/CA1/v4.0.5/optimizations/CA1_pyr_cACpyr_oh140807_A0_idG_20190328143451/CA1_pyr_cACpyr_oh140807_A0_idG_20190328143451.zip>`__. 
 
 Once the model files are integrated into the pipeline, the simulation can be run
 by clicking the "Run Simulation" button. The model is fed to the "Neuron As A Service"
@@ -245,12 +246,14 @@ the dedicated page of this guidebook (:ref:`single_cell_clamp`).
 
 |
 
+**Adding model to the Model Catalog**
+
 Finally, the user can register the optimized model in the Model Catalog.
 From the simulation page, after clicking on the "Register in Model Catalog"
-button, a form will be displayed where the user will be able to inserted the 
+button, a form will be displayed where the user will be able to insert the 
 model's metadata (see figure below). By clicking on the "Register" button,
 the registration process will be triggered, at the end of which the user will be
-provided with the Model Catalog url of the optimized model.
+provided with the Model Catalog URL of the optimized model.
 
 |
 
