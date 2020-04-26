@@ -223,7 +223,7 @@ the optimization to come to an end).
 Alternatively, the user can upload a *.zip* package containing the files needed for the
 simulation, through the upload button. For an example of how the *.zip* file
 content must be structured, please refer to the following 
-`example <https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/hippocampus_optimization/rat/CA1/v4.0.5/optimizations/CA1_pyr_cACpyr_oh140807_A0_idG_20190328143451/CA1_pyr_cACpyr_oh140807_A0_idG_20190328143451.zip>`__. 
+`link <https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/hippocampus_optimization/rat/CA1/v4.0.5/optimizations/CA1_pyr_cACpyr_oh140807_A0_idG_20190328143451/CA1_pyr_cACpyr_oh140807_A0_idG_20190328143451.zip>`__. 
 
 Once the model files are integrated into the pipeline, the simulation can be run
 by clicking the "Run Simulation" button. The model is fed to the "Neuron As A Service"
