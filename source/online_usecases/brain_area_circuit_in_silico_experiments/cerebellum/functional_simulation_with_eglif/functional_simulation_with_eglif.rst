@@ -3,8 +3,14 @@ Functional Simulation with Advanced Point Neurons (E-GLIF)
 ##########################################################
 
 
-This Use Case can be used to test the functionality of the cerebellar microcircuit, in the NEST environment.
-The Use Case can be found in *Online Use Cases/Brain area circuit in silico experiments/Cerebellum/Functional simulation with point neurons*.
+This Use Case can be used to simulate an olivocerebellar microcircuit with point
+neurons modelled as E-GLIF (Extended-Generalized Leaky Integrate and Fire). This advanced
+point neuron model has been designed and optimized to reproduce complex electroresponsive
+dynamics (including bursting, adaptation, resonance, etc) while keeping a limited computational load.
+Simulations are run in NEST and show how realistic single neuron dynamics and network topology
+contribute to network spiking patterns following sensory-like stimuli.
+
+The Use Case can be found in *Online Use Cases/Brain area circuit in silico experiments/Cerebellum/Functional Simulation with Advanced Point Neurons (E-GLIF)*.
 
      .. image:: images/schema.png
         :width: 373px
