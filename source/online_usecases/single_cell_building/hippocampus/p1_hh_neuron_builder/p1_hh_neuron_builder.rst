@@ -1,8 +1,8 @@
 .. _hh_neuron_builder:
 
-#######################################
-Hodgkin Huxley Neuron Builder (CDP2-P1)
-#######################################
+#############################
+Hodgkin Huxley Neuron Builder
+#############################
 
 ******** 
 Overview 
@@ -29,7 +29,7 @@ workflow or to select a workflow previously saved in the current Collab storage.
 .. container:: bsp-container-center
 
     .. image:: images/hhnb_home.png 
-        :scale: 30% 
+        :scale: 28% 
         :align: right
 
 |
@@ -126,7 +126,7 @@ optimization parameters (see figure below).
 .. container:: bsp-container-center
 
     .. image:: images/hhnb_hpc_param_select.png 
-        :scale: 45% 
+        :scale: 65% 
         :align: right
 
 |
@@ -203,7 +203,7 @@ the optimization to come to an end).
 .. container:: bsp-container-center
 
     .. image:: images/hhnb_fetch_param.png 
-        :scale: 50% 
+        :scale: 45% 
         :align: right
 
 |
@@ -213,7 +213,7 @@ the optimization to come to an end).
 .. container:: bsp-container-center
 
     .. image:: images/hhnb_hpc_fetch.png 
-        :scale: 55% 
+        :scale: 35% 
         :align: right
 
 |
@@ -222,7 +222,8 @@ the optimization to come to an end).
 
 Alternatively, the user can upload a *.zip* package containing the files needed for the
 simulation, through the upload button. For an example of how the *.zip* file
-content must be structured, please refer to the following `link <https://github.com/lbologna/bsp_data_repository/raw/master/optimizations/>`__.
+content must be structured, please refer to the following 
+`link <https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/hippocampus_optimization/rat/CA1/v4.0.5/optimizations/CA1_pyr_cACpyr_oh140807_A0_idG_20190328143451/CA1_pyr_cACpyr_oh140807_A0_idG_20190328143451.zip>`__. 
 
 Once the model files are integrated into the pipeline, the simulation can be run
 by clicking the "Run Simulation" button. The model is fed to the "Neuron As A Service"
@@ -235,7 +236,7 @@ and as a dendogram) and set the simulation run parameters.
 .. container:: bsp-container-center
 
     .. image:: images/hhnb_naas_sim.png 
-        :scale: 30% 
+        :scale: 60% 
         :align: right
 
 |
@@ -243,3 +244,23 @@ and as a dendogram) and set the simulation run parameters.
 For further details on the "Neuron As A Service" application, please refer to
 the dedicated page of this guidebook (:ref:`single_cell_clamp`).
 
+|
+
+**Adding model to the Model Catalog**
+
+Finally, the user can register the optimized model in the Model Catalog.
+From the simulation page, after clicking on the "Register in Model Catalog"
+button, a form will be displayed where the user will be able to insert the 
+model's metadata (see figure below). By clicking on the "Register" button,
+the registration process will be triggered, at the end of which the user will be
+provided with the Model Catalog URL of the optimized model.
+
+|
+
+.. container:: bsp-container-center
+
+    .. image:: images/hhnb_mc_params.png 
+        :scale: 40% 
+        :align: right
+
+|
