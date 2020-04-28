@@ -34,7 +34,7 @@ The network spiking dynamics can be investigated by estimating population freque
 
 **Inputs:**
 
-•	a single hdf5 file (saved in /storage) containing position and connection data and some useful parameters from scaffold_params.py (in /storage)
+•	a single hdf5 file (saved in /storage) containing network topology data, i.e. cell positions and connections
 
 The user can define some features of the, “stimulation input spike patterns”:
 stimulation area radius (glomeruli within a central area with a tunable radius
