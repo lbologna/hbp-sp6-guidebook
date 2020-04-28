@@ -43,8 +43,8 @@ duration (ms) and spike frequency (Hz).
 
 **Output:**
 
-•	Files: .gdf files containing spike times of each network neuron along the simulation duration. The user can also choose to save .dat files containing voltage traces
-•	Monitoring: 3D scatter plot of spiking activity within the network; raster plot of spikes for each neuron type (selectable by the user) and PSTH
+•	Files: .gdf files containing spike times of each network neuron along the simulation duration. The user can also choose to save .dat files containing voltage traces (but this would significantly increase simulation time if whole population are selected)
+•	Monitoring: raster plot of spikes for each neuron type (selectable by the user) and PSTH
 
 
 **Additional information:**
