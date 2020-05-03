@@ -6,7 +6,7 @@ Functional Simulation with Advanced Point Neurons (E-GLIF)
 This Use Case can be used to simulate an olivocerebellar microcircuit with point
 neurons modeled as E-GLIF (Extended-Generalized Leaky Integrate and Fire). This advanced
 point neuron model has been designed and optimized to reproduce complex electroresponsive
-dynamics (including bursting, adaptation, resonance, etc) while keeping a limited computational load.
+dynamics (including bursting, adaptation, resonance, etc) while keeping a limited computational load [Geminiani et al., 2018].
 Simulations are run in NEST 2.18 and show how realistic single neuron dynamics and network topology
 contribute to network spiking patterns following sensory-like stimuli.
 
@@ -26,7 +26,7 @@ are specific for each cell type, as optimized in [Geminiani et al., 2019]. Conne
 from literature values, while connection weights are tuned with trial and error to obtain physiological baseline
 population firing rates.
 The network is stimulated with sensory-like input signals to the Granular layer and the Inferior Olive,
-mimicking the input signals of EyeBlink Classical Conditioning: a constant Poisson spike pattern at 40 Hz to the Granular layer,
+mimicking the input signals of Eye-Blink Classical Conditioning: a constant Poisson spike pattern at 40 Hz to the Granular layer,
 and a burst at 500 Hz to one nucleus of the Inferior Olive. Realistic single neuron dynamics provided by the E-GLIF
 and modular network topology allow to reproduce the complex spiking patterns of cerebellar signal encoding,
 including burst-pause and burst-pause mechanisms.
