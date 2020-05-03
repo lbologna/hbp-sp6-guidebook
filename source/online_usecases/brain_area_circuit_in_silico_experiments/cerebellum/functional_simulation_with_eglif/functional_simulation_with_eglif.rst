@@ -69,3 +69,5 @@ of the stimulated area in the Granular layer.
 
           .. image:: images/PSTH_PC2.png
              :width: 700px
+
+    with the complex spike not occurring.
