@@ -19,12 +19,11 @@ The Use Case can be found in *Online Use Cases/Brain area circuit in silico expe
 **Simulation description:**
 
 The olivocerebellar Spiking Neural Network is created in pyNEST. The topology is reconstructed
-based on the cerebellar scaffold rules in [Casali et al., 2019], adding to the original scaffold
-the Olivary nuclei and a subdivision into microcomplexes receiving different inputs. Neurons are
-modelled as E-GLIF with alpha-shaped conductance-based synapses [Geminiani et al., 2018]. E-GLIF parameters
-are specific for each cell type, as optimized in [Geminiani et al., 2019]. Connection delays are obtained
-from literature values, while connection weights are tuned with trial and error to obtain physiological baseline
-population firing rates.
+based on the cerebellar scaffold rules in [Casali et al., 2019], adding the Olivary nuclei and
+a subdivision into microcomplexes to the original scaffold. Neurons are modelled as E-GLIF with
+alpha-shaped conductance-based synapses [Geminiani et al., 2018]. E-GLIF parameters are specific for
+each cell type, as optimized in [Geminiani et al., 2019]. Connection delays are obtained from literature values,
+while connection weights are tuned with trial and error to obtain physiological baseline population firing rates.
 The network is stimulated with sensory-like input signals to the Granular layer and the Inferior Olive,
 mimicking the input signals of Eye-Blink Classical Conditioning: a constant Poisson spike pattern at 40 Hz to the Granular layer,
 and a burst at 500 Hz to one nucleus of the Inferior Olive. Realistic single neuron dynamics provided by the E-GLIF
@@ -58,9 +57,9 @@ of the stimulated area in the Granular layer.
 
     Providing the olivocerebellar scaffold a Poisson spike train (40 Hz frequency, 260 ms duration) to the Granular layer
     and a co-terminating burst (500 Hz frequency, 10 ms duration) to the Olivary nucleus connected to the first microcomplex,
-    the following PSTH should be generated for Purkinje cells in the first microcomplex:
+    the following PSTH should be generated for Purkinje cells in the first microcomplex (vertical lines representing stimuli start and end):
 
-         .. image:: images/PC1.png
+         .. image:: images/PSTH_PC1.png
             :width: 700px
 
     with the first stimulus causing an increased population firing rate and the burst causing a complex spike (burst-pause).
@@ -68,5 +67,5 @@ of the stimulated area in the Granular layer.
     The bursting spiking pattern is not present in the Purkinje cells of the second microcomplex, which receive only the first stimulus
     thanks to the modular connectivity of the network:
 
-          .. image:: images/PC2.png
+          .. image:: images/PSTH_PC2.png
              :width: 700px
