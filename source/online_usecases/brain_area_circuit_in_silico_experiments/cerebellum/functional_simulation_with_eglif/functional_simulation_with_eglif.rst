@@ -57,7 +57,8 @@ of the stimulated area in the Granular layer.
 
     Providing the olivocerebellar scaffold a Poisson spike train (40 Hz frequency, 260 ms duration) to the Granular layer
     and a co-terminating burst (500 Hz frequency, 10 ms duration) to the Olivary nucleus connected to the first microcomplex,
-    the following PSTH should be generated for Purkinje cells in the first microcomplex (vertical lines representing stimuli start and end):
+    the following PSTH should be generated for Purkinje cells in the first microcomplex (vertical lines representing
+    start of first and second stimulus, end of both stimuli):
 
          .. image:: images/PSTH_PC1.png
             :width: 700px
