@@ -4,7 +4,7 @@
 Synaptic events fitting
 #######################
 
-This Use Case allows a user to fit synaptic events using data and models from the Neuroinformatics Platform (NIP).
+This Use Case allows a user to fit synaptic events using data and models from the CSCS storage.
 
 Selecting this Use Case, two Jupyter Notebooks are cloned in a private existing/new Collab.
 The cloned Notebooks are:
@@ -15,12 +15,12 @@ Synaptic events fitting - Config
 
 It allows the user to:
 
-1. Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to be fitted.
+1. Select, download and visualize experimental data from the CSCS storage. The user may then select the data to be fitted.
 
 .. container:: bsp-container-center
 
      .. image:: images/data_selection.png
-         :width: 700px
+         :width: 850px
          :align: center
 
 |
@@ -89,13 +89,13 @@ All other parameters that are not fitted have their default value as defined in 
 
 |
 
-3. Configure the parameters of the optimization job: node number, core number and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the job status.
+3. Configure the parameters of the optimization job: the title of the job, the number of nodes, the number of cores and the runtime. Run the fitting procedure using UNICORE authentication on JURECA (booster partition), GALILEO, or on NSG (using your account or the Service Account), and check the job status.
 
 On JURECA, the node number, the number of CPUs per node and the runtime are set by default to 2, 24 and 10m respectively.
 
 |
 
-On MARCONI, the node number, the number of CPUs per node and the runtime are set by default to 2, 36 and 10m respectively.
+On GALILEO, the node number, the number of CPUs per node and the runtime are set by default to 2, 36 and 10m respectively.
 
 |
 
@@ -103,52 +103,20 @@ The user needs to be aware of resource limitations imposed by each HPC system.
 
 |
 
-On the NSG, the node number, the number of cores and the runtime are set by 
+On NSG, the node number, the number of cores and the runtime are set by 
 default to 2, 24 and 0.5 (hours) respectively. The maximum node number per job 
 is 72. If you would require more than 72 nodes, please contact 
 nsghelp@sdsc.edu. The maximum number of cores required per node is 24.
 
 .. container:: bsp-container-center
 
-    .. image:: images/hpc_selection.png
-        :width: 300px
+    .. image:: images/submission_process.png
+        :width: 650px
         :align: center
 
 |
 
-.. container:: bsp-container-center
-
-    .. image:: images/run_all_traces.png
-        :width: 150px
-        :align: center
-
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/set_cores_nodes.png
-     :width: 300px
-     :align: center
-
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/login.png
-     :width: 300px
-     :align: center
-
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/job_submitted.png
-     :width: 300px
-     :align: center
-
-|
-
-Note that when the job is submitted through UNICORE, the user can specify a title for the job and the account to use to submit the job on the HPC.
+Note that when the job is submitted through UNICORE, the user can specify the project to use to submit the job on the HPC.
 
 |
 
@@ -162,27 +130,19 @@ Note that when the job is submitted through UNICORE, the user can specify a titl
 
 Note that when the job is submitted through NSG, next to the status of the job, the user may see the submission date converted to CET time. It will be useful in the analysis notebook in order to fetch the job.
 
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/NSGstatus.png
-     :width: 300px
-     :align: center
-
-|
-
 The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.
 
 |
 
 Once the job is completed, the output files will be in the Collab storage under different directories, according to the system used.
 
-JURECA: results are saved under the results/output_submissionTime folder.
+JURECA: results are saved under the resultsJureca/jobtitle_fitting_submissionTime folder.
 
-MARCONI: results are saved under the resultsMarconi/output_submissionTime folder.
+GALILEO: results are saved under the resultsGalileo/jobtitle_fitting_submissionTime folder.
 
-NSG results are saved under the resultsNSG/output_submissionTime folder.
+NSG results are saved under the resultsNSG/jobtitle_fitting_submissionTime folder.
+
+NSG (Service Account) results are saved under the resultsNSG-SA/jobtitle_fitting_submissionTime folder.
 
 |
 

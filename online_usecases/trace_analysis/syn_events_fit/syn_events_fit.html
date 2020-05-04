@@ -110,17 +110,17 @@
 
                 <div class="section" id="synaptic-events-fitting">
 <span id="syn-events-fit"></span><h1>Synaptic events fitting<a class="headerlink" href="#synaptic-events-fitting" title="Permalink to this headline">¶</a></h1>
-<p>This Use Case allows a user to fit synaptic events using data and models from the Neuroinformatics Platform (NIP).</p>
+<p>This Use Case allows a user to fit synaptic events using data and models from the CSCS storage.</p>
 <p>Selecting this Use Case, two Jupyter Notebooks are cloned in a private existing/new Collab.
 The cloned Notebooks are:</p>
 <div class="section" id="synaptic-events-fitting-config">
 <h2>Synaptic events fitting - Config<a class="headerlink" href="#synaptic-events-fitting-config" title="Permalink to this headline">¶</a></h2>
 <p>It allows the user to:</p>
 <ol class="arabic simple">
-<li>Select, download and visualize experimental data from the Neuroinformatics Platform (NIP). The user may then select the data to be fitted.</li>
+<li>Select, download and visualize experimental data from the CSCS storage. The user may then select the data to be fitted.</li>
 </ol>
 <div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/data_selection.png"><img alt="../../../_images/data_selection.png" class="align-center" src="../../../_images/data_selection.png" style="width: 700px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/data_selection.png"><img alt="../../../_images/data_selection.png" class="align-center" src="../../../_images/data_selection.png" style="width: 850px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -181,13 +181,13 @@ values are shown in the figures below:</p>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="3">
-<li>Configure the parameters of the optimization job: node number, core number and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the job status.</li>
+<li>Configure the parameters of the optimization job: the title of the job, the number of nodes, the number of cores and the runtime. Run the fitting procedure using UNICORE authentication on JURECA (booster partition), GALILEO, or on NSG (using your account or the Service Account), and check the job status.</li>
 </ol>
 <p>On JURECA, the node number, the number of CPUs per node and the runtime are set by default to 2, 24 and 10m respectively.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>On MARCONI, the node number, the number of CPUs per node and the runtime are set by default to 2, 36 and 10m respectively.</p>
+<p>On GALILEO, the node number, the number of CPUs per node and the runtime are set by default to 2, 36 and 10m respectively.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -195,41 +195,17 @@ values are shown in the figures below:</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>On the NSG, the node number, the number of cores and the runtime are set by
+<p>On NSG, the node number, the number of cores and the runtime are set by
 default to 2, 24 and 0.5 (hours) respectively. The maximum node number per job
 is 72. If you would require more than 72 nodes, please contact
 <a class="reference external" href="mailto:nsghelp&#37;&#52;&#48;sdsc&#46;edu">nsghelp<span>&#64;</span>sdsc<span>&#46;</span>edu</a>. The maximum number of cores required per node is 24.</p>
 <div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/hpc_selection.png"><img alt="../../../_images/hpc_selection.png" class="align-center" src="../../../_images/hpc_selection.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/submission_process.png"><img alt="../../../_images/submission_process.png" class="align-center" src="../../../_images/submission_process.png" style="width: 650px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/run_all_traces.png"><img alt="../../../_images/run_all_traces.png" class="align-center" src="../../../_images/run_all_traces.png" style="width: 150px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/set_cores_nodes.png"><img alt="../../../_images/set_cores_nodes.png" class="align-center" src="../../../_images/set_cores_nodes.png" style="width: 300px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/login1.png"><img alt="../../../_images/login1.png" class="align-center" src="../../../_images/login1.png" style="width: 300px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/job_submitted1.png"><img alt="../../../_images/job_submitted1.png" class="align-center" src="../../../_images/job_submitted1.png" style="width: 300px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Note that when the job is submitted through UNICORE, the user can specify a title for the job and the account to use to submit the job on the HPC.</p>
+<p>Note that when the job is submitted through UNICORE, the user can specify the project to use to submit the job on the HPC.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -240,23 +216,15 @@ is 72. If you would require more than 72 nodes, please contact
 <div class="line"><br /></div>
 </div>
 <p>Note that when the job is submitted through NSG, next to the status of the job, the user may see the submission date converted to CET time. It will be useful in the analysis notebook in order to fetch the job.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/NSGstatus.png"><img alt="../../../_images/NSGstatus.png" class="align-center" src="../../../_images/NSGstatus.png" style="width: 300px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>The user can choose to fit all the experimental traces 100 times, a single trace 20 times or a demo version where a trace is fitted 5 times. For the single trace and the demo version the user can choose the number of the trace to be fitted.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p>Once the job is completed, the output files will be in the Collab storage under different directories, according to the system used.</p>
-<p>JURECA: results are saved under the results/output_submissionTime folder.</p>
-<p>MARCONI: results are saved under the resultsMarconi/output_submissionTime folder.</p>
-<p>NSG results are saved under the resultsNSG/output_submissionTime folder.</p>
+<p>JURECA: results are saved under the resultsJureca/jobtitle_fitting_submissionTime folder.</p>
+<p>GALILEO: results are saved under the resultsGalileo/jobtitle_fitting_submissionTime folder.</p>
+<p>NSG results are saved under the resultsNSG/jobtitle_fitting_submissionTime folder.</p>
+<p>NSG (Service Account) results are saved under the resultsNSG-SA/jobtitle_fitting_submissionTime folder.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
