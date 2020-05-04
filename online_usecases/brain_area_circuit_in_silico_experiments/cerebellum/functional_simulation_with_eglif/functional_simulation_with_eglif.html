@@ -1,0 +1,207 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Functional Simulation with Advanced Point Neurons (E-GLIF) &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../../_static/load_ga.js"></script>
+    <script type="text/javascript" src="../../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="HBP Validation Framework" href="../../../validation_framework/validation_framework.html" />
+    <link rel="prev" title="Functional Simulation with Point Neurons" href="../functional_simulation_with_point_neurons/functional_simulation_with_point_neurons.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../functional_simulation_with_point_neurons/functional_simulation_with_point_neurons.html"
+                        title="previous chapter">Functional Simulation with Point Neurons</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../../validation_framework/validation_framework.html"
+                        title="next chapter">HBP Validation Framework</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/online_usecases/brain_area_circuit_in_silico_experiments/cerebellum/functional_simulation_with_eglif/functional_simulation_with_eglif.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../../brain_area_circuit_in_silico_experiments.html">Brain area circuit <em>in silico</em> experiments</a>
+                    
+                    <a href="../cerebellum.html">Cerebellum</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../functional_simulation_with_point_neurons/functional_simulation_with_point_neurons.html">Functional Simulation with Point Neurons</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../../../validation_framework/validation_framework.html">HBP Validation Framework</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="functional-simulation-with-advanced-point-neurons-e-glif">
+<h1>Functional Simulation with Advanced Point Neurons (E-GLIF)<a class="headerlink" href="#functional-simulation-with-advanced-point-neurons-e-glif" title="Permalink to this headline">¶</a></h1>
+<p>This Use Case can be used to simulate an olivocerebellar microcircuit with
+point neurons modeled as E-GLIF (Extended-Generalized Leaky Integrate and
+Fire). This advanced point neuron model has been designed and optimized to
+reproduce complex electroresponsive dynamics (including bursting, adaptation,
+resonance, etc) while keeping a limited computational load
+[<a class="reference external" href="https://doi.org/10.3389/fninf.2018.00088">Geminiani et al., 2018</a>].
+Simulations are run in NEST 2.18 and show how realistic single neuron dynamics
+and network topology contribute to network spiking patterns following
+sensory-like stimuli.</p>
+<p>The Use Case can be found in <em>Online Use Cases/Brain area circuit in silico
+experiments/Cerebellum/Functional Simulation with Advanced Point Neurons
+(E-GLIF)</em>.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/scaffoldIO.png"><img alt="../../../../_images/scaffoldIO.png" src="../../../../_images/scaffoldIO.png" style="width: 373px;" /></a>
+</div></blockquote>
+<p><strong>Simulation description</strong></p>
+<p>The olivocerebellar Spiking Neural Network is created in pyNEST. The topology
+is reconstructed based on the cerebellar scaffold rules in
+[<a class="reference external" href="https://doi.org/10.3389/fninf.2019.00037">Casali et al. 2019</a>],
+adding the Olivary nuclei and a subdivision into microcomplexes to the
+original scaffold. Neurons are modelled as E-GLIF with alpha-shaped
+conductance-based synapses [<a class="reference external" href="https://doi.org/10.3389/fninf.2018.00088">Geminiani et al., 2018</a>].
+E-GLIF parameters are specific for each cell type, as optimized in [<a class="reference external" href="https://doi.org/10.3389/fncom.2019.00068">Geminiani et al., 2019</a>].
+Connection delays are obtained from literature values, while connection
+weights are tuned with a trial and error procedure to obtain physiological
+baseline population firing rates. The network is stimulated with sensory-like
+input signals to the Granular layer and the Inferior Olive, mimicking the
+input signals of Eye-Blink Classical Conditioning: a constant Poisson spike
+pattern at 40 Hz to the Granular layer, and a burst at 500 Hz to one nucleus
+of the Inferior Olive. Realistic single neuron dynamics provided by the E-GLIF
+and modular network topology allow to reproduce the complex spiking patterns of
+cerebellar signal encoding, including burst-pause and burst-pause mechanisms.</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li>a single hdf5 file (saved in /storage) containing network topology data, i.e. cell positions and connections.</li>
+</ul>
+<p>The user can modify the stimulation protocol by changing the parameters in the
+“Defining stimuli” section, namely: the duration of the simulation [ms]; the
+start [ms], end [ms] and frequency [Hz] of each stimulus; the radius [um]
+of the stimulated area in the Granular layer.</p>
+<p><strong>Output</strong></p>
+<ul class="simple">
+<li>Files: .gdf files containing spike times of each network neuron over the simulation duration. The user can also choose to save the .dat files containing the voltage traces (but this would significantly increase the simulation time if whole population are selected)</li>
+<li>Monitoring: raster plot of spikes for each neuron type, which the user can select, and PSTH</li>
+</ul>
+<p><strong>Additional information</strong></p>
+<ul class="simple">
+<li>The whole Use Case should take about 40 minutes to be completed, for a volume base of 400 x 400 µm.</li>
+<li>The BSP foundation software used in the notebook is pyNEST</li>
+<li>Single neuron and network parameters are the same reported in [<a class="reference external" href="https://doi.org/10.3389/fncom.2019.00068">Geminiani et al., 2019</a>]</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>EXAMPLE</strong></p>
+<blockquote>
+<div><p>Providing the olivocerebellar scaffold a Poisson spike train (40 Hz frequency, 260 ms duration) to the Granular layer
+and a co-terminating burst (500 Hz frequency, 10 ms duration) to the Olivary nucleus connected to the first microcomplex,
+the following PSTH should be generated for Purkinje cells in the first microcomplex (vertical lines representing
+start of first and second stimulus, end of both stimuli):</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/PSTH_PC1.png"><img alt="../../../../_images/PSTH_PC1.png" src="../../../../_images/PSTH_PC1.png" style="width: 700px;" /></a>
+</div></blockquote>
+<p>with the first stimulus causing an increased population firing rate and the burst causing a complex spike (burst-pause).</p>
+<p>The bursting spiking pattern is not present in the Purkinje cells of the second microcomplex, which receive only the first stimulus
+thanks to the modular connectivity of the network:</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/PSTH_PC2.png"><img alt="../../../../_images/PSTH_PC2.png" src="../../../../_images/PSTH_PC2.png" style="width: 700px;" /></a>
+</div></blockquote>
+<p>with the complex spike not occurring.</p>
+</div></blockquote>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../functional_simulation_with_point_neurons/functional_simulation_with_point_neurons.html">Functional Simulation with Point Neurons</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../../../validation_framework/validation_framework.html">HBP Validation Framework</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>
