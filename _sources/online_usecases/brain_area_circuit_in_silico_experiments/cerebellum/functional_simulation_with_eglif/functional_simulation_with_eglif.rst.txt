@@ -38,7 +38,8 @@ input signals of Eye-Blink Classical Conditioning: a constant Poisson spike
 pattern at 40 Hz to the Granular layer, and a burst at 500 Hz to one nucleus 
 of the Inferior Olive. Realistic single neuron dynamics provided by the E-GLIF
 and modular network topology allow to reproduce the complex spiking patterns of 
-cerebellar signal encoding, including burst-pause and burst-pause mechanisms.
+cerebellar signal encoding, including burst-pause (in Purkinje cells) and 
+pause-burst (in Deep Cerebellar Nuclei cells) mechanisms.
 
 
 **Inputs**
@@ -47,7 +48,7 @@ cerebellar signal encoding, including burst-pause and burst-pause mechanisms.
 
 The user can modify the stimulation protocol by changing the parameters in the 
 "Defining stimuli" section, namely: the duration of the simulation [ms]; the 
-start [ms], end [ms] and frequency [Hz] of each stimulus; the radius [um]
+start [ms], end [ms] and frequency [Hz] of each stimulus; the radius [µm]
 of the stimulated area in the Granular layer.
 
 
