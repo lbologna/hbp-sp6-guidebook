@@ -20,7 +20,7 @@ It allows the user to:
 .. container:: bsp-container-center
 
      .. image:: images/data_selection.png
-         :width: 700px
+         :width: 850px
          :align: center
 
 |
@@ -110,49 +110,9 @@ nsghelp@sdsc.edu. The maximum number of cores required per node is 24.
 
 .. container:: bsp-container-center
 
-    .. image:: images/hpc_selection.png
-        :width: 300px
+    .. image:: images/submission_process.png
+        :width: 650px
         :align: center
-
-|
-
-.. container:: bsp-container-center
-
-    .. image:: images/run_all_traces.png
-        :width: 150px
-        :align: center
-
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/set_cores_nodes.png
-     :width: 300px
-     :align: center
-
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/login.png
-     :width: 300px
-     :align: center
-
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/run-check.png
-     :width: 300px
-     :align: center
-
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/job_submitted.png
-     :width: 300px
-     :align: center
 
 |
 
