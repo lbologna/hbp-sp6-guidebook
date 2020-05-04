@@ -4,17 +4,15 @@ optimized parameters. If the user wants to view an analysis of simulations that
 are already in the storage of the Collab, (s)he can skip the 
 'View simulations' tab and go directly to the 'View analysis' tab.
 
-In the 'View simulations' tab, the user can visualize the Name/ID, status, 
-the submission date of the simulations submitted on the HPC systems and (s)he
-can obtain an output of successfully completed jobs.
-
 .. container:: bsp-container-center
 
      .. image:: ../syn_events_fit_analysis/images/viewsim1.png
          :width: 700px
          :align: center
-              
-|
+
+In the 'View simulations' tab, the user can visualize the Name/ID, status, 
+the submission date of the simulations submitted on the HPC systems and (s)he
+can obtain an output of successfully completed jobs.
 
 .. container:: bsp-container-center
 
