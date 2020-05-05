@@ -10,3 +10,4 @@ Brain area circuit *in silico* experiments
 
     hippocampus/hippocampus
     cerebellum/cerebellum
+    cerebrocerebellar/cerebrocerebellar

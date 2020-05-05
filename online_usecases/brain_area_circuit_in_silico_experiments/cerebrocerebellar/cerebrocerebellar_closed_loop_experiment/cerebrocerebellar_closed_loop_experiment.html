@@ -1,0 +1,185 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Closed-loop modelling and validation of large scale cerebro-cerebellar loops &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../../_static/load_ga.js"></script>
+    <script type="text/javascript" src="../../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="HBP Validation Framework" href="../../../validation_framework/validation_framework.html" />
+    <link rel="prev" title="Closed-loop modelling and validation of large scale cerebro-cerebellar loops" href="../cerebrocerebellar.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../cerebrocerebellar.html"
+                        title="previous chapter">Closed-loop modelling and validation of large scale cerebro-cerebellar loops</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../../validation_framework/validation_framework.html"
+                        title="next chapter">HBP Validation Framework</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/online_usecases/brain_area_circuit_in_silico_experiments/cerebrocerebellar/cerebrocerebellar_closed_loop_experiment/cerebrocerebellar_closed_loop_experiment.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../../brain_area_circuit_in_silico_experiments.html">Brain area circuit <em>in silico</em> experiments</a>
+                    
+                    <a href="../cerebrocerebellar.html">Closed-loop modelling and validation of large scale cerebro-cerebellar loops</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../cerebrocerebellar.html">Closed-loop modelling and validation of large scale cerebro-cerebellar loops</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../../../validation_framework/validation_framework.html">HBP Validation Framework</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="closed-loop-modelling-and-validation-of-large-scale-cerebro-cerebellar-loops">
+<h1>Closed-loop modelling and validation of large scale cerebro-cerebellar loops<a class="headerlink" href="#closed-loop-modelling-and-validation-of-large-scale-cerebro-cerebellar-loops" title="Permalink to this headline">¶</a></h1>
+<p>This Use Case shows a modeling effort of whole brain functionalities by
+leveraging the existing cerebellar models. We model and simulate the forward
+and inverse controller functions of the cerebrocortical-cerebellar loops in a
+closed-loop setting, emulating error-based learning and action prediction.</p>
+<p>The cerebellum model, made of single-point neurons with non-linear dynamics),
+leverages the scaffold developed in Task 6.2.2 (see Use Cases on Cerebellum
+models) and is embedded with a long-term synaptic plasticity rules for implicit
+learning.</p>
+<p>The Use Case can be found in <em>Online Use Cases/Brain area circuit in silico experiments/Cerebro-Cerebellar loops/Cerebro-Cerebellar closed loop experiment</em>.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/NEST_loop.png"><img alt="../../../../_images/NEST_loop.png" src="../../../../_images/NEST_loop.png" style="width: 373px;" /></a>
+</div></blockquote>
+<p><strong>Simulation description:</strong></p>
+<p>The cerebellum models are split into two modules, one operating in feed-forward
+mode (receiving motor command, i.e. the efference copy, and generating a
+sensory error prediction) and the other operating in inverse mode (receiving
+the sensory information of the desired target and generating compensatory motor
+commands). The two modules are connected as depicted in the following figure:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The model is used to simulate a specific sensorimotor task in closed-loop.
+We emulate a pointing task perturbed by prismatic glasses. The cerebellar
+modules allow to achieve complementary processing able to predict a sensory
+discrepancy and compensatory motor commands. Therefore, the cerebellum works
+as a general-purpose massive predictive machine in whole-brain modular systems.</p>
+<p><strong>Inputs:</strong></p>
+<ul class="simple">
+<li>One hdf5 files (saved in /storage) containing network topology data, i.e. cell positions and connections.</li>
+<li>One json file (/storage/scaffold_network_BSP_static.json) representing a network without plasticity, with fixed synaptic weights between the different neural populations.</li>
+<li>One json file (/storage/scaffold_network_BSP.json) representing a network provided with distributed STDP plasticity mechanisms.</li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul class="simple">
+<li>Monitoring: evolution of the error of the final position of the robot end-effector (i.e., the fingertip of the arm performing the pointing task) along the trials. The error remains stable when the static cerebellar model is used as a controller, while the error gradually decreses when a plastic cerebellar controller is used.</li>
+</ul>
+<p><strong>Additional information:</strong></p>
+<ul class="simple">
+<li>The user needs to run the notebooks in the following order:</li>
+</ul>
+<ol class="arabic simple">
+<li>Preparation of the environment</li>
+<li>Calibration</li>
+<li>Simulation</li>
+</ol>
+<ul class="simple">
+<li>The whole Use Case should take about 1 hour for a volume base of 400 x 400 µm.</li>
+<li>The BSP foundation software used in the notebook is pyNEST</li>
+</ul>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../cerebrocerebellar.html">Closed-loop modelling and validation of large scale cerebro-cerebellar loops</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../../../validation_framework/validation_framework.html">HBP Validation Framework</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>

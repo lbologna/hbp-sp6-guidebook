@@ -174,13 +174,13 @@ Typical values are shown in the figure below</li>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="4">
-<li>Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the status of the job</li>
+<li>Configure the parameters of the optimization job: the title of the job, the number of nodes, the number of cores and the runtime. Run the fitting procedure using UNICORE authentication on JURECA (booster partition), GALILEO, or on NSG (using your account), and check the job status.</li>
 </ol>
 <p>On JURECA the number of nodes, number of CPUs per node and runtime are set by default to 2, 24 and 10m respectively</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>On MARCONI the number of nodes, number of CPUs per node and runtime are set by default to 2, 36 and 10m respectively</p>
+<p>On GALILEO the number of nodes, number of CPUs per node and runtime are set by default to 2, 36 and 10m respectively</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -188,41 +188,14 @@ Typical values are shown in the figure below</li>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>On the NSG the number of nodes, number of cores and runtime are set by default to 2, 24 and 0.5 (hours) respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact <a class="reference external" href="mailto:nsghelp&#37;&#52;&#48;sdsc&#46;edu">nsghelp<span>&#64;</span>sdsc<span>&#46;</span>edu</a>. The maximum number of cores required per node is 24.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>On NSG the number of nodes, number of cores and runtime are set by default to 2, 24 and 0.5 (hours) respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact <a class="reference external" href="mailto:nsghelp&#37;&#52;&#48;sdsc&#46;edu">nsghelp<span>&#64;</span>sdsc<span>&#46;</span>edu</a>. The maximum number of cores required per node is 24.</p>
 <div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/select_hpc1.png"><img alt="../../../_images/select_hpc1.png" class="align-center" src="../../../_images/select_hpc1.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../../_images/submission_process_021.png"><img alt="../../../_images/submission_process_021.png" class="align-center" src="../../../_images/submission_process_021.png" style="width: 650px;" /></a>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/run_all_traces2.png"><img alt="../../../_images/run_all_traces2.png" class="align-center" src="../../../_images/run_all_traces2.png" style="width: 200px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/set_CPU_nodes.png"><img alt="../../../_images/set_CPU_nodes.png" class="align-center" src="../../../_images/set_CPU_nodes.png" style="width: 400px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/login3.png"><img alt="../../../_images/login3.png" class="align-center" src="../../../_images/login3.png" style="width: 400px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/job_submitted3.png"><img alt="../../../_images/job_submitted3.png" class="align-center" src="../../../_images/job_submitted3.png" style="width: 400px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>Note that when the job is submitted through UNICORE, the user can specify a title for the job and the account to use for submitting the job on the HPC.</p>
+<p>Note that when the job is submitted through UNICORE, the user can specify the project to use to submit the job on the HPC.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -235,29 +208,14 @@ Typical values are shown in the figure below</li>
 <p>Note that when the job is submitted through NSG, the user can see the
 submission date converted to CET time next to the status of the job. This will
 be useful in the analysis notebook in order to fetch the job.</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="bsp-container-center docutils container">
-<a class="reference internal image-reference" href="../../../_images/NSGstatus2.png"><img alt="../../../_images/NSGstatus2.png" class="align-center" src="../../../_images/NSGstatus2.png" style="width: 300px;" /></a>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <p>The user can choose to fit all experimental traces 100 times, a single trace 20
 times or use a demo version where a trace is fitted 5 times. For the single
 trace and the demo version the user can choose the trace to be fitted.</p>
 <p>Once the job is completed, the output files will be in the Collab storage under
 different directories, according to the system used.</p>
-<p>JURECA: results are saved under the results/output_submissionTime folder;</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>MARCONI: results are saved under the resultsMarconi/output_submissionTime folder;</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<p>NSG results are saved under the resultsNSG/output_submissionTime folder.</p>
+<p>JURECA: results are saved under the resultsJureca/jobtitle_fitting_submissionTime folder.</p>
+<p>GALILEO: results are saved under the resultsGalileo/jobtitle_fitting_submissionTime folder.</p>
+<p>NSG results are saved under the resultsNSG/jobtitle_fitting_submissionTime folder.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -287,15 +245,12 @@ storage of the HPC system to the storage of the Collab or to analyze the
 optimized parameters. If the user wants to view an analysis of simulations that
 are already in the storage of the Collab, (s)he can skip the
 ‘View simulations’ tab and go directly to the ‘View analysis’ tab.</p>
-<p>In the ‘View simulations’ tab, the user can visualize the Name/ID, status,
-the submission date of the simulations submitted on the HPC systems and (s)he
-can obtain an output of successfully completed jobs.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/viewsim13.png"><img alt="../../../_images/viewsim13.png" class="align-center" src="../../../_images/viewsim13.png" style="width: 700px;" /></a>
 </div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<p>In the ‘View simulations’ tab, the user can visualize the Name/ID, status,
+the submission date of the simulations submitted on the HPC systems and (s)he
+can obtain an output of successfully completed jobs.</p>
 <div class="bsp-container-center docutils container">
 <a class="reference internal image-reference" href="../../../_images/viewsimulations5.png"><img alt="../../../_images/viewsimulations5.png" class="align-center" src="../../../_images/viewsimulations5.png" style="width: 700px;" /></a>
 </div>
