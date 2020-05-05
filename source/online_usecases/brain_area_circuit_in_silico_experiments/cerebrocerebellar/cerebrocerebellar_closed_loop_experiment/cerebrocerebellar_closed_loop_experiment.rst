@@ -1,11 +1,17 @@
-##########################################################
+############################################################################
 Closed-loop modelling and validation of large scale cerebro-cerebellar loops
-##########################################################
+############################################################################
 
 
-This use-case shows a modeling effort of whole brain functionalities by leveraging on the existing cerebellar models. We model and simulate the forward and inverse controller functions of the cerebrocortical-cerebellar loops in a closed-loop setting, emulating error-based learning and action prediction.
+This Use Case shows a modeling effort of whole brain functionalities by 
+leveraging the existing cerebellar models. We model and simulate the forward 
+and inverse controller functions of the cerebrocortical-cerebellar loops in a 
+closed-loop setting, emulating error-based learning and action prediction.
 
-The cerebellum model, made of single-point neurons with non-linear dynamics), leverages on the scaffold developed in Task 6.2.2 (see Use-cases on Cerebellum models) and is embedded with long-term synaptic plasticity rules for implicit learning.
+The cerebellum model, made of single-point neurons with non-linear dynamics), 
+leverages the scaffold developed in Task 6.2.2 (see Use Cases on Cerebellum 
+models) and is embedded with a long-term synaptic plasticity rules for implicit 
+learning.
 
 The Use Case can be found in *Online Use Cases/Brain area circuit in silico experiments/Cerebro-Cerebellar loops/Cerebro-Cerebellar closed loop experiment*.
 
@@ -15,11 +21,19 @@ The Use Case can be found in *Online Use Cases/Brain area circuit in silico expe
 
 **Simulation description:**
 
-The cerebellum models are split into two modules, one operating in feed-forward mode (receiving motor command, i.e. the efference copy, and generating a sensory error prediction) and the other operating in inverse mode (receiving the sensory information of the desired target and generating compensatory motor commands). The two modules are connectes as depicted in the following figure:
+The cerebellum models are split into two modules, one operating in feed-forward 
+mode (receiving motor command, i.e. the efference copy, and generating a 
+sensory error prediction) and the other operating in inverse mode (receiving 
+the sensory information of the desired target and generating compensatory motor 
+commands). The two modules are connected as depicted in the following figure:
 
- 
+| 
 
-The model is used to simulate a specific sensorimotor task in closed-loop. We emulate a pointing task perturbed by prismatic glasses. The cerebellar modules allow to achieve complementary processing able to predict a sensory discrepancy and compensatory motor commands. Therefore, the cerebellum works as a general-purpose massive predictive machine in whole-brain modular systems.
+The model is used to simulate a specific sensorimotor task in closed-loop. 
+We emulate a pointing task perturbed by prismatic glasses. The cerebellar 
+modules allow to achieve complementary processing able to predict a sensory 
+discrepancy and compensatory motor commands. Therefore, the cerebellum works 
+as a general-purpose massive predictive machine in whole-brain modular systems.
 
 
 **Inputs:**
@@ -44,4 +58,4 @@ The model is used to simulate a specific sensorimotor task in closed-loop. We em
 3) Simulation
 
 •	The whole Use Case should take about 1 hour for a volume base of 400 x 400 µm.
-•	BSP tool used in the notebook: pyNEST
+•	The BSP foundation software used in the notebook is pyNEST

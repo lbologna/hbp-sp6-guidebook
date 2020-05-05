@@ -99,7 +99,7 @@ On NSG the number of nodes, number of cores and runtime are set by default to 2,
 
 .. container:: bsp-container-center
 
-    .. image:: images/submission_process.png
+    .. image:: images/submission_process_02.png
         :width: 650px
         :align: center
 

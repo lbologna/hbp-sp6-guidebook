@@ -1,3 +1,9 @@
+.. _cerebro_cerebellar:
+
+############################################################################
+Closed-loop modelling and validation of large scale cerebro-cerebellar loops
+############################################################################
+
 .. toctree::
     :maxdepth: 4
 

@@ -88,7 +88,7 @@ nsghelp@sdsc.edu. The maximum number of cores required per node is 24.
 
 .. container:: bsp-container-center
 
-    .. image:: images/submission_process2.png
+    .. image:: images/submission_process_02.png
         :width: 650px
         :align: center
 
