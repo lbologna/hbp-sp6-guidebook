@@ -8,15 +8,13 @@ leveraging the existing cerebellar models. We model and simulate the forward
 and inverse controller functions of the cerebrocortical-cerebellar loops in a 
 closed-loop setting, emulating error-based learning and action prediction.
 
-The cerebellum model, made of single-point neurons with non-linear dynamics), 
+The cerebellum model, made of single-point neurons with non-linear dynamics, 
 leverages the scaffold developed in Task 6.2.2 (see Use Cases on Cerebellum 
-models) and is embedded with a long-term synaptic plasticity rules for implicit 
+models) and is embedded with long-term synaptic plasticity rules for implicit 
 learning.
 
 The Use Case can be found in *Online Use Cases/Brain area circuit in silico experiments/Cerebro-Cerebellar loops/Cerebro-Cerebellar closed loop experiment*.
 
-     .. image:: images/NEST_loop.png
-        :width: 373px
 
 
 **Simulation description:**
@@ -27,7 +25,8 @@ sensory error prediction) and the other operating in inverse mode (receiving
 the sensory information of the desired target and generating compensatory motor 
 commands). The two modules are connected as depicted in the following figure:
 
-| 
+     .. image:: images/NEST_loop.png
+        :width: 800px 
 
 The model is used to simulate a specific sensorimotor task in closed-loop. 
 We emulate a pointing task perturbed by prismatic glasses. The cerebellar 
@@ -38,7 +37,7 @@ as a general-purpose massive predictive machine in whole-brain modular systems.
 
 **Inputs:**
 
-•	One hdf5 files (saved in /storage) containing network topology data, i.e. cell positions and connections.
+•	One hdf5 file (saved in /storage) containing network topology data, i.e. cell positions and connections.
 •	One json file (/storage/scaffold_network_BSP_static.json) representing a network without plasticity, with fixed synaptic weights between the different neural populations.
 •	One json file (/storage/scaffold_network_BSP.json) representing a network provided with distributed STDP plasticity mechanisms.
 

@@ -107,23 +107,20 @@
 leveraging the existing cerebellar models. We model and simulate the forward
 and inverse controller functions of the cerebrocortical-cerebellar loops in a
 closed-loop setting, emulating error-based learning and action prediction.</p>
-<p>The cerebellum model, made of single-point neurons with non-linear dynamics),
+<p>The cerebellum model, made of single-point neurons with non-linear dynamics,
 leverages the scaffold developed in Task 6.2.2 (see Use Cases on Cerebellum
-models) and is embedded with a long-term synaptic plasticity rules for implicit
+models) and is embedded with long-term synaptic plasticity rules for implicit
 learning.</p>
 <p>The Use Case can be found in <em>Online Use Cases/Brain area circuit in silico experiments/Cerebro-Cerebellar loops/Cerebro-Cerebellar closed loop experiment</em>.</p>
-<blockquote>
-<div><a class="reference internal image-reference" href="../../../../_images/NEST_loop.png"><img alt="../../../../_images/NEST_loop.png" src="../../../../_images/NEST_loop.png" style="width: 373px;" /></a>
-</div></blockquote>
 <p><strong>Simulation description:</strong></p>
 <p>The cerebellum models are split into two modules, one operating in feed-forward
 mode (receiving motor command, i.e. the efference copy, and generating a
 sensory error prediction) and the other operating in inverse mode (receiving
 the sensory information of the desired target and generating compensatory motor
 commands). The two modules are connected as depicted in the following figure:</p>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/NEST_loop.png"><img alt="../../../../_images/NEST_loop.png" src="../../../../_images/NEST_loop.png" style="width: 800px;" /></a>
+</div></blockquote>
 <p>The model is used to simulate a specific sensorimotor task in closed-loop.
 We emulate a pointing task perturbed by prismatic glasses. The cerebellar
 modules allow to achieve complementary processing able to predict a sensory
@@ -131,7 +128,7 @@ discrepancy and compensatory motor commands. Therefore, the cerebellum works
 as a general-purpose massive predictive machine in whole-brain modular systems.</p>
 <p><strong>Inputs:</strong></p>
 <ul class="simple">
-<li>One hdf5 files (saved in /storage) containing network topology data, i.e. cell positions and connections.</li>
+<li>One hdf5 file (saved in /storage) containing network topology data, i.e. cell positions and connections.</li>
 <li>One json file (/storage/scaffold_network_BSP_static.json) representing a network without plasticity, with fixed synaptic weights between the different neural populations.</li>
 <li>One json file (/storage/scaffold_network_BSP.json) representing a network provided with distributed STDP plasticity mechanisms.</li>
 </ul>
