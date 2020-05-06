@@ -26,7 +26,7 @@ the sensory information of the desired target and generating compensatory motor
 commands). The two modules are connected as depicted in the following figure:
 
      .. image:: images/NEST_loop.png
-        :width: 373px 
+        :width: 800px 
 
 The model is used to simulate a specific sensorimotor task in closed-loop. 
 We emulate a pointing task perturbed by prismatic glasses. The cerebellar 
