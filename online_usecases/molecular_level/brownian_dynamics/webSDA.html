@@ -1,0 +1,230 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Calculation of bimolecular association rates with webSDA &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../_static/load_ga.js"></script>
+    <script type="text/javascript" src="../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Analyse the results of a Brownian dynamics (BD) simulation for calculating protein-protein association rate constants" href="brownian_dynamics.html" />
+    <link rel="prev" title="Molecular level" href="../molecular_level.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Calculation of bimolecular association rates with webSDA</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#background">Background</a></li>
+<li><a class="reference internal" href="#setting-up-data-and-runnung-simulations-using-websda">Setting up data and runnung simulations using webSDA</a></li>
+<li><a class="reference internal" href="#results">Results</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../molecular_level.html"
+                        title="previous chapter">Molecular level</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="brownian_dynamics.html"
+                        title="next chapter">Analyse the results of a Brownian dynamics (BD) simulation for calculating protein-protein association rate constants</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/online_usecases/molecular_level/brownian_dynamics/webSDA.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../molecular_level.html">Molecular level</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../molecular_level.html">Molecular level</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="brownian_dynamics.html">Analyse the results of a Brownian dynamics (BD) simulation for calculating protein-protein association rate constants</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="calculation-of-bimolecular-association-rates-with-websda">
+<h1>Calculation of bimolecular association rates with webSDA<a class="headerlink" href="#calculation-of-bimolecular-association-rates-with-websda" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>This use case describes how you can predict protein-protein the diffusional association rate constant by using the web server version of the SDA (Simulation of Diffusion Association) package.</p>
+<p>WebSDA (<a class="reference external" href="https://websda.h-its.org/webSDA">https://websda.h-its.org/webSDA</a>) enables a user to run  Brownian dynamics (BD) simulations of diffusional association for two solute molecules in a continuum aqueous solvent.</p>
+<p>As the webserver does not support all features of the standalone version of SDA, e.g. it cannot handle cofactors and ions in structure files, the results should be assessed with care and the example in this use-case is to be viewed as educational. It is advised to run production runs with the standalone version of SDA ( available at <a class="reference external" href="https://mcm.h-its.org/sda">https://mcm.h-its.org/sda</a>).
+Besides calculating bimolecular association rate constants for known bound complexes, SDA can also be used to predict structures of protein-protein encounter complexes and to calculate bimolecular electron transfer rate constants, or  to simulate diffusional motion of systems consisting of many macromolecules in continuum solvent (also in the presence of a surface).</p>
+<p>For this use case, we will use an example of diffusional association of <span class="math notranslate nohighlight">\(Gα_{olf}\)</span> to apo-AC5. Details of these calculations can be found in the Live paper Bruce et al. 2019 and in Bruce et al. <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1007382">https://doi.org/10.1371/journal.pcbi.1007382</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul>
+<li><p class="first">Why should we care about the association rate of protein-protein interactions?</p>
+<p>The rate at which the association occurs is important for the understanding of cellular function at the molecular level</p>
+</li>
+<li><p class="first">Why do we perform Brownian dynamics simulations of protein-protein association?</p>
+<p>For many interactions, the speed of association is limited by the rate of bimolecular diffusional association.
+We can simulate the diffusion of solutes to compute association rates, but also to perform protein-protein docking or to predict the structure of bound complexes</p>
+</li>
+<li><p class="first">How are proteins modeled in Brownina dynamics simulations?</p>
+</li>
+</ul>
+<blockquote>
+<div><p>As the interaction of large biomolecules in solution is a highly complex problem with many degrees of freedom, the diffusional motion of proteins in Brownian dynamics simulations   is often modelled by assuming the proteins to be rigid bodies. Furthermore, their interactions with surrounding water molecules are modeled implicitly (using random forces that mimic the collisions between solutes and water molecules). These assumptions not only speed up the calculation of the systematic forces by allowing the use of precomputed interaction grids, but also allow for larger simulation time steps, as faster vibrational motions are removed. At each simulation step, the position <em>r</em> of solute <em>i</em> within a system of <em>N</em> solutes is propagated using the Ermak-McCammon equation:</p>
+<div class="math notranslate nohighlight">
+\[$$ \Delta r_{i} = \Delta t\sum_{j=1}^{N} ( \frac{\partial \widehat{D}_{ij}}{\partial r_{j}} + \frac{\widehat{D}_{ij}}{k_{B}T} \cdot F_{i} ) + R_{i} $$\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_B\)</span> and <em>T</em> are the Boltzmann constant and simulation temperature, respectively, and <span class="math notranslate nohighlight">\(F_i\)</span> is the force acting on solute <em>i</em> due to its interactions with all other   solutes; <span class="math notranslate nohighlight">\(\widehat{D}\)</span> is the diffusion tensor for the current configuration of the system, and <span class="math notranslate nohighlight">\(R_i\)</span> is a random displacement vector obtained from the factorisation of <span class="math notranslate nohighlight">\(\widehat{D}\)</span>. The dependence of the diffusion of one solute on the diffusion of all other solutes is due to hydrodynamic interactions, where solutes are able to feel the flow fields in solution created by the other solutes.</p>
+<p>Modelling hydrodynamic interactions is extremely computationally expensive, due to the need to factorise the diffusion tensor  at every time step. In dilute conditions, as we use rigid solutes, we can assume these interactions are negligible, simplifying the equation and removing the need for matrix factorisation:</p>
+<div class="math notranslate nohighlight">
+\[$$ \Delta r_{i} = \frac{\Delta t}{k_{B}T} D_{i}^{T} \cdot F_{i} + R_{i} $$\]</div>
+<p>where <span class="math notranslate nohighlight">\(D_i^T\)</span> is the infinite dilution translational diffusion coefficient of solute <em>i</em>, and <span class="math notranslate nohighlight">\(R_i\)</span> is a random vector sampled from a Gaussian distribution with mean zero and a variance of</p>
+<div class="math notranslate nohighlight">
+\[$\left \langle R_{i}^{2} \right \rangle = 6D_{i}^{T} \Delta t$.\]</div>
+<p>A similar equation is used to propagate the rotational motion of the solutes based on the torques acting on them.</p>
+<p>The predominant forces, <span class="math notranslate nohighlight">\(F_i\)</span>, acting between proteins are due to long-range electrostatic interactions. These can be modelled by the interaction between a molecular electrostatic potential field grid derived by solving the Poisson-Boltzmann equation for one protein, and a set of “effective charges” on another protein. The repulsive interactions that prevent proteins from overlapping with each other can be modelled by a simple volume exclusion term that is also computed on a grid surrounding each protein.</p>
+</div></blockquote>
+<ul class="simple">
+<li>Electrostatic interaction and and effective charges for macromolecules  (ECM) in a solvent</li>
+</ul>
+<blockquote>
+<div>We need to calculate the electrostatic forces and interaction free energies between two macromolecules in order to study their diffusional association. Unfortunately realistic systems typically consist of thousands of atomic charges in an environment with a non-uniform dielectric permittivity and a solvent of non-zero ionic strength thus making solution of the Poisson-Boltzmann equation during the BD simulations computationally infeasible. This problem can be overcome by assigning and fitting effective charges at 1 or 2 atoms of the side-chains of the titratable residues to reproduce the electrostatic potential of a protein computed with the use of all atomic charges in a heterogeneous dielectric, in a homogeneous dielectric. Forces are then computed between effective charges of one protein and the precomputed electrostatic potential grid of another protein during the BD simulations.</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="setting-up-data-and-runnung-simulations-using-websda">
+<h2>Setting up data and runnung simulations using webSDA<a class="headerlink" href="#setting-up-data-and-runnung-simulations-using-websda" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Coordinate files for 2 reactant proteins and their complex, are required for the calculations. Here, we use coordinates extracted from one snapshot of a molecular dynamics (MD) trajectory. Usually coordinates are in PDB format and need to be converted to PQR format (with the addition of charges (Q) and radii (R). Here we will use PQR files directly.</p>
+<ul class="simple">
+<li>Input files</li>
+</ul>
+<blockquote>
+<div><p>Due to the limitation of webSDA that does not handle coordinate files containing cofactors or ions, we will use modified input PQR files for this use case.</p>
+<p>Specifically, as a workaround to this limitation of webSDA and to maintain the net charge of each protein, we replaced the Mg++ ion in the AC5 coordinate file by 2 Lysine residues with their atoms at the same coordinate as the original Mg++ ion. For <span class="math notranslate nohighlight">\(Gα_{olf}\)</span>, we replaced GTP and Mg++ by three residues, Glu-Glu-Gly, with atoms positioned at the the positions of the cofactor and ion atoms. This procedure approximately conserves the charge distributions of the two molecules.
+The final PQR files can be downloade here:</p>
+<p>for AC5: <a class="reference external" href="https://projects.h-its.org/sda/example/AC5/AC5_reorder_mg2lys2.pqr">https://projects.h-its.org/sda/example/AC5/AC5_reorder_mg2lys2.pqr</a></p>
+<p>for  <span class="math notranslate nohighlight">\(Gα_{olf}\)</span> : <a class="reference external" href="https://projects.h-its.org/sda/example/AC5/Golf_mggtp2EEG.pqr">https://projects.h-its.org/sda/example/AC5/Golf_mggtp2EEG.pqr</a></p>
+<p>To run simulations on webSDA, you have to download these modified PQR input files for AC5 and  <span class="math notranslate nohighlight">\(Gα_{olf}\)</span> and save them on your site.</p>
+<p>Original PQR files can be downloaded from the live paper: Live paper Bruce et al. 2019: <a class="reference external" href="https://humanbrainproject.github.io/hbp-bsp-live-papers/2019/bruce_et_al_2019/bruce_et_al_2019.html">https://humanbrainproject.github.io/hbp-bsp-live-papers/2019/bruce_et_al_2019/bruce_et_al_2019.html</a>. These PQR files can be used to generate the results presented in the paper with the standalone version of SDA.</p>
+</div></blockquote>
+<ul class="simple">
+<li>Running simulations on WebSDA</li>
+</ul>
+<blockquote>
+<div>Upload the saved PQR files at the webserver. You can also do this outside this notebook by using the URL of webSDA directly: <a class="reference external" href="https://websda.h-its.org">https://websda.h-its.org</a>
+You need to select the “New Project”-&gt;”Association” analysis. Switch the input type to PQR, and give your solute a name. Do this for both solutes. Select again “Association” and give your analysis a name. On the left column, select AC5 and on the right column, select Golf. Then select “Next step”. This generates a reaction criteria file. After completion, again select “Next step” to calculate the electrostatic grid files for the solutes. After completion, again select “Next step” to start the SDA simulation. You can also open the tab for “Advanced options” and increase the number of runs to perform from the default of 200 to, for example 2000. More runs will result in more accurate results and more than 10000 runs are usually needed for obtaining sufficient statistical accuracy.</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Computed association rates of AC5 and <span class="math notranslate nohighlight">\(Gα_{olf}\)</span></li>
+</ul>
+<blockquote>
+<div>The figures below shows the association rate constants computed for the complex of apo-AC5 and <span class="math notranslate nohighlight">\(Gα_{olf}\)</span>  using 2000  runs for reaction criteria of 1-4 native polar contacts at distances from 3.5 to 15 Angstroms.
+For the results in the Live paper Bruce et al. 2019 and in Bruce et al. <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1007382">https://doi.org/10.1371/journal.pcbi.1007382</a> , a reaction criterion of 2 contacts at a distance of 6 Angstroms was used. This criterion is typically used for computing diffusional association rates for protein-protein complexation.
+For the protein structures simulated in this example and the limited number of trajectories generated, this criterion (2 contacts at 6 Angstroms) is not satisfied. However, the 6 Angstroms contact distance criterion is satisfied for one contact with 2000.</div></blockquote>
+<div class="figure">
+<img alt="../../../_images/webSDA_AC5.png" src="../../../_images/webSDA_AC5.png" />
+</div>
+<p>This figure illustrates binding rate calculations using 2000 runs.</p>
+</div></blockquote>
+</div>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../molecular_level.html">Molecular level</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="brownian_dynamics.html">Analyse the results of a Brownian dynamics (BD) simulation for calculating protein-protein association rate constants</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>
