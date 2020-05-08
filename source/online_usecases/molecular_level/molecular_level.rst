@@ -7,6 +7,7 @@ Molecular level
 .. toctree::
     :maxdepth: 4
 
+    brownian_dynamics/webSDA.rst
     brownian_dynamics/brownian_dynamics
     electrostatic_potential/electrostatic_potential.rst
     el_multipipsa/el_multipipsa.rst
