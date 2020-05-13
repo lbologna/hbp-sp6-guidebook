@@ -45,7 +45,7 @@ as a general-purpose massive predictive machine in whole-brain modular systems.
 
 **Output:**
 
-•	Monitoring: evolution of the error of the final position of the robot end-effector (i.e., the fingertip of the arm performing the pointing task) along the trials. The error remains stable when the static cerebellar model is used as a controller, while the error gradually decreses when a plastic cerebellar controller is used.
+•	Monitoring: evolution of the error of the final position of the robot end-effector (i.e., the fingertip of the arm performing the pointing task) along the trials. The error remains stable when the static cerebellar model is used as a controller, while the error gradually decreases when a plastic cerebellar controller is used.
 
 
 **Additional information:**
