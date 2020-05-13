@@ -81,13 +81,13 @@ defined in the mod file.
 
 |
 
-4. Configure the parameters of the optimization job: number of nodes, number of cores and runtime. Run the fitting procedure using UNICORE authentication on JURECA or MARCONI, or on the NSG, and check the status of the job
+4. Configure the parameters of the optimization job: the title of the job, the number of nodes, the number of cores and the runtime. Run the fitting procedure using UNICORE authentication on JURECA (booster partition), GALILEO, or on NSG (using your account), and check the job status.
 
 On JURECA the number of nodes, number of CPUs per node and runtime are set by default to 2, 24 and 10m respectively
 
 |
 
-On MARCONI the number of nodes, number of CPUs per node and runtime are set by default to 2, 36 and 10m respectively
+On GALILEO the number of nodes, number of CPUs per node and runtime are set by default to 2, 36 and 10m respectively
 
 |
 
@@ -95,52 +95,17 @@ The user needs to be aware of the limitations imposed by each HPC system on reso
 
 |
 
-On the NSG the number of nodes, number of cores and runtime are set by default to 2, 24 and 0.5 (hours) respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact nsghelp@sdsc.edu. The maximum number of cores required per node is 24.
-
-|
+On NSG the number of nodes, number of cores and runtime are set by default to 2, 24 and 0.5 (hours) respectively. The maximum number of nodes available per job is 72. If you require more than 72 nodes please contact nsghelp@sdsc.edu. The maximum number of cores required per node is 24.
 
 .. container:: bsp-container-center
 
- .. image:: images/select_hpc.png
-     :width: 300px
-     :align: center
+    .. image:: images/submission_process_02.png
+        :width: 650px
+        :align: center
 
 |
 
-.. container:: bsp-container-center
-
- .. image:: images/run_all_traces.png
-     :width: 200px
-     :align: center
-
-|
-
-
-.. container:: bsp-container-center
-
- .. image:: images/set_CPU_nodes.png
-     :width: 400px
-     :align: center
-
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/login.png
-     :width: 400px
-     :align: center
-
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/job_submitted.png
-     :width: 400px
-     :align: center
-
-|
-
-Note that when the job is submitted through UNICORE, the user can specify a title for the job and the account to use for submitting the job on the HPC.
+Note that when the job is submitted through UNICORE, the user can specify the project to use to submit the job on the HPC.
 
 |
 
@@ -156,16 +121,6 @@ Note that when the job is submitted through NSG, the user can see the
 submission date converted to CET time next to the status of the job. This will 
 be useful in the analysis notebook in order to fetch the job.
 
-|
-
-.. container:: bsp-container-center
-
- .. image:: images/NSGstatus.png
-     :width: 300px
-     :align: center
-
-|
-
 The user can choose to fit all experimental traces 100 times, a single trace 20 
 times or use a demo version where a trace is fitted 5 times. For the single 
 trace and the demo version the user can choose the trace to be fitted.
@@ -173,15 +128,11 @@ trace and the demo version the user can choose the trace to be fitted.
 Once the job is completed, the output files will be in the Collab storage under 
 different directories, according to the system used.
 
-JURECA: results are saved under the results/output_submissionTime folder;
+JURECA: results are saved under the resultsJureca/jobtitle_fitting_submissionTime folder.
 
-|
+GALILEO: results are saved under the resultsGalileo/jobtitle_fitting_submissionTime folder.
 
-MARCONI: results are saved under the resultsMarconi/output_submissionTime folder;
-
-|
-
-NSG results are saved under the resultsNSG/output_submissionTime folder.
+NSG results are saved under the resultsNSG/jobtitle_fitting_submissionTime folder.
 
 |
 
