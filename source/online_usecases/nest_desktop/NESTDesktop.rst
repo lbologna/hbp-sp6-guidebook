@@ -1,3 +1,5 @@
+.. _nest_desktop:
+
 =============
  NEST Desktop
 =============
@@ -8,6 +10,7 @@ Desktop enables the rapid construction, parametrization, and instrumentation
 of neuronal network models. It offers interactive tools for visual network construction, 
 running simulations in NEST and applying visualization to support the analysis of 
 simulation results.
+
 
 The Graphical User Interface
 ============================
@@ -23,16 +26,22 @@ More information on the full feature set and operation can be found in the user 
 
 https://nest-desktop.readthedocs.io/en/latest/user/index.html
 
+|
+
 .. image:: images/nest-desktop-network-construction.png
    :width: 600 px
 
 **Figure 1**: Interactive editor for network construction (left) and generative script code (right).  
 
+|
+
+|
 
 .. image:: images/nest-desktop-chart-stats.png
    :width: 600 px
 
 **Figure. 2**: Explore network activity in chart panels (left) and in statistics (right). 
+
    
 Getting Access & Documentation
 ==============================
