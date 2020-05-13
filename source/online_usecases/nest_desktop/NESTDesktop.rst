@@ -44,10 +44,10 @@ EBRAINS infrastructure as NEST Desktop is a web application
  
 https://nest-desktop.apps.hbp.eu   
  
-To get an overview of how to use it, please have a look at the QuickStart Section of NEST Dekstop’s documentation
+To get an overview of how to use it, please have a look at the QuickStart Section of NEST Desktop’s documentation
  
 https://nest-desktop.readthedocs.io/en/latest/user/quickstart.html
  
-The full document of NEST Desktop can be found here
+The full documentation of NEST Desktop can be found here
  
 https://nest-desktop.readthedocs.io/en/latest/user/index.html
