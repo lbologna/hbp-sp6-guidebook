@@ -1,0 +1,175 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Multicompartmental simulation of the cerebellum &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../../_static/load_ga.js"></script>
+    <script type="text/javascript" src="../../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Closed-loop modelling and validation of large scale cerebro-cerebellar loops" href="../../cerebrocerebellar/cerebrocerebellar.html" />
+    <link rel="prev" title="Functional Simulation with Advanced Point Neurons (E-GLIF)" href="../functional_simulation_with_eglif/functional_simulation_with_eglif.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Multicompartmental simulation of the cerebellum</a><ul>
+<li><a class="reference internal" href="#inputs">Inputs</a></li>
+<li><a class="reference internal" href="#outputs">Outputs</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../functional_simulation_with_eglif/functional_simulation_with_eglif.html"
+                        title="previous chapter">Functional Simulation with Advanced Point Neurons (E-GLIF)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../cerebrocerebellar/cerebrocerebellar.html"
+                        title="next chapter">Closed-loop modelling and validation of large scale cerebro-cerebellar loops</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/online_usecases/brain_area_circuit_in_silico_experiments/cerebellum/multicompartmental_simulation/multicompartmental_simulation.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../../brain_area_circuit_in_silico_experiments.html">Brain area circuit <em>in silico</em> experiments</a>
+                    
+                    <a href="../cerebellum.html">Cerebellum</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../functional_simulation_with_eglif/functional_simulation_with_eglif.html">Functional Simulation with Advanced Point Neurons (E-GLIF)</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../../cerebrocerebellar/cerebrocerebellar.html">Closed-loop modelling and validation of large scale cerebro-cerebellar loops</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="multicompartmental-simulation-of-the-cerebellum">
+<h1>Multicompartmental simulation of the cerebellum<a class="headerlink" href="#multicompartmental-simulation-of-the-cerebellum" title="Permalink to this headline">¶</a></h1>
+<p>This use case creates a scaffold model of a piece of 150 by 150 micrometer of cerebellar
+cortex. Inputs arrive through the afferent mossy fibers onto the glomeruli who  the
+excitation of the granule cells. The simulation includes Multicompartmental models of the
+granule cell, Golgi cell, Purkinje cell, stellate cell and basket cell.</p>
+<p>The use case walks you through the creation of a network architecture, an HDF5 file with
+the positions of neurons and connections between them. Some plots are provided to inspect
+the generated network architecture.</p>
+<p>This network architecture can be used to run simulations and the use case provides a small
+interface to set the input stimulus.</p>
+<p>After simulation the results can be plotted in a raster plot and the membrane potential of
+one of each cell type’s neurons can be viewed.</p>
+<p>The use case itself contains step by step explanations and code cells that guide you
+through the network construction, simulation and analysis.</p>
+<div class="section" id="inputs">
+<h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>A configuration file that describes the network architecture and simulation components.</li>
+<li>A morphology repository containing descriptions of the cell models.</li>
+</ul>
+<p>After running the code cell under the <code class="docutils literal notranslate"><span class="pre">Configuring</span> <span class="pre">the</span> <span class="pre">input</span></code> section the user can
+specify the start, number and interval for the mossy fiber input onto the glomeruli.</p>
+</div>
+<div class="section" id="outputs">
+<h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>A result HDF5 file containing the spike times and some membrane potential recordings.</li>
+<li>Plots: a spike raster plot, membrane potential plot and a boxplot that shows the
+average firing rate of the cell populations during the input stimulus.</li>
+</ul>
+</div>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../functional_simulation_with_eglif/functional_simulation_with_eglif.html">Functional Simulation with Advanced Point Neurons (E-GLIF)</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../../cerebrocerebellar/cerebrocerebellar.html">Closed-loop modelling and validation of large scale cerebro-cerebellar loops</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>
