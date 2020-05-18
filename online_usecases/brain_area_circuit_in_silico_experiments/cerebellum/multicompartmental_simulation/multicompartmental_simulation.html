@@ -112,27 +112,29 @@
 
                 <div class="section" id="multicompartmental-simulation-of-the-cerebellum">
 <h1>Multicompartmental simulation of the cerebellum<a class="headerlink" href="#multicompartmental-simulation-of-the-cerebellum" title="Permalink to this headline">¶</a></h1>
-<p>This use case creates a scaffold model of a piece of 150 by 150 micrometer of cerebellar
-cortex. Inputs arrive through the afferent mossy fibers onto the glomeruli who  the
-excitation of the granule cells. The simulation includes Multicompartmental models of the
-granule cell, Golgi cell, Purkinje cell, stellate cell and basket cell.</p>
-<p>The use case walks you through the creation of a network architecture, an HDF5 file with
-the positions of neurons and connections between them. Some plots are provided to inspect
-the generated network architecture.</p>
-<p>This network architecture can be used to run simulations and the use case provides a small
-interface to set the input stimulus.</p>
-<p>After simulation the results can be plotted in a raster plot and the membrane potential of
-one of each cell type’s neurons can be viewed.</p>
-<p>The use case itself contains step by step explanations and code cells that guide you
-through the network construction, simulation and analysis.</p>
+<p>This use case creates a scaffold model of a piece of 150 by 150 micrometer of
+cerebellar cortex. Inputs arrive through the afferent mossy fibers onto the
+glomeruli which excite the granule cells.</p>
+<p>The simulation includes Multicompartmental models of the granule cell,
+Golgi cell, Purkinje cell, stellate cell and basket cell.</p>
+<p>The use case walks you through the creation of a network architecture,
+an HDF5 file with the positions of neurons and connections between them.
+Some plots are provided to inspect the generated network architecture.</p>
+<p>This network architecture can be used to run simulations and the use case
+provides a small interface to set the input stimulus.</p>
+<p>After simulation the results can be plotted in a raster plot and the membrane
+potential of one of each cell type’s neurons can be viewed.</p>
+<p>The use case itself contains step by step explanations and code cells that
+guide you through the network construction, simulation and analysis.</p>
 <div class="section" id="inputs">
 <h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>A configuration file that describes the network architecture and simulation components.</li>
 <li>A morphology repository containing descriptions of the cell models.</li>
 </ul>
-<p>After running the code cell under the <code class="docutils literal notranslate"><span class="pre">Configuring</span> <span class="pre">the</span> <span class="pre">input</span></code> section the user can
-specify the start, number and interval for the mossy fiber input onto the glomeruli.</p>
+<p>After running the code cell under the <code class="docutils literal notranslate"><span class="pre">Configuring</span> <span class="pre">the</span> <span class="pre">input</span></code> section the
+user can specify the start, number and interval for the mossy fiber input onto
+the glomeruli.</p>
 </div>
 <div class="section" id="outputs">
 <h2>Outputs<a class="headerlink" href="#outputs" title="Permalink to this headline">¶</a></h2>
