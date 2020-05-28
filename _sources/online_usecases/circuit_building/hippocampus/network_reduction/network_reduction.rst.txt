@@ -4,7 +4,8 @@ Network Reduction
 
 
 This notebook is intended for applying a neuron reduction algorithm by Oren
-Amsalem to a neuronal circuit in SONATA format.
+Amsalem [:ref:`1 <net_red_1>`][:ref:`2 <net_red_2>`] to a neuronal circuit in 
+SONATA [:ref:`3 <net_red_3>`] format.
 
 Principle
 ---------
@@ -21,6 +22,14 @@ More examples of reduced morphologies:
 
 References
 ----------
-For details on the algorithm refer to https://doi.org/10.1038/s41467-019-13932-6
-and https://github.com/orena1/neuron_reduce. For details on neuronal circuits
-in SONATA format refer to https://github.com/AllenInstitute/sonata.
+.. _net_red_1:
+
+    [1] https://doi.org/10.1038/s41467-019-13932-6
+
+.. _net_red_2:
+
+    [2] https://github.com/orena1/neuron_reduce
+
+.. _net_red_3:
+
+    [3] https://github.com/AllenInstitute/sonata
