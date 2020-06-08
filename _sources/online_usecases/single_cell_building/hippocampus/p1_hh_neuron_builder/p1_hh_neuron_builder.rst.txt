@@ -100,6 +100,11 @@ optimization parameters (see figure below).
   <https://github.com/BlueBrain/BluePyOpt>`_ tool through an optimization procedure
   based on a genetic algorithm. For a complete reference to the BluePyOpt, please
   refer to the original article at this `link <https://www.frontiersin.org/articles/10.3389/fninf.2016.00017/full>`__.
+  Alternatively, the users can also upload their own model to be optimized.
+  This has to be appropriately formatted and compressed in a zip file.
+  You can download an example .zip file at the following :download:`link <data/example_model.zip>` 
+  (please reproduce the same folder structure in the example file, including
+  empty folders).
 
 |
 
