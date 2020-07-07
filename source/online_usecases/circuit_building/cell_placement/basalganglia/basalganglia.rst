@@ -1,8 +1,8 @@
 .. _cb_basal_ganglia:
 
-#######################################
-Basal Ganglia - Striatum microcircuitry
-#######################################
+#######################
+Striatum microcircuitry
+#######################
 
 This Use Case is a demonstration of how the Striatum microcircuitry is created, 
 and simulated. It walks you through the steps taken to place the neurons in a 

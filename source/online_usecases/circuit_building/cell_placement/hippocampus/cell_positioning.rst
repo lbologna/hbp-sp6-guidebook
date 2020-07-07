@@ -1,6 +1,6 @@
-################
-Cell positioning
-################
+###################
+Rat hippocampus CA1
+###################
 
 
 This Use Case places hippocampal neurons into a volume defined by an atlas.

@@ -1,7 +1,7 @@
 .. _hh_neuron_builder:
 
 #############################
-Hodgkin Huxley Neuron Builder
+Hodgkin-Huxley Neuron Builder
 #############################
 
 ******** 

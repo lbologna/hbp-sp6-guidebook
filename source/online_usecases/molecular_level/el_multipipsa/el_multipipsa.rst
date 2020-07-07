@@ -1,8 +1,8 @@
 .. _el_multipipsa:
 
-######################################################################################
-Compare electrostatic potentials surrounding a set of protein isoforms with multipipsa
-######################################################################################
+##########################################################################################
+Compare the electrostatic potentials surrounding a set of protein isoforms with multipipsa
+##########################################################################################
 
 ********
 Overview
