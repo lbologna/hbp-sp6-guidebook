@@ -1,5 +1,5 @@
-The ARDOCK service
-==================
+Predict protein interaction surface with the ARDOCK server
+==========================================================
 
 Scientific Purposes
 -------------------

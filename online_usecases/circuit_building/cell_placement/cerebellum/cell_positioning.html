@@ -1,0 +1,234 @@
+
+
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Rat Cerebellum volume &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
+    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../../../_static/load_ga.js"></script>
+    <script type="text/javascript" src="../../../../_static/extra.js"></script>
+    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Rat hippocampus CA1" href="../hippocampus/cell_positioning.html" />
+    <link rel="prev" title="Cell placement" href="../cell_placement.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head><body>
+<div class="hbpdoc-page">
+    <section class="hbpdoc-title page-header">
+        <a class="project-title" href="../../../../index.html">HBP Brain Simulation Platform Guidebook</a>
+
+        <a class="hbpdoc-toc-toggle pull-right" href>
+            <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+        </a>
+    </section>
+    <section class="hbpdoc-main">
+        <nav class="hbpdoc-sidebar hbpdoc-container">
+            <a class="hbpdoc-toc-toggle pull-right" href>
+                <span class="zmdi zmdi-menu"></span> <span class="sr-only icon-text">Menu</span>
+            </a>
+            
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../cell_placement.html"
+                        title="previous chapter">Cell placement</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../hippocampus/cell_positioning.html"
+                        title="next chapter">Rat hippocampus CA1</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/online_usecases/circuit_building/cell_placement/cerebellum/cell_positioning.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+        </nav>
+
+        <article class="hbpdoc-content">
+
+            <div class="content">
+                
+                <div class="breadcrumb breadcrumb-meta expand">
+                    
+                    <a href="../../../online_usecases.html">Online Use Cases</a>
+                    
+                    <a href="../../circuit_building.html">Circuit Building</a>
+                    
+                    <a href="../cell_placement.html">Cell placement</a>
+                    
+                </div>
+                
+
+                <aside class="hbpdoc-hnav hbpdoc-hnav-top">
+                    
+                    <span class="hbpdoc-hnav-previous">
+                        previous: <a class="hbpdoc-hnav-link" href="../cell_placement.html">Cell placement</a>
+                    </span>
+                    
+                    
+                    <span class="hbpdoc-hnav-next">
+                        next: <a class="hbpdoc-hnav-link" href="../hippocampus/cell_positioning.html">Rat hippocampus CA1</a>
+                    </span>
+                    
+                </aside>
+
+                <div class="section" id="rat-cerebellum-volume">
+<h1>Rat Cerebellum volume<a class="headerlink" href="#rat-cerebellum-volume" title="Permalink to this headline">¶</a></h1>
+<p>This Use Case places cerebellar neurons (different types: specific simplified
+geometric features with anisotropic properties and specific density) into a
+layered-volume of the cerebellum.
+This Use Case can be found in
+<em>Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume</em>.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/schema1.png"><img alt="../../../../_images/schema1.png" src="../../../../_images/schema1.png" style="width: 373px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/cerebellum.png"><img alt="../../../../_images/cerebellum.png" src="../../../../_images/cerebellum.png" style="width: 743px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/placement_flow_chart.png"><img alt="../../../../_images/placement_flow_chart.png" src="../../../../_images/placement_flow_chart.png" style="width: 1829px;" /></a>
+</div></blockquote>
+<p>Approach: the desired number of cells are progressively placed following a
+random direction from the previous cell with a distance step guaranteeing that
+they do not overlap. A “reset” starting point occurs when the entire
+surrounding is occupied. This algorithm is computationally efficient, which is
+fundamental for high-density volumes, but still keeps a strong random component
+to achieve a realistic distribution of the pairwise inter-neuron distances.
+The PC Layer is almost a planar grid in-between GRL and ML, with an inter-soma
+distance along the x-axis constrained by the requirement that adjacent
+dendritic trees must not overlap.</p>
+<p><strong>Inputs:</strong> by a simple GUI, the basic parameters can be entered by the user</p>
+<ul class="simple">
+<li>Base sizes (x and z) of the cerebellar volume to be built</li>
+<li>Plot option enabling</li>
+<li>Save option enabling</li>
+</ul>
+<p>Expert users can modify more parameters from <cite>scaffold_params.py</cite>
+(in <cite>/storage</cite>):</p>
+<ul class="simple">
+<li>Neuron types (with ID)</li>
+<li>Simplified geometric features for each neuron type: radius of the soma, and eventually dendritic field extensions (direction-dependent) if the constraints of not-overlapping cells are taken into account</li>
+<li>Density for each neuron type, and eventually the ratio of the density values when compagin different types.</li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul class="simple">
+<li>hdf5 matrix with 5 columns (saved in /storage)</li>
+<li>Neuron ID (unique)</li>
+<li>Neuron type ID (from 1 to 7)</li>
+<li>3D coordinates (soma center) of each neuron (x, y, and z)</li>
+</ul>
+<p>Monitoring: sparseness in the subvolume by computing the distribution of
+pairwise distances (monitoring_positioning.py in /storage)</p>
+<p>Moreover, a 3D basic visualization is depicted (somas of each neuron, using a different color for each neuron type).</p>
+<p><strong>Additional information:</strong></p>
+<ul class="simple">
+<li>The whole Use Case should take about 10 minutes for a volume base of 400 x 400 µm.</li>
+<li>No log in to any other computer required.</li>
+</ul>
+<p><strong>EXAMPLE</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>x = 400 µm, z = 400 µm (→ DCN 200 x 200 µm)</li>
+<li>y = 930 µm (600+ 150+30+150 µm), i.e. thickness DCN + GRL+ PCL + ML</li>
+</ul>
+<p>TOT #NEURONS: 96.887</p>
+<p>Glomeruli (N=7073, radius =1.5 µm, in GRL excluded the upper 10 µm)</p>
+<ul class="simple">
+<li>3D dist = 206 ± 89 µm - Gaussian</li>
+<li>Min = 4; max =558 µm</li>
+</ul>
+<p>Granule cells (N=88229, radius = 2.5 µm, in the whole GRL)</p>
+<ul class="simple">
+<li>3D dist = 210 ± 90 µm- Gaussian</li>
+<li>Min =    ; max =     µm</li>
+</ul>
+<p>Golgi cells (N=219, radius = 8 µm, in GRL excluded the bottom 10 µm)</p>
+<ul class="simple">
+<li>3D dist = 214 ± 91 µm – Gaussian</li>
+<li>Min = 26; max =504 µm</li>
+</ul>
+<p>Purkinje cells (N=78, radius = 7.5 µm, in PCL, planar grid)</p>
+<ul class="simple">
+<li>3D dist = 250 ± 121 µm</li>
+<li>Min = 15; max =544 µm</li>
+</ul>
+<p>Basket cells (N=603, radius = 6 µm, in the ML lower half)</p>
+<ul class="simple">
+<li>3D dist = 208 ± 96 µm - Gaussian</li>
+<li>Min = 13; max = 534 µm</li>
+</ul>
+<p>Stellate cells (N=603, radius = 4 µm, in the ML upper half)</p>
+<ul class="simple">
+<li>3D dist = 201 ±94 µm - Gaussian</li>
+<li>Min = 9; max = 534 µm</li>
+</ul>
+<p>Deep Cerebellar projection Neurons (N=12, radius=10 µm, in the Deep Nucleus)</p>
+<ul class="simple">
+<li>3D dist = 269 ± 155 µm</li>
+<li>Min = 44; max = 566 µm</li>
+</ul>
+<blockquote>
+<div><a class="reference internal image-reference" href="../../../../_images/golgi_placement.png"><img alt="../../../../_images/golgi_placement.png" src="../../../../_images/golgi_placement.png" style="width: 388px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/gloms_placement.png"><img alt="../../../../_images/gloms_placement.png" src="../../../../_images/gloms_placement.png" style="width: 388px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/pc_placement.png"><img alt="../../../../_images/pc_placement.png" src="../../../../_images/pc_placement.png" style="width: 394px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/basket_placement.png"><img alt="../../../../_images/basket_placement.png" src="../../../../_images/basket_placement.png" style="width: 394px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/stellate_placement.png"><img alt="../../../../_images/stellate_placement.png" src="../../../../_images/stellate_placement.png" style="width: 394px;" /></a>
+<a class="reference internal image-reference" href="../../../../_images/dcn_placement.png"><img alt="../../../../_images/dcn_placement.png" src="../../../../_images/dcn_placement.png" style="width: 388px;" /></a>
+</div></blockquote>
+</div></blockquote>
+</div>
+
+            </div>
+
+            <aside class="hbpdoc-hnav hbpdoc-hnav-bottom">
+                
+                <span class="hbpdoc-hnav-previous">
+                    previous: <a class="hbpdoc-hnav-link" href="../cell_placement.html">Cell placement</a>
+                </span>
+                
+                
+                <span class="hbpdoc-hnav-next">
+                    next: <a class="hbpdoc-hnav-link" href="../hippocampus/cell_positioning.html">Rat hippocampus CA1</a>
+                </span>
+                
+            </aside>
+        </article>
+    </section>
+
+
+    <div class="hbpdoc-footer">
+        HBP Brain Simulation Platform Guidebook <small>0.1</small> 
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Brain Simulation Platform members.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+    </div>
+    </div>
+</div>
+
+  </body>
+</html>

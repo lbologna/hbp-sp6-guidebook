@@ -1,5 +1,5 @@
-Calculation of bimolecular association rates with webSDA
-========================================================
+Calculate protein-protein bimolecular association rate constants with webSDA
+============================================================================
 
 Overview
 --------

@@ -7,6 +7,6 @@ Circuit Building
 .. toctree::
     :maxdepth: 4
 
-    cerebellum/cerebellum
-    basalganglia/basalganglia
-    hippocampus/hippocampus
+    cell_placement/cell_placement
+    connectome/connectome
+    network_reduction/network_reduction
