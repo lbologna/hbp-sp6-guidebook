@@ -1,6 +1,6 @@
-##########
-Connectome
-##########
+#####################
+Rat Cerebellum volume
+#####################
 
 
 This Use Case is used to connect cerebellar neurons and can be found in 

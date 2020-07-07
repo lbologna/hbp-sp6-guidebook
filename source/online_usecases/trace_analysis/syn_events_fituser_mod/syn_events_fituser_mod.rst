@@ -1,8 +1,8 @@
 .. _syn_events_fit_user_mod:
 
-######################################
-Synaptic events fitting (user’s model)
-######################################
+#######################################
+Synaptic events fitting with user model
+#######################################
 
 This Use Case allows a user to fit synaptic events using user’s data and model.
 

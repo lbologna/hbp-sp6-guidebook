@@ -1,8 +1,8 @@
 .. _syn_events_fit_user_data:
 
-#####################################
-Synaptic events fitting (user’s data)
-#####################################
+######################################
+Synaptic events fitting with user data
+######################################
 
 This Use Case allows a user to fit data of synaptic events models from the 
 NeuroInformatics Platform.

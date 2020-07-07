@@ -1,6 +1,6 @@
-#################
-Network Reduction
-#################
+###########################################################
+Reduce a hippocampus network model using Amsalem et al 2020
+###########################################################
 
 
 This notebook is intended for applying a neuron reduction algorithm by Oren

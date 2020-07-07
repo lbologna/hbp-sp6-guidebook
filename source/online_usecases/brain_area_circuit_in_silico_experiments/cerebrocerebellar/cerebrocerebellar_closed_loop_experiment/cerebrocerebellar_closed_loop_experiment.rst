@@ -1,6 +1,6 @@
-############################################################################
-Closed-loop modelling and validation of large scale cerebro-cerebellar loops
-############################################################################
+#########################################
+Cerebro-cerebellar Closed-loop experiment
+#########################################
 
 
 This Use Case shows a modeling effort of whole brain functionalities by 

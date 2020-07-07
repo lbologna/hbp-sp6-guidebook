@@ -1,8 +1,8 @@
 .. _efel_gui:
 
-###########################################
-Feature Extraction Graphical User Interface
-###########################################
+##################
+Feature extraction
+##################
 
 ********
 Overview

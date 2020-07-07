@@ -1,8 +1,8 @@
 .. _single_cell_clamp:
 
-###############################################################
-Single cell *in silico* experiments under current/voltage clamp
-###############################################################
+#######################################################
+Single cell *in silico* experiments under current clamp
+#######################################################
 
 The *Single cell in silico experiments under current/voltage clamp* Use Case 
 provides Web UI to access **Neuron as a Service** in order to load the single 

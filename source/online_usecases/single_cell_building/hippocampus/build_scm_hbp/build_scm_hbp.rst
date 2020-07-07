@@ -1,8 +1,8 @@
 .. _build_scm_hbp:
 
-###############################################
-Build your own single cell model using HBP data 
-###############################################
+###########################################################
+Build your own single hippocampal cell model using HBP data 
+###########################################################
 
 This Use Case allows a user to configure the 
 `BluePyOpt <http://bluepyopt.readthedocs.io/en/latest/>`_ to run an 
