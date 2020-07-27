@@ -1,9 +1,9 @@
-==========================
-Pair Recording application
-==========================
+===========================================================================================
+In silico experiments of a small circuit extracted from large scale detailed network models
+===========================================================================================
 
-Pair Recording application is a web environment for a small circuit
-in-silico experiments.
+This use case, implemented through the Pair Recording application, is a web 
+environment for a small circuit in-silico experiments.
 
 It provides an extended toolset to configure and run simulations of single cell
 models as well as multiple connected neurons from a given circuit.
