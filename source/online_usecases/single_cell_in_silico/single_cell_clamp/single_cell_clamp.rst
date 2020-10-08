@@ -8,7 +8,10 @@ The *Single cell in silico experiments under current/voltage clamp* Use Case
 provides Web UI to access **Neuron as a Service** in order to load the single 
 cell models and run model simulations.
 
-#. This Use Case can be found in the *Online Use Cases/Single Cell In Silico Experiments*:
+#. This Use Case can be run through the *Online Use Cases/Single Cell In Silico 
+   Experiments* panel in the Brain Simulation Platform (click `here 
+   <https://collab.humanbrainproject.eu/#/collab/1655/nav/66854>`_ to access 
+   the tool):
 
      .. image:: images/single_cell_in_silico.png
         :width: 700px
