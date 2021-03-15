@@ -53,41 +53,112 @@ Usage
 =====================
 
 #.  Open subcellular application by using this link: `SubcellularApp`_
+
+|
+.. image:: images/main.png
+|
+
+
 #.  Create a new model or load/import an existing one
 
     * To load a public model click the arrow to expand a list of public models
       in `Subcellular models repository`, choose one, then click `Load`
-    * To import `BNGL`_ or `SBML`_ (`Atomizer`_ is used for the latter) model click
+
+    |
+    .. image:: images/load_model.png
+    |
+
+    * To import `BNGL`_ or `SBML`_  model click
       `Import` in `Model` menu
     * To create a new model specify all model parameters and reaction equations
       sequentially opening and filling the tables in the `Model` menu (upper left
       of the UI). Each table corresponds to a particular section of the
       BioNetGen file of the model (with except for `Diffusions` and `Geometry`
       section). All expressions should comply with the BioNetGen language.
-#.  To add diffusion (required if using STEPS) navigate to the corresponding section
-    of the model, click `New diffusion` and specify an arbitrary name
-    of diffusive species or molecules, the affected structure where the corresponding
-    species will diffuse, the `BNGL`_ expression for those and the diffusion
-    coefficient in m^2/s units.
-#.  To add geometry (required if using STEPS) click `Add geometry` in
-    the corresponding model section: specify it's name, add `TetGen`_ tetrahedral
+  
+#.  Models are represented by a set of structures (e.g. compartments of models) and
+    a collection of entities from the BioNetGen language such as parameters, functions, 
+    molecules, species, observables and reactions. To modify these entities sof the model
+    navigate to the corresponding section in the Physiology dropdown menu and specify them
+    according to the BioNetGen language (for more about BioNetGen see the `official documentation <http://bionetgen.org/>`_)
+  
+
+#.  To add diffusions (required if using STEPS) navigate to the corresponding section, 
+    click `New diffusion` and specify a name for the diffusive species or molecules, 
+    the affected structure, the `BNGL`_ expression and the diffusion
+    coefficient in m^2/s.
+
+    |
+    .. image:: images/add_diffusion.png
+    |
+
+#.  To add a geometry (required if using STEPS) click `Add geometry` in
+    the corresponding section: specify its name, add a `TetGen`_ tetrahedral
     mesh and a geometry specification file (geometry.json, contains
     relationship between structures and their corresponding tetrahedra and
     triangles, free diffusion boundaries and geometry scale coefficient
     converting mesh vertices position units to meters, see examples below)
+
+    |
+    .. image:: images/add_geometry.png
+    |
+
+    |
+    .. image:: images/add_geometry_2.png
+    |
+
 #.  At any stage model can be:
 
     * saved using `Model` -> `Save` sequence, and then loaded from `My models`
       in `Subcellular models repository`
-    * exported to file using `Model` -> `Export` in different formats
+
+    |
+    .. image:: images/save.png
+    |
+
+    * exported into different formats by using `Model` -> `Export` 
+
+    |
+    .. image:: images/export_model.png
+    |
+
+
 #.  To simulate a model select `Simulations` on the `Model` panel, then create
-    new simulation by clicking the corresponding button, specify the solver
-    (`STEPS`_ or `NFSim`_), change the default simulation parameters and add
-    stimulation (this can be imported from a CSV or NFSim .rnf file) if needed;
-    click `Apply` in the bottom of the form and finally `Run` to start the
-    simulation.
+    new simulation by clicking the corresponding button.
+    
+    * Specify the solver (`STEPS`_ or `NFSim`_), change the default simulation parameters
+    
+    |
+    .. image:: images/config_simulation.png
+    |
+    
+    
+    * If desired add stimulations (this can be imported from a CSV or NFSim .rnf file) if needed:
+
+    |
+    .. image:: images/stimulation.png
+    |
+
+    * If 3D visualization is needed, Spatial sampling parameters (sampled compartments and observables ) 
+    should be specified:
+
+    |
+    .. image:: images/spatial.png
+    |
+    
+    Click `Apply` in the bottom of the form and finally `Run` to start the simulation.
+    
+    |
+    .. image:: images/simulations.png
+    |
+
+
 #.  Simulation logs and charts are available for inspection once the simulation
     is started by clicking on `Graph` or `Log` buttons.
+
+    |
+    .. image:: images/sim_started.png
+    |
 
 Example
 =====================
