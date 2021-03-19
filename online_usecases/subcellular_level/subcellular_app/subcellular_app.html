@@ -152,10 +152,32 @@ of the query can be added to a molecular network model.</p>
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li>Open subcellular application by using this link: <a class="reference external" href="https://subcellular.humanbrainproject.eu">SubcellularApp</a></li>
-<li>Create a new model or load/import an existing one<ul>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/main.png" src="../../../_images/main.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic">
+<li><p class="first">Create a new model or load/import an existing one</p>
+<ul class="simple">
 <li>To load a public model click the arrow to expand a list of public models
 in <cite>Subcellular models repository</cite>, choose one, then click <cite>Load</cite></li>
-<li>To import <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> or <a class="reference external" href="http://sbml.org/Main_Page">SBML</a> (<a class="reference external" href="https://ruleworld.github.io/atomizer/">Atomizer</a> is used for the latter) model click
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/load_model.png" src="../../../_images/load_model.png" />
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>To import <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> or <a class="reference external" href="http://sbml.org/Main_Page">SBML</a>  model click
 <cite>Import</cite> in <cite>Model</cite> menu</li>
 <li>To create a new model specify all model parameters and reaction equations
 sequentially opening and filling the tables in the <cite>Model</cite> menu (upper left
@@ -163,33 +185,140 @@ of the UI). Each table corresponds to a particular section of the
 BioNetGen file of the model (with except for <cite>Diffusions</cite> and <cite>Geometry</cite>
 section). All expressions should comply with the BioNetGen language.</li>
 </ul>
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first">Models are represented by a set of structures (e.g. compartments of models) and
+a collection of entities from the BioNetGen language such as parameters, functions,
+molecules, species, observables and reactions. To modify these entities sof the model
+navigate to the corresponding section in the Physiology dropdown menu and specify them
+according to the BioNetGen language (for more about BioNetGen see the <a class="reference external" href="http://bionetgen.org/">official documentation</a>)</p>
 </li>
-<li>To add diffusion (required if using STEPS) navigate to the corresponding section
-of the model, click <cite>New diffusion</cite> and specify an arbitrary name
-of diffusive species or molecules, the affected structure where the corresponding
-species will diffuse, the <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> expression for those and the diffusion
-coefficient in m^2/s units.</li>
-<li>To add geometry (required if using STEPS) click <cite>Add geometry</cite> in
-the corresponding model section: specify it’s name, add <a class="reference external" href="http://wias-berlin.de/software/tetgen/fformats.html">TetGen</a> tetrahedral
+<li><p class="first">To add diffusions (required if using STEPS) navigate to the corresponding section,
+click <cite>New diffusion</cite> and specify a name for the diffusive species or molecules,
+the affected structure, the <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> expression and the diffusion
+coefficient in m^2/s.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/add_diffusion.png" src="../../../_images/add_diffusion.png" />
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic">
+<li><p class="first">To add a geometry (required if using STEPS) click <cite>Add geometry</cite> in
+the corresponding section: specify its name, add a <a class="reference external" href="http://wias-berlin.de/software/tetgen/fformats.html">TetGen</a> tetrahedral
 mesh and a geometry specification file (geometry.json, contains
 relationship between structures and their corresponding tetrahedra and
 triangles, free diffusion boundaries and geometry scale coefficient
-converting mesh vertices position units to meters, see examples below)</li>
-<li>At any stage model can be:<ul>
+converting mesh vertices position units to meters, see examples below)</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/add_geometry.png" src="../../../_images/add_geometry.png" />
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/add_geometry_2.png" src="../../../_images/add_geometry_2.png" />
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic">
+<li><p class="first">At any stage model can be:</p>
+<ul class="simple">
 <li>saved using <cite>Model</cite> -&gt; <cite>Save</cite> sequence, and then loaded from <cite>My models</cite>
 in <cite>Subcellular models repository</cite></li>
-<li>exported to file using <cite>Model</cite> -&gt; <cite>Export</cite> in different formats</li>
 </ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/save.png" src="../../../_images/save.png" />
 </li>
-<li>To simulate a model select <cite>Simulations</cite> on the <cite>Model</cite> panel, then create
-new simulation by clicking the corresponding button, specify the solver
-(<a class="reference external" href="http://steps.sourceforge.net/STEPS/default.php">STEPS</a> or <a class="reference external" href="http://michaelsneddon.net/nfsim/">NFSim</a>), change the default simulation parameters and add
-stimulation (this can be imported from a CSV or NFSim .rnf file) if needed;
-click <cite>Apply</cite> in the bottom of the form and finally <cite>Run</cite> to start the
-simulation.</li>
-<li>Simulation logs and charts are available for inspection once the simulation
-is started by clicking on <cite>Graph</cite> or <cite>Log</cite> buttons.</li>
 </ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>exported into different formats by using <cite>Model</cite> -&gt; <cite>Export</cite></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/export_model.png" src="../../../_images/export_model.png" />
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic">
+<li><p class="first">To simulate a model select <cite>Simulations</cite> on the <cite>Model</cite> panel, then create
+new simulation by clicking the corresponding button.</p>
+<ul class="simple">
+<li>Specify the solver (<a class="reference external" href="http://steps.sourceforge.net/STEPS/default.php">STEPS</a> or <a class="reference external" href="http://michaelsneddon.net/nfsim/">NFSim</a>), change the default simulation parameters</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/config_simulation.png" src="../../../_images/config_simulation.png" />
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>If desired add stimulations (this can be imported from a CSV or NFSim .rnf file) if needed:</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/stimulation.png" src="../../../_images/stimulation.png" />
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li>If 3D visualization is needed, Spatial sampling parameters (sampled compartments and observables) should be specified:</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/spatial.png" src="../../../_images/spatial.png" />
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><p>Click <cite>Apply</cite> in the bottom of the form and finally <cite>Run</cite> to start the simulation.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/simulations.png" src="../../../_images/simulations.png" />
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic">
+<li><p class="first">Simulation logs and charts are available for inspection once the simulation
+is started by clicking on <cite>Graph</cite> or <cite>Log</cite> buttons.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../_images/sim_started.png" src="../../../_images/sim_started.png" />
+</li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
