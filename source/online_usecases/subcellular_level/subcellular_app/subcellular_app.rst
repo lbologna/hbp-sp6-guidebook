@@ -55,7 +55,9 @@ Usage
 #.  Open subcellular application by using this link: `SubcellularApp`_
 
 |
+
 .. image:: images/main.png
+
 |
 
 
@@ -65,8 +67,10 @@ Usage
       in `Subcellular models repository`, choose one, then click `Load`
 
     |
+
     .. image:: images/load_model.png
-    |
+
+|
 
     * To import `BNGL`_ or `SBML`_  model click
       `Import` in `Model` menu
@@ -89,8 +93,10 @@ Usage
     coefficient in m^2/s.
 
     |
+
     .. image:: images/add_diffusion.png
-    |
+
+|
 
 #.  To add a geometry (required if using STEPS) click `Add geometry` in
     the corresponding section: specify its name, add a `TetGen`_ tetrahedral
@@ -100,12 +106,16 @@ Usage
     converting mesh vertices position units to meters, see examples below)
 
     |
+
     .. image:: images/add_geometry.png
-    |
+
+|
 
     |
+
     .. image:: images/add_geometry_2.png
-    |
+
+|
 
 #.  At any stage model can be:
 
@@ -113,14 +123,18 @@ Usage
       in `Subcellular models repository`
 
     |
+
     .. image:: images/save.png
-    |
+
+|
 
     * exported into different formats by using `Model` -> `Export` 
 
     |
+
     .. image:: images/export_model.png
-    |
+
+|
 
 
 #.  To simulate a model select `Simulations` on the `Model` panel, then create
@@ -129,36 +143,45 @@ Usage
     * Specify the solver (`STEPS`_ or `NFSim`_), change the default simulation parameters
     
     |
+
     .. image:: images/config_simulation.png
-    |
+
+|
     
     
     * If desired add stimulations (this can be imported from a CSV or NFSim .rnf file) if needed:
 
     |
+
     .. image:: images/stimulation.png
+
+|
+
+    * If 3D visualization is needed, Spatial sampling parameters (sampled compartments and observables) should be specified:
+
     |
 
-    * If 3D visualization is needed, Spatial sampling parameters (sampled compartments and observables ) 
-    should be specified:
-
-    |
     .. image:: images/spatial.png
-    |
+
+|
     
     Click `Apply` in the bottom of the form and finally `Run` to start the simulation.
     
     |
+
     .. image:: images/simulations.png
-    |
+
+|
 
 
 #.  Simulation logs and charts are available for inspection once the simulation
     is started by clicking on `Graph` or `Log` buttons.
 
     |
+
     .. image:: images/sim_started.png
-    |
+
+|
 
 Example
 =====================
