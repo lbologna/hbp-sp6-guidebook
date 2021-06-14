@@ -4,23 +4,22 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Model Validation app &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/bsp.css" />
     <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../_static/extra.js"></script>
-    <script type="text/javascript" src="../_static/hbpdoc.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/load_ga.js"></script>
+    <script src="../_static/extra.js"></script>
+    <script src="../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Python client for the Model Validation service" href="validation_client.html" />
@@ -44,7 +43,7 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Model Validation app</a><ul>
 <li><a class="reference internal" href="#adding-the-app-to-your-collab">Adding the app to your Collab</a></li>
@@ -71,17 +70,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -116,22 +113,23 @@
 (more precisely, the results of computer simulations of the model) to experimental data.</p>
 <p>The Model Validation app can be installed in any Collab workspace, and can be used:</p>
 <ul class="simple">
-<li>to search for validation tests appropriate to a given model type
-(e.g. tests for models of hippocampus CA1 pyramidal cells);</li>
-<li>to view the results of validation tests, including:<ul>
-<li>seeing all the tests for a given model</li>
-<li>tracking changes in test results over time (as the model being tested is modified)</li>
-<li>comparing different models of the same system</li>
+<li><p>to search for validation tests appropriate to a given model type
+(e.g. tests for models of hippocampus CA1 pyramidal cells);</p></li>
+<li><p>to view the results of validation tests, including:</p>
+<ul>
+<li><p>seeing all the tests for a given model</p></li>
+<li><p>tracking changes in test results over time (as the model being tested is modified)</p></li>
+<li><p>comparing different models of the same system</p></li>
 </ul>
 </li>
-<li>to register new validation tests with the HBP validation test library.</li>
+<li><p>to register new validation tests with the HBP validation test library.</p></li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<ul class="last simple">
-<li>Uploading test results to the database requires the <a class="reference external" href="http://hbp-validation-client.readthedocs.io">validation framework Python client</a>.
-In future the upload will be integrated into many of the online use cases of the Brain Simulation platform.</li>
-<li>To register new models for validation, use the <a class="reference internal" href="model_catalog.html#model-catalog-app"><span class="std std-ref">Model Catalog app</span></a>.</li>
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Uploading test results to the database requires the <a class="reference external" href="http://hbp-validation-client.readthedocs.io">validation framework Python client</a>.
+In future the upload will be integrated into many of the online use cases of the Brain Simulation platform.</p></li>
+<li><p>To register new models for validation, use the <a class="reference internal" href="model_catalog.html#model-catalog-app"><span class="std std-ref">Model Catalog app</span></a>.</p></li>
 </ul>
 </div>
 <div class="section" id="adding-the-app-to-your-collab">
@@ -214,7 +212,7 @@ including the URL of the source code repository containing the test implementati
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

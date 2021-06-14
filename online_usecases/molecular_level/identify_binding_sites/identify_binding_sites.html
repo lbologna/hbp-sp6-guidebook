@@ -4,23 +4,23 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Identify potential protein binding sites by comparing the electrostatic potentials of a set of protein isoforms &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/bsp.css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/load_ga.js"></script>
+    <script src="../../../_static/extra.js"></script>
+    <script src="../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Predict protein interaction surface with the ARDOCK server" href="../ardock/ardock_hpb_platform.html" />
@@ -44,7 +44,7 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <h3><a href="../../../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Identify potential protein binding sites by comparing the electrostatic potentials of a set of protein isoforms</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
@@ -70,17 +70,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -117,8 +115,8 @@
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>This use case describes how to compare the electrostatic potentials of nine isoforms of the enzyme adenylyl cyclase  protein at many sites on its surface. The electrostatic similarities at these sites is compared to find isoform-specific regulation patterns for the inhibitory protein, to predict the likely binding site of regulatory proteins. It uses the multipipsa software tool, which also helps to automate these calculations by providing a python wrapper for the following open source software tools:</p>
 <ul class="simple">
-<li>PDB2PQR: A tool that takes a protein structure in PDB format, adds missing hydrogen atoms, and creates a structure file in PQR format. The PQR file format is derived from the PDB format for describing atomic data, but with the occupancy and temperature factor fields replaced with atomic partial charges and radii.</li>
-<li>APBS: A tool that calculates electrostatic potentials through solution of the Poisson-Boltzmann equation, one of the most common continuum models for describing electrostatic interactions between molecular solutes in salty, aqueous media.</li>
+<li><p>PDB2PQR: A tool that takes a protein structure in PDB format, adds missing hydrogen atoms, and creates a structure file in PQR format. The PQR file format is derived from the PDB format for describing atomic data, but with the occupancy and temperature factor fields replaced with atomic partial charges and radii.</p></li>
+<li><p>APBS: A tool that calculates electrostatic potentials through solution of the Poisson-Boltzmann equation, one of the most common continuum models for describing electrostatic interactions between molecular solutes in salty, aqueous media.</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -127,8 +125,8 @@
 <div class="section" id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>For details on computation of the electrostatic potential see <a class="reference internal" href="../electrostatic_potential/electrostatic_potential.html#electrostatic-potential"><span class="std std-ref">Calculate the electrostatic potential of a protein from its atomic structure</span></a>.</li>
-<li>For details on the similarity computations and pipsa algorithm, see <a class="reference internal" href="../el_multipipsa/el_multipipsa.html#el-multipipsa"><span class="std std-ref">Compare the electrostatic potentials surrounding a set of protein isoforms with multipipsa</span></a></li>
+<li><p>For details on computation of the electrostatic potential see <a class="reference internal" href="../electrostatic_potential/electrostatic_potential.html#electrostatic-potential"><span class="std std-ref">Calculate the electrostatic potential of a protein from its atomic structure</span></a>.</p></li>
+<li><p>For details on the similarity computations and pipsa algorithm, see <a class="reference internal" href="../el_multipipsa/el_multipipsa.html#el-multipipsa"><span class="std std-ref">Compare the electrostatic potentials surrounding a set of protein isoforms with multipipsa</span></a></p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -145,10 +143,10 @@ The structures of the AC isoforms were created via homology modelling using the 
 <div class="section" id="procedure">
 <h2>Procedure<a class="headerlink" href="#procedure" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Structure of AC5 is visualized. The catalytic domain of AC5 is a dimer consisting of two protein chains. In the full structure of AC5 these two chains are connected by a series of transmembrane helices that anchor the protein in the post-synaptic membrane.</li>
-<li>Then the Pdb2Pqr method is used to generate hydrogen atoms in the protein structure. Proteins contain a number of ionisable amino acids, which can exist in different protonation states, depending on the pH of the solution they are in. PDB2PQR can predict the states of these amino acids, at a given pH (defined as 7.4 in the last cell, a normal physiological pH), then add all missing hydrogen atoms to the structure, and assign atomic charges and radii to all atoms. By default, multipipsa assigns charges and radii from the Amber force field.</li>
-<li>The  APBS method used to solve the linearised Poisson-Boltzmann equation to obtain the electrostatic potential in the dx and UHBD file formats. It also creates a dx file describing the solvent excluded volume of AC5. This is used for visualisation later.</li>
-<li>Finally, electrostatic similarity between AC isoforms is computed.</li>
+<li><p>Structure of AC5 is visualized. The catalytic domain of AC5 is a dimer consisting of two protein chains. In the full structure of AC5 these two chains are connected by a series of transmembrane helices that anchor the protein in the post-synaptic membrane.</p></li>
+<li><p>Then the Pdb2Pqr method is used to generate hydrogen atoms in the protein structure. Proteins contain a number of ionisable amino acids, which can exist in different protonation states, depending on the pH of the solution they are in. PDB2PQR can predict the states of these amino acids, at a given pH (defined as 7.4 in the last cell, a normal physiological pH), then add all missing hydrogen atoms to the structure, and assign atomic charges and radii to all atoms. By default, multipipsa assigns charges and radii from the Amber force field.</p></li>
+<li><p>The  APBS method used to solve the linearised Poisson-Boltzmann equation to obtain the electrostatic potential in the dx and UHBD file formats. It also creates a dx file describing the solvent excluded volume of AC5. This is used for visualisation later.</p></li>
+<li><p>Finally, electrostatic similarity between AC isoforms is computed.</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -157,7 +155,7 @@ The structures of the AC isoforms were created via homology modelling using the 
 <div class="section" id="results">
 <h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
 <p>The similarity of AC5 isoforms is indicated by the surface color from the most dissimilar regions (<span class="math notranslate nohighlight">\(SI_{12}=-1\)</span>, shown in red) to the highly similar regions (<span class="math notranslate nohighlight">\(SI_{12}=1\)</span>, shown in white):</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="../../../_images/Similarity.png" src="../../../_images/Similarity.png" />
 </div>
 </div>
@@ -185,7 +183,7 @@ The structures of the AC isoforms were created via homology modelling using the 
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

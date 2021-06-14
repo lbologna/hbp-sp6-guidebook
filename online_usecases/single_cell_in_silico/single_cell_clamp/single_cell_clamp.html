@@ -4,23 +4,22 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single cell in silico experiments under current clamp &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/bsp.css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/load_ga.js"></script>
+    <script src="../../../_static/extra.js"></script>
+    <script src="../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Small Circuit In Silico Experiments" href="../../small_circuit_in_silico_experiments/small_circuit_in_silico_experiments.html" />
@@ -58,17 +57,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -105,48 +102,45 @@
 provides Web UI to access <strong>Neuron as a Service</strong> in order to load the single
 cell models and run model simulations.</p>
 <ol class="arabic">
-<li><p class="first">This Use Case can be run through the <em>Online Use Cases/Single Cell In Silico
+<li><p>This Use Case can be run through the <em>Online Use Cases/Single Cell In Silico
 Experiments</em> panel in the Brain Simulation Platform (click <a class="reference external" href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66854">here</a> to access
 the tool):</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../_images/single_cell_in_silico.png"><img alt="../../../_images/single_cell_in_silico.png" src="../../../_images/single_cell_in_silico.png" style="width: 700px;" /></a>
 </div></blockquote>
 </li>
-<li><p class="first">When you arrive at the <em>Single cell in silico experiments under current/voltage clamp</em> Use Case
+<li><p>When you arrive at the <em>Single cell in silico experiments under current/voltage clamp</em> Use Case
 you can select the single cell model from the HBP data:</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../_images/single_cell_in_silico_select.png"><img alt="../../../_images/single_cell_in_silico_select.png" src="../../../_images/single_cell_in_silico_select.png" style="width: 700px;" /></a>
 </div></blockquote>
 </li>
-<li><p class="first">As a result, the single cell model will open in a new Browser window within the
+<li><p>As a result, the single cell model will open in a new Browser window within the
 <strong>Neuron as a Service</strong> web application. The following screenshot of the app is annotated with
 red text to guide you through the interface:</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../_images/neuron_as_a_service_ui.png"><img alt="../../../_images/neuron_as_a_service_ui.png" src="../../../_images/neuron_as_a_service_ui.png" style="width: 700px;" /></a>
 </div></blockquote>
 </li>
-<li><p class="first">Cell morphology can be visualized either in 3D view or 2D Dendrogram view. It is possible to
-zoom/rotate/pan using your mouse/scroll wheel/trackpad.</p>
-</li>
-<li><p class="first">Current clamp can be attached to any section by clicking the segment in the cell 3D/2D Dendrogram
+<li><p>Cell morphology can be visualized either in 3D view or 2D Dendrogram view. It is possible to
+zoom/rotate/pan using your mouse/scroll wheel/trackpad.</p></li>
+<li><p>Current clamp can be attached to any section by clicking the segment in the cell 3D/2D Dendrogram
 view and then pressing the <em>Place current injection</em> button, or by selecting the section in the
-tree view on the right and pressing the same button.</p>
-</li>
-<li><p class="first">To run the simulation, switch to the <strong>Simulation</strong> tab. In this view, you can click
+tree view on the right and pressing the same button.</p></li>
+<li><p>To run the simulation, switch to the <strong>Simulation</strong> tab. In this view, you can click
 and select the segments to record the voltage from. They are added to the corresponding list. Up to
 10 segments can be recorded from.</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../_images/neuron_as_a_service_ui_sim.png"><img alt="../../../_images/neuron_as_a_service_ui_sim.png" src="../../../_images/neuron_as_a_service_ui_sim.png" style="width: 700px;" /></a>
 </div></blockquote>
 </li>
-<li><p class="first">The graph showing the traces recorded from the cell segments can be zoomed in by clicking and dragging
-in order to select the area to zoom in. Double click on the graph will restore the original zoom level.</p>
-</li>
-<li><p class="first">The recorded traces can be downloaded as csv file. The download link is available at the
+<li><p>The graph showing the traces recorded from the cell segments can be zoomed in by clicking and dragging
+in order to select the area to zoom in. Double click on the graph will restore the original zoom level.</p></li>
+<li><p>The recorded traces can be downloaded as csv file. The download link is available at the
 bottom right corner of the graph after the simulation has finished.</p>
 <p>The following jupyter notebook code shows how it can be loaded with pandas for the further analysis:</p>
 <blockquote>
-<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sim_CA1_int_bAC_011023HP2_20170510120324_2017-06-21_14-36-10_amp-soma_0-0.7nA.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;soma[0]_0&#39;</span><span class="p">)</span>
@@ -154,11 +148,10 @@ bottom right corner of the graph after the simulation has finished.</p>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">In order to initialize simulation parameters with certain values it is possible to append the application
+<li><p>In order to initialize simulation parameters with certain values it is possible to append the application
 URL with, for example, the following:
-<code class="docutils literal notranslate"><span class="pre">?delay=0&amp;vinit=-86&amp;dt=.025&amp;amp=0&amp;hypamp=0&amp;tstop=500&amp;delay=100&amp;dur=800&amp;celsius=37</span></code></p>
-</li>
-<li><p class="first">If the model folder contains file named <code class="file docutils literal notranslate"><span class="pre">traces.dat</span></code> containing experimental traces in the following format:</p>
+<code class="docutils literal notranslate"><span class="pre">?delay=0&amp;vinit=-86&amp;dt=.025&amp;amp=0&amp;hypamp=0&amp;tstop=500&amp;delay=100&amp;dur=800&amp;celsius=37</span></code></p></li>
+<li><p>If the model folder contains file named <code class="file docutils literal notranslate"><span class="pre">traces.dat</span></code> containing experimental traces in the following format:</p>
 <blockquote>
 <div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>time,soma[0]_0_exp,soma[0]_1_exp,soma[0]_2_exp,soma[0]_3_exp,soma[0]_4_exp,soma[0]_5_exp
 0.004,-87.179,-87.136,-86.605,-86.825,-86.453,-85.763
@@ -171,7 +164,7 @@ URL with, for example, the following:
 traces. If trace names following the naming convention: <code class="docutils literal notranslate"><span class="pre">SECTION\_SEGMENTINDEX\_ANYNAME</span></code> then the
 corresponding segment will be highlighted when user hovers the mouse over the trace.</p>
 </li>
-<li><p class="first">If the model folder contains file named <code class="file docutils literal notranslate"><span class="pre">synapses_meta.json</span></code> in the following format:</p>
+<li><p>If the model folder contains file named <code class="file docutils literal notranslate"><span class="pre">synapses_meta.json</span></code> in the following format:</p>
 <blockquote>
 <div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;exc&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;AMPANMDA_EMS&quot;</span><span class="p">],</span>
@@ -183,9 +176,8 @@ corresponding segment will be highlighted when user hovers the mouse over the tr
 <p>Then those channel mechanisms will be visualized on the morphology with the corresponding coloring for
 excitatory and inhibitory.</p>
 </li>
-<li><p class="first">If you have spines modeled as additional sections, it is assumed that they are constructed from a single
-segment. They will also be correctly positioned and visualized on the morphology.</p>
-</li>
+<li><p>If you have spines modeled as additional sections, it is assumed that they are constructed from a single
+segment. They will also be correctly positioned and visualized on the morphology.</p></li>
 </ol>
 </div>
 
@@ -211,7 +203,7 @@ segment. They will also be correctly positioned and visualized on the morphology
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

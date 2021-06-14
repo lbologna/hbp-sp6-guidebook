@@ -4,23 +4,22 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rat Cerebellum volume &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/bsp.css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../../../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/load_ga.js"></script>
+    <script src="../../../../_static/extra.js"></script>
+    <script src="../../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Network reduction" href="../../network_reduction/network_reduction.html" />
@@ -58,17 +57,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -113,41 +110,39 @@
 <p>Approach: the potential connections are created by imposing geometric constraints (based on the anisotropic simplified geometric features of the pre- and post-synaptic neuron types). Then, if needed, a selection (pruning) is carried out by defining convergence or/and divergence ratios and applying them by distance-dependent probability.</p>
 <p><strong>Inputs:</strong></p>
 <ul class="simple">
-<li>hdf5 matrix (saved in /storage) obtained from the “Cell positioning” Use Case (found in Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume/).</li>
-<li>The parameters are automatically imported from user-defined parameters filled in the GUI of the “Cell positioning” Use Case and from scaffold_params.py (in /storage).</li>
+<li><p>hdf5 matrix (saved in /storage) obtained from the “Cell positioning” Use Case (found in Online Use Cases/Circuit Building/Cells placement/Rat cerebellum volume/).</p></li>
+<li><p>The parameters are automatically imported from user-defined parameters filled in the GUI of the “Cell positioning” Use Case and from scaffold_params.py (in /storage).</p></li>
 </ul>
 <p>Expert users can modify connection-specific parameters could be modified from scaffold_params.py (in /storage)</p>
 <ul class="simple">
-<li>Convergence and divergence ratio of each connection type</li>
+<li><p>Convergence and divergence ratio of each connection type</p></li>
 </ul>
 <p><strong>Output:</strong></p>
 <ul class="simple">
-<li>Within the hdf5 file generated from the “Cell positioning” Use Case, a new key is added named “/connections”. It contains multiple items, one for each connection type (e.g. “/glom_grc”, “/glom_goc”,…). Each of them is made up of a matrix with 2 columns (PRE Neuron ID and POST Neuron ID). The enriched hdf5 file is saved in /storage.</li>
+<li><p>Within the hdf5 file generated from the “Cell positioning” Use Case, a new key is added named “/connections”. It contains multiple items, one for each connection type (e.g. “/glom_grc”, “/glom_goc”,…). Each of them is made up of a matrix with 2 columns (PRE Neuron ID and POST Neuron ID). The enriched hdf5 file is saved in /storage.</p></li>
 </ul>
 <p>Monitoring: effective convergence and divergence ratios and pairwise distances among connected neurons (metrics_connectome.py in /storage) and probability of connection dependent on inter-soma distance between connected neurons (monitoring_probConn.py in /storage)</p>
 <p>As an example, a 3D basic visualization of the connection from Glomeruli to Golgi cells is displayed. One PRE Neuron ID is selected, and all the POST neurons receiving its outward connections are plotted (Divergence). Also, one specific POST Neuron ID is selected, and all the PRE neurons sending connections to it are plotted (Convergence).</p>
 <p><strong>Additional information:</strong></p>
 <ul class="simple">
-<li>This whole Use Case should take about 4 minutes for a volume base of 400 x 400 µm. If enabled, the computation of the metrics for each connection type adds about 15 minutes for such a network size.</li>
-<li>No login to any other computer required</li>
+<li><p>This whole Use Case should take about 4 minutes for a volume base of 400 x 400 µm. If enabled, the computation of the metrics for each connection type adds about 15 minutes for such a network size.</p></li>
+<li><p>No login to any other computer required</p></li>
 </ul>
 <p>1.1) Glomeruli – Granule Cells (EXC)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirements imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Simple connectivity rule: a single GrC cannot send more than one dendrite into the same glomerulus</li>
-<li>Convergence: 4</li>
-<li>The maximal length of GrC dendrites is ~ 40 µm (average = 13.6)</li>
+<li><dl class="simple">
+<dt>Requirements imposed in the code:</dt><dd><ul>
+<li><p>Simple connectivity rule: a single GrC cannot send more than one dendrite into the same glomerulus</p></li>
+<li><p>Convergence: 4</p></li>
+<li><p>The maximal length of GrC dendrites is ~ 40 µm (average = 13.6)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Target values to be matched:</dt>
-<dd><ul class="first last">
-<li>Divergence: ~53</li>
-<li>Mean number of dendrites per Granule Cell: 4 (+/- 1)</li>
+<li><dl class="simple">
+<dt>Target values to be matched:</dt><dd><ul>
+<li><p>Divergence: ~53</p></li>
+<li><p>Mean number of dendrites per Granule Cell: 4 (+/- 1)</p></li>
 </ul>
 </dd>
 </dl>
@@ -155,20 +150,18 @@
 </ul>
 <p>1.2) Glomeruli – Golgi Cells (basolateral dendrites) (EXC)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirement imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Extent of GoC basolater arborization (under the soma) is ~ 100 µm (diameter)</li>
+<li><dl class="simple">
+<dt>Requirement imposed in the code:</dt><dd><ul>
+<li><p>Extent of GoC basolater arborization (under the soma) is ~ 100 µm (diameter)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Target values to be matched:</dt>
-<dd><ul class="first last">
-<li>Divergence: 4</li>
-<li>Convergence: 40 (on GoC basal dendrites) (not the same Glomeruli on the same GoC!)</li>
-<li>Number of GoC (basal) dendrites = 4.1 +/- 1.4</li>
+<li><dl class="simple">
+<dt>Target values to be matched:</dt><dd><ul>
+<li><p>Divergence: 4</p></li>
+<li><p>Convergence: 40 (on GoC basal dendrites) (not the same Glomeruli on the same GoC!)</p></li>
+<li><p>Number of GoC (basal) dendrites = 4.1 +/- 1.4</p></li>
 </ul>
 </dd>
 </dl>
@@ -176,20 +169,18 @@
 </ul>
 <p>1.3) Golgi Cells – Glomeruli (INHIB)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirements imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Divergence: 40</li>
-<li>Convergence: 1 (max)</li>
-<li>Anisotropic extension of GoC axonal plexus: ~150 µm on x axis; ~150 µm on y axis; ~30 µm on z axis</li>
+<li><dl class="simple">
+<dt>Requirements imposed in the code:</dt><dd><ul>
+<li><p>Divergence: 40</p></li>
+<li><p>Convergence: 1 (max)</p></li>
+<li><p>Anisotropic extension of GoC axonal plexus: ~150 µm on x axis; ~150 µm on y axis; ~30 µm on z axis</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Target values to be matched:</dt>
-<dd><ul class="first last">
-<li>The GoC axon inhibits granule cells dendrites inside the glomeruli.</li>
+<li><dl class="simple">
+<dt>Target values to be matched:</dt><dd><ul>
+<li><p>The GoC axon inhibits granule cells dendrites inside the glomeruli.</p></li>
 </ul>
 </dd>
 </dl>
@@ -197,12 +188,11 @@
 </ul>
 <p>1.4) Granule Cells by Ascending Axons - Golgi Cells (EXC)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirements imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Divergence: 1 (max)</li>
-<li>Convergence: 400</li>
-<li>Extent of GoC arborization (sphere) is ~ 100 µm (diameter)</li>
+<li><dl class="simple">
+<dt>Requirements imposed in the code:</dt><dd><ul>
+<li><p>Divergence: 1 (max)</p></li>
+<li><p>Convergence: 400</p></li>
+<li><p>Extent of GoC arborization (sphere) is ~ 100 µm (diameter)</p></li>
 </ul>
 </dd>
 </dl>
@@ -210,19 +200,17 @@
 </ul>
 <p>1.5) Granule Cells by Parallel Fibers - Golgi Cells (apical dendrites) (EXC)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirements imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Convergence: 1600, of which 400 are from the nearest granules already connected by Ascending Axons from 1.4) connection type</li>
-<li>GoC apical dendritic tree is ~ 100 µm (diameter)</li>
+<li><dl class="simple">
+<dt>Requirements imposed in the code:</dt><dd><ul>
+<li><p>Convergence: 1600, of which 400 are from the nearest granules already connected by Ascending Axons from 1.4) connection type</p></li>
+<li><p>GoC apical dendritic tree is ~ 100 µm (diameter)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Target value to be matched:</dt>
-<dd><ul class="first last">
-<li>Divergence: ~2</li>
+<li><dl class="simple">
+<dt>Target value to be matched:</dt><dd><ul>
+<li><p>Divergence: ~2</p></li>
 </ul>
 </dd>
 </dl>
@@ -230,13 +218,12 @@
 </ul>
 <p>2.1) Stellate Cells – Purkinje Cells (INHIB)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirements imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Anisotropic extension of SC axon: ~500 µm on x axis; ~100 µm on z axis</li>
-<li>Divergence: 2</li>
-<li>Convergence: 20</li>
-<li>Activated BEAM ON (even the PCs excited by the Ascending Axons bundle are within the potential inhibition from the Molecular Layer interneurons, i.e. Stellate and Basket Cells)</li>
+<li><dl class="simple">
+<dt>Requirements imposed in the code:</dt><dd><ul>
+<li><p>Anisotropic extension of SC axon: ~500 µm on x axis; ~100 µm on z axis</p></li>
+<li><p>Divergence: 2</p></li>
+<li><p>Convergence: 20</p></li>
+<li><p>Activated BEAM ON (even the PCs excited by the Ascending Axons bundle are within the potential inhibition from the Molecular Layer interneurons, i.e. Stellate and Basket Cells)</p></li>
 </ul>
 </dd>
 </dl>
@@ -244,13 +231,12 @@
 </ul>
 <p>2.2) Basket Cells - Purkinje Cells (INHIB)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirements imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Anisotropic extension of SC axon: ~500 µm on x axis; ~100 µm on z axis</li>
-<li>Divergence: 2</li>
-<li>Convergence: 20</li>
-<li>Activated BEAM ON (even the PCs excited by the Ascending Axons bundle are within the potential inhibition from the Molecular Layer interneurons, i.e. Stellate and Basket Cells)</li>
+<li><dl class="simple">
+<dt>Requirements imposed in the code:</dt><dd><ul>
+<li><p>Anisotropic extension of SC axon: ~500 µm on x axis; ~100 µm on z axis</p></li>
+<li><p>Divergence: 2</p></li>
+<li><p>Convergence: 20</p></li>
+<li><p>Activated BEAM ON (even the PCs excited by the Ascending Axons bundle are within the potential inhibition from the Molecular Layer interneurons, i.e. Stellate and Basket Cells)</p></li>
 </ul>
 </dd>
 </dl>
@@ -258,19 +244,17 @@
 </ul>
 <p>2.3) Stellate Cells - Stellate Cells   &amp;  Basket Cells - Basket Cells  (INHIB)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirements imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Divergence: 4</li>
-<li>Maximum inter-soma distance for connection (150 µm on x-y plane; 50 µm along z)</li>
+<li><dl class="simple">
+<dt>Requirements imposed in the code:</dt><dd><ul>
+<li><p>Divergence: 4</p></li>
+<li><p>Maximum inter-soma distance for connection (150 µm on x-y plane; 50 µm along z)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Target value to be matched:</dt>
-<dd><ul class="first last">
-<li>Convergence: 4</li>
+<li><dl class="simple">
+<dt>Target value to be matched:</dt><dd><ul>
+<li><p>Convergence: 4</p></li>
 </ul>
 </dd>
 </dl>
@@ -278,19 +262,17 @@
 </ul>
 <p>3.1) Granule Cells by Ascending Axons – Purkinje Cells (EXC)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirements imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Divergence: 1</li>
-<li>Anisotropic extension of PC dendritic tree (symmetrically around the soma): ~130 µm on x axis; ~3.5 µm on z axis; all molecular layer thickness (y-axis)</li>
+<li><dl class="simple">
+<dt>Requirements imposed in the code:</dt><dd><ul>
+<li><p>Divergence: 1</p></li>
+<li><p>Anisotropic extension of PC dendritic tree (symmetrically around the soma): ~130 µm on x axis; ~3.5 µm on z axis; all molecular layer thickness (y-axis)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Target value to be matched:</dt>
-<dd><ul class="first last">
-<li>Convergence: 200-400</li>
+<li><dl class="simple">
+<dt>Target value to be matched:</dt><dd><ul>
+<li><p>Convergence: 200-400</p></li>
 </ul>
 </dd>
 </dl>
@@ -298,18 +280,16 @@
 </ul>
 <p>3.2) Granule Cells by Parallel Fibers – Purkinje Cells (EXC)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirement imposed in the code:</dt>
-<dd><ul class="first last">
-<li>Anisotropic extension of PC dendritic tree (symmetrically around the soma): ~130 µm on x axis</li>
+<li><dl class="simple">
+<dt>Requirement imposed in the code:</dt><dd><ul>
+<li><p>Anisotropic extension of PC dendritic tree (symmetrically around the soma): ~130 µm on x axis</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Target value to be matched:</dt>
-<dd><ul class="first last">
-<li>Divergence: 30 (but experimentally difficult on slices, since long PFs but cut)…</li>
+<li><dl class="simple">
+<dt>Target value to be matched:</dt><dd><ul>
+<li><p>Divergence: 30 (but experimentally difficult on slices, since long PFs but cut)…</p></li>
 </ul>
 </dd>
 </dl>
@@ -317,11 +297,10 @@
 </ul>
 <p>3.3) Granule Cells by Parallel Fibers – Basket Cells (EXC)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Target values to be matched:</dt>
-<dd><ul class="first last">
-<li>Basket cell dendritic “circle” (2D on x-y sagittal plane) of 15 µm radius</li>
-<li>PFs into the Molecular Layer; from GrC soma, y shift of AA length (taken from this distribution 151 ± 66 µm, with a minimum depending on the GrC soma y-coordinate, in order to always reach the ML)</li>
+<li><dl class="simple">
+<dt>Target values to be matched:</dt><dd><ul>
+<li><p>Basket cell dendritic “circle” (2D on x-y sagittal plane) of 15 µm radius</p></li>
+<li><p>PFs into the Molecular Layer; from GrC soma, y shift of AA length (taken from this distribution 151 ± 66 µm, with a minimum depending on the GrC soma y-coordinate, in order to always reach the ML)</p></li>
 </ul>
 </dd>
 </dl>
@@ -329,11 +308,10 @@
 </ul>
 <p>3.4) Granule Cells by Parallel Fibers – Stellate Cells (EXC)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Target values to be matched:</dt>
-<dd><ul class="first last">
-<li>Stellate cell dendritic “circle” (2D on x-y sagittal plane) of 15 µm radius</li>
-<li>PFs into the Molecular Layer; from GrC soma, y shift of AA length (taken from this distribution 151 ± 66 µm, with a minimum depending on the GrC soma y-coordinate, in order to always reach the ML)</li>
+<li><dl class="simple">
+<dt>Target values to be matched:</dt><dd><ul>
+<li><p>Stellate cell dendritic “circle” (2D on x-y sagittal plane) of 15 µm radius</p></li>
+<li><p>PFs into the Molecular Layer; from GrC soma, y shift of AA length (taken from this distribution 151 ± 66 µm, with a minimum depending on the GrC soma y-coordinate, in order to always reach the ML)</p></li>
 </ul>
 </dd>
 </dl>
@@ -341,19 +319,17 @@
 </ul>
 <p>4.1) Purkinje Cells – Deep Cerebellar projection Neurons (INHIB)</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Requirements imposed in the code:</dt>
-<dd><ul class="first last">
-<li>DCpN dendritic field (planar with random angle, extensions over the network volume)</li>
-<li>Divergence: 4 or 5 (randomly)</li>
+<li><dl class="simple">
+<dt>Requirements imposed in the code:</dt><dd><ul>
+<li><p>DCpN dendritic field (planar with random angle, extensions over the network volume)</p></li>
+<li><p>Divergence: 4 or 5 (randomly)</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>Target value to be matched:</dt>
-<dd><ul class="first last">
-<li>Convergence: 34-52</li>
+<li><dl class="simple">
+<dt>Target value to be matched:</dt><dd><ul>
+<li><p>Convergence: 34-52</p></li>
 </ul>
 </dd>
 </dl>
@@ -363,32 +339,28 @@
 <blockquote>
 <div><p>From “Cells Placement” in the volume:</p>
 <ul class="simple">
-<li>x = 400 µm, z = 400 µm (→ DCN 200 x 200 µm)</li>
-<li>y = 930 µm (600+ 150+30+150  µm), i.e. thickness DCN + GRL+ PCL + ML</li>
+<li><p>x = 400 µm, z = 400 µm (→ DCN 200 x 200 µm)</p></li>
+<li><p>y = 930 µm (600+ 150+30+150  µm), i.e. thickness DCN + GRL+ PCL + ML</p></li>
 </ul>
 <p>1.1) Glomeruli – Granule Cells (EXC)</p>
 <ul class="simple">
-<li>Div = 50 ± 24</li>
-<li>Conv = 4 ± 0</li>
-<li>3D distance = 12 ± 5 µm</li>
+<li><p>Div = 50 ± 24</p></li>
+<li><p>Conv = 4 ± 0</p></li>
+<li><p>3D distance = 12 ± 5 µm</p></li>
 </ul>
 <p>1.2) Glomeruli – Golgi Cells (basolateral dendrites) (EXC)</p>
 <ul class="simple">
-<li>Div = 2 ± 1</li>
-<li>Conv = 65 ± 28</li>
-<li>3D distance = 37 ± 10 µm</li>
+<li><p>Div = 2 ± 1</p></li>
+<li><p>Conv = 65 ± 28</p></li>
+<li><p>3D distance = 37 ± 10 µm</p></li>
 </ul>
 <p>1.3) Golgi Cells – Glomeruli (INHIB)</p>
 <ul>
-<li><p class="first">Div = 31 ± 14</p>
-</li>
-<li><p class="first">Conv = 1 ± 0</p>
-</li>
-<li><p class="first">3D distance = 37 ± 17 µm</p>
-</li>
-<li><p class="first">2D distance sagittal (x-y) = 35 ± 18 µm</p>
-</li>
-<li><p class="first">Distance on transverse direction (z) = 7 ± 4 µm</p>
+<li><p>Div = 31 ± 14</p></li>
+<li><p>Conv = 1 ± 0</p></li>
+<li><p>3D distance = 37 ± 17 µm</p></li>
+<li><p>2D distance sagittal (x-y) = 35 ± 18 µm</p></li>
+<li><p>Distance on transverse direction (z) = 7 ± 4 µm</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../../_images/distances_tot1.png"><img alt="../../../../_images/distances_tot1.png" src="../../../../_images/distances_tot1.png" style="width: 405px;" /></a>
 <a class="reference internal image-reference" href="../../../../_images/distances_conns1.png"><img alt="../../../../_images/distances_conns1.png" src="../../../../_images/distances_conns1.png" style="width: 399px;" /></a>
@@ -398,35 +370,33 @@
 </ul>
 <p>1.4) Granule Cells by Ascending Axons - Golgi Cells (EXC)</p>
 <ul class="simple">
-<li>Div = 1 ± 0</li>
-<li>Conv = 383 ± 58</li>
-<li>3D distance = 30 ± 16 µm</li>
+<li><p>Div = 1 ± 0</p></li>
+<li><p>Conv = 383 ± 58</p></li>
+<li><p>3D distance = 30 ± 16 µm</p></li>
 </ul>
 <p>1.5) Granule Cells by Parallel Fibers - Golgi Cells (apical dendrites) (EXC)</p>
 <ul class="simple">
-<li>Div = 4 ± 2</li>
-<li>Conv = 1600 ± 0</li>
-<li>3D distance =148 ± 103 µm</li>
+<li><p>Div = 4 ± 2</p></li>
+<li><p>Conv = 1600 ± 0</p></li>
+<li><p>3D distance =148 ± 103 µm</p></li>
 </ul>
 <p>2.1) Stellate Cells – Purkinje Cells (INHIB)</p>
 <ul class="simple">
-<li>Div = 2.6 ± 1.6</li>
-<li>Conv = 20 ± 0.1</li>
-<li>3D distance = 227 ± 85 µm</li>
+<li><p>Div = 2.6 ± 1.6</p></li>
+<li><p>Conv = 20 ± 0.1</p></li>
+<li><p>3D distance = 227 ± 85 µm</p></li>
 </ul>
 <p>2.2) Basket Cells - Purkinje Cells (INHIB)</p>
 <ul class="simple">
-<li>Div = 2.6 ± 1.6</li>
-<li>Conv = 20 ± 0.1</li>
-<li>3D distance = 186 ± 94 µm</li>
+<li><p>Div = 2.6 ± 1.6</p></li>
+<li><p>Conv = 20 ± 0.1</p></li>
+<li><p>3D distance = 186 ± 94 µm</p></li>
 </ul>
 <p>2.3) Stellate Cells - Stellate Cells   &amp;  Basket Cells - Basket Cells  (INHIB)</p>
 <ul>
-<li><p class="first">Div = 4 ± 0</p>
-</li>
-<li><p class="first">Conv = 4 ± 2</p>
-</li>
-<li><p class="first">3D distance = 66 ± 29 µm</p>
+<li><p>Div = 4 ± 0</p></li>
+<li><p>Conv = 4 ± 2</p></li>
+<li><p>3D distance = 66 ± 29 µm</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../../_images/distances_tot2.png"><img alt="../../../../_images/distances_tot2.png" src="../../../../_images/distances_tot2.png" style="width: 398px;" /></a>
 <a class="reference internal image-reference" href="../../../../_images/distances_conns2.png"><img alt="../../../../_images/distances_conns2.png" src="../../../../_images/distances_conns2.png" style="width: 392px;" /></a>
@@ -436,39 +406,39 @@
 </ul>
 <p>3.1) Granule Cells by Ascending Axons – Purkinje Cells (EXC)</p>
 <ul class="simple">
-<li>Div = 0 or 1 (20%)</li>
-<li>Conv = 252 ± 11</li>
-<li>3D distance = 98 ± 40 µm</li>
-<li>2D distance sagittal (x-y) = 98 ± 40 µm</li>
-<li>Distance on transverse direction (z) = 0.8 ± 0.5 µm</li>
+<li><p>Div = 0 or 1 (20%)</p></li>
+<li><p>Conv = 252 ± 11</p></li>
+<li><p>3D distance = 98 ± 40 µm</p></li>
+<li><p>2D distance sagittal (x-y) = 98 ± 40 µm</p></li>
+<li><p>Distance on transverse direction (z) = 0.8 ± 0.5 µm</p></li>
 </ul>
 <p>3.2) Granule Cells by Parallel Fibers – Purkinje Cells (EXC)</p>
 <ul class="simple">
-<li>Div = 23 ± 3</li>
-<li>Conv = 28827 ± 165</li>
-<li>3D distance = 178 ± 79 µm</li>
+<li><p>Div = 23 ± 3</p></li>
+<li><p>Conv = 28827 ± 165</p></li>
+<li><p>3D distance = 178 ± 79 µm</p></li>
 </ul>
 <p>3.3) Granule Cells by Parallel Fibers – Basket Cells (EXC)</p>
 <ul class="simple">
-<li>Div = 10 ± 6</li>
-<li>Conv = 1425 ± 399</li>
-<li>3D distance = 224 ± 65 µm</li>
-<li>2D distance sagittal (x-y) = 224 ± 65 µm</li>
-<li>Distance on transverse direction (z) = 6 ± 4 µm</li>
+<li><p>Div = 10 ± 6</p></li>
+<li><p>Conv = 1425 ± 399</p></li>
+<li><p>3D distance = 224 ± 65 µm</p></li>
+<li><p>2D distance sagittal (x-y) = 224 ± 65 µm</p></li>
+<li><p>Distance on transverse direction (z) = 6 ± 4 µm</p></li>
 </ul>
 <p>3.4) Granule Cells by Parallel Fibers – Stellate Cells (EXC)</p>
 <ul class="simple">
-<li>Div = 5 ± 6</li>
-<li>Conv = 635 ± 436</li>
-<li>3D distance = 222 ± 65 µm</li>
-<li>2D distance sagittal (x-y) = 222 ± 65 µm</li>
-<li>Distance on transverse direction (z) = 6 ± 4 µm</li>
+<li><p>Div = 5 ± 6</p></li>
+<li><p>Conv = 635 ± 436</p></li>
+<li><p>3D distance = 222 ± 65 µm</p></li>
+<li><p>2D distance sagittal (x-y) = 222 ± 65 µm</p></li>
+<li><p>Distance on transverse direction (z) = 6 ± 4 µm</p></li>
 </ul>
 <p>4.1) Purkinje Cells – Deep Cerebellar projection Neurons (INHIB)</p>
 <ul class="simple">
-<li>Div = 4 or 5</li>
-<li>Conv = 27 ± 3</li>
-<li>3D distance = 535 ± 145 µm</li>
+<li><p>Div = 4 or 5</p></li>
+<li><p>Conv = 27 ± 3</p></li>
+<li><p>3D distance = 535 ± 145 µm</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -495,7 +465,7 @@
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

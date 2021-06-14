@@ -4,23 +4,22 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Optimise a striatal fast-spiking interneuron &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/bsp.css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../../../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/load_ga.js"></script>
+    <script src="../../../../_static/extra.js"></script>
+    <script src="../../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Circuit Building" href="../../../circuit_building/circuit_building.html" />
@@ -58,17 +57,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -113,10 +110,10 @@ Neuron, we also need to compile the channel mod files.</p>
 <p>The information about the optimization to be run is stored in <cite>config/</cite>
 directory:</p>
 <ul class="simple">
-<li><cite>protocols.json</cite></li>
-<li><cite>features.json</cite></li>
-<li><cite>mechanisms.json</cite></li>
-<li><cite>parameters.json</cite> and <cite>parameters-demo.json</cite></li>
+<li><p><cite>protocols.json</cite></p></li>
+<li><p><cite>features.json</cite></p></li>
+<li><p><cite>mechanisms.json</cite></p></li>
+<li><p><cite>parameters.json</cite> and <cite>parameters-demo.json</cite></p></li>
 </ul>
 <p>For each set of parameters to be tested a neuron model is instantiated by the
 <cite>evaluator</cite>. A series of current injections is sent to the neuron while
@@ -136,7 +133,7 @@ mod file which is compiled by nrnivmodl.</p>
 specified as a value, or as a range, by giving its upper and lower bounds.</p>
 <p>Morphology of the neuron is located in <cite>morphology/</cite> directory:</p>
 <ul class="simple">
-<li><cite>morphology/BE37A-rep-cor-reg15.swc</cite></li>
+<li><p><cite>morphology/BE37A-rep-cor-reg15.swc</cite></p></li>
 </ul>
 <div class="bsp-container-center docutils container">
 <img alt="../../../../_images/fs-morpho.png" src="../../../../_images/fs-morpho.png" />
@@ -190,7 +187,7 @@ notebook.</p>
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

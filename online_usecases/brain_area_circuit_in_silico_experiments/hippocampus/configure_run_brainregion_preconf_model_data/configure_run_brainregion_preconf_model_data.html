@@ -4,23 +4,22 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Configure and run a rat hippocampus CA1 region using preconfigured HBP model and data &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/bsp.css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../../../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/load_ga.js"></script>
+    <script src="../../../../_static/extra.js"></script>
+    <script src="../../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Configure and run a hippocampus microcircuit" href="../configure_and_run_a_hippocampus_column/configure_and_run_a_hippocampus_column.html" />
@@ -44,7 +43,7 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Configure and run a rat hippocampus CA1 region using preconfigured HBP model and data</a><ul>
 <li><a class="reference internal" href="#run-simulations">Run Simulations</a></li>
@@ -68,17 +67,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -119,65 +116,62 @@
 <p><img alt="run_simulation" src="../../../../_images/run_simulation.png" /></p>
 <p>In the <strong>Section 1)</strong> you can configure:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">Population</span></code>: Population of cells to be loaded by the simulator.</li>
-<li><code class="docutils literal notranslate"><span class="pre">Duration</span></code>: Time length of stimulus duration, given in
-milliseconds(ms)</li>
-<li><code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Simulations</span></code>: From here you can see all the history of
-simulations (explained in page <a class="reference external" href="#view-simulations">View Simulations</a>)</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Population</span></code>: Population of cells to be loaded by the simulator.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Duration</span></code>: Time length of stimulus duration, given in
+milliseconds(ms)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Simulations</span></code>: From here you can see all the history of
+simulations (explained in page <a class="reference external" href="#view-simulations">View Simulations</a>)</p></li>
 </ul>
 <p>In the <strong>Section 2)</strong> you can configure:</p>
 <ul class="simple">
-<li>Using the buttons <img alt="edit_buttons" src="../../../../_images/edit_buttons.png" /> you can <code class="docutils literal notranslate"><span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">edit</span></code> or <code class="docutils literal notranslate"><span class="pre">remove</span></code> new stimulus/report (You can also
-double-click on the timeline to add or edit)</li>
-<li><code class="docutils literal notranslate"><span class="pre">Stimulations</span></code> configuration:</li>
+<li><p>Using the buttons <img alt="edit_buttons" src="../../../../_images/edit_buttons.png" /> you can <code class="docutils literal notranslate"><span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">edit</span></code> or <code class="docutils literal notranslate"><span class="pre">remove</span></code> new stimulus/report (You can also
+double-click on the timeline to add or edit)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Stimulations</span></code> configuration:</p></li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li><em>Population</em>: Name of a population to receive the stimulation</li>
-<li><em>Delay</em>: Time when the stimulus commences, given in
-milliseconds(ms)</li>
-<li><em>Duration</em>: Time length of stimulus duration, given in
-milliseconds(ms)</li>
-<li><em>Pattern</em>: Type of stimulus to inject</li>
-<li><em>Synapses per cell</em>: The number of synapses to create</li>
-<li><em>Lambda</em>: Configure the random distribution</li>
-<li><em>Weight</em>: The strength of the created synapses</li>
+<li><p><em>Population</em>: Name of a population to receive the stimulation</p></li>
+<li><p><em>Delay</em>: Time when the stimulus commences, given in
+milliseconds(ms)</p></li>
+<li><p><em>Duration</em>: Time length of stimulus duration, given in
+milliseconds(ms)</p></li>
+<li><p><em>Pattern</em>: Type of stimulus to inject</p></li>
+<li><p><em>Synapses per cell</em>: The number of synapses to create</p></li>
+<li><p><em>Lambda</em>: Configure the random distribution</p></li>
+<li><p><em>Weight</em>: The strength of the created synapses</p></li>
 </ul>
 <blockquote>
-<div><img alt="edit_stimulus" src="../../../../_images/edit_stimulus.png" /></div></blockquote>
+<div><p><img alt="edit_stimulus" src="../../../../_images/edit_stimulus.png" /></p>
+</div></blockquote>
 </div></blockquote>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">Reports</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Reports</span></code></p></li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li><em>Population</em>: Defines the population from where the data will be reported.</li>
-<li><em>StartTime</em>: Time to start reporting(ms)</li>
-<li><em>EndTime</em>: Time to stop reporting(ms)</li>
-<li><em>Compartments</em>: Which compartment(s) to report [Soma = compartment, Soma + Dendrites = AllCompartments]</li>
-<li><em>ReportOn</em>: What to report [Voltage, Calcium Concentration, Current Summation (for LFP)]</li>
-<li><em>dt</em>: The frequency of reporting in milliseconds(ms)</li>
-<li><em>Format</em>: Defines the report output format [Binary (.bbp), ASCII, HDF5]</li>
+<li><p><em>Population</em>: Defines the population from where the data will be reported.</p></li>
+<li><p><em>StartTime</em>: Time to start reporting(ms)</p></li>
+<li><p><em>EndTime</em>: Time to stop reporting(ms)</p></li>
+<li><p><em>Compartments</em>: Which compartment(s) to report [Soma = compartment, Soma + Dendrites = AllCompartments]</p></li>
+<li><p><em>ReportOn</em>: What to report [Voltage, Calcium Concentration, Current Summation (for LFP)]</p></li>
+<li><p><em>dt</em>: The frequency of reporting in milliseconds(ms)</p></li>
+<li><p><em>Format</em>: Defines the report output format [Binary (.bbp), ASCII, HDF5]</p></li>
 </ul>
 <blockquote>
-<div><img alt="edit_report" src="../../../../_images/edit_report.png" /></div></blockquote>
+<div><p><img alt="edit_report" src="../../../../_images/edit_report.png" /></p>
+</div></blockquote>
 </div></blockquote>
 <p>In the <strong>Section 3)</strong> you can modify the <strong>connection</strong> between populations on the circuit specifying:</p>
 <ul>
-<li><p class="first"><em>Source:</em> This target defines presynaptic cells</p>
-</li>
-<li><p class="first"><em>Destination:</em> This target defines postsynaptic cells</p>
-</li>
-<li><p class="first"><em>Delay (ms):</em> A delay after which the modifications are applied</p>
-</li>
-<li><p class="first"><em>Weight:</em> A scaling factor to adjust the synaptic strength (default = 1)</p>
-</li>
-<li><p class="first"><em>MinisFreq:</em> The Poisson mean rate for spontaneous synaptic activity</p>
-</li>
-<li><p class="first"><em>Synapse Configuration:</em> Snippets of hoc code to manipulate additional synaptic parameters</p>
+<li><p><em>Source:</em> This target defines presynaptic cells</p></li>
+<li><p><em>Destination:</em> This target defines postsynaptic cells</p></li>
+<li><p><em>Delay (ms):</em> A delay after which the modifications are applied</p></li>
+<li><p><em>Weight:</em> A scaling factor to adjust the synaptic strength (default = 1)</p></li>
+<li><p><em>MinisFreq:</em> The Poisson mean rate for spontaneous synaptic activity</p></li>
+<li><p><em>Synapse Configuration:</em> Snippets of hoc code to manipulate additional synaptic parameters</p>
 <p><img alt="connection_manipulation" src="../../../../_images/connection_manipulation.png" /></p>
 <ul>
-<li><p class="first">If you want to modify a synpase just click <em>configure</em> and a pop-up will appear</p>
+<li><p>If you want to modify a synpase just click <em>configure</em> and a pop-up will appear</p>
 <p><img alt="synapse_configurator" src="../../../../_images/synapse_configurator.png" /></p>
 </li>
 </ul>
@@ -185,45 +179,33 @@ milliseconds(ms)</li>
 </ul>
 <p>In the <strong>Section 4)</strong>  you can modify the <strong>projection</strong> going to the circuit</p>
 <ul>
-<li><p class="first"><em>Weight:</em> A scaling factor to adjust the synaptic strength (default = 1)</p>
-</li>
-<li><p class="first"><em>Minis Projection:</em> Generate inputs based on spontaneous synaptic activity
-- <em>Frequency (Hz):</em> Frequency of the spontaneous synaptic activity</p>
-</li>
-<li><p class="first"><em>Spike Replay Projection:</em> Generate inputs based on a given distribution</p>
+<li><p><em>Weight:</em> A scaling factor to adjust the synaptic strength (default = 1)</p></li>
+<li><p><em>Minis Projection:</em> Generate inputs based on spontaneous synaptic activity
+- <em>Frequency (Hz):</em> Frequency of the spontaneous synaptic activity</p></li>
+<li><p><em>Spike Replay Projection:</em> Generate inputs based on a given distribution</p>
 <ul>
-<li><p class="first"><em>Target:</em> From which cells the projection is coming</p>
-</li>
-<li><p class="first"><em>Frequency (Hz):</em> The input mean rate</p>
-</li>
-<li><p class="first"><em>Stimulus Type:</em> Type of distribution (default = Poisson)</p>
+<li><p><em>Target:</em> From which cells the projection is coming</p></li>
+<li><p><em>Frequency (Hz):</em> The input mean rate</p></li>
+<li><p><em>Stimulus Type:</em> Type of distribution (default = Poisson)</p>
 <p><img alt="projection_manipulation" src="../../../../_images/projection_manipulation.png" /></p>
 </li>
-<li><p class="first">If you want to modify a projection just click <em>configure</em> and a pop-up will appear</p>
+<li><p>If you want to modify a projection just click <em>configure</em> and a pop-up will appear</p>
 <p><img alt="projection_edition" src="../../../../_images/projection_edition.png" /></p>
 </li>
 </ul>
 </li>
-<li><p class="first">Launching a simulation will open a form to configure the parameters before executing the jobs on the supercomputer</p>
-</li>
+<li><p>Launching a simulation will open a form to configure the parameters before executing the jobs on the supercomputer</p></li>
 </ul>
 <blockquote>
 <div><ul>
-<li><p class="first"><em>Title</em>: The title of the job</p>
-</li>
-<li><p class="first"><em>Computer</em>: Which supercomputer will run the simulation.</p>
-</li>
-<li><p class="first"><em>Project</em>: (optional) If you want to specify under which project the simulation should be run</p>
-</li>
-<li><p class="first"><em>Nodes</em>: The amount of nodes that will be allocated and used for the simulation</p>
-</li>
-<li><p class="first"><em>Run Time</em>: The maximum time before timeout (in seconds).</p>
-</li>
-<li><p class="first"><em>CPUs Per Node</em>: Number of CPUs that are going to be used for the simulation.</p>
-</li>
-<li><p class="first"><em>Total Processors</em>: The total amount (nodes * cpus).</p>
-</li>
-<li><p class="first"><em>Preview BlueConfig</em>: This will open a new tab with the complete configuration that is going to be sent</p>
+<li><p><em>Title</em>: The title of the job</p></li>
+<li><p><em>Computer</em>: Which supercomputer will run the simulation.</p></li>
+<li><p><em>Project</em>: (optional) If you want to specify under which project the simulation should be run</p></li>
+<li><p><em>Nodes</em>: The amount of nodes that will be allocated and used for the simulation</p></li>
+<li><p><em>Run Time</em>: The maximum time before timeout (in seconds).</p></li>
+<li><p><em>CPUs Per Node</em>: Number of CPUs that are going to be used for the simulation.</p></li>
+<li><p><em>Total Processors</em>: The total amount (nodes * cpus).</p></li>
+<li><p><em>Preview BlueConfig</em>: This will open a new tab with the complete configuration that is going to be sent</p>
 <p><img alt="run_simulation_form" src="../../../../_images/run_simulation_form.png" /></p>
 </li>
 </ul>
@@ -235,47 +217,42 @@ milliseconds(ms)</li>
 <p><img alt="view_simulation" src="../../../../_images/view_simulation.png" /></p>
 <p>In the <strong>Section 1)</strong> you are able to:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">Filter</span></code> by <em>Title</em>, <em>Status</em>, <em>Supercomputer</em>, <em>Project</em></li>
-<li><code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Simulation</span></code> providing the full path to simulation folder on that HPC</li>
-<li><code class="docutils literal notranslate"><span class="pre">Launch</span> <span class="pre">Simulation</span></code>: this goes back to <em>Configure and Launch
-simuation</em> page</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Filter</span></code> by <em>Title</em>, <em>Status</em>, <em>Supercomputer</em>, <em>Project</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">Simulation</span></code> providing the full path to simulation folder on that HPC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Launch</span> <span class="pre">Simulation</span></code>: this goes back to <em>Configure and Launch
+simuation</em> page</p></li>
 </ul>
 <p>In the <strong>Section 2)</strong> you are able to:</p>
 <ul>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">Check</span> <span class="pre">status</span></code> of Simulation and Analysis steps:</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">Check</span> <span class="pre">status</span></code> of Simulation and Analysis steps:</p>
 <ul class="simple">
-<li>ready <img alt="done" src="../../../../_images/done.png" /></li>
-<li>queue <img alt="sync" src="../../../../_images/sync.png" /></li>
-<li>aborted <img alt="block" src="../../../../_images/block.png" /></li>
-<li>failed <img alt="error" src="../../../../_images/error.png" /></li>
+<li><p>ready <img alt="done" src="../../../../_images/done.png" /></p></li>
+<li><p>queue <img alt="sync" src="../../../../_images/sync.png" /></p></li>
+<li><p>aborted <img alt="block" src="../../../../_images/block.png" /></p></li>
+<li><p>failed <img alt="error" src="../../../../_images/error.png" /></p></li>
 </ul>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">View</span></code> the details page of the simulation.</p>
-</li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">Analyse</span></code> will open a form to configure the parameters before executing the analysis on the supercomputer</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">View</span></code> the details page of the simulation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Analyse</span></code> will open a form to configure the parameters before executing the analysis on the supercomputer</p>
 <ul>
-<li><p class="first"><em>Title</em>: Title of the job</p>
-</li>
-<li><p class="first"><em>Report</em>: Report created by the simulation</p>
-</li>
-<li><dl class="first docutils">
-<dt><em>Raster / Traces</em>: (Basic Analysis) Type of analysis to run</dt>
-<dd><ul class="first last simple">
-<li><em>Whole Population</em>: Population cells</li>
-<li><em>Cells GIDs</em>: Specify single GID and/or ranges of GIDs</li>
-<li><em>Random Cells</em>: Amount of random cells (from the report) to analyze</li>
+<li><p><em>Title</em>: Title of the job</p></li>
+<li><p><em>Report</em>: Report created by the simulation</p></li>
+<li><dl class="simple">
+<dt><em>Raster / Traces</em>: (Basic Analysis) Type of analysis to run</dt><dd><ul class="simple">
+<li><p><em>Whole Population</em>: Population cells</p></li>
+<li><p><em>Cells GIDs</em>: Specify single GID and/or ranges of GIDs</p></li>
+<li><p><em>Random Cells</em>: Amount of random cells (from the report) to analyze</p></li>
 </ul>
 </dd>
 </dl>
 <p><img alt="run_analysis_form" src="../../../../_images/run_analysis_form.png" /></p>
 </li>
-<li><dl class="first docutils">
-<dt><em>LFP</em>: (Advanced Analysis) Type of analysis to run</dt>
-<dd><ul class="first last simple">
-<li><em>Population</em>: Population cells</li>
-<li><em>Plots</em>: Type of plots to get as a result of the LFP calculation</li>
-<li><em>Duration</em>: Start and End duration of the LFP calculation</li>
-<li><em>Points</em>: Either write or upload a file with points to calculate LFP</li>
+<li><dl class="simple">
+<dt><em>LFP</em>: (Advanced Analysis) Type of analysis to run</dt><dd><ul class="simple">
+<li><p><em>Population</em>: Population cells</p></li>
+<li><p><em>Plots</em>: Type of plots to get as a result of the LFP calculation</p></li>
+<li><p><em>Duration</em>: Start and End duration of the LFP calculation</p></li>
+<li><p><em>Points</em>: Either write or upload a file with points to calculate LFP</p></li>
 </ul>
 </dd>
 </dl>
@@ -283,8 +260,7 @@ simuation</em> page</li>
 </li>
 </ul>
 </li>
-<li><p class="first"><code class="docutils literal notranslate"><span class="pre">Delete</span></code> the simulation</p>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Delete</span></code> the simulation</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -293,31 +269,34 @@ simuation</em> page</li>
 <p><img alt="simulation_details" src="../../../../_images/simulation_details.png" /></p>
 <p>In the <strong>Section 1)</strong> you are able to see:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">Simulation</span></code> with the following information<ul>
-<li><em>Name</em></li>
-<li><em>ID</em></li>
-<li><em>Status</em></li>
-<li><em>Submission Date</em></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Simulation</span></code> with the following information</p>
+<ul>
+<li><p><em>Name</em></p></li>
+<li><p><em>ID</em></p></li>
+<li><p><em>Status</em></p></li>
+<li><p><em>Submission Date</em></p></li>
 </ul>
 </li>
 </ul>
 <p>In the <strong>Section 2)</strong> you are able to see:</p>
 <blockquote>
 <div><ul class="simple">
-<li><em>Analysis</em>: Plots of the analysis will be shown here</li>
-<li><em>BlueConfig</em>: The configuration that was sent to run the simulation</li>
-<li><em>Files</em>: List of files that the simulation produced</li>
-<li><em>Technical Logs</em>:<ul>
-<li><em>Unicore Logs</em></li>
-<li><em>Stderr</em>: Logs of the simulation</li>
-<li><em>Stdout</em>: Output information of the simulation</li>
+<li><p><em>Analysis</em>: Plots of the analysis will be shown here</p></li>
+<li><p><em>BlueConfig</em>: The configuration that was sent to run the simulation</p></li>
+<li><p><em>Files</em>: List of files that the simulation produced</p></li>
+<li><p><em>Technical Logs</em>:</p>
+<ul>
+<li><p><em>Unicore Logs</em></p></li>
+<li><p><em>Stderr</em>: Logs of the simulation</p></li>
+<li><p><em>Stdout</em>: Output information of the simulation</p></li>
 </ul>
 </li>
 </ul>
 </div></blockquote>
 <p>The <code class="docutils literal notranslate"><span class="pre">Analysis</span></code> section shows the different analyses the user has run</p>
 <blockquote>
-<div><img alt="simulation_details_analysis" src="../../../../_images/simulation_details_analysis.png" /></div></blockquote>
+<div><p><img alt="simulation_details_analysis" src="../../../../_images/simulation_details_analysis.png" /></p>
+</div></blockquote>
 </div>
 </div>
 
@@ -343,7 +322,7 @@ simuation</em> page</li>
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

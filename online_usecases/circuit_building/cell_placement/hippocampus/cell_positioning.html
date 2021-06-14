@@ -4,23 +4,22 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rat hippocampus CA1 &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/bsp.css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../../../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/load_ga.js"></script>
+    <script src="../../../../_static/extra.js"></script>
+    <script src="../../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Striatum microcircuitry" href="../basalganglia/basalganglia.html" />
@@ -44,7 +43,7 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../../../index.html">Table Of Contents</a></h3>
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Rat hippocampus CA1</a><ul>
 <li><a class="reference internal" href="#approach">Approach:</a></li>
@@ -68,17 +67,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -127,13 +124,13 @@ properties of the cells.</p>
 <p>The sequence of steps is the following:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Define the region of interest based on the parcellation given by the atlas</li>
-<li>Define cell positions based on given neuron densities</li>
-<li>Define excitatory/inhibitory properties based on given ratio</li>
-<li>Define ME-Type properties based on M-Type and E-Type ratio</li>
-<li>Define the morphology to be used based on available morphologies and
-previously defined properties</li>
-<li>Define cell orientation based on a computed orientation field in the volume</li>
+<li><p>Define the region of interest based on the parcellation given by the atlas</p></li>
+<li><p>Define cell positions based on given neuron densities</p></li>
+<li><p>Define excitatory/inhibitory properties based on given ratio</p></li>
+<li><p>Define ME-Type properties based on M-Type and E-Type ratio</p></li>
+<li><p>Define the morphology to be used based on available morphologies and
+previously defined properties</p></li>
+<li><p>Define cell orientation based on a computed orientation field in the volume</p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -143,9 +140,9 @@ previously defined properties</li>
 <p>Volume was adapted from <a class="reference external" href="http://krasnow1.gmu.edu/cn3/hippocampus3d/">Ropireddy et al., 2012</a></p>
 <p><strong>Cell composition</strong></p>
 <ul class="simple">
-<li>Total number of cells: 350000 <a class="reference external" href="https://doi.org/10.1002/hipo.22141">(adult rat - Bezaire and Soltesz, 2013)</a></li>
-<li>EI ratio: 89:11 <a class="reference external" href="https://doi.org/10.1002/hipo.22141">(adult rat - Bezaire and Soltesz, 2013)</a></li>
-<li>Percentage of neuron types from <a class="reference external" href="https://doi.org/10.1002/hipo.22141">(Bezaire and Soltesz, 2013 - adult rat)</a></li>
+<li><p>Total number of cells: 350000 <a class="reference external" href="https://doi.org/10.1002/hipo.22141">(adult rat - Bezaire and Soltesz, 2013)</a></p></li>
+<li><p>EI ratio: 89:11 <a class="reference external" href="https://doi.org/10.1002/hipo.22141">(adult rat - Bezaire and Soltesz, 2013)</a></p></li>
+<li><p>Percentage of neuron types from <a class="reference external" href="https://doi.org/10.1002/hipo.22141">(Bezaire and Soltesz, 2013 - adult rat)</a></p></li>
 </ul>
 <p><strong>Morphoelectrical-type composition</strong></p>
 <p>We collected 146 electrophysiological single cell recordings from different
@@ -161,75 +158,75 @@ few recordings and for this reason we restricted the e-types to classical
 accommodating (cAC), bursting accommodating (bAC) and classical
 non-accommodating (cNAC). Each morphology type (m-type) can show multiple
 firing patterns, leading to different morpho-electrical types (me-types).</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="20%" />
-<col width="24%" />
-<col width="28%" />
-<col width="28%" />
+<col style="width: 20%" />
+<col style="width: 24%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&#160;</th>
-<th class="head">cNAC</th>
-<th class="head">cAC</th>
-<th class="head">bAC</th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>cNAC</p></th>
+<th class="head"><p>cAC</p></th>
+<th class="head"><p>bAC</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>Ivy</td>
-<td>33.33%</td>
-<td>0.00%</td>
-<td>66.67%</td>
+<tbody>
+<tr class="row-even"><td><p>Ivy</p></td>
+<td><p>33.33%</p></td>
+<td><p>0.00%</p></td>
+<td><p>66.67%</p></td>
 </tr>
-<tr class="row-odd"><td>OLM</td>
-<td>0.00%</td>
-<td>100.00%</td>
-<td>0.00%</td>
+<tr class="row-odd"><td><p>OLM</p></td>
+<td><p>0.00%</p></td>
+<td><p>100.00%</p></td>
+<td><p>0.00%</p></td>
 </tr>
-<tr class="row-even"><td>PVBC</td>
-<td>70.00%</td>
-<td>0.00%</td>
-<td>30.00%</td>
+<tr class="row-even"><td><p>PVBC</p></td>
+<td><p>70.00%</p></td>
+<td><p>0.00%</p></td>
+<td><p>30.00%</p></td>
 </tr>
-<tr class="row-odd"><td>CCKBC</td>
-<td>0.00%</td>
-<td>100.00%</td>
-<td>0.00%</td>
+<tr class="row-odd"><td><p>CCKBC</p></td>
+<td><p>0.00%</p></td>
+<td><p>100.00%</p></td>
+<td><p>0.00%</p></td>
 </tr>
-<tr class="row-even"><td>BS</td>
-<td>75.00%</td>
-<td>0.00%</td>
-<td>25.00%</td>
+<tr class="row-even"><td><p>BS</p></td>
+<td><p>75.00%</p></td>
+<td><p>0.00%</p></td>
+<td><p>25.00%</p></td>
 </tr>
-<tr class="row-odd"><td>AA</td>
-<td>0.00%</td>
-<td>0.00%</td>
-<td>100.00%</td>
+<tr class="row-odd"><td><p>AA</p></td>
+<td><p>0.00%</p></td>
+<td><p>0.00%</p></td>
+<td><p>100.00%</p></td>
 </tr>
-<tr class="row-even"><td>SCA</td>
-<td>0.00%</td>
-<td>100.00%</td>
-<td>0.00%</td>
+<tr class="row-even"><td><p>SCA</p></td>
+<td><p>0.00%</p></td>
+<td><p>100.00%</p></td>
+<td><p>0.00%</p></td>
 </tr>
-<tr class="row-odd"><td>PPA</td>
-<td>0.00%</td>
-<td>0.00%</td>
-<td>100.00%</td>
+<tr class="row-odd"><td><p>PPA</p></td>
+<td><p>0.00%</p></td>
+<td><p>0.00%</p></td>
+<td><p>100.00%</p></td>
 </tr>
-<tr class="row-even"><td>IS1</td>
-<td>0.00%</td>
-<td>100.00%</td>
-<td>0.00%</td>
+<tr class="row-even"><td><p>IS1</p></td>
+<td><p>0.00%</p></td>
+<td><p>100.00%</p></td>
+<td><p>0.00%</p></td>
 </tr>
-<tr class="row-odd"><td>IS3</td>
-<td>0.00%</td>
-<td>100.00%</td>
-<td>0.00%</td>
+<tr class="row-odd"><td><p>IS3</p></td>
+<td><p>0.00%</p></td>
+<td><p>100.00%</p></td>
+<td><p>0.00%</p></td>
 </tr>
-<tr class="row-even"><td>Tri</td>
-<td>0.00%</td>
-<td>100.00%</td>
-<td>0.00%</td>
+<tr class="row-even"><td><p>Tri</p></td>
+<td><p>0.00%</p></td>
+<td><p>100.00%</p></td>
+<td><p>0.00%</p></td>
 </tr>
 </tbody>
 </table>
@@ -238,21 +235,21 @@ firing patterns, leading to different morpho-electrical types (me-types).</p>
 <h2>Executing the Use Case<a class="headerlink" href="#executing-the-use-case" title="Permalink to this headline">¶</a></h2>
 <p>Execute the cell (SHIFT + ENTER) in the “Cell Placement Hippocampus Setup” notebook. Then navigate to the “Cell Placement Hippocampus” notebook and execute them sequentially (SHIFT + ENTER).</p>
 <ol class="arabic">
-<li><p class="first">positioning neurons</p>
+<li><p>positioning neurons</p>
 <p>This step computes cell positions with downscaled densities as an
 illustration. It then displays the cell positions in a widget.</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../../_images/position.png"><img alt="../../../../_images/position.png" src="../../../../_images/position.png" style="width: 600px;" /></a>
 </div></blockquote>
 </li>
-<li><p class="first">defining excitatory/inhibitory property</p>
+<li><p>defining excitatory/inhibitory property</p>
 <p>This step computes the excitatory/inhibitory property based on the
 provided ratio and displays it in a widget.</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../../_images/ei.png"><img alt="../../../../_images/ei.png" src="../../../../_images/ei.png" style="width: 600px;" /></a>
 </div></blockquote>
 </li>
-<li><p class="first">defining M-Type and E-Type properties</p>
+<li><p>defining M-Type and E-Type properties</p>
 <p>This step computes the M-Type property and E-Type property at the same time
 and displays them in a widget.</p>
 <p>M-Type property:</p>
@@ -264,13 +261,13 @@ and displays them in a widget.</p>
 <div><a class="reference internal image-reference" href="../../../../_images/etype.png"><img alt="../../../../_images/etype.png" src="../../../../_images/etype.png" style="width: 600px;" /></a>
 </div></blockquote>
 </li>
-<li><p class="first">defining morphology for the cell position</p>
+<li><p>defining morphology for the cell position</p>
 <p>This step computes which morphology will be assigned to a particular cell position.</p>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../../_images/morphology.png"><img alt="../../../../_images/morphology.png" src="../../../../_images/morphology.png" style="width: 600px;" /></a>
 </div></blockquote>
 </li>
-<li><p class="first">defining cell orientation</p>
+<li><p>defining cell orientation</p>
 <p>This steps computes the 3 vector fields X, Y, and Z and uses them to orient each neuron.</p>
 <p>X vector field:</p>
 <blockquote>
@@ -311,7 +308,7 @@ and displays them in a widget.</p>
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

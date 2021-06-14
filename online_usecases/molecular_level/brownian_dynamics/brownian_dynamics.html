@@ -4,23 +4,23 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analyse the results of a Brownian dynamics (BD) simulation for calculating protein-protein association rate constants &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/bsp.css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/load_ga.js"></script>
+    <script src="../../../_static/extra.js"></script>
+    <script src="../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Calculate the electrostatic potential of a protein from its atomic structure" href="../electrostatic_potential/electrostatic_potential.html" />
@@ -44,7 +44,7 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <h3><a href="../../../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Analyse the results of a Brownian dynamics (BD) simulation for calculating protein-protein association rate constants</a><ul>
 <li><a class="reference internal" href="#overview">Overview</a></li>
@@ -69,17 +69,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -117,15 +115,15 @@
 <p>In this use case, we analyse the results of BD simulations of the association of the <span class="math notranslate nohighlight">\(G_{olf}\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span> - subunit to the enzyme adenylyl cyclase 5 (AC5) [An upcoming use case “Set Up a Brownian Dynamics simulation for calculation of protein association rate constant” will explain how to set up and run these simulations].</p>
 <p>This use case will explain:</p>
 <ul class="simple">
-<li>The functionality provided by SDA to calculate the biomolecular rate of <span class="math notranslate nohighlight">\(G_{olf}\)</span> associating to AC5 by analyzing the contact formation between the two protein species during a set of 50 000 completed Brownian dynamics simulation trajectories.</li>
-<li>The use of a bootstrapping procedure to estimate the error in the predicted rates.</li>
-<li>The use of matplotlib to plot the dependence of association rates on how we define the end point of association based on contact formation.</li>
+<li><p>The functionality provided by SDA to calculate the biomolecular rate of <span class="math notranslate nohighlight">\(G_{olf}\)</span> associating to AC5 by analyzing the contact formation between the two protein species during a set of 50 000 completed Brownian dynamics simulation trajectories.</p></li>
+<li><p>The use of a bootstrapping procedure to estimate the error in the predicted rates.</p></li>
+<li><p>The use of matplotlib to plot the dependence of association rates on how we define the end point of association based on contact formation.</p></li>
 </ul>
 </div>
 <div class="section" id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>How is protein diffusion modeled in Brownian dynamics simulations?</li>
+<li><p>How is protein diffusion modeled in Brownian dynamics simulations?</p></li>
 </ul>
 <p>As the interaction of large biomolecules in solution is a highly complex problem with many degrees of freedom, the diffusional motion of proteins in Brownian dynamics simulations   is often modeled by assuming the proteins to be rigid bodies. Furthermore, their interactions with surrounding water molecules are modeled implicitly (using random forces that mimic the collisions between solutes and water molecules). These assumptions not only speed up the calculation of the systematic forces by allowing the use of precomputed interaction grids, but also allow for larger simulation time steps, as faster vibrational motions are removed. At each simulation step, the position <em>r</em> of solute <em>i</em> within a system of <em>N</em> solutes is propagated using the Ermak-McCammon equation:</p>
 <div class="math notranslate nohighlight">
@@ -142,10 +140,10 @@
 <p>A similar equation is used to propagate the rotational motion of the solutes based on the torques acting on them.</p>
 <p>For information on the calculation of the contributions to the force <span class="math notranslate nohighlight">\(F_i\)</span>, see [<a class="reference external" href="https://doi.org/10.1002/jcc.23971">https://doi.org/10.1002/jcc.23971</a>].</p>
 <ul class="simple">
-<li>How can bimolecular association rate constant be computed?</li>
+<li><p>How can bimolecular association rate constant be computed?</p></li>
 </ul>
 <p>SDA calculates bimolecular association rate constants using the [Northrup, Allison and McCammon](<a class="reference external" href="https://doi.org/10.1063/1.446900">https://doi.org/10.1063/1.446900</a>) method. Here we run many thousands of Brownian  dynamics trajectories, each beginning with the two solutes (in this case proteins) at a separation <em>b</em> (shown by the b-surface in the figure below). In each trajectory, we then simulate the diffusion of one solute relative to another, until the solutes are separated by a larger distance <em>c</em> (shown by the c-surface in the figure below).</p>
-<div class="figure">
+<div class="figure align-default">
 <a class="reference internal image-reference" href="https://projects.h-its.org/mcmsoft/hbpdata/sda_bsurface_csurface.gif"><img alt="https://projects.h-its.org/mcmsoft/hbpdata/sda_bsurface_csurface.gif" src="https://projects.h-its.org/mcmsoft/hbpdata/sda_bsurface_csurface.gif" style="width: 300pt;" /></a>
 </div>
 <p>During each trajectory, we monitor the formation of polar contacts present in the native state of the complex formed by the two solutes. If we define a set of reaction criteria that means that a reactive encounter occurs when <em>N</em> native contacts are within a certain distance, we can calculate the fraction <span class="math notranslate nohighlight">\(\beta\)</span> of our trajectories in which these criteria are met, and estimate the bimolecular association rate constant <span class="math notranslate nohighlight">\(k_{on}\)</span> from</p>
@@ -157,34 +155,34 @@
 <h2>Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h2>
 <p>In this example, we estimate the the rate constant of <span class="math notranslate nohighlight">\(G_{olf}\)</span> associating to AC5 using a reaction criterion of two contacts at a distance of 6 <em>Angstrom</em>.
 For this, we downloaded a file called <em>assoc_bootstrap.log</em> from CSCS storage. This file gives a concise representation of the results of 50 000 Brownian dynamics simulation trajectories. The header to the file gives some information about the simulations that have been run.</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="14%" />
-<col width="11%" />
-<col width="20%" />
-<col width="21%" />
-<col width="14%" />
-<col width="15%" />
-<col width="5%" />
+<col style="width: 14%" />
+<col style="width: 11%" />
+<col style="width: 20%" />
+<col style="width: 21%" />
+<col style="width: 14%" />
+<col style="width: 15%" />
+<col style="width: 5%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><span class="math notranslate nohighlight">\(nb_{contact}\)</span></th>
-<th class="head"><span class="math notranslate nohighlight">\(nb_{win}\)</span></th>
-<th class="head"><span class="math notranslate nohighlight">\(first_{win}\)</span> <em>Angstrom</em></th>
-<th class="head"><span class="math notranslate nohighlight">\(width_{win}\)</span> <em>Angstrom</em></th>
-<th class="head"><span class="math notranslate nohighlight">\(b_{rate}\)</span> 1/Ms</th>
-<th class="head"><span class="math notranslate nohighlight">\(c_{rate}\)</span> 1/Ms</th>
-<th class="head">nrun</th>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(nb_{contact}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(nb_{win}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(first_{win}\)</span> <em>Angstrom</em></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(width_{win}\)</span> <em>Angstrom</em></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(b_{rate}\)</span> 1/Ms</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c_{rate}\)</span> 1/Ms</p></th>
+<th class="head"><p>nrun</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>4</td>
-<td>35</td>
-<td>3.00</td>
-<td>0.50</td>
-<td>0.231552E+11</td>
-<td>0.694655E+11</td>
-<td>50000</td>
+<tbody>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>35</p></td>
+<td><p>3.00</p></td>
+<td><p>0.50</p></td>
+<td><p>0.231552E+11</p></td>
+<td><p>0.694655E+11</p></td>
+<td><p>50000</p></td>
 </tr>
 </tbody>
 </table>
@@ -193,7 +191,7 @@ For this, we downloaded a file called <em>assoc_bootstrap.log</em> from CSCS sto
 <div class="section" id="interpretation-of-results">
 <h2>Interpretation of results<a class="headerlink" href="#interpretation-of-results" title="Permalink to this headline">¶</a></h2>
 <p>During the 50 000 trajectories described in the log file, we monitor the formation of up to 4 native contacts. In the cells below, we perform bootstrapping by randomly resampling 200 sets of 50 000 trajectories. From there, we will extract the values and convert them to a pandas dataframe, which will then be plotted with matplotlib, and we  save summary data to a set of output files.</p>
-<div class="figure">
+<div class="figure align-default">
 <a class="reference internal image-reference" href="../../../_images/rates.png"><img alt="../../../_images/rates.png" src="../../../_images/rates.png" style="width: 500pt;" /></a>
 </div>
 <p>In the figure above, the average association rate constant is plotted on a logarithmic scale against the contact distance in <em>Angstrom</em>; when 1 to 4  contacts between the two solutes, as defined by the reaction criteria, are shorter than the contact distance. One can see that the association rate constant decreases the closer the solutes come to each other.  It also decreases as the number of contacts that have to be satisfied increases. These trends can be explained by the decreasing number of ways the two solutes can arrange with respect to each other as the reaction criteria become more stringent.  From this plot, the association rate constant for a given reaction criterion can be extracted and used for further modeling.</p>
@@ -222,7 +220,7 @@ For this, we downloaded a file called <em>assoc_bootstrap.log</em> from CSCS sto
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

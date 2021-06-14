@@ -4,23 +4,22 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HPC Status Monitor &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/bsp.css" />
     <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../_static/extra.js"></script>
-    <script type="text/javascript" src="../_static/hbpdoc.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/load_ga.js"></script>
+    <script src="../_static/extra.js"></script>
+    <script src="../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Online Use Cases" href="../online_usecases/online_usecases.html" />
@@ -44,7 +43,7 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">HPC Status Monitor</a><ul>
 <li><a class="reference internal" href="#hpc-system-status">HPC system status</a></li>
@@ -67,17 +66,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -127,7 +124,7 @@ respectively.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../_images/hpc_monitor_main.png"><img alt="../_images/hpc_monitor_main.png" class="align-right" src="../_images/hpc_monitor_main.png" style="width: 794.4px; height: 449.6px;" /></a>
+<a class="reference internal image-reference" href="../_images/hpc_monitor_main.png"><img alt="../_images/hpc_monitor_main.png" class="align-right" src="../_images/hpc_monitor_main.png" style="width: 794.4000000000001px; height: 449.6px;" /></a>
 <p>Fig. 1 Top panel of the HPC Status Monitor.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -149,7 +146,7 @@ to submit job at the moment of checking.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<a class="reference internal image-reference" href="../_images/hpc_monitor_pizdaint.png"><img alt="../_images/hpc_monitor_pizdaint.png" class="align-right" src="../_images/hpc_monitor_pizdaint.png" style="width: 806.4px; height: 776.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/hpc_monitor_pizdaint.png"><img alt="../_images/hpc_monitor_pizdaint.png" class="align-right" src="../_images/hpc_monitor_pizdaint.png" style="width: 806.4000000000001px; height: 776.0px;" /></a>
 <p>Fig. 2 User’s details panel. The projects the user belongs to on the
 selected HPC system and the relative quotas are shown.</p>
 <div class="line-block">
@@ -188,7 +185,7 @@ successful</p>
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

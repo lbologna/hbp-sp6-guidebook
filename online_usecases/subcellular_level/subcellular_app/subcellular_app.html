@@ -4,23 +4,22 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subcellular application &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/bsp.css" />
     <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../../_static/hbpdoc.js"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/load_ga.js"></script>
+    <script src="../../../_static/extra.js"></script>
+    <script src="../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Trace Analysis" href="../../trace_analysis/trace_analysis.html" />
@@ -44,7 +43,7 @@
             
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../../index.html">Table Of Contents</a></h3>
+  <h3><a href="../../../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Subcellular application</a><ul>
 <li><a class="reference internal" href="#general-info">General info</a></li>
@@ -69,17 +68,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -151,7 +148,7 @@ of the query can be added to a molecular network model.</p>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Open subcellular application by using this link: <a class="reference external" href="https://subcellular.humanbrainproject.eu">SubcellularApp</a></li>
+<li><p>Open subcellular application by using this link: <a class="reference external" href="https://subcellular.humanbrainproject.eu">SubcellularApp</a></p></li>
 </ol>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -161,10 +158,10 @@ of the query can be added to a molecular network model.</p>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic">
-<li><p class="first">Create a new model or load/import an existing one</p>
+<li><p>Create a new model or load/import an existing one</p>
 <ul class="simple">
-<li>To load a public model click the arrow to expand a list of public models
-in <cite>Subcellular models repository</cite>, choose one, then click <cite>Load</cite></li>
+<li><p>To load a public model click the arrow to expand a list of public models
+in <cite>Subcellular models repository</cite>, choose one, then click <cite>Load</cite></p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -177,23 +174,22 @@ in <cite>Subcellular models repository</cite>, choose one, then click <cite>Load
 </div>
 <blockquote>
 <div><ul class="simple">
-<li>To import <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> or <a class="reference external" href="http://sbml.org/Main_Page">SBML</a>  model click
-<cite>Import</cite> in <cite>Model</cite> menu</li>
-<li>To create a new model specify all model parameters and reaction equations
+<li><p>To import <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> or <a class="reference external" href="http://sbml.org/Main_Page">SBML</a>  model click
+<cite>Import</cite> in <cite>Model</cite> menu</p></li>
+<li><p>To create a new model specify all model parameters and reaction equations
 sequentially opening and filling the tables in the <cite>Model</cite> menu (upper left
 of the UI). Each table corresponds to a particular section of the
 BioNetGen file of the model (with except for <cite>Diffusions</cite> and <cite>Geometry</cite>
-section). All expressions should comply with the BioNetGen language.</li>
+section). All expressions should comply with the BioNetGen language.</p></li>
 </ul>
 </div></blockquote>
 <ol class="arabic">
-<li><p class="first">Models are represented by a set of structures (e.g. compartments of models) and
+<li><p>Models are represented by a set of structures (e.g. compartments of models) and
 a collection of entities from the BioNetGen language such as parameters, functions,
 molecules, species, observables and reactions. To modify these entities sof the model
 navigate to the corresponding section in the Physiology dropdown menu and specify them
-according to the BioNetGen language (for more about BioNetGen see the <a class="reference external" href="http://bionetgen.org/">official documentation</a>)</p>
-</li>
-<li><p class="first">To add diffusions (required if using STEPS) navigate to the corresponding section,
+according to the BioNetGen language (for more about BioNetGen see the <a class="reference external" href="http://bionetgen.org/">official documentation</a>)</p></li>
+<li><p>To add diffusions (required if using STEPS) navigate to the corresponding section,
 click <cite>New diffusion</cite> and specify a name for the diffusive species or molecules,
 the affected structure, the <a class="reference external" href="https://www.csb.pitt.edu/Faculty/Faeder/?page_id=409">BNGL</a> expression and the diffusion
 coefficient in m^2/s.</p>
@@ -207,7 +203,7 @@ coefficient in m^2/s.</p>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic">
-<li><p class="first">To add a geometry (required if using STEPS) click <cite>Add geometry</cite> in
+<li><p>To add a geometry (required if using STEPS) click <cite>Add geometry</cite> in
 the corresponding section: specify its name, add a <a class="reference external" href="http://wias-berlin.de/software/tetgen/fformats.html">TetGen</a> tetrahedral
 mesh and a geometry specification file (geometry.json, contains
 relationship between structures and their corresponding tetrahedra and
@@ -232,10 +228,10 @@ converting mesh vertices position units to meters, see examples below)</p>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic">
-<li><p class="first">At any stage model can be:</p>
+<li><p>At any stage model can be:</p>
 <ul class="simple">
-<li>saved using <cite>Model</cite> -&gt; <cite>Save</cite> sequence, and then loaded from <cite>My models</cite>
-in <cite>Subcellular models repository</cite></li>
+<li><p>saved using <cite>Model</cite> -&gt; <cite>Save</cite> sequence, and then loaded from <cite>My models</cite>
+in <cite>Subcellular models repository</cite></p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -248,7 +244,7 @@ in <cite>Subcellular models repository</cite></li>
 </div>
 <blockquote>
 <div><ul class="simple">
-<li>exported into different formats by using <cite>Model</cite> -&gt; <cite>Export</cite></li>
+<li><p>exported into different formats by using <cite>Model</cite> -&gt; <cite>Export</cite></p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -259,10 +255,10 @@ in <cite>Subcellular models repository</cite></li>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic">
-<li><p class="first">To simulate a model select <cite>Simulations</cite> on the <cite>Model</cite> panel, then create
+<li><p>To simulate a model select <cite>Simulations</cite> on the <cite>Model</cite> panel, then create
 new simulation by clicking the corresponding button.</p>
 <ul class="simple">
-<li>Specify the solver (<a class="reference external" href="http://steps.sourceforge.net/STEPS/default.php">STEPS</a> or <a class="reference external" href="http://michaelsneddon.net/nfsim/">NFSim</a>), change the default simulation parameters</li>
+<li><p>Specify the solver (<a class="reference external" href="http://steps.sourceforge.net/STEPS/default.php">STEPS</a> or <a class="reference external" href="http://michaelsneddon.net/nfsim/">NFSim</a>), change the default simulation parameters</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -275,7 +271,7 @@ new simulation by clicking the corresponding button.</p>
 </div>
 <blockquote>
 <div><ul class="simple">
-<li>If desired add stimulations (this can be imported from a CSV or NFSim .rnf file) if needed:</li>
+<li><p>If desired add stimulations (this can be imported from a CSV or NFSim .rnf file) if needed:</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -287,7 +283,7 @@ new simulation by clicking the corresponding button.</p>
 </div>
 <blockquote>
 <div><ul class="simple">
-<li>If 3D visualization is needed, Spatial sampling parameters (sampled compartments and observables) should be specified:</li>
+<li><p>If 3D visualization is needed, Spatial sampling parameters (sampled compartments and observables) should be specified:</p></li>
 </ul>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -308,7 +304,7 @@ new simulation by clicking the corresponding button.</p>
 <div class="line"><br /></div>
 </div>
 <ol class="arabic">
-<li><p class="first">Simulation logs and charts are available for inspection once the simulation
+<li><p>Simulation logs and charts are available for inspection once the simulation
 is started by clicking on <cite>Graph</cite> or <cite>Log</cite> buttons.</p>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -323,77 +319,77 @@ is started by clicking on <cite>Graph</cite> or <cite>Log</cite> buttons.</p>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>Parameters</p>
-<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fac</span>       <span class="mi">1</span>
-<span class="n">kCa</span>       <span class="mi">0</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">Ca_in</span>     <span class="mf">0.08e-6</span> <span class="o">*</span> <span class="mf">83.3</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">Ca_out</span>    <span class="mf">83.3</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CBN1_on</span>   <span class="mi">75000000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CBN2_on</span>   <span class="mi">75000000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CBC1_on</span>   <span class="mi">75000000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CBC2_on</span>   <span class="mi">75000000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CBN1_off</span>  <span class="mf">29.5</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CBN2_off</span>  <span class="mf">29.5</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CBC1_off</span>  <span class="mf">29.5</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CBC2_off</span>  <span class="mf">29.5</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CaMN1_on</span>  <span class="mi">770000000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CaMN2_on</span>  <span class="mi">32000000000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CaMC1_on</span>  <span class="mi">84000000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CaMC2_on</span>  <span class="mi">25000000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CaMN1_off</span> <span class="mi">160000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CaMN2_off</span> <span class="mi">22000</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CaMC1_off</span> <span class="mi">2600</span> <span class="o">*</span> <span class="n">fac</span>
-<span class="n">CaMC2_off</span> <span class="mf">6.5</span> <span class="o">*</span> <span class="n">fac</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fac       1
+kCa       0 * fac
+Ca_in     0.08e-6 * 83.3 * fac
+Ca_out    83.3 * fac
+CBN1_on   75000000 * fac
+CBN2_on   75000000 * fac
+CBC1_on   75000000 * fac
+CBC2_on   75000000 * fac
+CBN1_off  29.5 * fac
+CBN2_off  29.5 * fac
+CBC1_off  29.5 * fac
+CBC2_off  29.5 * fac
+CaMN1_on  770000000 * fac
+CaMN2_on  32000000000 * fac
+CaMC1_on  84000000 * fac
+CaMC2_on  25000000 * fac
+CaMN1_off 160000 * fac
+CaMN2_off 22000 * fac
+CaMC1_off 2600 * fac
+CaMC2_off 6.5 * fac
 </pre></div>
 </div>
 <p>Functions</p>
-<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">k__5</span><span class="p">()</span>  <span class="o">=</span> <span class="n">Ca_in</span>
-<span class="n">k__6</span><span class="p">()</span>  <span class="o">=</span> <span class="n">Ca_out</span>
-<span class="n">k_4</span><span class="p">()</span>   <span class="o">=</span> <span class="n">CBN1_on</span>
-<span class="n">k_5</span><span class="p">()</span>   <span class="o">=</span> <span class="n">CBN2_on</span>
-<span class="n">k_6</span><span class="p">()</span>   <span class="o">=</span> <span class="n">CBC1_on</span>
-<span class="n">k_7</span><span class="p">()</span>   <span class="o">=</span> <span class="n">CBC2_on</span>
-<span class="n">k_9</span><span class="p">()</span>   <span class="o">=</span> <span class="n">CBN1_off</span>
-<span class="n">k_10</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CBN2_off</span>
-<span class="n">k_11</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CBC1_off</span>
-<span class="n">k_12</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CBC2_off</span>
-<span class="n">k_14</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CaMN1_on</span>
-<span class="n">k_15</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CaMN2_on</span>
-<span class="n">k_16</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CaMC1_on</span>
-<span class="n">k_17</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CaMC2_on</span>
-<span class="n">k_19</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CaMN1_off</span>
-<span class="n">k_20</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CaMN2_off</span>
-<span class="n">k_21</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CaMC1_off</span>
-<span class="n">k_22</span><span class="p">()</span>  <span class="o">=</span> <span class="n">CaMC2_off</span>
-<span class="n">k__9</span><span class="p">()</span>  <span class="o">=</span> <span class="n">kCa</span> <span class="o">*</span> <span class="mf">1e3</span>
-<span class="n">k__10</span><span class="p">()</span> <span class="o">=</span> <span class="mi">1000</span> <span class="o">/</span> <span class="mi">50</span>
-<span class="n">k__11</span><span class="p">()</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">700</span> <span class="o">/</span> <span class="mi">40</span> <span class="o">/</span> <span class="mi">50</span> <span class="o">*</span> <span class="mi">1000</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>k__5()  = Ca_in
+k__6()  = Ca_out
+k_4()   = CBN1_on
+k_5()   = CBN2_on
+k_6()   = CBC1_on
+k_7()   = CBC2_on
+k_9()   = CBN1_off
+k_10()  = CBN2_off
+k_11()  = CBC1_off
+k_12()  = CBC2_off
+k_14()  = CaMN1_on
+k_15()  = CaMN2_on
+k_16()  = CaMC1_on
+k_17()  = CaMC2_on
+k_19()  = CaMN1_off
+k_20()  = CaMN2_off
+k_21()  = CaMC1_off
+k_22()  = CaMC2_off
+k__9()  = kCa * 1e3
+k__10() = 1000 / 50
+k__11() = 10 * 2 * 700 / 40 / 50 * 1000
 </pre></div>
 </div>
 <p>Structures</p>
-<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dendrite</span> <span class="mi">3</span> <span class="mf">1.1649e-18</span>
-<span class="n">Synapse</span>  <span class="mi">3</span> <span class="mf">3.9820e-19</span>
-<span class="n">PSD</span>      <span class="mi">2</span> <span class="mf">3.8885e-13</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Dendrite 3 1.1649e-18
+Synapse  3 3.9820e-19
+PSD      2 3.8885e-13
 </pre></div>
 </div>
 <p>Molecule types</p>
-<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ca</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">CaM</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="n">N2</span><span class="p">,</span><span class="n">C1</span><span class="p">,</span><span class="n">C2</span><span class="p">,</span><span class="n">K</span><span class="p">,</span><span class="n">Kp</span><span class="o">~</span><span class="mi">0</span><span class="o">~</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">CB</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="n">N2</span><span class="p">,</span><span class="n">C1</span><span class="p">,</span><span class="n">C2</span><span class="p">)</span>
-<span class="n">NMDA</span><span class="p">(</span><span class="n">pore</span><span class="o">~</span><span class="n">C</span><span class="o">~</span><span class="n">O</span><span class="p">,</span><span class="n">ank</span><span class="o">~</span><span class="mi">0</span><span class="o">~</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Ca(x)
+CaM(N1,N2,C1,C2,K,Kp~0~1)
+CB(N1,N2,C1,C2)
+NMDA(pore~C~O,ank~0~1)
 </pre></div>
 </div>
 <p>Species</p>
-<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@Dendrite</span><span class="p">:</span><span class="n">Ca</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                   <span class="mf">8e-08</span>
-<span class="nd">@Dendrite</span><span class="p">:</span><span class="n">CaM</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="n">N2</span><span class="p">,</span><span class="n">C1</span><span class="p">,</span><span class="n">C2</span><span class="p">,</span><span class="n">K</span><span class="p">,</span><span class="n">Kp</span><span class="o">~</span><span class="mi">0</span><span class="p">)</span> <span class="mf">8e-05</span>
-<span class="nd">@Dendrite</span><span class="p">:</span><span class="n">CB</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="n">N2</span><span class="p">,</span><span class="n">C1</span><span class="p">,</span><span class="n">C2</span><span class="p">)</span>         <span class="mf">3e-05</span>
-<span class="nd">@Synapse</span><span class="p">:</span><span class="n">Ca</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>                    <span class="mf">8e-08</span>
-<span class="nd">@Synapse</span><span class="p">:</span><span class="n">CaM</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="n">N2</span><span class="p">,</span><span class="n">C1</span><span class="p">,</span><span class="n">C2</span><span class="p">,</span><span class="n">K</span><span class="p">,</span><span class="n">Kp</span><span class="o">~</span><span class="mi">0</span><span class="p">)</span>  <span class="mf">8e-05</span>
-<span class="nd">@Synapse</span><span class="p">:</span><span class="n">CB</span><span class="p">(</span><span class="n">N1</span><span class="p">,</span><span class="n">N2</span><span class="p">,</span><span class="n">C1</span><span class="p">,</span><span class="n">C2</span><span class="p">)</span>          <span class="mf">3e-05</span>
-<span class="nd">@PSD</span><span class="p">:</span><span class="n">NMDA</span><span class="p">(</span><span class="n">pore</span><span class="o">~</span><span class="n">C</span><span class="p">,</span><span class="n">ank</span><span class="o">~</span><span class="mi">1</span><span class="p">)</span>           <span class="mf">40.0</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>@Dendrite:Ca(x)                   8e-08
+@Dendrite:CaM(N1,N2,C1,C2,K,Kp~0) 8e-05
+@Dendrite:CB(N1,N2,C1,C2)         3e-05
+@Synapse:Ca(x)                    8e-08
+@Synapse:CaM(N1,N2,C1,C2,K,Kp~0)  8e-05
+@Synapse:CB(N1,N2,C1,C2)          3e-05
+@PSD:NMDA(pore~C,ank~1)           40.0
 </pre></div>
 </div>
 <p>Reaction Rules</p>
-<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>NMDA_opening:  @PSD:NMDA(pore~C) -&gt; @PSD:NMDA(pore~O)                       k__9()
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>NMDA_opening:  @PSD:NMDA(pore~C) -&gt; @PSD:NMDA(pore~O)                       k__9()
 NMDA_closing:  @PSD:NMDA(pore~O) -&gt; @PSD:NMDA(pore~C)                       k__10()
 NMDA_Ca_input: @PSD:NMDA(pore~O) -&gt; @PSD:NMDA(pore~O) + @Synapse:Ca(x)      k__11()
 Ca_input:      0 -&gt; @Dendrite:Ca(x)                                         k__5()
@@ -419,37 +415,37 @@ CB_C2_Ca_off:  CB(C1!+,C2!1).Ca(x!1) -&gt; CB(C1!+,C2) + Ca(x)                 k
 </pre></div>
 </div>
 <p>Geometry specification (geometry.json)</p>
-<div class="code json highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;meshNameRoot&quot;</span><span class="p">:</span> <span class="s2">&quot;spine&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;scale&quot;</span><span class="p">:</span> <span class="mf">1e-06</span><span class="p">,</span>
-  <span class="s2">&quot;structures&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">{</span> <span class="s2">&quot;tetIdxs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;compartment&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dendrite&quot;</span> <span class="p">},</span>
-    <span class="p">{</span> <span class="s2">&quot;tetIdxs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;compartment&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Synapse&quot;</span><span class="p">},</span>
-    <span class="p">{</span> <span class="s2">&quot;triIdxs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">133</span><span class="p">,</span> <span class="mi">141</span><span class="p">],</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;membrane&quot;</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PSD&quot;</span> <span class="p">}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;meshNameRoot&quot;</span><span class="p">:</span> <span class="s2">&quot;spine&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;scale&quot;</span><span class="p">:</span> <span class="mf">1e-06</span><span class="p">,</span>
+  <span class="nt">&quot;structures&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span> <span class="nt">&quot;tetIdxs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;compartment&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Dendrite&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="nt">&quot;tetIdxs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;compartment&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Synapse&quot;</span><span class="p">},</span>
+    <span class="p">{</span> <span class="nt">&quot;triIdxs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">133</span><span class="p">,</span> <span class="mi">141</span><span class="p">],</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;membrane&quot;</span><span class="p">,</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PSD&quot;</span> <span class="p">}</span>
   <span class="p">],</span>
-  <span class="s2">&quot;freeDiffusionBoundaries&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="s2">&quot;triIdxs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">203</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;diffb_0&quot;</span> <span class="p">}]</span>
+  <span class="nt">&quot;freeDiffusionBoundaries&quot;</span><span class="p">:</span> <span class="p">[{</span> <span class="nt">&quot;triIdxs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">203</span><span class="p">,</span> <span class="mi">350</span><span class="p">],</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;diffb_0&quot;</span> <span class="p">}]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Simulation config</p>
-<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">max_dt</span><span class="p">:</span> <span class="mf">0.02</span>
-<span class="n">t_end</span><span class="p">:</span>  <span class="mi">2</span>
-<span class="n">solver</span><span class="p">:</span> <span class="n">STEPS</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>max_dt: 0.02
+t_end:  2
+solver: STEPS
 </pre></div>
 </div>
 <p>Stimulation</p>
-<div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">0.1</span>   <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">1</span>
-<span class="mf">0.105</span> <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">0</span>
-<span class="mf">0.3</span>   <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">1</span>
-<span class="mf">0.302</span> <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">0</span>
-<span class="mf">0.5</span>   <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">1</span>
-<span class="mf">0.502</span> <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">0</span>
-<span class="mf">0.7</span>   <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">1</span>
-<span class="mf">0.702</span> <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">0</span>
-<span class="mf">0.9</span>   <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">1</span>
-<span class="mf">0.902</span> <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">0</span>
-<span class="mf">1.1</span>   <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">1</span>
-<span class="mf">1.102</span> <span class="n">setParam</span> <span class="n">kCa</span> <span class="mi">0</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0.1   setParam kCa 1
+0.105 setParam kCa 0
+0.3   setParam kCa 1
+0.302 setParam kCa 0
+0.5   setParam kCa 1
+0.502 setParam kCa 0
+0.7   setParam kCa 1
+0.702 setParam kCa 0
+0.9   setParam kCa 1
+0.902 setParam kCa 0
+1.1   setParam kCa 1
+1.102 setParam kCa 0
 </pre></div>
 </div>
 <p>The above mentioned model with geometry and simulation configuration can be found
@@ -460,8 +456,8 @@ in <cite>Public models</cite> as <cite>CaM_Ca_spatial</cite> model.</p>
 <p>Simulation results (available when sim has been started with live updates)
 can be downloaded as well as inspected with integrated:</p>
 <ul class="simple">
-<li>cumulative per-observable concentration chart</li>
-<li>spatial molecule distribution visualizer</li>
+<li><p>cumulative per-observable concentration chart</p></li>
+<li><p>spatial molecule distribution visualizer</p></li>
 </ul>
 <a class="reference internal image-reference" href="../../../_images/simulation_result_viewer.png"><img alt="../../../_images/simulation_result_viewer.png" src="../../../_images/simulation_result_viewer.png" style="width: 800px;" /></a>
 </div>
@@ -489,7 +485,7 @@ can be downloaded as well as inspected with integrated:</p>
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>

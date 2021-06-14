@@ -4,23 +4,22 @@
 <!DOCTYPE html>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rat Cerebellum volume &#8212; HBP Brain Simulation Platform Guidebook 0.1.1 documentation</title>
-    <link rel="stylesheet" href="../../../../_static/hbpdoc.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/hbpdoc.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/bsp.css" />
     <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/css/bsp.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../../../_static/load_ga.js"></script>
-    <script type="text/javascript" src="../../../../_static/extra.js"></script>
-    <script type="text/javascript" src="../../../../_static/hbpdoc.js"></script>
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/load_ga.js"></script>
+    <script src="../../../../_static/extra.js"></script>
+    <script src="../../../../_static/hbpdoc.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Rat hippocampus CA1" href="../hippocampus/cell_positioning.html" />
@@ -58,17 +57,15 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
         </nav>
@@ -124,73 +121,73 @@ distance along the x-axis constrained by the requirement that adjacent
 dendritic trees must not overlap.</p>
 <p><strong>Inputs:</strong> by a simple GUI, the basic parameters can be entered by the user</p>
 <ul class="simple">
-<li>Base sizes (x and z) of the cerebellar volume to be built</li>
-<li>Plot option enabling</li>
-<li>Save option enabling</li>
+<li><p>Base sizes (x and z) of the cerebellar volume to be built</p></li>
+<li><p>Plot option enabling</p></li>
+<li><p>Save option enabling</p></li>
 </ul>
 <p>Expert users can modify more parameters from <cite>scaffold_params.py</cite>
 (in <cite>/storage</cite>):</p>
 <ul class="simple">
-<li>Neuron types (with ID)</li>
-<li>Simplified geometric features for each neuron type: radius of the soma, and eventually dendritic field extensions (direction-dependent) if the constraints of not-overlapping cells are taken into account</li>
-<li>Density for each neuron type, and eventually the ratio of the density values when compagin different types.</li>
+<li><p>Neuron types (with ID)</p></li>
+<li><p>Simplified geometric features for each neuron type: radius of the soma, and eventually dendritic field extensions (direction-dependent) if the constraints of not-overlapping cells are taken into account</p></li>
+<li><p>Density for each neuron type, and eventually the ratio of the density values when compagin different types.</p></li>
 </ul>
 <p><strong>Output:</strong></p>
 <ul class="simple">
-<li>hdf5 matrix with 5 columns (saved in /storage)</li>
-<li>Neuron ID (unique)</li>
-<li>Neuron type ID (from 1 to 7)</li>
-<li>3D coordinates (soma center) of each neuron (x, y, and z)</li>
+<li><p>hdf5 matrix with 5 columns (saved in /storage)</p></li>
+<li><p>Neuron ID (unique)</p></li>
+<li><p>Neuron type ID (from 1 to 7)</p></li>
+<li><p>3D coordinates (soma center) of each neuron (x, y, and z)</p></li>
 </ul>
 <p>Monitoring: sparseness in the subvolume by computing the distribution of
 pairwise distances (monitoring_positioning.py in /storage)</p>
 <p>Moreover, a 3D basic visualization is depicted (somas of each neuron, using a different color for each neuron type).</p>
 <p><strong>Additional information:</strong></p>
 <ul class="simple">
-<li>The whole Use Case should take about 10 minutes for a volume base of 400 x 400 µm.</li>
-<li>No log in to any other computer required.</li>
+<li><p>The whole Use Case should take about 10 minutes for a volume base of 400 x 400 µm.</p></li>
+<li><p>No log in to any other computer required.</p></li>
 </ul>
 <p><strong>EXAMPLE</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li>x = 400 µm, z = 400 µm (→ DCN 200 x 200 µm)</li>
-<li>y = 930 µm (600+ 150+30+150 µm), i.e. thickness DCN + GRL+ PCL + ML</li>
+<li><p>x = 400 µm, z = 400 µm (→ DCN 200 x 200 µm)</p></li>
+<li><p>y = 930 µm (600+ 150+30+150 µm), i.e. thickness DCN + GRL+ PCL + ML</p></li>
 </ul>
 <p>TOT #NEURONS: 96.887</p>
 <p>Glomeruli (N=7073, radius =1.5 µm, in GRL excluded the upper 10 µm)</p>
 <ul class="simple">
-<li>3D dist = 206 ± 89 µm - Gaussian</li>
-<li>Min = 4; max =558 µm</li>
+<li><p>3D dist = 206 ± 89 µm - Gaussian</p></li>
+<li><p>Min = 4; max =558 µm</p></li>
 </ul>
 <p>Granule cells (N=88229, radius = 2.5 µm, in the whole GRL)</p>
 <ul class="simple">
-<li>3D dist = 210 ± 90 µm- Gaussian</li>
-<li>Min =    ; max =     µm</li>
+<li><p>3D dist = 210 ± 90 µm- Gaussian</p></li>
+<li><p>Min =    ; max =     µm</p></li>
 </ul>
 <p>Golgi cells (N=219, radius = 8 µm, in GRL excluded the bottom 10 µm)</p>
 <ul class="simple">
-<li>3D dist = 214 ± 91 µm – Gaussian</li>
-<li>Min = 26; max =504 µm</li>
+<li><p>3D dist = 214 ± 91 µm – Gaussian</p></li>
+<li><p>Min = 26; max =504 µm</p></li>
 </ul>
 <p>Purkinje cells (N=78, radius = 7.5 µm, in PCL, planar grid)</p>
 <ul class="simple">
-<li>3D dist = 250 ± 121 µm</li>
-<li>Min = 15; max =544 µm</li>
+<li><p>3D dist = 250 ± 121 µm</p></li>
+<li><p>Min = 15; max =544 µm</p></li>
 </ul>
 <p>Basket cells (N=603, radius = 6 µm, in the ML lower half)</p>
 <ul class="simple">
-<li>3D dist = 208 ± 96 µm - Gaussian</li>
-<li>Min = 13; max = 534 µm</li>
+<li><p>3D dist = 208 ± 96 µm - Gaussian</p></li>
+<li><p>Min = 13; max = 534 µm</p></li>
 </ul>
 <p>Stellate cells (N=603, radius = 4 µm, in the ML upper half)</p>
 <ul class="simple">
-<li>3D dist = 201 ±94 µm - Gaussian</li>
-<li>Min = 9; max = 534 µm</li>
+<li><p>3D dist = 201 ±94 µm - Gaussian</p></li>
+<li><p>Min = 9; max = 534 µm</p></li>
 </ul>
 <p>Deep Cerebellar projection Neurons (N=12, radius=10 µm, in the Deep Nucleus)</p>
 <ul class="simple">
-<li>3D dist = 269 ± 155 µm</li>
-<li>Min = 44; max = 566 µm</li>
+<li><p>3D dist = 269 ± 155 µm</p></li>
+<li><p>Min = 44; max = 566 µm</p></li>
 </ul>
 <blockquote>
 <div><a class="reference internal image-reference" href="../../../../_images/golgi_placement.png"><img alt="../../../../_images/golgi_placement.png" src="../../../../_images/golgi_placement.png" style="width: 388px;" /></a>
@@ -225,7 +222,7 @@ pairwise distances (monitoring_positioning.py in /storage)</p>
         HBP Brain Simulation Platform Guidebook <small>0.1</small> 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Brain Simulation Platform members.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.5.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
     </div>
 </div>
