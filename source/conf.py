@@ -98,7 +98,7 @@ html_theme = 'hbp_sphinx_theme'
 html_theme_path = ['.']
 
 def setup(app):
-  app.add_stylesheet( "css/bsp.css" )
+  app.add_css_file("css/bsp.css")
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
